@@ -4,12 +4,13 @@ body {
 }
 
 h1 {
-  margin-top: 50pt;
+  margin-top: 80pt;
   display: inline-block;
 }
 
 h2 {
+  margin-top: 10pt;
   color: white;
   font-family: 'Open Sans';
-  display: inline-block;
+  font-size: 24pt;
 }
