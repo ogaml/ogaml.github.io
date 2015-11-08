@@ -29,6 +29,9 @@ ul {
   margin: 0;
   padding: 0;
 }
+ul ul {
+  padding-left: 5pt;
+}
 
 .modulename {
   color: rgb(87, 110, 198);
@@ -60,6 +63,10 @@ aside h1 {
   font-size: 15pt;
 }
 
+aside ul {
+  border-left: 5pt solid rgb(38, 73, 71);
+}
+
 aside ul li {
   width: 100%;
 }
@@ -75,6 +82,13 @@ aside a:hover {
   background-color: rgb(81, 158, 155);
   color: rgb(47, 61, 56);
 }
+
+aside ul ul {
+  border-left: 5pt solid rgb(38, 73, 71);
+  padding-left: 0;
+}
+
+/* Main content */
 
 main {
   max-width: 700pt;
