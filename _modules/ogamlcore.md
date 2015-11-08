@@ -1,5 +1,6 @@
 ---
 modulename: OgamlCore
+abstract: Main functions for an ogaml project
 ---
 
-Something need to be done here.
+We have yet to figure what we want to write here.

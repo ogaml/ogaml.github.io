@@ -11,6 +11,7 @@ title: Home
 
 {% for module in site.modules %}
 {% unless module.parent %}
-### [{{ module.modulename }}]({{ module.url }})
+* [{{ module.modulename }}]({{ module.url }})
+{% if module.abstract %}{{ module.abstract }}{% endif %}
 {% endunless %}
 {% endfor %}
