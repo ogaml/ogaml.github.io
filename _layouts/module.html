@@ -1,3 +1,4 @@
+{% capture fullname %}{% if page.prefix %}{{ page.prefix }}.{{ page.modulename }}{% else %}{{ page.modulename }}{% endif %}{% endcapture %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -26,7 +27,9 @@
       </ul>
     </aside>
     <main>
-      <h1>Module <span class="modulename">{{ page.modulename }}</span></h1>
+      <h1>Module
+        {% if page.prefix %}<span class="prefix">{{ page.prefix }}.</span>{% endif %}<!--
+     --><span class="modulename">{{ page.modulename }}</span></h1>
       {% if page.abstract %}<span class="abstract">{{ page.abstract }}</span>{% endif %}
       {% assign sub_count = 0 %}
       {% for submodule in site.modules %}
@@ -38,7 +41,7 @@
       <h2>Submodules</h2>
       <ul>
         {% for submodule in site.modules %}
-        {% if submodule.parent == page.modulename %}
+        {% if submodule.prefix == fullname %}
         <li>
           <a href="{{ submodule.url }}">{{ submodule.modulename }}</a>
           {% if submodule.abstract %}{{ submodule.abstract }}{% endif %}

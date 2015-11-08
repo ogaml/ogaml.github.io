@@ -1,6 +1,7 @@
 ---
 modulename: Window
 parent: OgamlCore
+prefix: OgamlCore
 abstract: Window management
 ---
 

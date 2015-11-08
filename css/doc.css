@@ -34,6 +34,11 @@ ul {
   color: rgb(87, 110, 198);
 }
 
+.prefix {
+  color: rgb(62, 83, 89);
+  font-weight: lighter;
+}
+
 .abstract {
   color: rgb(125, 136, 139);
 }

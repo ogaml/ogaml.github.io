@@ -14,3 +14,12 @@ h2 {
   color: white;
   font-size: 24pt;
 }
+
+a {
+  color: rgb(51, 95, 131);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(67, 132, 185);
+}
