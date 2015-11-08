@@ -8,7 +8,7 @@ title: Home
 ## Main modules
 
 {% for module in site.modules %}
-{% unless module.parent %}
+{% unless module.prefix %}
 * [{{ module.modulename }}]({{ module.url }})
 {% if module.abstract %}{{ module.abstract }}{% endif %}
 {% endunless %}
