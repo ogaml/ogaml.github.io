@@ -10,9 +10,21 @@
     <link href="/css/doc.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <img src="/img/small-logo.png" alt="OGAML" />
-    </header>
+    <aside>
+      <header>
+        <a href="/index.html">
+          <img src="/img/small-logo.png" alt="OGAML" />
+        </a>
+      </header>
+      <h1><a href="/doc.html">Modules</a></h1>
+      <ul>
+        {% for module in site.modules %}
+        {% unless module.parent %}
+        <li><a href="{{ module.url }}">{{ module.modulename }}</a></li>
+        {% endunless %}
+        {% endfor %}
+      </ul>
+    </aside>
     <main>
       <h1>Module <span class="modulename">{{ page.modulename }}</span></h1>
       {% if page.abstract %}<span class="abstract">{{ page.abstract }}</span>{% endif %}

@@ -1,3 +1,5 @@
+/* General */
+
 body {
   background-color: rgb(225, 232, 237);
   font-family: 'Open Sans';
@@ -5,15 +7,27 @@ body {
   margin: 0;
 }
 
-header {
-  background-color: rgb(255, 156, 6);
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
 }
 
-main {
-  max-width: 700pt;
-  padding: 5pt;
-  background-color: rgb(254, 246, 254);
-  margin: auto;
+h2, h3, h4, h5, h6 {
+  margin-top: 5pt;
+}
+
+a {
+  color: rgb(67, 132, 185);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(85, 168, 236);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .modulename {
@@ -22,4 +36,44 @@ main {
 
 .abstract {
   color: rgb(125, 136, 139);
+}
+
+/* The side bar */
+aside {
+  background-color: rgb(62, 120, 118);
+  width: 196px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+header {
+  background-color: rgb(40, 77, 75);
+}
+
+aside h1 {
+  font-size: 15pt;
+}
+
+aside ul li {
+  width: 100%;
+}
+
+aside a {
+  display: block;
+  padding-left: 2pt;
+  width: calc(100% - 2pt);
+  color: rgb(47, 61, 56);
+}
+
+aside a:hover {
+  background-color: rgb(81, 158, 155);
+  color: rgb(47, 61, 56);
+}
+
+main {
+  max-width: 700pt;
+  padding: 5pt 12pt;
+  background-color: rgb(254, 246, 254);
+  margin-left: 196px;
 }
