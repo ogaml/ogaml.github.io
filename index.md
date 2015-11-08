@@ -6,5 +6,5 @@ layout: home
 
 ## A powerful ocaml library for graphics.
 
-Consult the [documentation](doc.html) for more information on the
+Check out the [documentation](doc.html) for more information on the
 modules of **ogaml**.
