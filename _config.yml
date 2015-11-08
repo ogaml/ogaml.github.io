@@ -2,7 +2,10 @@
 permalink: none
 
 # Markdown rendering
-markdown: rdiscount
+# markdown: rdiscount
+
+# Syntax highlighting
+highlighter: pygments
 
 # Exclude non website files
 exclude: ['.gitignore', 'Gemfile', 'README.md']
