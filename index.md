@@ -1,8 +1,10 @@
 ---
 layout: home
-title: Homepage
 ---
 
 # ![OGAML](img/header.png)
 
 ## A powerful ocaml library for graphics.
+
+Consult the [documentation](doc.html) for more information on the
+modules of **ogaml**.

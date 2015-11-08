@@ -1,8 +1,21 @@
-# Permanent link of pages
-permalink: /:title
+# Permanent link of posts
+permalink: none
 
 # Markdown rendering
 markdown: rdiscount
 
 # Exclude non website files
 exclude: ['.gitignore', 'Gemfile', 'README.md']
+
+# The collections we are going to use for the documentation
+collections:
+  modules:
+    output: true
+
+# Defaults values
+defaults:
+  - scope:
+      path: ""
+      type: modules
+    values:
+      layout: doc

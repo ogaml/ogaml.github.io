@@ -1,0 +1,17 @@
+body {
+  background-color: rgb(225, 232, 237);
+  font-family: 'Open Sans';
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: rgb(255, 156, 6);
+}
+
+main {
+  max-width: 700pt;
+  padding: 5pt;
+  background-color: rgb(254, 246, 254);
+  margin: auto;
+}
