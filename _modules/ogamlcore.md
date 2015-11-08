@@ -1,6 +1,6 @@
 ---
 modulename: OgamlCore
-abstract: Main functions for an ogaml project
+abstract: low-level event and window management
 ---
 
 We have yet to figure what we want to write here.

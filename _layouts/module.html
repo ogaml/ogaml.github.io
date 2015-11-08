@@ -41,16 +41,16 @@
       {% endfor %}
       {% if sub_count > 0 %}
       <h2>Submodules</h2>
-      <ul>
+      <table class="belowh">
         {% for submodule in site.modules %}
         {% if submodule.prefix == fullname %}
-        <li>
-          <a href="{{ submodule.url }}">{{ submodule.modulename }}</a>
-          {% if submodule.abstract %}{{ submodule.abstract }}{% endif %}
-        </li>
+        <tr>
+          <td><a href="{{ submodule.url }}">{{ submodule.modulename }}</a></td>
+          <td>{{ submodule.abstract }}</td>
+        </tr>
         {% endif %}
         {% endfor %}
-      </ul>
+      </table>
       {% else %}
       {% endif %}
       {{content}}

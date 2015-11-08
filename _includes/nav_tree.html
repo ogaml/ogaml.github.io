@@ -7,10 +7,10 @@
 {% endif %}
 <ul>
   {% for module in site.modules %}
-  {% if module.prefix == name %}
-  <li><a href="{{ module.url }}">{{ module.modulename }}</a>
-    {% include nav_tree.html prefix=module.prefix name=module.modulename %}
-  </li>
-  {% endif %}
+    {% if module.prefix == name %}
+      <li><a href="{{ module.url }}">{{ module.modulename }}</a>
+        {% include nav_tree.html prefix=module.prefix name=module.modulename %}
+      </li>
+    {% endif %}
   {% endfor %}
 </ul>

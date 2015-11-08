@@ -1,6 +1,6 @@
 ---
 modulename: Window
-prefix: OgamlCore
+prefix: OgamlCore.LL
 abstract: Window management
 ---
 

@@ -96,3 +96,7 @@ main {
   background-color: rgb(254, 246, 254);
   margin-left: 196px;
 }
+
+table.belowh {
+  border-top: 1pt solid rgb(116, 116, 116);
+}
