@@ -15,3 +15,7 @@ main {
   background-color: rgb(254, 246, 254);
   margin: auto;
 }
+
+.modulename {
+  color: rgb(87, 110, 198);
+}

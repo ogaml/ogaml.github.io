@@ -18,4 +18,4 @@ defaults:
       path: ""
       type: modules
     values:
-      layout: doc
+      layout: module

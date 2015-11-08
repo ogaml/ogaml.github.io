@@ -10,5 +10,7 @@ title: Home
 ## Main modules
 
 {% for module in site.modules %}
+{% unless module.parent %}
 ### [{{ module.modulename }}]({{ module.url }})
+{% endunless %}
 {% endfor %}
