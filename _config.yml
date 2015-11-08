@@ -1,1 +1,8 @@
+# Permanent link of pages
 permalink: /:title
+
+# Markdown rendering
+markdown: rdiscount
+
+# Exclude non website files
+exclude: ['.gitignore', 'Gemfile', 'README.md']
