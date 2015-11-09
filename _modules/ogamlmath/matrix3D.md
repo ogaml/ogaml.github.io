@@ -54,7 +54,7 @@ val rotation : Vector3f.t -> float -> t
 {% capture description %}
 Builds a rotation matrix from a vector (axis) and an angle.
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+{% include docelem.html listing=listing description=description related="OgamlMath.Vector3f"%}
 
 {% capture listing %}
 val from_quaternion : Quaternion.t -> t
@@ -62,7 +62,7 @@ val from_quaternion : Quaternion.t -> t
 {% capture description %}
 Returns the rotation matrix associated to a quaternion.
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+{% include docelem.html listing=listing description=description related="OgamlMath.Quaternion"%}
 
 ### Matrix Operations
 
@@ -112,7 +112,7 @@ val times : t -> Vector3f.t -> Vector3f.t
 {% capture description %}
 Computes the product of a matrix with a column vector.
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+{% include docelem.html listing=listing description=description related="OgamlMath.Vector3f"%}
 
 {% capture listing %}
 val print : t -> string
@@ -140,7 +140,7 @@ Builds a "look at" view matrix from eulerian angles. Theta should be in [0;2pi] 
 If phi = pi/2, the camera is looking up (towards positive Y). 
 If theta = 0, the camera is looking towards negative Z.
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+{% include docelem.html listing=listing description=description related="OgamlMath.Vector3f"%}
 
 {% capture listing %}
 val orthographic : right:float -> left:float -> near:float -> far:float -> top:float -> bottom:float -> t

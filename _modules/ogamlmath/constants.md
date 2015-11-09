@@ -4,7 +4,9 @@ prefix: OgamlMath
 abstract: Contains various useful constants
 ---
 
-Mathematical constants
+This module contains some useful constants
+
+### Mathematical constants
 
 {% capture listing %}
 val pi : float 
