@@ -38,7 +38,7 @@ val translation : Vector3f.t -> t
 {% capture description %}
 Builds a translation matrix from a vector.
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+{% include docelem.html listing=listing description=description related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val scaling : Vector3f.t -> t
@@ -46,7 +46,7 @@ val scaling : Vector3f.t -> t
 {% capture description %}
 Builds a scaling matrix from a vector.
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+{% include docelem.html listing=listing description=description related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val rotation : Vector3f.t -> float -> t
@@ -88,7 +88,7 @@ val translate : Vector3f.t -> t -> t
 {% capture description %}
 Translates a matrix by a vector, returns the result. The original matrix is not modified.
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+{% include docelem.html listing=listing description=description related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val scale : Vector3f.t -> t -> t
@@ -96,7 +96,7 @@ val scale : Vector3f.t -> t -> t
 {% capture description %}
 Scales a matrix by a vector, returns the result. The original matrix is not modified.
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+{% include docelem.html listing=listing description=description related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val rotate : Vector3f.t -> float -> t -> t
@@ -104,7 +104,7 @@ val rotate : Vector3f.t -> float -> t -> t
 {% capture description %}
 Rotates a matrix, returns the result. The original matrix is not modified.
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+{% include docelem.html listing=listing description=description related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val times : t -> Vector3f.t -> Vector3f.t
@@ -112,7 +112,7 @@ val times : t -> Vector3f.t -> Vector3f.t
 {% capture description %}
 Computes the product of a matrix with a column vector.
 {% endcapture %}
-{% include docelem.html listing=listing description=description related="OgamlMath.Vector3f"%}
+{% include docelem.html listing=listing description=description related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val print : t -> string
@@ -130,7 +130,7 @@ val look_at : from:Vector3f.t -> at:Vector3f.t -> up:Vector3f.t -> t
 {% capture description %}
 Builds a "look at" view matrix.
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+{% include docelem.html listing=listing description=description related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val look_at_eulerian : from:Vector3f.t -> theta:float -> phi:float -> t
