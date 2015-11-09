@@ -9,10 +9,10 @@ This module consists of only one type.
 {% capture listing %}
 type t
 {% endcapture %}
+{% include values_reset.html %}
 {% capture desc %}
 Used when an unrecognized key is triggered. You don't usually need to listen on it.
 {% endcapture %}
-{% include values_reset.html %}
 {% include add_value.html value="Unknown" desc=desc %}
 {% include add_value.html value="A" %}
 {% include add_value.html value="B" %}
