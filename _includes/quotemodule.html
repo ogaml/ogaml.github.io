@@ -1,0 +1,15 @@
+{% for child in site.modules %}
+  {% if child.prefix == include.prefix and child.modulename == include.name %}
+    {% assign themodule = child %}
+  {% endif %}
+{% endfor %}
+
+<h2>Module
+  {% if themodule.prefix %}<span class="prefix">{{ themodule.prefix }}.</span>{% endif %}<!--
+--><span class="modulename">{{ themodule.modulename }}</span></h2>
+
+<section>
+  {% if themodule.abstract %}<span class="abstract">{{ themodule.abstract }}</span>{% endif %}
+
+  {{ themodule.output }}
+</section>

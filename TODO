@@ -1,6 +1,7 @@
 Style:
   ✘ Fix syntax highlighting @cancelled(2015-11-09 12:17) @project(Style)
   ☐ Something smoother than details @unsure
+  ☐ Use SVG for images
 
 Syntax Highlighting:
   ☐ Beautify syntax highlighting
@@ -12,6 +13,7 @@ Documentation:
   ☐ Add more options to docelem
   ☐ Make prefix clickable @unsure
   ☐ Make types/modules in descriptions clickable @do(a function that takes a string and returns the links by splitting around '.')
+  ☐ Fix module quoting
 
 General:
   ☐ Add a tutorial collection (or maybe use posts)
