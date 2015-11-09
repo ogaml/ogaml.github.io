@@ -16,6 +16,21 @@
 {% endfor %}
 </table>
 {% endif %}
+{% if include.struct_values %}
+{% assign pairs = include.struct_values | split: '£' %}
+<h4>Structure members</h4>
+<table class="values">
+{% for pair in pairs %}
+{% unless forloop.first %}
+{% assign val_desc = pair | split: '§' %}
+<tr>
+<td>{% highlight ocaml %}{{ val_desc[0] }}{% endhighlight %}</td>
+<td>{{ val_desc[1] }}</td>
+</tr>
+{% endunless %}
+{% endfor %}
+</table>
+{% endif %}
 {% if include.related %}
 {% capture see_content_tmp %}
 {% assign related_modules = include.related | split: ',' %}

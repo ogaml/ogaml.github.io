@@ -36,7 +36,7 @@ ul ul {
 }
 
 table td {
-  padding: 2pt 4pt;
+  padding: 2pt 8pt 2pt 0;
 }
 
 .modulename {
@@ -135,12 +135,9 @@ table.values div.highlight, table.values pre,  table.values div.highlight pre co
   background: none;
 }
 
-/*table.values td {
-  padding: 2pt 4pt;
-}*/
-
 table.values td.variant {
   border-left: 1pt solid rgb(210, 17, 51);
+  padding-left: 4pt;
 }
 
 /*table.values div.highlight {
