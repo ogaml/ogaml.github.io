@@ -1,6 +1,12 @@
 Style:
-  ☐ Fix syntax highlighting
+  ✘ Fix syntax highlighting @cancelled(2015-11-09 12:17) @project(Style)
   ☐ Something smoother than details @unsure
+
+Syntax Highlighting:
+  ☐ Beautify syntax highlighting
+  ☐ Something more ocaml specific
+  ☐ Line numers are copied along with the code
+  ☐ Inline code should be highlighted
 
 Documentation:
   ☐ Add more options to docelem

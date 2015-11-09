@@ -8,6 +8,20 @@ Here we can start with a discussion about how to (and not to) use this module.
 We can also provide overall examples easily.
 Once we are done with that we can start listing the content of the module.
 
+Remember we can quote code to show examples.
+
+```ocaml
+let win = Window.create ~width:800 ~height:640 in
+Window.display win
+```
+
+And even with line numbering.
+
+{% highlight ocaml linenos %}
+let win = Window.create ~width:800 ~height:640 in
+Window.display win
+{% endhighlight %}
+
 ### Creating a Window
 
 {% capture listing %}
