@@ -13,3 +13,5 @@ title: Home
 {% if module.abstract %}{{ module.abstract }}{% endif %}
 {% endunless %}
 {% endfor %}
+
+All modules can be checked out from the side bar on the left.
