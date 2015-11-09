@@ -124,6 +124,23 @@ summary div.highlight, summary pre,  summary div.highlight pre code {
   background: none;
 }
 
+table.values div.highlight, table.values pre,  table.values div.highlight pre code {
+  display: inline;
+  background: none;
+}
+
+table.values td {
+  padding: 2pt 4pt;
+}
+
+table.values td.variant {
+  border-left: 1pt solid rgb(210, 17, 51);
+}
+
+/*table.values div.highlight {
+  border-left: 1pt solid rgb(210, 17, 51);
+}*/
+
 /* When quoting submodules */
 
 section {

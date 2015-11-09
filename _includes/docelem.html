@@ -1,6 +1,19 @@
 <details>
   <summary>{% highlight ocaml %}{{ include.listing }}{% endhighlight %}</summary>
-  <p>
-    {{ include.description }}
-  </p>
+  <p>{{ include.description }}</p>
+{% if include.values %}
+{% assign pairs = include.values | split: '£' %}
+<h4>Possible values</h4>
+<table class="values">
+{% for pair in pairs %}
+{% unless forloop.first %}
+{% assign val_desc = pair | split: '§' %}
+<tr>
+<td class="variant">{% highlight ocaml %}{{ val_desc[0] }}{% endhighlight %}</td>
+<td>{{ val_desc[1] }}</td>
+</tr>
+{% endunless %}
+{% endfor %}
+</table>
+{% endif %}
 </details>
