@@ -7,7 +7,8 @@ Syntax Highlighting:
   ☐ Beautify syntax highlighting
   ☐ Something more ocaml specific
   ☐ Line numers are copied along with the code
-  ☐ Inline code should be highlighted
+  ✘ Inline code should be highlighted @cancelled(2015-11-09 15:26) @project(Syntax Highlighting)
+  ✔ Inline code for summary is highlighted @done(2015-11-09 15:26) @project(Syntax Highlighting)
 
 Documentation:
   ☐ Add more options to docelem

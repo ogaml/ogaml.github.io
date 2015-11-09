@@ -118,6 +118,12 @@ main hr {
   border: 1pt solid rgb(125, 136, 139);
 }
 
+/* At least code in summary is inlined */
+summary div.highlight, summary pre,  summary div.highlight pre code {
+  display: inline;
+  background: none;
+}
+
 /* When quoting submodules */
 
 section {
