@@ -124,9 +124,14 @@ main hr {
   border: 1pt solid rgb(125, 136, 139);
 }
 
+summary {
+  overflow: scroll;
+}
+
 /* At least code in summary is inlined */
 summary div.highlight, summary pre,  summary div.highlight pre code {
-  display: inline;
+  display: inline-block;
+  max-width: 580pt;
   background: none;
 }
 
