@@ -1,4 +1,4 @@
 ---
 modulename: OgamlGraphics
-abstract: graphics rendering
+abstract: 2D and 3D rendering, provides high level wrappers around openGL
 ---

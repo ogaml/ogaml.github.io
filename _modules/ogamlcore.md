@@ -1,6 +1,6 @@
 ---
 modulename: OgamlCore
-abstract: low-level event and window management
+abstract: Base module of OGAML, defines events and low-level window management
 ---
 
 {% comment %}

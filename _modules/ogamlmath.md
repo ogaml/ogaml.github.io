@@ -1,4 +1,4 @@
 ---
 modulename: OgamlMath
-abstract: math structures and helpers
+abstract: Mathematical helpers for data manipulation and rendering
 ---
