@@ -1,0 +1,4 @@
+{% assign values = values | append: "£" %}
+{% assign values = values | append: include.value %}
+{% assign values = values | append: "§" %}
+{% assign values = values | append: include.desc %}

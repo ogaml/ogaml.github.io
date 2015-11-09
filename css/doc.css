@@ -30,8 +30,13 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 ul ul {
   padding-left: 5pt;
+}
+
+table td {
+  padding: 2pt 4pt;
 }
 
 .modulename {
@@ -129,9 +134,9 @@ table.values div.highlight, table.values pre,  table.values div.highlight pre co
   background: none;
 }
 
-table.values td {
+/*table.values td {
   padding: 2pt 4pt;
-}
+}*/
 
 table.values td.variant {
   border-left: 1pt solid rgb(210, 17, 51);

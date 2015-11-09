@@ -9,12 +9,12 @@ This module consists of only one type.
 {% capture listing %}
 type t
 {% endcapture %}
-{% capture description %}
-| Values         | Description                                                                                  |
-|:---------------|:---------------------------------------------------------------------------------------------|
-| `Unknown`      | Used when an unrecognized mouse button is triggered. You don't usually need to listen on it. |
-| `Left`         |                                                                                              |
-| `Right`        |                                                                                              |
-| `Middle`       |                                                                                              |
+{% include values_reset.html %}
+{% capture desc %}
+Used when an unrecognized mouse button is triggered. You don't usually need to listen on it.
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+{% include add_value.html value="Unknown" desc=desc %}
+{% include add_value.html value="Left" %}
+{% include add_value.html value="Right" %}
+{% include add_value.html value="Middle" %}
+{% include docelem.html listing=listing values=values %}

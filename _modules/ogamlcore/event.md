@@ -12,11 +12,11 @@ type t
 {% capture description %}
 A variant type describing the possible events.
 {% endcapture %}
-{% assign values = "" %}
-{% assign values = values | append: "£Closed§The user asked for the window to close." %}
-{% assign values = values | append: "£KeyPressed     of KeyEvent.t§A key was pressed." %}
-{% assign values = values | append: "£KeyReleased    of KeyEvent.t§A key was released." %}
-{% assign values = values | append: "£ButtonPressed  of ButtonEvent.t§A mouse button was pressed." %}
-{% assign values = values | append: "£ButtonReleased of ButtonEvent.t§A mouse button was released." %}
-{% assign values = values | append: "£MouseMoved     of MouseEvent.t§The mouse was moved." %}
+{% include values_reset.html %}
+{% include add_value.html value="Closed" desc="The user asked for the window to close." %}
+{% include add_value.html value="KeyPressed     of KeyEvent.t" desc="A key was pressed." %}
+{% include add_value.html value="KeyReleased    of KeyEvent.t" desc="A key was released." %}
+{% include add_value.html value="ButtonPressed  of ButtonEvent.t" desc="A mouse button was pressed." %}
+{% include add_value.html value="ButtonReleased of ButtonEvent.t" desc="A mouse button was released." %}
+{% include add_value.html value="MouseMoved     of MouseEvent.t" desc="The mouse was moved." %}
 {% include docelem.html listing=listing description=description values=values %}
