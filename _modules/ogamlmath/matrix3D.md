@@ -122,12 +122,10 @@ Outputs a matrix as a pretty-printed string.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
-
 ### Rendering Matrices Creation
 
 {% capture listing %}
 val look_at : from:Vector3f.t -> at:Vector3f.t -> up:Vector3f.t -> t
-{% endcapture %}
 {% endcapture %}
 {% capture description %}
 Builds a "look at" view matrix.
