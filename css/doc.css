@@ -52,6 +52,12 @@ table td {
   color: rgb(125, 136, 139);
 }
 
+.see {
+  font-weight: lighter;
+  font-size: 10pt;
+  color: rgb(126, 126, 126);
+}
+
 /* The side bar */
 aside {
   background-color: rgb(62, 120, 118);
