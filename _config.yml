@@ -2,7 +2,7 @@
 permalink: none
 
 # Markdown rendering
-# markdown: rdiscount
+markdown: redcarpet
 
 # Syntax highlighting
 highlighter: pygments
