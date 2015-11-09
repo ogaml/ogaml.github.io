@@ -16,4 +16,20 @@
 {% endfor %}
 </table>
 {% endif %}
+{% if include.related %}
+{% capture see_content_tmp %}
+{% assign related_modules = include.related | split: ',' %}
+{% for related_module in related_modules %}
+{% for candidate in site.modules %}
+{% assign tmp = candidate.prefix | append: '.' %}
+{% assign candidate_path = tmp | append: candidate.modulename %}
+{% if candidate_path == related_module %}
+, <a href="{{ candidate.url }}">{{ related_module }}</a>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endcapture %}
+{% assign see_content = see_content_tmp | remove_first: ', ' %}
+<span class="see">See: {{ see_content | strip_newlines }}</span>
+{% endif %}
 </details>

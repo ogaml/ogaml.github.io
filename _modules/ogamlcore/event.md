@@ -19,4 +19,4 @@ A variant type describing the possible events.
 {% include add_value.html value="ButtonPressed  of ButtonEvent.t" desc="A mouse button was pressed." %}
 {% include add_value.html value="ButtonReleased of ButtonEvent.t" desc="A mouse button was released." %}
 {% include add_value.html value="MouseMoved     of MouseEvent.t" desc="The mouse was moved." %}
-{% include docelem.html listing=listing description=description values=values %}
+{% include docelem.html listing=listing description=description values=values related="OgamlCore.Event.KeyEvent" %}
