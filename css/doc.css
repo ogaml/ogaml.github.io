@@ -110,3 +110,8 @@ table.belowh {
 main h2 {
   font-weight: normal;
 }
+
+main hr {
+  margin-bottom: 30pt;
+  border: 1pt solid rgb(125, 136, 139);
+}
