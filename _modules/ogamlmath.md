@@ -1,6 +1,4 @@
 ---
 modulename: OgamlMath
-abstract: Handles all of math
+abstract: math structures and helpers
 ---
-
-Something need to be done here.
