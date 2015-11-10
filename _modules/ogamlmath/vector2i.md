@@ -1,18 +1,18 @@
 ---
-modulename: Vector3f
+modulename: Vector2i
 prefix: OgamlMath
-abstract: Operation on vectors of 3 floats
+abstract: Operation on vectors of 2 integers 
 ---
 
-This module defines the vector3f type and various operations on it.
+This module defines the vector2i type and various operations on it.
 
 ### Vector Operations
 
 {% capture listing %}
-type t = {x : float; y : float; z : float}
+type t = {x : int; y : int}
 {% endcapture %}
 {% capture description %}
-Type of immutable vectors of 3 floats.
+Type of immutable vectors of 2 integers
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -41,14 +41,6 @@ Unit y vector.
 {% include docelem.html listing=listing description=description %}
 
 {% capture listing %}
-val unit_z : t
-{% endcapture %}
-{% capture description %}
-Unit z vector.
-{% endcapture %}
-{% include docelem.html listing=listing description=description %}
-
-{% capture listing %}
 val add : t -> t -> t
 {% endcapture %}
 {% capture description %}
@@ -60,60 +52,28 @@ Adds two vectors.
 val sub : t -> t -> t
 {% endcapture %}
 {% capture description %}
-sub t1 t2 computes the vector t1 - t2.
+sub u v computes the vector u-v.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
 {% capture listing %}
-val prop : float -> t -> t
+val prop : int -> t -> t
 {% endcapture %}
 {% capture description %}
-Multiplies a vector by a scalar.
+Multiplies a vector by an integer scalar.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
 {% capture listing %}
-val div : float -> t -> t
+val div : int -> t -> t
 {% endcapture %}
 {% capture description %}
-Divides a vector by a scalar.
+Divides a vector by a scalar. The result is rounded down.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
 {% capture listing %}
-val floor : t -> Vector3i.t
-{% endcapture %}
-{% capture description %}
-Converts a floating-point vector to an integer vector.
-{% endcapture %}
-{% include docelem.html listing=listing description=description related="OgamlMath.Vector3i" %}
-
-{% capture listing %}
-val from_int : Vector3i.t -> t
-{% endcapture %}
-{% capture description %}
-Converts an integer vector to a floating-point vector.
-{% endcapture %}
-{% include docelem.html listing=listing description=description related="OgamlMath.Vector3i" %}
-
-{% capture listing %}
-val project : t -> Vector2f.t
-{% endcapture %}
-{% capture description %}
-Projects a vector on the plane z = 0.0.
-{% endcapture %}
-{% include docelem.html listing=listing description=description related="OgamlMath.Vector2f" %}
-
-{% capture listing %}
-val lift : Vector2f.t -> t
-{% endcapture %}
-{% capture description %}
-Lifts a 2D vector by adding z = 0.0.
-{% endcapture %}
-{% include docelem.html listing=listing description=description related="OgamlMath.Vector2f" %}
-
-{% capture listing %}
-val dot : t -> t -> float
+val dot : t -> t -> int
 {% endcapture %}
 {% capture description %}
 Computes the dot product of two vectors.
@@ -121,10 +81,10 @@ Computes the dot product of two vectors.
 {% include docelem.html listing=listing description=description %}
 
 {% capture listing %}
-val cross : t -> t -> t
+val det : t -> t -> int
 {% endcapture %}
 {% capture description %}
-Computes the cross product of two vectors.
+Computes the determinant of two vectors.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -132,15 +92,15 @@ Computes the cross product of two vectors.
 val angle : t -> t -> float
 {% endcapture %}
 {% capture description %}
-Returns the oriented angle between two vectors.
+Computes the directed angle between two vectors.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
 {% capture listing %}
-val squared_norm : t -> float
+val squared_norm : t -> int
 {% endcapture %}
 {% capture description %}
-Returns the squared (L2-)norm of a vector.
+Computes the squared norm of a vector.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -148,7 +108,7 @@ Returns the squared (L2-)norm of a vector.
 val norm : t -> float
 {% endcapture %}
 {% capture description %}
-Returns the (L2-)norm of a vector.
+Compute the norm of a vector.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -156,12 +116,13 @@ Returns the (L2-)norm of a vector.
 val clamp : t -> t -> t -> t
 {% endcapture %}
 {% capture description %}
-clamp v a b returns the vector u whose coordinates are the coordinates of v clamped between the coordinates of a and b. 
+clamp v a b returns the vector u whose coordinates 
+are the coordinates of v clamped between the coordinates of a and b.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
 {% capture listing %}
-val max : t -> float
+val max : t -> int
 {% endcapture %}
 {% capture description %}
 Returns the maximal coordinate of a vector.
@@ -169,18 +130,10 @@ Returns the maximal coordinate of a vector.
 {% include docelem.html listing=listing description=description %}
 
 {% capture listing %}
-val min : t -> float
+val min : t -> int
 {% endcapture %}
 {% capture description %}
 Returns the minimal coordinate of a vector.
-{% endcapture %}
-{% include docelem.html listing=listing description=description %}
-
-{% capture listing %}
-val normalize : t -> t
-{% endcapture %}
-{% capture description %}
-Normalizes a vector.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -189,23 +142,6 @@ val print : t -> string
 {% endcapture %}
 {% capture description %}
 Returns a pretty-printed string.
-{% endcapture %}
-{% include docelem.html listing=listing description=description %}
-
-{% capture listing %}
-val direction : t -> t -> t
-{% endcapture %}
-{% capture description %}
-direction p1 p2 returns the normalized direction vector going from p1 to p2.
-Equivalent to normalize (sub v2 v1).
-{% endcapture %}
-{% include docelem.html listing=listing description=description %}
-
-{% capture listing %}
-val endpoint : t -> t -> float -> t
-{% endcapture %}
-{% capture description %}
-endpoint p v t returns the point p+tv.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 

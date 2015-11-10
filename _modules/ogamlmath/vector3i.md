@@ -6,7 +6,7 @@ abstract: Operation on vectors of 3 integers
 
 This module defines the vector3i type and various operations on it.
 
-### 3-ints vectors
+### Vector Operations
 
 {% capture listing %}
 type t = {x : int; y : int; z : int}

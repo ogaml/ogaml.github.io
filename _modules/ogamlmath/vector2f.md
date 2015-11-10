@@ -1,18 +1,18 @@
 ---
-modulename: Vector3f
+modulename: Vector2f
 prefix: OgamlMath
-abstract: Operation on vectors of 3 floats
+abstract: Operation on vectors of 2 floats
 ---
 
-This module defines the vector3f type and various operations on it.
+This module defines the vector2f type and various operations on it.
 
 ### Vector Operations
 
 {% capture listing %}
-type t = {x : float; y : float; z : float}
+type t = {x : float; y : float}
 {% endcapture %}
 {% capture description %}
-Type of immutable vectors of 3 floats.
+Type of immutable vectors of 2 floats.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -41,14 +41,6 @@ Unit y vector.
 {% include docelem.html listing=listing description=description %}
 
 {% capture listing %}
-val unit_z : t
-{% endcapture %}
-{% capture description %}
-Unit z vector.
-{% endcapture %}
-{% include docelem.html listing=listing description=description %}
-
-{% capture listing %}
 val add : t -> t -> t
 {% endcapture %}
 {% capture description %}
@@ -60,7 +52,7 @@ Adds two vectors.
 val sub : t -> t -> t
 {% endcapture %}
 {% capture description %}
-sub t1 t2 computes the vector t1 - t2.
+sub u v computes the vector u-v.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -81,36 +73,20 @@ Divides a vector by a scalar.
 {% include docelem.html listing=listing description=description %}
 
 {% capture listing %}
-val floor : t -> Vector3i.t
+val floor : t -> Vector2i.t
 {% endcapture %}
 {% capture description %}
 Converts a floating-point vector to an integer vector.
 {% endcapture %}
-{% include docelem.html listing=listing description=description related="OgamlMath.Vector3i" %}
+{% include docelem.html listing=listing description=description related="OgamlMath.Vector2i" %}
 
 {% capture listing %}
-val from_int : Vector3i.t -> t
+val from_int : Vector2i.t -> t
 {% endcapture %}
 {% capture description %}
 Converts an integer vector to a floating-point vector.
 {% endcapture %}
-{% include docelem.html listing=listing description=description related="OgamlMath.Vector3i" %}
-
-{% capture listing %}
-val project : t -> Vector2f.t
-{% endcapture %}
-{% capture description %}
-Projects a vector on the plane z = 0.0.
-{% endcapture %}
-{% include docelem.html listing=listing description=description related="OgamlMath.Vector2f" %}
-
-{% capture listing %}
-val lift : Vector2f.t -> t
-{% endcapture %}
-{% capture description %}
-Lifts a 2D vector by adding z = 0.0.
-{% endcapture %}
-{% include docelem.html listing=listing description=description related="OgamlMath.Vector2f" %}
+{% include docelem.html listing=listing description=description related="OgamlMath.Vector2i" %}
 
 {% capture listing %}
 val dot : t -> t -> float
@@ -121,10 +97,10 @@ Computes the dot product of two vectors.
 {% include docelem.html listing=listing description=description %}
 
 {% capture listing %}
-val cross : t -> t -> t
+val det : t -> t -> float
 {% endcapture %}
 {% capture description %}
-Computes the cross product of two vectors.
+Computes the determinant of two vectors.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -132,7 +108,7 @@ Computes the cross product of two vectors.
 val angle : t -> t -> float
 {% endcapture %}
 {% capture description %}
-Returns the oriented angle between two vectors.
+Computes the directed angle between two vectors.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -140,7 +116,7 @@ Returns the oriented angle between two vectors.
 val squared_norm : t -> float
 {% endcapture %}
 {% capture description %}
-Returns the squared (L2-)norm of a vector.
+Computes the squared norm of a vector.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -148,7 +124,7 @@ Returns the squared (L2-)norm of a vector.
 val norm : t -> float
 {% endcapture %}
 {% capture description %}
-Returns the (L2-)norm of a vector.
+Computes the norm of a vector.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -156,7 +132,8 @@ Returns the (L2-)norm of a vector.
 val clamp : t -> t -> t -> t
 {% endcapture %}
 {% capture description %}
-clamp v a b returns the vector u whose coordinates are the coordinates of v clamped between the coordinates of a and b. 
+clamp v a b returns the vector u whose coordinates 
+are the coordinates of v clamped between the coordinates of a and b.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -196,8 +173,8 @@ Returns a pretty-printed string.
 val direction : t -> t -> t
 {% endcapture %}
 {% capture description %}
-direction p1 p2 returns the normalized direction vector going from p1 to p2.
-Equivalent to normalize (sub v2 v1).
+direction a b returns a normalized vector going from a to b.
+Equivalent to normalize (sub b a).
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -205,7 +182,7 @@ Equivalent to normalize (sub v2 v1).
 val endpoint : t -> t -> float -> t
 {% endcapture %}
 {% capture description %}
-endpoint p v t returns the point p+tv.
+endpoint p u t computes the point p+tu.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
