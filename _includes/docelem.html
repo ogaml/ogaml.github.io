@@ -25,7 +25,7 @@
 {% assign val_desc = pair | split: '§' %}
 <tr>
 <td>{% highlight ocaml %}{{ val_desc[0] }}{% endhighlight %}</td>
-<td>{{ val_desc[1] }}</td>
+<td>{{ val_desc[1] | markdownify }}</td>
 </tr>
 {% endunless %}
 {% endfor %}

@@ -130,6 +130,23 @@ main hr {
   border: 1pt solid rgb(125, 136, 139);
 }
 
+details {
+  margin-left: -12pt;
+  margin-right: -12pt;
+  padding: 2pt 12pt;
+  transition: 1s ease;
+}
+
+details[open] {
+  background-color: rgb(229, 242, 246);
+  transition: 1s ease;
+}
+
+details p {
+  margin-top: 2pt;
+  margin-bottom: 0;
+}
+
 summary {
   overflow: scroll;
 }
