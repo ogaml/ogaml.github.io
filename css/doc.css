@@ -137,11 +137,6 @@ article {
   transition: 1s ease;
 }
 
-/*details[open] {
-  background-color: rgb(229, 242, 246);
-  transition: 1s ease;
-}*/
-
 article p {
   margin-top: 2pt;
   margin-bottom: 0;
@@ -149,6 +144,7 @@ article p {
 
 span.showmore {
   overflow: scroll;
+  cursor: pointer;
 }
 
 div.more {
