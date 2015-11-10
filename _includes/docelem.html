@@ -1,5 +1,6 @@
-<details>
-  <summary>{% highlight ocaml %}{{ include.listing }}{% endhighlight %}</summary>
+<article>
+  <span class="showmore">{% highlight ocaml %}{{ include.listing }}{% endhighlight %}</span>
+  <div class="more">
   <p>{{ include.description }}</p>
 {% if include.values %}
 {% assign pairs = include.values | split: '£' %}
@@ -47,4 +48,5 @@
 {% assign see_content = see_content_tmp | remove_first: ', ' %}
 <span class="see">See: {{ see_content | strip_newlines }}</span>
 {% endif %}
-</details>
+  </div>
+</article>
