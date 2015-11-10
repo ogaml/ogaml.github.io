@@ -97,6 +97,22 @@ Converts an integer vector to a floating-point vector.
 {% include docelem.html listing=listing description=description related="OgamlMath.Vector3i" %}
 
 {% capture listing %}
+val project : t -> Vector2f.t
+{% endcapture %}
+{% capture description %}
+Projects a vector on the plane z = 0.0.
+{% endcapture %}
+{% include docelem.html listing=listing description=description related="OgamlMath.Vector2f" %}
+
+{% capture listing %}
+val lift : Vector2f.t -> t
+{% endcapture %}
+{% capture description %}
+Lifts a 2D vector by adding z = 0.0.
+{% endcapture %}
+{% include docelem.html listing=listing description=description related="OgamlMath.Vector2f" %}
+
+{% capture listing %}
 val dot : t -> t -> float
 {% endcapture %}
 {% capture description %}
@@ -133,6 +149,14 @@ val norm : t -> float
 {% endcapture %}
 {% capture description %}
 Returns the (L2-)norm of a vector.
+{% endcapture %}
+{% include docelem.html listing=listing description=description %}
+
+{% capture listing %}
+val clamp : t -> t -> t -> t
+{% endcapture %}
+{% capture description %}
+clamp v a b returns the vector u whose coordinates are the coordinates of v clamped between the coordinates of a and b. 
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 

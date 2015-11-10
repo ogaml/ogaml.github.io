@@ -28,7 +28,10 @@ Content:
   ☐ OgamlMath
     ✔ Vector3f @done(2015-11-10 10:45) @project(Content)
     ☐ Vector3fs
-    ☐ Vector3i
+    ✔ Vector3i @done(2015-11-10 14:25) @project(Content)
+    ☐ Vector2i
+    ☐ Vector2f
+    ✔ Add project, lift and clamp to 3f  @done(2015-11-10 14:25) @project(Content)
   ☐ OgamlGraphics
 
 General:
