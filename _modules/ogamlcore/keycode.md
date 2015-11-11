@@ -93,4 +93,4 @@ Used when an unrecognized key is triggered. You don't usually need to listen on 
 {% include add_value.html value="F10" %}
 {% include add_value.html value="F11" %}
 {% include add_value.html value="F12" %}
-{% include docelem.html listing=listing values=values %}
+{% include docelem.html listing=listing values=values open='' %}

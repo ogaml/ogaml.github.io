@@ -1,6 +1,6 @@
 <article>
   <span class="showmore">{% highlight ocaml %}{{ include.listing }}{% endhighlight %}</span>
-  <div class="more">
+  <div class="more{% if include.open %} open{% endif %}">
   <p>{{ include.description }}</p>
 {% if include.values %}
 {% assign pairs = include.values | split: '£' %}
