@@ -1,7 +1,7 @@
 Style:
   ✘ Fix syntax highlighting @cancelled(2015-11-09 12:17) @project(Style)
-  ☐ Something smoother than details @unsure
-  ☐ Use SVG for images
+  ✔ Something smoother than details @unsure @done(2015-11-11 22:53) @project(Style)
+  ✔ Use SVG for images @done(2015-11-11 22:53) @project(Style)
 
 Syntax Highlighting:
   ☐ Beautify syntax highlighting
@@ -11,7 +11,7 @@ Syntax Highlighting:
   ✔ Inline code for summary is highlighted @done(2015-11-09 15:26) @project(Syntax Highlighting)
 
 Documentation:
-  ☐ Add more options to docelem
+  ✔ Add more options to docelem @done(2015-11-11 22:53) @project(Documentation)
   ☐ Make prefix clickable @unsure
   ☐ Make types/modules in descriptions clickable @do(a function that takes a string and returns the links by splitting around '.')
   ☐ Fix module quoting

@@ -2,7 +2,7 @@
 layout: home
 ---
 
-# ![OGAML](img/header.png)
+# <img src="img/ogaml-logo.svg" alt="OGAML" width="520pt" />
 
 ## A powerful ocaml library for graphics.
 
