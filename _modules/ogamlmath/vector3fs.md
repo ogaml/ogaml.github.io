@@ -9,7 +9,7 @@ This module defines the vector3fs type and various operations on it.
 ### Vector Operations
 
 {% capture listing %}
-type t
+type t = {r : float; t : float; p : float}
 {% endcapture %}
 {% capture description %}
 Type of immutable vectors of 3 floats represented in spherical coordinates.
