@@ -153,13 +153,13 @@ div.more {
   border-top: 1pt solid rgb(209, 222, 226);
   border-bottom: 1pt solid rgb(209, 222, 226);
   margin: 0 -12pt;
-  padding: 2pt 4pt;
+  padding: 2pt 12pt;
   position: relative;
 }
 
 div.more:after, div.more:before {
   bottom: 100%;
-  left: 30pt;
+  left: 27pt;
   border: solid transparent;
   content: " ";
   height: 0;
