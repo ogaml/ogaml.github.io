@@ -4,7 +4,7 @@ Style:
   ✔ Use SVG for images @done(2015-11-11 22:53) @project(Style)
   ☐ Rethink nav / aside / header @unsure
   ✔ Responsiveness @done(2015-11-12 01:08) @project(Style)
-  ☐ Add includes to factorize layouts
+  ✔ Add includes to factorize layouts @done(2015-11-12 20:55) @project(Style)
 
 Syntax Highlighting:
   ☐ Beautify syntax highlighting
