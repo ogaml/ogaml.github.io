@@ -1,5 +1,7 @@
 $(function () {
 
+  // Handles all doc drawers
+
   $('.more').hide();
 
   $('.open').show();
@@ -12,6 +14,13 @@ $(function () {
     else {
       divmore.slideUp("fast");
     }
+  });
+
+  // Handles menu for small screens
+
+  $('#nav-trigger').click(function () {
+    $('aside').toggleClass('nav-visible');
+    $(this).toggleClass('nav-visible');
   });
 
 });

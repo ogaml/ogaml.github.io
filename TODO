@@ -2,6 +2,9 @@ Style:
   ✘ Fix syntax highlighting @cancelled(2015-11-09 12:17) @project(Style)
   ✔ Something smoother than details @unsure @done(2015-11-11 22:53) @project(Style)
   ✔ Use SVG for images @done(2015-11-11 22:53) @project(Style)
+  ☐ Rethink nav / aside / header @unsure
+  ✔ Responsiveness @done(2015-11-12 01:08) @project(Style)
+  ☐ Add includes to factorize layouts
 
 Syntax Highlighting:
   ☐ Beautify syntax highlighting
