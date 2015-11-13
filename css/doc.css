@@ -275,6 +275,29 @@ article p {
   margin-bottom: 0;
 }
 
+.arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.arrow-right {
+  border-width: 5px 0 5px 8.7px;
+  border-color: transparent transparent transparent #000000;
+  transition: all 0.5s ease;
+}
+
+.arrow-bottom {
+  border-width: 4.3px 2.5px 0 2.5px;
+  border-color: #000000 transparent transparent transparent;
+  transition: all 0.5s ease;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
 span.showmore {
   overflow: scroll;
   cursor: pointer;

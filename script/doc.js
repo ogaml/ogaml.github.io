@@ -8,6 +8,10 @@ $(function () {
 
   $('.showmore').click(function () {
     var divmore = $(this).parent().children('.more');
+    var arrow   = $(this).parent().children('.arrow');
+    // arrow.toggleClass('arrow-right');
+    // arrow.toggleClass('arrow-bottom');
+    arrow.toggleClass('rotate');
     if(divmore.is(':hidden')) {
       divmore.slideDown("fast");
     }
