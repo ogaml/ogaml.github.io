@@ -315,7 +315,7 @@ div.more {
 
 div.more:after, div.more:before {
   bottom: 100%;
-  left: 27pt;
+  left: 31pt;
   border: solid transparent;
   content: " ";
   height: 0;
