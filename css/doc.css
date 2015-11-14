@@ -361,14 +361,28 @@ span.showmore div.highlight, span.showmore pre {
 }
 
 /* At least code in summary is inlined */
-span.showmore div.highlight, span.showmore pre,  span.showmore div.highlight pre code {
+span.showmore div.highlight, span.showmore pre,
+span.showmore div.highlight pre code {
   display: inline-block;
   /*overflow: visible;*/
   /*max-width: 580pt;*/
   /*background: none;*/
 }
 
-table.values div.highlight, table.values pre,  table.values div.highlight pre code {
+/* Inline code gets similar treatment */
+div.inline-code {
+  display: inline;
+}
+
+div.inline-code div.highlight, div.inline-code pre,
+div.inline-code div.highlight pre code {
+  display: inline;
+  padding: 2px 2px;
+  border: none;
+}
+
+table.values div.highlight, table.values pre,
+table.values div.highlight pre code {
   display: inline;
   /*background: none;*/
   padding: 3px 5px;

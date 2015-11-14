@@ -10,7 +10,10 @@ abstract: Getting real-time mouse information
 val position : unit -> (int * int)
 {% endcapture %}
 {% capture description %}
-...
+{% include inline-ocaml.html code="let (x,y) = position ()" %} assigns
+the number of pixels from the left of the screen in
+{% include inline-ocaml.html code="x" %} and the number of pixels from the top
+in {% include inline-ocaml.html code="y" %}.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
