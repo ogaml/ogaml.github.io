@@ -1,0 +1,3 @@
+[submodule "plugins/lionbars"]
+	path = plugins/lionbars
+	url = https://github.com/Charuru/lionbars.git
