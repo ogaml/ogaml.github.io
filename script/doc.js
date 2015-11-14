@@ -1,5 +1,14 @@
 $(function () {
 
+  // Lionbars
+  $('aside').lionbars({
+    autohide: true
+  });
+
+  $('pre').lionbars({
+    autohide: true
+  });
+
   // Handles all doc drawers
 
   $('.more').hide();
