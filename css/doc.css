@@ -317,7 +317,7 @@ div.more {
   background-color: rgb(229, 242, 246);
   border-top: 1pt solid rgb(209, 222, 226);
   border-bottom: 1pt solid rgb(209, 222, 226);
-  margin: 0 -12pt;
+  margin: 12pt -12pt 0 -12pt;
   padding: 2pt 12pt;
   position: relative;
 }
