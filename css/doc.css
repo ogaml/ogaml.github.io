@@ -44,6 +44,11 @@ table td {
   padding: 2pt 8pt 2pt 0;
 }
 
+pre {
+  overflow: scroll;
+  margin: 0;
+}
+
 .modulename {
   color: rgb(87, 110, 198);
 }
@@ -299,8 +304,12 @@ article p {
 }
 
 span.showmore {
-  overflow: scroll;
+  display: inline-block;
+  /*overflow: scroll;*/
   cursor: pointer;
+  position: relative;
+  top: 7pt;
+  max-width: calc(100% - 25pt);
 }
 
 div.more {
@@ -337,10 +346,16 @@ div.more:before {
   margin-left: -6pt;
 }
 
+/* For overflow */
+span.showmore div.highlight, span.showmore pre {
+  max-width: 100%;
+}
+
 /* At least code in summary is inlined */
 span.showmore div.highlight, span.showmore pre,  span.showmore div.highlight pre code {
   display: inline-block;
-  max-width: 580pt;
+  /*overflow: visible;*/
+  /*max-width: 580pt;*/
   /*background: none;*/
 }
 
