@@ -246,7 +246,7 @@ aside ul ul {
 main {
   top: 0;
   max-width: 600pt;
-  padding: 5pt 12pt;
+  padding: 5pt 12pt 20pt 5pt;
   margin-left: 196px;
   background-color: rgb(254, 246, 254);
 }
