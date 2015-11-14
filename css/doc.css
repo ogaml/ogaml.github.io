@@ -49,6 +49,11 @@ pre {
   margin: 0;
 }
 
+code {
+  font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  font-size: 1rem;
+}
+
 .modulename {
   color: rgb(87, 110, 198);
 }
