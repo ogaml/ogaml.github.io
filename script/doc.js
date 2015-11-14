@@ -9,6 +9,17 @@ $(function () {
     autohide: true
   });
 
+  // We do it again on resize
+  $( window ).resize(function () {
+    $('aside').lionbars({
+      autohide: true
+    });
+
+    $('pre').lionbars({
+      autohide: true
+    });
+  });
+
   // Handles all doc drawers
 
   $('.more').hide();
