@@ -318,6 +318,7 @@ span.showmore {
   position: relative;
   top: 7pt;
   max-width: calc(100% - 25pt);
+  margin-bottom: 12pt;
 }
 
 div.more {
@@ -325,7 +326,7 @@ div.more {
   background-color: rgb(229, 242, 246);
   border-top: 1pt solid rgb(209, 222, 226);
   border-bottom: 1pt solid rgb(209, 222, 226);
-  margin: 12pt -12pt 0 -12pt;
+  margin: 0 -12pt 0 -12pt;
   padding: 2pt 12pt;
   position: relative;
 }
