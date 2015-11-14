@@ -23,3 +23,7 @@ a {
 a:hover {
   color: rgb(67, 132, 185);
 }
+
+img {
+  max-width: 100%;
+}
