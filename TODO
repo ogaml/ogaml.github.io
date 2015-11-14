@@ -7,8 +7,8 @@ Style:
   ✔ Add includes to factorize layouts @done(2015-11-12 20:55) @project(Style)
 
 Syntax Highlighting:
-  ☐ Beautify syntax highlighting
-  ☐ Something more ocaml specific
+  ✔ Beautify syntax highlighting @done(2015-11-14 15:31) @project(Syntax Highlighting)
+  ✘ Something more ocaml specific @cancelled(2015-11-14 15:31) @project(Syntax Highlighting)
   ☐ Line numers are copied along with the code
   ✘ Inline code should be highlighted @cancelled(2015-11-09 15:26) @project(Syntax Highlighting)
   ✔ Inline code for summary is highlighted @done(2015-11-09 15:26) @project(Syntax Highlighting)
