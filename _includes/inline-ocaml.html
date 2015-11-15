@@ -1,1 +1,6 @@
-<div class="inline-code">{% highlight ocaml %}{{ include.code }}{% endhighlight %}</div>
+{% capture code %}
+<span class="inline-code">
+{% highlight ocaml %}{{ include.code }}{% endhighlight %}
+</span>
+{% endcapture %}
+{{ code | remove: '<div class="highlight">' | remove: '</div>' | remove: '<pre>' | remove: '</pre>' | remove: '<p>' | remove: '</p>' | strip_newlines }}

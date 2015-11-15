@@ -372,14 +372,13 @@ span.showmore div.highlight pre code {
 }
 
 /* Inline code gets similar treatment */
-div.inline-code {
-  display: inline;
+span.inline-code {
+  background-color: #49483E;
+  border-radius: 3px;
 }
 
-div.inline-code div.highlight, div.inline-code pre,
-div.inline-code div.highlight pre code {
-  display: inline;
-  padding: 2px 2px;
+span.inline-code code {
+  padding: 3px 3px;
   border: none;
 }
 
