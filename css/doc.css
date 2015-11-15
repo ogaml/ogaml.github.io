@@ -45,7 +45,7 @@ table td {
 }
 
 pre {
-  overflow: scroll;
+  overflow: auto;
   margin: 0;
 }
 
@@ -181,7 +181,8 @@ aside {
   position: fixed;
   top: 0;
   bottom: 0;
-  overflow: scroll;
+  height: 100%;
+  overflow: auto;
 }
 
 @media only screen and (max-width: 768px) {
@@ -192,7 +193,8 @@ aside {
     left: 0;
     top: 30pt;
     width: 100%;
-    overflow: scroll;
+    height: 100%;
+    overflow: auto;
     transition: opacity 0.2s 0s, visibility 0s 0.2s;
   }
 
