@@ -10,7 +10,7 @@ abstract: High-level window wrapper for rendering and event management
 exception Missing_uniform of string
 {% endcapture %}
 {% capture description %}
-...
+Raised if a uniform variable is missing when calling draw.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -18,7 +18,7 @@ exception Missing_uniform of string
 exception Invalid_uniform of string
 {% endcapture %}
 {% capture description %}
-...
+Raised when calling draw if a uniform variable has an incorrect type.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -93,7 +93,7 @@ directly.
 val poll_event : t -> OgamlCore.Event.t option
 {% endcapture %}
 {% capture description %}
-The type of a window.
+Returns the next event on the event stack, or None if the stack is empty.
 {% endcapture %}
 {% include docelem.html listing=listing description=description related="OgamlCore.Event" %}
 
@@ -119,7 +119,7 @@ val draw :
   unit -> unit
 {% endcapture %}
 {% capture description %}
-Draws a vertex array.
+Draws a vertex array using with the given program, uniforms, draw parameters, and an optional index array.
 {% endcapture %}
 {% include docelem.html listing=listing description=description related="OgamlGraphics.IndexArray,OgamlGraphics.VertexArray,OgamlGraphics.Program,OgamlGraphics.Uniform,OgamlGraphics.DrawParameter,OgamlGraphics.DrawMode" %}
 
