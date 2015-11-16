@@ -214,7 +214,8 @@ aside h1 {
 }
 
 aside ul {
-  border-left: 5pt solid rgb(38, 73, 71);
+  border-left: 3pt solid rgb(38, 73, 71);
+  padding-left: 3pt;
 }
 
 aside ul li {
@@ -223,7 +224,7 @@ aside ul li {
 
 aside a {
   display: block;
-  padding-left: 2pt;
+  /*padding-left: 2pt;*/
   width: calc(100% - 2pt);
   color: rgb(47, 61, 56);
 }
@@ -238,10 +239,10 @@ aside a:hover {
   color: rgb(47, 61, 56);
 }
 
-aside ul ul {
+/*aside ul ul {
   border-left: 5pt solid rgb(38, 73, 71);
   padding-left: 0;
-}
+}*/
 
 /* Main content */
 
