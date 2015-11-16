@@ -12,6 +12,7 @@ Syntax Highlighting:
   ☐ Line numers are copied along with the code
   ✘ Inline code should be highlighted @cancelled(2015-11-09 15:26) @project(Syntax Highlighting)
   ✔ Inline code for summary is highlighted @done(2015-11-09 15:26) @project(Syntax Highlighting)
+  ✔ Inline highlighting is broken by </p><p> @done(2015-11-16 22:18) @project(Syntax Highlighting)
 
 Documentation:
   ✔ Add more options to docelem @done(2015-11-11 22:53) @project(Documentation)

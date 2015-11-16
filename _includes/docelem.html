@@ -2,7 +2,7 @@
   <span class="arrow-right arrow{% if include.open %} rotate{% endif %}"></span>
   <span class="showmore">{% highlight ocaml %}{{ include.listing }}{% endhighlight %}</span>
   <div class="more{% if include.open %} open{% endif %}">
-  {% if include.description %}{{ include.description | markdownify }}{% endif %}
+  {% if include.description %}<p>{{ include.description }}</p>{% endif %}
 {% if include.values %}
 {% assign pairs = include.values | split: '£' %}
 <h4>Possible values</h4>
@@ -27,7 +27,7 @@
 {% assign val_desc = pair | split: '§' %}
 <tr>
 <td>{% highlight ocaml %}{{ val_desc[0] }}{% endhighlight %}</td>
-<td>{{ val_desc[1] | markdownify }}</td>
+<td>{{ val_desc[1] }}</td>
 </tr>
 {% endunless %}
 {% endfor %}
