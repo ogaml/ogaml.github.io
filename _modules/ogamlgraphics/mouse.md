@@ -21,8 +21,8 @@ in {% include inline-ocaml.html code="y" %}.
 val relative_position : Window.t -> (int * int)
 {% endcapture %}
 {% capture description %}
-`relative_position window` returns the position of the cursor in window
-coordinates.
+{% include inline-ocaml.html code='relative_position window' %} returns the
+position of the cursor in window coordinates.
 {% endcapture %}
 {% include docelem.html listing=listing description=description related="OgamlGraphics.Window" %}
 

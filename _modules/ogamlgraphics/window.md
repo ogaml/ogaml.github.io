@@ -36,8 +36,10 @@ The type of a window.
 val create : width:int -> height:int -> settings:ContextSettings.t -> t
 {% endcapture %}
 {% capture description %}
-Creates a window of size `width` x `height`.
-This window will create its openGL context following the `settings` specified.
+Creates a window of size {% include inline-ocaml.html code='width' %} x
+{% include inline-ocaml.html code='height' %}.
+This window will create its openGL context following the
+{% include inline-ocaml.html code='settings' %} specified.
 {% endcapture %}
 {% include docelem.html listing=listing description=description related="OgamlGraphics.ContextSettings" %}
 

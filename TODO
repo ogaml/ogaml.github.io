@@ -21,9 +21,10 @@ Documentation:
 
 Content:
   ☐ OgamlCore
-    ☐ Button
-    ☐ Event
-    ☐ Keycode
+    ✔ Button @done(2015-11-16 21:11) @project(Content)
+    ✔ Event @done(2015-11-16 21:26) @project(Content)
+      ☐ Still: we need to document whether coordinates are screen or window based
+    ☐ Keycode @comment(What's missing?)
     ☐ LL
       ☐ Keyboard
       ☐ Mouse

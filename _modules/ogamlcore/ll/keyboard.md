@@ -10,7 +10,9 @@ abstract: Getting real-time keyboard information
 val is_pressed : Keycode.t -> bool
 {% endcapture %}
 {% capture description %}
-`is_pressed key` will return `true` iff `key` is currently down on the keyboard.
+{% include inline-ocaml.html code='is_pressed key' %} will return
+{% include inline-ocaml.html code='true' %} iff
+{% include inline-ocaml.html code='key' %} is currently down on the keyboard.
 {% endcapture %}
 {% include docelem.html listing=listing description=description related="OgamlCore.Keycode" %}
 
@@ -20,7 +22,8 @@ val is_pressed : Keycode.t -> bool
 val is_shift_down : unit -> bool
 {% endcapture %}
 {% capture description %}
-`true` iff the shift modifier is currently down on the keyboard.
+{% include inline-ocaml.html code='true' %} iff the shift modifier is currently
+down on the keyboard.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -28,8 +31,8 @@ val is_shift_down : unit -> bool
 val is_ctrl_down : unit -> bool
 {% endcapture %}
 {% capture description %}
-`true` iff the control (or command on OSX) modifier is currently down on the
-keyboard.
+{% include inline-ocaml.html code='true' %} iff the control (or command on OSX)
+modifier is currently down on the keyboard.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -37,6 +40,7 @@ keyboard.
 val is_alt_down : unit -> bool
 {% endcapture %}
 {% capture description %}
-`true` iff the alt modifier is currently down on the keyboard.
+{% include inline-ocaml.html code='true' %} iff the alt modifier is currently
+down on the keyboard.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}

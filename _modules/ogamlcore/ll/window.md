@@ -36,7 +36,8 @@ This is the type of a Window.
 val create : width:int -> height:int -> t
 {% endcapture %}
 {% capture description %}
-Creates a window of size `width` x `height`.
+Creates a window of size {% include inline-ocaml.html code='width' %} x
+{% include inline-ocaml.html code='height' %}.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -73,7 +74,7 @@ Return the size of a window in pixels.
 val is_open : t -> bool
 {% endcapture %}
 {% capture description %}
-Return `true` iff the window is open.
+Return {% include inline-ocaml.html code='true' %} iff the window is open.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -81,7 +82,7 @@ Return `true` iff the window is open.
 val has_focus : t -> bool
 {% endcapture %}
 {% capture description %}
-Return `true` iff the window has the focus.
+Return {% include inline-ocaml.html code='true' %} iff the window has the focus.
 This should prove useful when one wants to access the mouse or keyboard
 directly.
 {% endcapture %}
