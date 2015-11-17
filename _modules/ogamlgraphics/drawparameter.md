@@ -17,7 +17,7 @@ type t
 {% include add_value.html value="TriangleFan" %}
 {% include add_value.html value="Triangles" %}
 {% include add_value.html value="Lines" %}
-{% include docelem.html listing=listing description='Type of a set of draw parameters.' %}
+{% include docelem.html listing=listing values=values description='Type of a set of draw parameters.' open='' %}
 
 {% capture listing %}
 val make : ?culling:CullingMode.t ->
