@@ -22,8 +22,8 @@ type int_32
 type ('a,'b) t
 {% endcapture %}
 {% capture description %}
-Type of data using caml type {% include inline-ocaml code="'a" %} and storing
-type {% include inline-ocaml code="'b" %}.
+Type of data using caml type {% include inline-ocaml.html code="'a" %} and storing
+type {% include inline-ocaml.html code="'b" %}.
 {% endcapture %}
 {% include docelem.html listing=listing description=description %}
 
@@ -51,7 +51,7 @@ Creates some data, the integer must be the expected size.
 val add_3f : (float, float_32) t -> OgamlMath.Vector3f.t -> unit
 {% endcapture %}
 {% capture description %}
-Adds a {% include inline-ocaml code="vector3f" %} to the data.
+Adds a {% include inline-ocaml.html code="vector3f" %} to the data.
 {% endcapture %}
 {% include docelem.html listing=listing description=description related="OgamlMath.Vector3f" %}
 
