@@ -5,6 +5,9 @@ Style:
   ☐ Rethink nav / aside / header @unsure
   ✔ Responsiveness @done(2015-11-12 01:08) @project(Style)
   ✔ Add includes to factorize layouts @done(2015-11-12 20:55) @project(Style)
+  ☐ Intermediary style between 900pt and 750pt
+  ☐ Change style of the sidebar
+  ☐ Collapsable modules
 
 Syntax Highlighting:
   ✔ Beautify syntax highlighting @done(2015-11-14 15:31) @project(Syntax Highlighting)
