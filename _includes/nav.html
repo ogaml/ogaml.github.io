@@ -4,11 +4,11 @@
 <aside>
   <header>
     <a href="/index.html">
-      <img src="/img/ogaml-logo.svg" alt="OGAML" width="196px" />
+      <img src="/img/ogaml-logo.svg" alt="OGAML" width="150pt" />
     </a>
   </header>
   <h1><a href="/doc.html">Modules</a></h1>
-  <ul>
+  <ul id="main-nav">
     {% for module in site.modules %}
     {% unless module.prefix %}
     <li><a href="{{ module.url }}">{{ module.modulename }}</a>

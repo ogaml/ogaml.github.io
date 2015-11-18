@@ -2,12 +2,14 @@
 
 html {
   font-size: 62.5%;
-  font-family: 'Open Sans', sans-serif;;
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100%;
 }
 
 body {
-  background-color: rgb(225, 232, 237);
+  /*background-color: rgb(225, 232, 237);*/
   /*background-color: rgb(254, 246, 254);*/
+  background: linear-gradient(to bottom, rgb(255, 156, 6) 0,rgb(255, 156, 6) 150pt,rgb(225, 232, 237) 150pt,rgb(225, 232, 237) 100%) no-repeat;
   font-size: 1.5rem;
   padding: 0;
   margin: 0;
@@ -78,10 +80,10 @@ nav {
   display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 760pt) {
   nav {
     display: block;
-    background-color: rgb(62, 120, 118);
+    background-color: rgb(255, 156, 6);
     width: 100%;
     height: 30pt;
     position: fixed;
@@ -176,38 +178,50 @@ nav {
 /* The side bar */
 aside {
   z-index: 2;
-  background-color: rgb(62, 120, 118);
-  width: 196px;
+  background-color: rgb(251, 251, 251);
+  width: 150pt;
   position: fixed;
   top: 0;
   bottom: 0;
   height: 100%;
   overflow: auto;
+  box-shadow: 2pt 0 15pt rgba(31, 31, 31, 0.30);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 760pt) {
   aside {
-    opacity: 0;
-    visibility: hidden;
+    /*opacity: 0;*/
+    /*visibility: hidden;*/
+    top: 100%;
     position: fixed;
     left: 0;
-    top: 30pt;
+    /*top: 30pt;*/
     width: 100%;
     height: 100%;
+    /*background-color: rgb(230, 230, 230);*/
     overflow: auto;
-    transition: opacity 0.2s 0s, visibility 0s 0.2s;
+    /*transition: opacity 0.2s 0s, visibility 0s 0.2s;*/
+    transition: top 0.2s 0s;
   }
 
   aside.nav-visible {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.2s 0s, visibility 0s 0s;
+    /*opacity: 1;*/
+    /*visibility: visible;*/
+    top:30pt;
+    /*transition: opacity 0.2s 0s, visibility 0s 0s;*/
+    transition: top 0.2s 0s;
   }
 }
 
 header {
-  background-color: rgb(40, 77, 75);
+  background-color: rgb(255, 156, 6);
 }
+
+/*@media only screen and (max-width: 760pt) {
+  header {
+    background-color: rgb(255, 156, 6);
+  }
+}*/
 
 aside h1 {
   font-size: 15pt;
@@ -216,6 +230,10 @@ aside h1 {
 aside ul {
   border-left: 3pt solid rgb(38, 73, 71);
   padding-left: 3pt;
+}
+
+#main-nav {
+  margin-bottom: 20pt;
 }
 
 aside ul li {
@@ -235,8 +253,8 @@ header a {
 }
 
 aside a:hover {
-  background-color: rgb(81, 158, 155);
-  color: rgb(47, 61, 56);
+  background-color: rgb(168, 196, 224);
+  color: rgb(17, 18, 18);
 }
 
 /*aside ul ul {
@@ -247,14 +265,18 @@ aside a:hover {
 /* Main content */
 
 main {
-  top: 0;
+  /*margin-left: 196px;*/
+  margin: auto;
+  margin-top: 30pt;
+  margin-bottom: 30pt;
   max-width: 600pt;
   padding: 5pt 12pt 20pt 12pt;
-  margin-left: 196px;
   background-color: rgb(254, 246, 254);
+  box-shadow: 0 2pt 15pt rgba(31, 31, 31, 0.30);
+  border-radius: 2pt;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 760pt) {
   main {
     width: calc(100% - 24pt);
     position: absolute;
