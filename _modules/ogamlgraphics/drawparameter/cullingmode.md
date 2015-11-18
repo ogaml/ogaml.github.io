@@ -1,16 +1,23 @@
 ---
-modulename: CullingMode
+modulename: CullingMode 
 prefix: OgamlGraphics.DrawParameter
-abstract: Culling modes enumeration
+abstract: Culling modes enumeration 
 ---
 
-This module consists of only one type enumerating culling modes.
 
+This module consists of only one type enumerating OpenGL culling modes 
 {% capture listing %}
-type t
+type t = 
+| CullNone
+| CullClockwise
+| CullCounterClockwise
 {% endcapture %}
-{% include values_reset.html %}
-{% include add_value.html value="CullNone" %}
-{% include add_value.html value="CullClockWise" %}
-{% include add_value.html value="CullCounterClockWise" %}
-{% include docelem.html listing=listing values=values open='' %}
+{% capture description %}
+Backface culling modes 
+{% endcapture %}
+{% include add_value.html value="CullNone" desc=" Culls no face " %}
+{% include add_value.html value="CullClockwise" desc=" Culls all faces displayed in CW order from the camera POV " %}
+{% include add_value.html value="CullCounterClockwise" desc=" Same with CCW " %}
+
+{% include docelem.html listing=listing description=description values=values %}
+

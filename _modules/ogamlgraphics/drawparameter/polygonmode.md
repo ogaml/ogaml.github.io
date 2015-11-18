@@ -1,16 +1,21 @@
 ---
-modulename: PolygonMode
+modulename: PolygonMode 
 prefix: OgamlGraphics.DrawParameter
-abstract: Polygon modes enumeration
+abstract: Polygon modes enumeration 
 ---
 
-This module consists of only one type enumerating polygon modes.
-
 {% capture listing %}
-type t
+type t = 
+| DrawVertices
+| DrawLines
+| DrawFill
 {% endcapture %}
-{% include values_reset.html %}
-{% include add_value.html value="DrawVertices" %}
-{% include add_value.html value="DrawLines" %}
-{% include add_value.html value="DrawFill" %}
-{% include docelem.html listing=listing values=values open='' %}
+{% capture description %}
+This module consists of only one type enumerating OpenGL polygon modes 
+{% endcapture %}
+{% include add_value.html value="DrawVertices" desc=" Draws only vertices " %}
+{% include add_value.html value="DrawLines" desc=" Draws only lines " %}
+{% include add_value.html value="DrawFill" desc=" Draws full polygons " %}
+
+{% include docelem.html listing=listing description=description values=values %}
+

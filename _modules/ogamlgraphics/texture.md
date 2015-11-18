@@ -1,7 +1,6 @@
 ---
-modulename: Texture
+modulename: Texture 
 prefix: OgamlGraphics
-abstract: High-level wrapper around GL textures
+abstract: High-level wrapper around GL textures 
 ---
-
 
