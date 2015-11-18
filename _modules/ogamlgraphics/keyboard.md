@@ -1,47 +1,47 @@
 ---
-modulename: Keyboard
+modulename: Keyboard 
 prefix: OgamlGraphics
-abstract: Getting real-time keyboard information
+abstract: Getting real-time keyboard information 
 ---
 
-### Polling Keyboard
+### Polling keyboard 
 
 {% capture listing %}
-val is_pressed : Keycode.t -> bool
+val is_pressed : OgamlCore.Keycode.t -> bool
 {% endcapture %}
 {% capture description %}
-{% include inline-ocaml.html code='is_pressed key' %} will return
-{% include inline-ocaml.html code='true' %} iff
-{% include inline-ocaml.html code='key' %} is currently down on the keyboard.
+{% include inline-ocaml.html code="is_pressed key" %} will return {% include inline-ocaml.html code="true" %} iff {% include inline-ocaml.html code="key" %} is currently pressed 
+ 
 {% endcapture %}
-{% include docelem.html listing=listing description=description related="OgamlCore.Keycode" %}
 
-### Accessing Modifiers Information
+{% include docelem.html listing=listing description=description  related="OgamlCore.Keycode" %}
+
+### Accessing modifiers information 
 
 {% capture listing %}
 val is_shift_down : unit -> bool
 {% endcapture %}
 {% capture description %}
-{% include inline-ocaml.html code='true' %} iff the shift modifier is currently
-down on the keyboard.
+{% include inline-ocaml.html code="true" %} iff the shift modifier is active 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val is_ctrl_down : unit -> bool
 {% endcapture %}
 {% capture description %}
-{% include inline-ocaml.html code='true' %} iff the control (or command on OSX)
-modifier is currently down on the
-keyboard.
+{% include inline-ocaml.html code="true" %} iff the control modifier (or cmd on OSX) is active 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val is_alt_down : unit -> bool
 {% endcapture %}
 {% capture description %}
-{% include inline-ocaml.html code='true' %} iff the alt modifier is currently
-down on the keyboard.
+{% include inline-ocaml.html code="true" %} iff the alt modifier is active 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
+

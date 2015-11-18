@@ -1,17 +1,25 @@
 ---
-modulename: DrawMode
+modulename: DrawMode 
 prefix: OgamlGraphics
-abstract: Draw modes enumeration
+abstract: Draw modes enumeration 
 ---
 
-This module consists of only one type enumerating openGL draw modes.
 
+This module consists of only one type enumerating OpenGL draw modes 
 {% capture listing %}
-type t
+type t = 
+| TriangleStrip
+| TriangleFan
+| Triangles
+| Lines
 {% endcapture %}
-{% include values_reset.html %}
+{% capture description %}
+OpenGL draw modes 
+{% endcapture %}
 {% include add_value.html value="TriangleStrip" %}
 {% include add_value.html value="TriangleFan" %}
 {% include add_value.html value="Triangles" %}
 {% include add_value.html value="Lines" %}
-{% include docelem.html listing=listing values=values open='' %}
+
+{% include docelem.html listing=listing description=description values=values %}
+
