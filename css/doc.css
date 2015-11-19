@@ -288,7 +288,7 @@ main {
     position: absolute;
     top: 30pt;
     left: 0;
-    margin: 0;
+    right: 0;
     margin: auto;
   }
 }
