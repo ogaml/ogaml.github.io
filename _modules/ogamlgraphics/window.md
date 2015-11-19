@@ -6,6 +6,11 @@ abstract: High-level window wrapper for rendering and event management
 
 ### Error Handling 
 
+
+This module provides a high-level wrapper around the low-level
+ window interface of OgamlCore and also provides drawing functions.<br/>
+ Windows encapsulate a copy of the GL state that can be retrieved
+ to obtain information about the GL context. 
 {% capture listing %}
 exception Missing_uniform of string
 {% endcapture %}

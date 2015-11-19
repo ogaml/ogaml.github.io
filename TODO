@@ -40,21 +40,9 @@ Content:
     ✔ Vector2i @done(2015-11-10 16:33) @project(Content)
     ✔ Vector2f @done(2015-11-10 16:33) @project(Content)
     ✔ Add project, lift and clamp to 3f  @done(2015-11-10 14:25) @project(Content)
-  ☐ OgamlGraphics
+  ✔ OgamlGraphics @done(2015-11-19 23:05) @project(Content)
     ✔ Color @done(2015-11-15 12:10) @project(Content)
     ✔ ContextSettings @done(2015-11-15 12:23) @project(Content)
-    ☐ DrawMode
-    ☐ DrawParameter
-    ☐ Image
-    ☐ IndexArray
-    ☐ Model
-    ☐ Poly
-    ☐ Program
-    ☐ State
-    ☐ Texture
-    ☐ Uniform
-    ☐ VertexArray
-    ☐ GL
 
 General:
   ☐ Add a tutorial collection (or maybe use posts)

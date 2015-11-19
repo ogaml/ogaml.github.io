@@ -6,6 +6,9 @@ abstract: Getting real-time keyboard information
 
 ### Polling keyboard 
 
+
+This module allows real-time access to the keyboard,
+ to check if a key is currently pressed for example. 
 {% capture listing %}
 val is_pressed : OgamlCore.Keycode.t -> bool
 {% endcapture %}

@@ -4,6 +4,10 @@ prefix: OgamlGraphics
 abstract: Encapsulates draw parameters used for rendering 
 ---
 
+
+This module encapsulates the data passed to the GPU when rendering. 
+ State changes are optimized such that calling a rendering primitive 
+ with the same parameters twice does not induce a state change. 
 {% capture listing %}
 type t
 {% endcapture %}
