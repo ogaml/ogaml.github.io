@@ -6,6 +6,9 @@ abstract: Getting real-time mouse information
 
 ### Accessing position 
 
+
+This module allows real-time access to the mouse,
+ to check if a button is currently pressed for example. 
 {% capture listing %}
 val position : unit -> (int * int)
 {% endcapture %}

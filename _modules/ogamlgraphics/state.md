@@ -4,20 +4,14 @@ prefix: OgamlGraphics
 abstract: Encapsulates data about an OpenGL internal state 
 ---
 
-{% capture listing %}
-exception Invalid_texture_unit of int
-{% endcapture %}
-{% capture description %}
 
-{% endcapture %}
-
-{% include docelem.html listing=listing description=description  %}
-
+This module encapsulates a copy of the internal GL state.
+ This allows efficient optimizations of state changes 
 {% capture listing %}
 type t
 {% endcapture %}
 {% capture description %}
-
+Type of a GL state 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  %}
@@ -26,7 +20,7 @@ type t
 val version : t -> (int * int)
 {% endcapture %}
 {% capture description %}
-
+Returns the GL version supported by this state in (major, minor) format 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  %}
@@ -35,7 +29,8 @@ val version : t -> (int * int)
 val is_version_supported : t -> (int * int) -> bool
 {% endcapture %}
 {% capture description %}
-
+Returns true iff the given GL version in (major, minor) format
+ is supported by the given state 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  %}
@@ -44,7 +39,7 @@ val is_version_supported : t -> (int * int) -> bool
 val glsl_version : t -> int
 {% endcapture %}
 {% capture description %}
-
+Returns the GLSL version supported by this state 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  %}
@@ -53,43 +48,7 @@ val glsl_version : t -> int
 val is_glsl_version_supported : t -> int -> bool
 {% endcapture %}
 {% capture description %}
-
-{% endcapture %}
-
-{% include docelem.html listing=listing description=description  %}
-
-{% capture listing %}
-val culling_mode : t -> DrawParameter.CullingMode.t
-{% endcapture %}
-{% capture description %}
-
-{% endcapture %}
-
-{% include docelem.html listing=listing description=description  %}
-
-{% capture listing %}
-val polygon_mode : t -> DrawParameter.PolygonMode.t
-{% endcapture %}
-{% capture description %}
-
-{% endcapture %}
-
-{% include docelem.html listing=listing description=description  %}
-
-{% capture listing %}
-val depth_test : t -> bool
-{% endcapture %}
-{% capture description %}
-
-{% endcapture %}
-
-{% include docelem.html listing=listing description=description  %}
-
-{% capture listing %}
-val clear_color : t -> Color.t
-{% endcapture %}
-{% capture description %}
-
+Returns true iff the given GLSL version is supported by this state 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  %}
