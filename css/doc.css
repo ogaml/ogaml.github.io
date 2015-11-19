@@ -289,6 +289,7 @@ main {
     top: 30pt;
     left: 0;
     margin: 0;
+    margin: auto;
   }
 }
 
