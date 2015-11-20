@@ -42,19 +42,38 @@ $(function () {
     }
   });
 
-  // Show all button
-  $('.showall:not(.hideall)').click(function () {
-    $('.shownav:not(.rotate)').trigger('click');
-    $(this).text('Hide all');
-    $(this).addClass('hideall');
-  });
+  // Show and hide all buttons
 
-  // Hide all button
-  $('.showall.hideall').click(function () {
+  function showall() {
+    var el = $('.showall');
+    $('.shownav:not(.rotate)').trigger('click');
+    el.text('Hide all');
+    el.off('click').on('click',showall);
+    el.click(hideall);
+  }
+
+  function hideall() {
+    var el = $('.showall');
     $('.shownav.rotate').trigger('click');
-    $(this).text('Show all');
-    $(this).removeClass('hideall');
-  });
+    el.text('Show all');
+    el.off('click').on('click',hideall);
+    el.click(showall);
+  }
+
+  $('.showall').click(showall);
+
+  // $('.showall').click(function () {
+  //   $('.shownav:not(.rotate)').trigger('click');
+  //   $(this).text('Hide all');
+  //   $(this).addClass('hideall');
+  // });
+  //
+  // // Hide all button
+  // $('.hideall').click(function () {
+  //   $('.shownav.rotate').trigger('click');
+  //   $(this).text('Show all');
+  //   $(this).removeClass('hideall');
+  // });
 
   /////////////////////////////////
   // Handles menu for small screens
