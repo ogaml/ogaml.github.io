@@ -8,7 +8,9 @@
       {% assign name = include.name %}
     {% endif %}
     {% if module.prefix == name %}
-      <li><a href="{{ module.url }}">{{ module.modulename }}</a>
+      <li>
+        <span class="arrow-right arrow shownav"></span>
+        <a href="{{ module.url }}">{{ module.modulename }}</a>
         {% include nav_tree.html prefix=module.prefix name=module.modulename %}
       </li>
     {% endif %}

@@ -7,7 +7,8 @@ Style:
   ✔ Add includes to factorize layouts @done(2015-11-12 20:55) @project(Style)
   ✔ Intermediary style between 900pt and 750pt @done(2015-11-19 01:24) @project(Style)
   ☐ Change style of the sidebar
-  ☐ Collapsable modules
+  ✔ Collapsable modules @done(2015-11-20 01:13) @project(Style)
+  ☐ For intermediary size: nav button should be aligned better
 
 Syntax Highlighting:
   ✔ Beautify syntax highlighting @done(2015-11-14 15:31) @project(Syntax Highlighting)
