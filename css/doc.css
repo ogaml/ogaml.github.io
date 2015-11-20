@@ -227,24 +227,37 @@ aside h1 {
   font-size: 15pt;
 }
 
+aside h1 .showall {
+  font-size: 10pt;
+  padding-left: 10pt;
+  cursor: pointer;
+  color: #BBDCF9;
+  font-weight: lighter;
+}
+
 aside ul {
-  border-left: 3pt solid rgb(38, 73, 71);
+  border-left: 1pt solid rgb(38, 73, 71);
   padding-left: 3pt;
+  margin-left: 3pt;
 }
 
 #main-nav {
   margin-bottom: 20pt;
 }
 
-aside ul li {
+/*aside ul li {
   width: 100%;
+}*/
+
+aside span.arrow {
+  cursor: pointer;
 }
 
 aside a {
-  display: block;
+  /*display: block;*/
   /*padding-left: 2pt;*/
-  width: calc(100% - 2pt);
-  color: rgb(47, 61, 56);
+  /*width: calc(100% - 2pt);*/
+  color: rgb(116, 131, 134);
 }
 
 header a {
@@ -253,7 +266,7 @@ header a {
 }
 
 aside a:hover {
-  background-color: rgb(168, 196, 224);
+  /*background-color: rgb(168, 196, 224);*/
   color: rgb(17, 18, 18);
 }
 
