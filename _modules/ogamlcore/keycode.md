@@ -1,21 +1,19 @@
 ---
-modulename: Keycode
+modulename: Keycode 
 prefix: OgamlCore
-abstract: keycodes for the keyboard
+abstract: Key codes 
 ---
 
-This module consists of only one type listing all keys that can be triggered
-by the user in an ogaml program.
 
+This modules contains an enumeration of the keys 
 {% capture listing %}
-type t
+type t = ...
 {% endcapture %}
-{% include values_reset.html %}
-{% capture desc %}
-Used when an unrecognized key is triggered. You don't usually need to listen on
-it.
+{% capture description %}
+Keys enumeration 
 {% endcapture %}
-{% include add_value.html value="Unknown" desc=desc %}
+{% include add_value.html value="Unknown" desc=" Used when an unrecognized key event is triggered.
+               * You usually don't need to listen on it. " %}
 {% include add_value.html value="A" %}
 {% include add_value.html value="B" %}
 {% include add_value.html value="C" %}
@@ -95,4 +93,6 @@ it.
 {% include add_value.html value="F10" %}
 {% include add_value.html value="F11" %}
 {% include add_value.html value="F12" %}
-{% include docelem.html listing=listing values=values open='' %}
+
+{% include docelem.html listing=listing description=description values=values %}
+

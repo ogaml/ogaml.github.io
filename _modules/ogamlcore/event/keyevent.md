@@ -1,32 +1,22 @@
 ---
-modulename: KeyEvent
+modulename: KeyEvent 
 prefix: OgamlCore.Event
-abstract: Key event information
+abstract: Key event information 
 ---
 
-This module simply defines a structure to get information about a key that has
-been pressed or released by the user.
 
+This module defines a public structure encapsulating information
+ about a key event 
 {% capture listing %}
-type t
+type t = {key : Keycode.t; shift : bool; control : bool; alt : bool}
 {% endcapture %}
 {% capture description %}
-A {% include inline-ocaml.html code="struct" %} containing key event
-information.
+A record containing information about a key event 
 {% endcapture %}
-{% include values_reset.html %}
-{% include add_value.html value="key : Keycode.t" desc="The key corresponding to the event." %}
-{% capture desc %}
-{% include inline-ocaml.html code="true" %} iff the shift modifier was down.
-{% endcapture %}
-{% include add_value.html value="shift : bool" desc=desc %}
-{% capture desc %}
-{% include inline-ocaml.html code="true" %} iff the control (command on OS X)
-modifier was down.
-{% endcapture %}
-{% include add_value.html value="control : bool" desc=desc %}
-{% capture desc %}
-{% include inline-ocaml.html code="true" %} iff the alt modifier was down.
-{% endcapture %}
-{% include add_value.html value="alt : bool" desc=desc %}
-{% include docelem.html listing=listing description=description struct_values=values related="OgamlCore.Keycode" open='' %}
+{% include add_value.html value="key : Keycode.t" desc=" Key coresponding to the event " %}
+{% include add_value.html value="shift : bool" desc=" $true$ iff the shift modifier was active during the event " %}
+{% include add_value.html value="control : bool" desc=" $true$ iff the ctrl modifier (or cmd under OSX) was active during the event " %}
+{% include add_value.html value="alt : bool" desc=" $true$ iff the alt modifier was active during the event " %}
+
+{% include docelem.html listing=listing description=description struct_values=values related="OgamlCore.KeyCode" %}
+

@@ -1,25 +1,22 @@
 ---
-modulename: Event
+modulename: Event 
 prefix: OgamlCore
-abstract: contains all kinds of events
+abstract: Contains all events 
 ---
 
-This module contains submodules defining types for mouse and keyboard events
-as well as a type of all events.
-
-### Type of Events
-
 {% capture listing %}
-type t
+type t = ...
 {% endcapture %}
 {% capture description %}
-A variant type describing the possible events.
+A variant type describing the possible events 
+ 
 {% endcapture %}
-{% include values_reset.html %}
-{% include add_value.html value="Closed" desc="The user asked for the window to close." %}
-{% include add_value.html value="KeyPressed     of KeyEvent.t" desc="A key was pressed." %}
-{% include add_value.html value="KeyReleased    of KeyEvent.t" desc="A key was released." %}
-{% include add_value.html value="ButtonPressed  of ButtonEvent.t" desc="A mouse button was pressed." %}
-{% include add_value.html value="ButtonReleased of ButtonEvent.t" desc="A mouse button was released." %}
-{% include add_value.html value="MouseMoved     of MouseEvent.t" desc="The mouse was moved." %}
-{% include docelem.html listing=listing description=description values=values related="OgamlCore.Event.KeyEvent,OgamlCore.Event.ButtonEvent,OgamlCore.Event.MouseEvent" open='' %}
+{% include add_value.html value="Closed" desc=" The window sending the event has been closed " %}
+{% include add_value.html value="KeyPressed of KeyEvent.t" desc=" A key has been pressed " %}
+{% include add_value.html value="KeyReleased of KeyEvent.t" desc=" A key has been released " %}
+{% include add_value.html value="ButtonPressed of ButtonEvent.t" desc=" A mouse button has been pressed " %}
+{% include add_value.html value="ButtonReleased of ButtonEvent.t" desc=" A mouse button has been released " %}
+{% include add_value.html value="MouseMoved of MouseEvent.t" desc=" The mouse has been moved " %}
+
+{% include docelem.html listing=listing description=description values=values related="OgamlCore.Event.KeyEvent" related="OgamlCore.Event.ButtonEvent" related="OgamlCore.Event.MouseEvent" %}
+

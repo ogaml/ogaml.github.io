@@ -1,55 +1,58 @@
 ---
-modulename: Mouse
+modulename: Mouse 
 prefix: OgamlCore.LL
-abstract: Getting real-time mouse information
+abstract: Getting real-time mouse information 
 ---
 
-### Accessing Position
 
+This modules provides a low-level access to the mouse
+ in real-time. You should probably use the OgamlGraphics.Mouse
+ wrapper instead. 
 {% capture listing %}
 val position : unit -> (int * int)
 {% endcapture %}
 {% capture description %}
-{% include inline-ocaml.html code="let (x,y) = position ()" %} assigns
-the number of pixels from the left of the screen to the cursor in
-{% include inline-ocaml.html code="x" %} and the number of pixels from the top
-in {% include inline-ocaml.html code="y" %}.
+Returns the postion of the mouse in screen coordinates 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val relative_position : Window.t -> (int * int)
 {% endcapture %}
 {% capture description %}
-{% include inline-ocaml.html code='relative_position window' %} returns the
-position of the cursor in window coordinates.
+Returns the position of the mouse relatively to a window
+ 
 {% endcapture %}
-{% include docelem.html listing=listing description=description related="OgamlCore.LL.Window" %}
 
-### Setting Position
+{% include docelem.html listing=listing description=description  related="OgamlCore.LL.Window" %}
 
 {% capture listing %}
 val set_position : (int * int) -> unit
 {% endcapture %}
 {% capture description %}
-Sets the position of the cursor in screen coordinates.
+Sets the position of the cursor relatively to the screen 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val set_relative_position : Window.t -> (int * int) -> unit
 {% endcapture %}
 {% capture description %}
-Sets the position of the cursor in window coordinates.
+Sets the position of the cursor relatively to a window
+ 
 {% endcapture %}
-{% include docelem.html listing=listing description=description related="OgamlCore.LL.Window" %}
 
-### Accessing Button Information
+{% include docelem.html listing=listing description=description  related="OgamlCore.LL.Window" %}
 
 {% capture listing %}
 val is_pressed : Button.t -> bool
 {% endcapture %}
 {% capture description %}
-Tells whether a given mouse button is currently held down by the user.
+Returns {% include inline-ocaml.html code="true" %} iff the given button is currently held down
+ by the user 
 {% endcapture %}
-{% include docelem.html listing=listing description=description related="OgamlCore.Button" %}
+
+{% include docelem.html listing=listing description=description  related="OgamlCore.Button" %}
+

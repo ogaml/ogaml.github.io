@@ -1,42 +1,24 @@
 ---
-modulename: ButtonEvent
+modulename: ButtonEvent 
 prefix: OgamlCore.Event
-abstract: Button event information
+abstract: Mouse button event information 
 ---
 
-This module simply defines a structure to get information about a button that
-has been pressed or released by the user on the mouse.
 
+This module defines a public structure encapsulating information
+ about a mouse button event 
 {% capture listing %}
-type t
+type t = {button : Button.t; x : int; y : int; shift : bool; control : bool; alt : bool}
 {% endcapture %}
 {% capture description %}
-A {% include inline-ocaml.html code="struct" %} containing mouse button event
-information.
+A record containing information about a mouse event 
 {% endcapture %}
-{% include values_reset.html %}
-{% include add_value.html value="button : Button.t" desc="The mouse button corresponding to the event." %}
-{% capture desc %}
-The {% include inline-ocaml.html code="x" %}-coordinate of the mouse during the
-event.
-{% endcapture %}
-{% include add_value.html value="x : int" desc=desc %}
-{% capture desc %}
-The {% include inline-ocaml.html code="y" %}-coordinate of the mouse during the
-event.
-{% endcapture %}
-{% include add_value.html value="y : int" desc=desc %}
-{% capture desc %}
-{% include inline-ocaml.html code="true" %} iff the shift modifier was down.
-{% endcapture %}
-{% include add_value.html value="shift : bool" desc=desc %}
-{% capture desc %}
-{% include inline-ocaml.html code="true" %} iff the control (command on OS X)
-modifier was down.
-{% endcapture %}
-{% include add_value.html value="control : bool" desc=desc %}
-{% capture desc %}
-{% include inline-ocaml.html code="true" %} iff the alt modifier was down.
-{% endcapture %}
-{% include add_value.html value="alt : bool" desc=desc %}
-{% include docelem.html listing=listing description=description struct_values=values related="OgamlCore.Button" open='' %}
+{% include add_value.html value="button : Button.t" desc=" Button corresponding to the event " %}
+{% include add_value.html value="x : int" desc=" X position of the mouse when the event was triggered " %}
+{% include add_value.html value="y : int" desc=" Y position of the mouse when the event was triggered " %}
+{% include add_value.html value="shift : bool" desc=" $true$ iff the shift modifier was active during the event " %}
+{% include add_value.html value="control : bool" desc=" $true$ iff the ctrl modifier (or cmd under OSX) was active during the event " %}
+{% include add_value.html value="alt : bool" desc=" $true$ iff the alt modifier was active during the event " %}
+
+{% include docelem.html listing=listing description=description struct_values=values related="OgamlCore.Button" %}
+

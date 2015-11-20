@@ -1,28 +1,20 @@
 ---
-modulename: MouseEvent
+modulename: MouseEvent 
 prefix: OgamlCore.Event
-abstract: Mouse movement event information
+abstract: Mouse movement event information 
 ---
 
-This module simply defines a structure to get information about the mouse
-location when it has been moved by the user.
 
+This module defines a public structure encapsulating information
+ about a mouse movement event 
 {% capture listing %}
-type t
+type t = {x : int; y : int}
 {% endcapture %}
 {% capture description %}
-A {% include inline-ocaml.html code="struct" %} containing mouse movement event
-information.
+Record containing the new mouse position 
 {% endcapture %}
-{% include values_reset.html %}
-{% capture desc %}
-The {% include inline-ocaml.html code="x" %}-coordinate of the mouse during the
-event.
-{% endcapture %}
-{% include add_value.html value="x : int" desc=desc %}
-{% capture desc %}
-The {% include inline-ocaml.html code="y" %}-coordinate of the mouse during the
-event.
-{% endcapture %}
-{% include add_value.html value="y : int" desc=desc %}
-{% include docelem.html listing=listing description=description struct_values=values open='' %}
+{% include add_value.html value="x : int" %}
+{% include add_value.html value="y : int" %}
+
+{% include docelem.html listing=listing description=description struct_values=values %}
+
