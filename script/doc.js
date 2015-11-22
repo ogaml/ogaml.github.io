@@ -62,19 +62,6 @@ $(function () {
 
   $('.showall').click(showall);
 
-  // $('.showall').click(function () {
-  //   $('.shownav:not(.rotate)').trigger('click');
-  //   $(this).text('Hide all');
-  //   $(this).addClass('hideall');
-  // });
-  //
-  // // Hide all button
-  // $('.hideall').click(function () {
-  //   $('.shownav.rotate').trigger('click');
-  //   $(this).text('Show all');
-  //   $(this).removeClass('hideall');
-  // });
-
   /////////////////////////////////
   // Handles menu for small screens
   /////////////////////////////////
