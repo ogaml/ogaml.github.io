@@ -3,7 +3,7 @@
 <html lang="en">
   {% include doc-head.html %}
   <body>
-    {% include nav.html %}
+    {% include nav.html prefix=page.prefix %}
     <main>
       <h1>Module
         {% if page.prefix %}<span class="prefix">{{ page.prefix }}.</span>{% endif %}<!--

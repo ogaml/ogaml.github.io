@@ -20,7 +20,7 @@
     <li>
       <span class="arrow-right arrow shownav"></span>
       <a href="{{ module.url }}">{{ module.modulename }}</a>
-      {% include nav_tree.html name=module.modulename %}
+      {% include nav_tree.html name=module.modulename mainprefix=include.prefix %}
     </li>
     {% endunless %}
     {% endfor %}

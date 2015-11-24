@@ -26,6 +26,7 @@ $(function () {
 
   $('aside ul').hide();
   $('#main-nav').show();
+  $('.nav-open').show();
 
   // We remove the arrow when the li has no ul inside
   $('aside li:not(:has(ul ul))').children('.arrow').hide();

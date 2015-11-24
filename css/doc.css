@@ -242,6 +242,10 @@ aside ul {
   margin-left: 3pt;
 }
 
+aside ul.nav-open {
+  border-color: #188BF1;
+}
+
 #main-nav {
   margin-bottom: 20pt;
 }

@@ -11,6 +11,7 @@ Style:
   ☐ For intermediary size: nav button should be aligned better
   ☐ Bigger nav for small screens
   ✔ Word wrap for small screens @done(2015-11-24 20:54) @project(Style)
+  ✔ Open current module in left nav @done(2015-11-24 21:50) @project(Style)
 
 Syntax Highlighting:
   ✔ Beautify syntax highlighting @done(2015-11-14 15:31) @project(Syntax Highlighting)
