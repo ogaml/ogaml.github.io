@@ -17,6 +17,8 @@ http://www.tipue.com/search
   /*border: 1px solid #e2e2e2;*/
 	border-top: 1px solid #e2e2e2;
   border-bottom: 1px solid #e2e2e2;
+  border-left: none;
+  border-right: none;
 	border-radius: 0;
 	-moz-appearance: none;
 	-webkit-appearance: none;
