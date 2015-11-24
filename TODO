@@ -10,6 +10,7 @@ Style:
   ✔ Collapsable modules @done(2015-11-20 01:13) @project(Style)
   ☐ For intermediary size: nav button should be aligned better
   ☐ Bigger nav for small screens
+  ✔ Word wrap for small screens @done(2015-11-24 20:54) @project(Style)
 
 Syntax Highlighting:
   ✔ Beautify syntax highlighting @done(2015-11-14 15:31) @project(Syntax Highlighting)
