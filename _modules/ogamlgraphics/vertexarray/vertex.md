@@ -20,7 +20,7 @@ Type of a vertex
 val create : ?position:OgamlMath.Vector3f.t -> ?texcoord:OgamlMath.Vector2f.t -> ?normal:OgamlMath.Vector3f.t -> ?color:Color.t -> unit -> t
 {% endcapture %}
 {% capture description %}
-Creates a vertex containing various optional attributes 
+Creates a vertex containing various optional attributes
  f
  f
  

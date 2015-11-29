@@ -11,7 +11,7 @@ This module provides an easy way to manipulate colors with
 type t = [`HSV of HSV.t | `RGB of RGB.t]
 {% endcapture %}
 {% capture description %}
-Polymorphic variant representing both color formats 
+Polymorphic variant representing both color formats
      * 
 {% endcapture %}
 

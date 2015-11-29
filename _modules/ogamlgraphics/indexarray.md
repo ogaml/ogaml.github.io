@@ -9,15 +9,6 @@ This modules provides a high-level and safe access to
  openGL index arrays. Index arrays can be passed to 3D rendering
  primitives and are used to render 3D models more efficiently. 
 {% capture listing %}
-exception Invalid_buffer of string
-{% endcapture %}
-{% capture description %}
-Raised when trying to access a destroyed buffer 
-{% endcapture %}
-
-{% include docelem.html listing=listing description=description  %}
-
-{% capture listing %}
 type static
 {% endcapture %}
 {% capture description %}
@@ -65,10 +56,12 @@ Creates a dynamic index array that can be modified after creation.
 {% include docelem.html listing=listing description=description  related="OgamlGraphics.IndexArray.Source" %}
 
 {% capture listing %}
-val rebuild : dynamic t -> Source.t -> dynamic t
+val rebuild : dynamic t -> Source.t -> int -> unit
 {% endcapture %}
 {% capture description %}
-Rebuilds a dynamic index array from a source
+{% include inline-ocaml.html code="rebuild array src offset" %} rebuilds {% include inline-ocaml.html code="array" %} starting from
+ the index at position {% include inline-ocaml.html code="offset" %} using {% include inline-ocaml.html code="src" %}.<br/>
+ The index array is modified in-place and is resized as needed.
  
 {% endcapture %}
 
@@ -79,15 +72,6 @@ val length : 'a t -> int
 {% endcapture %}
 {% capture description %}
 Returns the length of an index array 
-{% endcapture %}
-
-{% include docelem.html listing=listing description=description  %}
-
-{% capture listing %}
-val destroy : 'a t -> unit
-{% endcapture %}
-{% capture description %}
-Destroys and frees an index array from the VRAM 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  %}

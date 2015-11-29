@@ -67,7 +67,7 @@ Compiles a program from a vertex source and a fragment source.
 val from_source_list : State.t -> vertex_source:(int * src) list -> fragment_source:(int * src) list -> t
 {% endcapture %}
 {% capture description %}
-Compiles a program from a state (gotten from a window) and 
+Compiles a program from a state (gotten from a window) and
  a list of sources paired with their required GLSL version.
  The function will chose the best source for the current context.
  

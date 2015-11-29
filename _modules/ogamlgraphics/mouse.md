@@ -4,17 +4,17 @@ prefix: OgamlGraphics
 abstract: Getting real-time mouse information 
 ---
 
-### Accessing position 
-
 
 This module allows real-time access to the mouse,
  to check if a button is currently pressed for example. 
+### Accessing position 
+
 {% capture listing %}
 val position : unit -> (int * int)
 {% endcapture %}
 {% capture description %}
 Returns the position of the cursor relatively to the screen.<br/>
- {% include inline-ocaml.html code="let (x,y) = position ()" %} assigns the number of pixels from the left of 
+ {% include inline-ocaml.html code="let (x,y) = position ()" %} assigns the number of pixels from the left of
  the screen to the cursor in {% include inline-ocaml.html code="x" %} and the number of pixels from the top in {% include inline-ocaml.html code="y" %}
 
 {% endcapture %}
@@ -46,7 +46,7 @@ Sets the position of the cursor relatively to the screen
 val set_relative_position : Window.t -> (int * int) -> unit
 {% endcapture %}
 {% capture description %}
-Sets the position of the cursor relatively to a window 
+Sets the position of the cursor relatively to a window
  
 {% endcapture %}
 

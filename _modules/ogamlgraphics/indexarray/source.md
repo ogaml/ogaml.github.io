@@ -6,9 +6,9 @@ abstract: Represents a source of indices
 
 
 This module provides a way to store indices in a source
- before creating an index array. <br/>
- Note that a source is a mutable structure, therefore 
- add and (<<) will directly modify the source. <br/>
+ before creating an index array.<br/>
+ Note that a source is a mutable structure, therefore
+ add and (<<) will directly modify the source.<br/>
  Sources are redimensionned as needed when adding indices. 
 {% capture listing %}
 type t

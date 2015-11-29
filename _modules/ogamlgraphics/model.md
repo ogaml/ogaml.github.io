@@ -133,7 +133,7 @@ Adds a vertex to a model f
 val add_normal : t -> OgamlMath.Vector3f.t -> normal
 {% endcapture %}
 {% capture description %}
-Adds a normal to a model f 
+Adds a normal to a model f
  and returns its location 
 {% endcapture %}
 
@@ -143,7 +143,7 @@ Adds a normal to a model f
 val add_uv : t -> OgamlMath.Vector2f.t -> uv
 {% endcapture %}
 {% capture description %}
-Adds some UV coordinates to a model f 
+Adds some UV coordinates to a model f
  and returns its location 
 {% endcapture %}
 
@@ -205,7 +205,7 @@ val source : t -> ?index_source:IndexArray.Source.t -> vertex_source:VertexArray
 {% endcapture %}
 {% capture description %}
 Appends a model to a vertex source. Uses indexing if an index source is provided.
- Use Triangles as DrawMode with this source. 
+ Use Triangles as DrawMode with this source.
      * 
 {% endcapture %}
 

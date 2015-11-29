@@ -4,16 +4,16 @@ prefix: OgamlGraphics
 abstract: Getting real-time keyboard information 
 ---
 
-### Polling keyboard 
-
 
 This module allows real-time access to the keyboard,
  to check if a key is currently pressed for example. 
+### Polling keyboard 
+
 {% capture listing %}
 val is_pressed : OgamlCore.Keycode.t -> bool
 {% endcapture %}
 {% capture description %}
-{% include inline-ocaml.html code="is_pressed key" %} will return {% include inline-ocaml.html code="true" %} iff {% include inline-ocaml.html code="key" %} is currently pressed 
+{% include inline-ocaml.html code="is_pressed key" %} will return {% include inline-ocaml.html code="true" %} iff {% include inline-ocaml.html code="key" %} is currently pressed
  
 {% endcapture %}
 

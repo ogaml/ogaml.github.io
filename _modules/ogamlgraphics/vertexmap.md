@@ -1,18 +1,20 @@
 ---
-modulename: VertexArray 
+modulename: VertexMap 
 prefix: OgamlGraphics
-abstract: High-level wrapper around OpenGL vertex arrays 
+abstract: Customisable, high-level vertex arrays 
 ---
 
 
 This modules provides a high-level and safe access to
- openGL vertex arrays. Vertex arrays are used to store
- vertices on the GPU and can be used to render 3D models. 
+ openGL vertex arrays.
+ Vertex maps are less safe and optimized than vertex arrays,
+ but can store any kind of data (especially integers).
+ You should use the module VertexArray when possible. 
 {% capture listing %}
 exception Invalid_source of string
 {% endcapture %}
 {% capture description %}
-Raised when trying to rebuild a vertex array from an invalid source 
+Raised when trying to rebuild a vertex map from an invalid source 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  %}
@@ -40,7 +42,7 @@ Raised if an attribute defined in a GLSL program does not
 exception Missing_attribute of string
 {% endcapture %}
 {% capture description %}
-Raised when trying to draw with a vertex array containing an
+Raised when trying to draw with a vertex map containing an
  attribute that has not been declared in the GLSL program 
 {% endcapture %}
 
@@ -50,7 +52,7 @@ Raised when trying to draw with a vertex array containing an
 type static
 {% endcapture %}
 {% capture description %}
-Phantom type for static arrays 
+Phantom type for static maps 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  %}
@@ -59,7 +61,7 @@ Phantom type for static arrays
 type dynamic
 {% endcapture %}
 {% capture description %}
-Phantom type for dynamic arrays 
+Phantom type for dynamic maps 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  %}
@@ -68,7 +70,7 @@ Phantom type for dynamic arrays
 type 'a t
 {% endcapture %}
 {% capture description %}
-Type of a vertex array (static or dynamic) 
+Type of a vertex map (static or dynamic) 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  %}
@@ -77,39 +79,39 @@ Type of a vertex array (static or dynamic)
 val static : Source.t -> static t
 {% endcapture %}
 {% capture description %}
-Creates a static array from a source. A static array is faster
+Creates a static map from a source. A static map is faster
  but cannot be modified later. 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlGraphics.VertexArray.Source" %}
+{% include docelem.html listing=listing description=description  related="OgamlGraphics.VertexMap.Source" %}
 
 {% capture listing %}
 val dynamic : Source.t -> dynamic t
 {% endcapture %}
 {% capture description %}
-Creates a dynamic vertex array that can be modified later.
+Creates a dynamic vertex map that can be modified later.
  
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlGraphics.VertexArray.Source" %}
+{% include docelem.html listing=listing description=description  related="OgamlGraphics.VertexMap.Source" %}
 
 {% capture listing %}
 val rebuild : dynamic t -> Source.t -> int -> unit
 {% endcapture %}
 {% capture description %}
-{% include inline-ocaml.html code="rebuild array src offset" %} rebuilds {% include inline-ocaml.html code="array" %} starting from
+{% include inline-ocaml.html code="rebuild map src offset" %} rebuilds {% include inline-ocaml.html code="map" %} starting from
  the vertex at position {% include inline-ocaml.html code="offset" %} using {% include inline-ocaml.html code="src" %}.<br/>
- The vertex array is modified in-place and is resized as needed.
+ The vertex map is modified in-place and is resized as needed.
  
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlGraphics.VertexArray.Source" %}
+{% include docelem.html listing=listing description=description  related="OgamlGraphics.VertexMap.Source" %}
 
 {% capture listing %}
 val length : 'a t -> int
 {% endcapture %}
 {% capture description %}
-Returns the length of a vertex array 
+Returns the length of a vertex map 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  %}
@@ -118,7 +120,7 @@ Returns the length of a vertex array
 val draw : vertices:'a t -> window:Window.t -> ?indices:'b IndexArray.t -> program:Program.t -> uniform:Uniform.t -> parameters:DrawParameter.t -> mode:DrawMode.t -> unit -> unit
 {% endcapture %}
 {% capture description %}
-Draws a vertex array using the given program, uniforms, draw parameters, and an optional index array.
+Draws a vertex map using the given program, uniforms, draw parameters, and an optional index array.
      *     * 
 {% endcapture %}
 

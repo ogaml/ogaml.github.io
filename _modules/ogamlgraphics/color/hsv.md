@@ -102,7 +102,7 @@ Transparent black
 val clamp : t -> t
 {% endcapture %}
 {% capture description %}
-Clamps the s,v,a values of a color between 0 and 1, 
+Clamps the s,v,a values of a color between 0 and 1,
  and h between 0 and 2*pi 
 {% endcapture %}
 

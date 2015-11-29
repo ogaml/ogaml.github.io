@@ -6,9 +6,9 @@ abstract: Represents a source of vertices
 
 
 This module provides a way to store vertices in a source
- before creating a vertex array. <br/>
- Note that a source is a mutable structure, therefore 
- add and (<<) will directly modify the source. <br/>
+ before creating a vertex array.<br/>
+ Note that a source is a mutable structure, therefore
+ add and (<<) will directly modify the source.<br/>
  Sources are redimensionned as needed when adding vertices. 
 {% capture listing %}
 type t
@@ -23,7 +23,7 @@ Type of a source
 val empty : ?position:string -> ?normal:string -> ?texcoord:string -> ?color:string -> size:int -> unit -> t
 {% endcapture %}
 {% capture description %}
-Creates an empty source of a given initial size. The source will 
+Creates an empty source of a given initial size. The source will
  be redimensionned as needed.<br/>
  The optional arguments specify whether a source should expect vertices
  having the corrsponding attributes, and the name of the attribute
@@ -73,7 +73,7 @@ See requires_position
 val add : t -> Vertex.t -> unit
 {% endcapture %}
 {% capture description %}
-Adds a vertex to a source. Redimensions the source if needed. 
+Adds a vertex to a source. Resizes the source if needed.
  
 {% endcapture %}
 

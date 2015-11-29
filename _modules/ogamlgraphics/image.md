@@ -6,7 +6,7 @@ abstract: Image manipulation and creation
 
 
 This module provides a safe way to load and access images stored in the RAM.
- Images stored this way are uncompressed arrays of bytes and are therefore 
+ Images stored this way are uncompressed arrays of bytes and are therefore
  not meant to be stored in large quantities. 
 {% capture listing %}
 type t
@@ -50,7 +50,7 @@ Sets a pixel of an image
 val get : t -> int -> int -> Color.RGB.t
 {% endcapture %}
 {% capture description %}
-Gets the color of a pixel of an image 
+Gets the color of a pixel of an image
  
 {% endcapture %}
 

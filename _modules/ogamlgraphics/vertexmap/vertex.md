@@ -1,37 +1,18 @@
 ---
-modulename: Uniform 
-prefix: OgamlGraphics
-abstract: Encapsulates a group of uniforms for rendering 
+modulename: Vertex 
+prefix: OgamlGraphics.VertexMap
+abstract: Represents a vertex 
 ---
 
 
-This module encapsulates a set of uniforms that
- can be passed to GLSL programs 
-{% capture listing %}
-exception Unknown_uniform of string
-{% endcapture %}
-{% capture description %}
-Raised when trying to draw using a program
- that requires a uniform not provided in the set 
-{% endcapture %}
-
-{% include docelem.html listing=listing description=description  %}
-
-{% capture listing %}
-exception Invalid_uniform of string
-{% endcapture %}
-{% capture description %}
-Raised when the type of a uniform is not matching
- the type required by the GLSL program 
-{% endcapture %}
-
-{% include docelem.html listing=listing description=description  %}
-
+This module encapsulates vertices that can be passed to
+ a source. A vertex is an immutable collection of
+ attributes. 
 {% capture listing %}
 type t
 {% endcapture %}
 {% capture description %}
-Type of a set of uniforms 
+Type of a vertex 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  %}
@@ -40,7 +21,7 @@ Type of a set of uniforms
 val empty : t
 {% endcapture %}
 {% capture description %}
-Empty set of uniforms 
+Empty vertex 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  %}
@@ -49,8 +30,8 @@ Empty set of uniforms
 val vector3f : string -> OgamlMath.Vector3f.t -> t -> t
 {% endcapture %}
 {% capture description %}
-{% include inline-ocaml.html code="vector3f name vec set" %} adds the uniform {% include inline-ocaml.html code="vec" %} to {% include inline-ocaml.html code="set" %}.
- The uniform should be refered to as {% include inline-ocaml.html code="name" %} in a GLSL program.
+Adds a vector3f to a vertex. The given name must match
+ the name of the vec3 attribute in the GLSL program
  f 
 {% endcapture %}
 
@@ -60,7 +41,9 @@ val vector3f : string -> OgamlMath.Vector3f.t -> t -> t
 val vector2f : string -> OgamlMath.Vector2f.t -> t -> t
 {% endcapture %}
 {% capture description %}
-See vector3f f 
+Adds a vector2f to a vertex. The given name must match
+ the name of the vec2 attribute in the GLSL program
+ f 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
@@ -69,7 +52,9 @@ See vector3f f
 val vector3i : string -> OgamlMath.Vector3i.t -> t -> t
 {% endcapture %}
 {% capture description %}
-See vector3f i 
+Adds a vector3i to a vertex. The given name must match
+ the name of the ivec3 attribute in the GLSL program
+ i 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
@@ -78,7 +63,9 @@ See vector3f i
 val vector2i : string -> OgamlMath.Vector2i.t -> t -> t
 {% endcapture %}
 {% capture description %}
-See vector3f i 
+Adds a vector2i to a vertex. The given name must match
+ the name of the ivec2 attribute in the GLSL program
+ i 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
@@ -87,7 +74,8 @@ See vector3f i
 val int : string -> int -> t -> t
 {% endcapture %}
 {% capture description %}
-See vector3f 
+Adds an integer to a vertex. The given name must match
+ the name of the int attribute in the GLSL program 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  %}
@@ -96,35 +84,20 @@ See vector3f
 val float : string -> float -> t -> t
 {% endcapture %}
 {% capture description %}
-See vector3f 
+Adds a float to a vertex. The given name must match
+ the name of the float attribute in the GLSL program 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
-val matrix3D : string -> OgamlMath.Matrix3D.t -> t -> t
-{% endcapture %}
-{% capture description %}
-See vector3f D 
-{% endcapture %}
-
-{% include docelem.html listing=listing description=description  related="OgamlMath.Matrix" %}
-
-{% capture listing %}
 val color : string -> Color.t -> t -> t
 {% endcapture %}
 {% capture description %}
-See vector3f 
+Adds a color to a vertex. The given name must match
+ the name of the vec4 attribute in the GLSL program
+ 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  related="OgamlGraphics.Color" %}
-
-{% capture listing %}
-val texture2D : string -> Texture.Texture2D.t -> t -> t
-{% endcapture %}
-{% capture description %}
-See vector3f D 
-{% endcapture %}
-
-{% include docelem.html listing=listing description=description  related="OgamlGraphics.Texture.Texture" %}
 
