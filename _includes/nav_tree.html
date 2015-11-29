@@ -1,4 +1,11 @@
-<ul>
+{% if include.prefix %}
+  {% assign dot = "." %}
+  {% assign tmp = include.prefix | append: dot %}
+  {% assign name = tmp | append: include.name %}
+{% else %}
+  {% assign name = include.name %}
+{% endif %}
+<ul{% if include.mainname %}{% if include.mainname contains name %} class="nav-open"{% endif %}{% endif %}>
   {% for module in site.modules %}
     {% if include.prefix %}
       {% assign dot = "." %}
@@ -11,7 +18,7 @@
       <li>
         <span class="arrow-right arrow shownav"></span>
         <a href="{{ module.url }}">{{ module.modulename }}</a>
-        {% include nav_tree.html prefix=module.prefix name=module.modulename %}
+        {% include nav_tree.html prefix=module.prefix name=module.modulename mainname=include.mainname %}
       </li>
     {% endif %}
   {% endfor %}

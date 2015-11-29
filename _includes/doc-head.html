@@ -9,9 +9,14 @@
   <!-- Style -->
   <link href="/css/doc.css" rel="stylesheet">
   <link href="/css/monokai.css" rel="stylesheet">
+  <link href="/plugins/tipuesearch/tipuesearch.css" rel="stylesheet">
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="/img/favicon-ogaml.ico">
   <!-- Script -->
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="/script/doc.js"></script>
+  <!-- More? -->
+  {% if include.more %}
+  {{ include.more }}
+  {% endif %}
 </head>

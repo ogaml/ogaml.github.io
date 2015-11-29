@@ -9,11 +9,14 @@ Style:
   ☐ Change style of the sidebar
   ✔ Collapsable modules @done(2015-11-20 01:13) @project(Style)
   ☐ For intermediary size: nav button should be aligned better
+  ☐ Bigger nav for small screens
+  ✔ Word wrap for small screens @done(2015-11-24 20:54) @project(Style)
+  ✔ Open current module in left nav @done(2015-11-24 21:50) @project(Style)
 
 Syntax Highlighting:
   ✔ Beautify syntax highlighting @done(2015-11-14 15:31) @project(Syntax Highlighting)
   ✘ Something more ocaml specific @cancelled(2015-11-14 15:31) @project(Syntax Highlighting)
-  ☐ Line numers are copied along with the code
+  ☐ Line numbers are copied along with the code
   ✘ Inline code should be highlighted @cancelled(2015-11-09 15:26) @project(Syntax Highlighting)
   ✔ Inline code for summary is highlighted @done(2015-11-09 15:26) @project(Syntax Highlighting)
   ✔ Inline highlighting is broken by </p><p> @done(2015-11-16 22:18) @project(Syntax Highlighting)
@@ -23,6 +26,7 @@ Documentation:
   ☐ Make prefix clickable @unsure
   ☐ Make types/modules in descriptions clickable @do(a function that takes a string and returns the links by splitting around '.')
   ☐ Fix module quoting
+  ☐ Add tags to modules for search
 
 Content:
   ☐ OgamlCore

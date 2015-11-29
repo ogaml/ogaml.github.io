@@ -27,6 +27,10 @@ $(function () {
   $('aside ul').hide();
   $('#main-nav').show();
 
+  // Handling nav-open
+  $('.nav-open').show();
+  $('.nav-open').parent().children('.arrow').toggleClass('rotate');
+
   // We remove the arrow when the li has no ul inside
   $('aside li:not(:has(ul ul))').children('.arrow').hide();
 
@@ -61,19 +65,6 @@ $(function () {
   }
 
   $('.showall').click(showall);
-
-  // $('.showall').click(function () {
-  //   $('.shownav:not(.rotate)').trigger('click');
-  //   $(this).text('Hide all');
-  //   $(this).addClass('hideall');
-  // });
-  //
-  // // Hide all button
-  // $('.hideall').click(function () {
-  //   $('.shownav.rotate').trigger('click');
-  //   $(this).text('Show all');
-  //   $(this).removeClass('hideall');
-  // });
 
   /////////////////////////////////
   // Handles menu for small screens
