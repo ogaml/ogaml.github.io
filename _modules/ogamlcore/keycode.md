@@ -12,8 +12,7 @@ type t = ...
 {% capture description %}
 Keys enumeration 
 {% endcapture %}
-{% include add_value.html value="Unknown" desc=" Used when an unrecognized key event is triggered.
-               * You usually don't need to listen on it. " %}
+{% include add_value.html value="Unknown" desc=" Used when an unrecognized key event is triggered. You usually don't need to listen on it. " %}
 {% include add_value.html value="A" %}
 {% include add_value.html value="B" %}
 {% include add_value.html value="C" %}
