@@ -226,6 +226,7 @@ header {
 
 aside h1 {
   font-size: 15pt;
+  margin-left: 5pt;
 }
 
 aside h1 .showall {
@@ -248,6 +249,7 @@ aside ul.nav-open {
 
 #main-nav {
   margin-bottom: 20pt;
+  margin-left: 6pt;
 }
 
 /*aside ul li {
