@@ -1,170 +1,203 @@
 ---
-modulename: Vector3i
+modulename: Vector3i 
 prefix: OgamlMath
-abstract: Operation on vectors of 3 integers 
+abstract: Operations on immutable vectors of 3 ints 
 ---
 
-This module defines the vector3i type and various operations on it.
 
-### Vector Operations
+This module defines the vector3i type and various operations on it. 
+{% capture listing %}
+exception Vector3i_exception of string
+{% endcapture %}
+{% capture description %}
+Raised when an error occurs (usually a division by zero) 
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description  %}
+
+### Vector operations 
 
 {% capture listing %}
 type t = {x : int; y : int; z : int}
 {% endcapture %}
 {% capture description %}
-Type of immutable vectors of 3 integers.
+Type of immutable vectors of 3 ints 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+{% include add_value.html value="x : int" %}
+{% include add_value.html value="y : int" %}
+{% include add_value.html value="z : int" %}
+
+{% include docelem.html listing=listing description=description struct_values=values %}
 
 {% capture listing %}
 val zero : t
 {% endcapture %}
 {% capture description %}
-Zero vector.
+Zero vector 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val unit_x : t
 {% endcapture %}
 {% capture description %}
-Unit x vector.
+Unit x vector 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val unit_y : t
 {% endcapture %}
 {% capture description %}
-Unit y vector.
+Unit y vector 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val unit_z : t
 {% endcapture %}
 {% capture description %}
-Unit z vector.
+Unit z vector 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val add : t -> t -> t
 {% endcapture %}
 {% capture description %}
-Adds two vectors.
+Adds two vectors together 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val sub : t -> t -> t
 {% endcapture %}
 {% capture description %}
-sub u v computes the vector u-v.
+{% include inline-ocaml.html code="sub u v" %} computes the vector {% include inline-ocaml.html code="u - v" %} 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val prop : int -> t -> t
 {% endcapture %}
 {% capture description %}
-Multiplies a vector by a scalar.
+Multiplies a vector by a scalar 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val div : int -> t -> t
 {% endcapture %}
 {% capture description %}
-Divides a vector by a scalar. The result is rounded down.
+Divides a vector by a scalar. Raises Vector3i_exception if the scalar is zero. 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val project : t -> Vector2i.t
 {% endcapture %}
 {% capture description %}
-Projects a vector on the plane z = 0.
+Projects a vector on the plane {% include inline-ocaml.html code="z = 0" %} i 
 {% endcapture %}
-{% include docelem.html listing=listing description=description related="OgamlMath.Vector2i" %}
+
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
 
 {% capture listing %}
 val lift : Vector2i.t -> t
 {% endcapture %}
 {% capture description %}
-Lifts a 2D vector by adding z = 0.
+Lifts a 2D vector in the 3D space by setting {% include inline-ocaml.html code="z = 0" %} i 
 {% endcapture %}
-{% include docelem.html listing=listing description=description related="OgamlMath.Vector2i" %}
+
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
 
 {% capture listing %}
 val dot : t -> t -> int
 {% endcapture %}
 {% capture description %}
-Computes the dot product of two vectors.
+Computes the dot product of two vectors 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val cross : t -> t -> t
 {% endcapture %}
 {% capture description %}
-Computes the cross product of two vectors.
+Computes the cross product of two vectors 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val angle : t -> t -> float
 {% endcapture %}
 {% capture description %}
-Computes the angle between two vectors.
+Computes the angle (in radians) between two vectors 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val squared_norm : t -> int
 {% endcapture %}
 {% capture description %}
-Computes the squared norm of a vector.
+Computes the squared norm of a vector 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val norm : t -> float
 {% endcapture %}
 {% capture description %}
-Computes the norm of a vector.
+Computes the norm of a vector 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val clamp : t -> t -> t -> t
 {% endcapture %}
 {% capture description %}
-clamp v a b returns the vector u whose coordinates are the coordinates of v clamped between the coordinates of a and b. 
+{% include inline-ocaml.html code="clamp v a b" %} returns the vector whose coordinates are the coordinates of {% include inline-ocaml.html code="v" %}
+ clamped between the coordinates of {% include inline-ocaml.html code="a" %} and {% include inline-ocaml.html code="b" %} 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val max : t -> int
 {% endcapture %}
 {% capture description %}
-Returns the maximal coordinate of a vector.
+Returns the maximal coordinate of a vector 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val min : t -> int
 {% endcapture %}
 {% capture description %}
-Returns the minimal coordinate of a vector.
+Returns the minimal coordinate of a vector 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val print : t -> string
 {% endcapture %}
 {% capture description %}
-Returns a pretty-printed string.
+Returns a pretty-printed string (not for serialization) 
 {% endcapture %}
-{% include docelem.html listing=listing description=description %}
+
+{% include docelem.html listing=listing description=description  %}
 

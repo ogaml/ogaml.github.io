@@ -73,14 +73,15 @@ Frees the window and the memory
 ### Information About Windows 
 
 {% capture listing %}
-val size : t -> (int * int)
+val size : t -> OgamlMath.Vector2i.t
 {% endcapture %}
 {% capture description %}
 Returns in pixel the width and height of the window
- (it only takes into account the size of the content where you can draw, *ie* the useful information). 
+ (it only takes into account the size of the content where you can draw, *ie* the useful information).
+ i 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
 
 {% capture listing %}
 val is_open : t -> bool

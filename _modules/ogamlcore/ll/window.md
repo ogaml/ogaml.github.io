@@ -46,13 +46,14 @@ Destroys and frees the window from the memory
 {% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
-val size : t -> (int * int)
+val size : t -> OgamlMath.Vector2i.t
 {% endcapture %}
 {% capture description %}
-Returns the size of a window 
+Returns the size of a window
+ i 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
 
 {% capture listing %}
 val is_open : t -> bool

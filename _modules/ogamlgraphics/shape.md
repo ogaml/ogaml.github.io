@@ -147,7 +147,7 @@ Scales the shape.
 {% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
-val get_position : t -> OgamlMath.Vector2i.t
+val position : t -> OgamlMath.Vector2i.t
 {% endcapture %}
 {% capture description %}
 Returns the position of the origin in window coordinates. 
@@ -156,7 +156,7 @@ Returns the position of the origin in window coordinates.
 {% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
-val get_origin : t -> OgamlMath.Vector2f.t
+val origin : t -> OgamlMath.Vector2f.t
 {% endcapture %}
 {% capture description %}
 Returns the position of the origin with respect to the first point of the
@@ -166,7 +166,7 @@ Returns the position of the origin with respect to the first point of the
 {% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
-val get_rotation : t -> float
+val rotation : t -> float
 {% endcapture %}
 {% capture description %}
 Returns the angle of rotation of the shape. 
@@ -184,7 +184,7 @@ Returns the scale of the shape.
 {% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
-val get_thickness : t -> float
+val thickness : t -> float
 {% endcapture %}
 {% capture description %}
 Returns the thickness of the outline. 
@@ -193,7 +193,7 @@ Returns the thickness of the outline.
 {% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
-val get_color : t -> Color.t
+val color : t -> Color.t
 {% endcapture %}
 {% capture description %}
 Returns the filling color of the shape. 

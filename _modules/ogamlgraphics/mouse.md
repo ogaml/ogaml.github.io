@@ -10,47 +10,46 @@ This module allows real-time access to the mouse,
 ### Accessing position 
 
 {% capture listing %}
-val position : unit -> (int * int)
+val position : unit -> OgamlMath.Vector2i.t
 {% endcapture %}
 {% capture description %}
-Returns the position of the cursor relatively to the screen.<br/>
- {% include inline-ocaml.html code="let (x,y) = position ()" %} assigns the number of pixels from the left of
- the screen to the cursor in {% include inline-ocaml.html code="x" %} and the number of pixels from the top in {% include inline-ocaml.html code="y" %}
-
+Returns the position of the cursor relatively to the screen.
+ i 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
 
 {% capture listing %}
-val relative_position : Window.t -> (int * int)
+val relative_position : Window.t -> OgamlMath.Vector2i.t
 {% endcapture %}
 {% capture description %}
 Returns the position of the cursor relatively to a window.
- 
+     * i 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlGraphics.Window" %}
+{% include docelem.html listing=listing description=description  related="OgamlGraphics.Window" related="OgamlMath.Vector" %}
 
 ### Setting position 
 
 {% capture listing %}
-val set_position : (int * int) -> unit
+val set_position : OgamlMath.Vector2i.t -> unit
 {% endcapture %}
 {% capture description %}
-Sets the position of the cursor relatively to the screen 
+Sets the position of the cursor relatively to the screen
+ i 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
 
 {% capture listing %}
-val set_relative_position : Window.t -> (int * int) -> unit
+val set_relative_position : Window.t -> OgamlMath.Vector2i.t -> unit
 {% endcapture %}
 {% capture description %}
 Sets the position of the cursor relatively to a window
- 
+     * i 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlGraphics.Window" %}
+{% include docelem.html listing=listing description=description  related="OgamlGraphics.Window" related="OgamlMath.Vector" %}
 
 ### Accessing button information 
 

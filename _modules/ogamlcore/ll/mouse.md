@@ -9,42 +9,46 @@ This modules provides a low-level access to the mouse
  in real-time. You should probably use the OgamlGraphics.Mouse
  wrapper instead. 
 {% capture listing %}
-val position : unit -> (int * int)
+val position : unit -> OgamlMath.Vector2i.t
 {% endcapture %}
 {% capture description %}
 Returns the postion of the mouse in screen coordinates 
+ i 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
 
 {% capture listing %}
-val relative_position : Window.t -> (int * int)
+val relative_position : Window.t -> OgamlMath.Vector2i.t
 {% endcapture %}
 {% capture description %}
 Returns the position of the mouse relatively to a window
  
+ i 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlCore.LL.Window" %}
+{% include docelem.html listing=listing description=description  related="OgamlCore.LL.Window" related="OgamlMath.Vector" %}
 
 {% capture listing %}
-val set_position : (int * int) -> unit
+val set_position : OgamlMath.Vector2i.t -> unit
 {% endcapture %}
 {% capture description %}
 Sets the position of the cursor relatively to the screen 
+ i 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
 
 {% capture listing %}
-val set_relative_position : Window.t -> (int * int) -> unit
+val set_relative_position : Window.t -> OgamlMath.Vector2i.t -> unit
 {% endcapture %}
 {% capture description %}
 Sets the position of the cursor relatively to a window
  
+ i 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlCore.LL.Window" %}
+{% include docelem.html listing=listing description=description  related="OgamlCore.LL.Window" related="OgamlMath.Vector" %}
 
 {% capture listing %}
 val is_pressed : Button.t -> bool

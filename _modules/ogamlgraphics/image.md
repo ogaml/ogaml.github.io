@@ -28,7 +28,7 @@ Creates an image from a file, or an empty image with a given size filled with a 
 {% include docelem.html listing=listing description=description  related="OgamlGraphics.Color" %}
 
 {% capture listing %}
-val size : t -> (int * int)
+val size : t -> OgamlMath.Vector2i.t
 {% endcapture %}
 {% capture description %}
 Return the size of an image 

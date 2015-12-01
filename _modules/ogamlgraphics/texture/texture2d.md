@@ -18,17 +18,16 @@ Type of a 2D texture
 {% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
-val create : State.t -> [< `File of string | `Image of Image.t] -> t
+val create : [< `File of string | `Image of Image.t] -> t
 {% endcapture %}
 {% capture description %}
-Creates a texture from a state and a source (a file or an image)
- 
+Creates a texture from a source (a file or an image) 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlGraphics.State" %}
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
-val size : t -> (int * int)
+val size : t -> OgamlMath.Vector2i.t
 {% endcapture %}
 {% capture description %}
 Returns the size of a texture 
