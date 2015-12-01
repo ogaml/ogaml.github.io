@@ -105,19 +105,19 @@ Divides a vector by a scalar. Raises Vector3i_exception if the scalar is zero.
 val project : t -> Vector2i.t
 {% endcapture %}
 {% capture description %}
-Projects a vector on the plane {% include inline-ocaml.html code="z = 0" %} i 
+Projects a vector on the plane {% include inline-ocaml.html code="z = 0" %} 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector2i" %}
 
 {% capture listing %}
 val lift : Vector2i.t -> t
 {% endcapture %}
 {% capture description %}
-Lifts a 2D vector in the 3D space by setting {% include inline-ocaml.html code="z = 0" %} i 
+Lifts a 2D vector in the 3D space by setting {% include inline-ocaml.html code="z = 0" %} 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector2i" %}
 
 {% capture listing %}
 val dot : t -> t -> int

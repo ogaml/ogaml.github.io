@@ -78,10 +78,10 @@ val size : t -> OgamlMath.Vector2i.t
 {% capture description %}
 Returns in pixel the width and height of the window
  (it only takes into account the size of the content where you can draw, *ie* the useful information).
- i 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector2i" %}
 
 {% capture listing %}
 val is_open : t -> bool

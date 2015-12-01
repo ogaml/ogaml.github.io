@@ -96,10 +96,10 @@ val rotation : Vector3f.t -> float -> t
 {% endcapture %}
 {% capture description %}
 Returns the quaternion representing a rotation given by an axis and an angle.
- f 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val conj : t -> t

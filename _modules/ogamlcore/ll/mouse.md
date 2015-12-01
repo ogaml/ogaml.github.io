@@ -13,10 +13,10 @@ val position : unit -> OgamlMath.Vector2i.t
 {% endcapture %}
 {% capture description %}
 Returns the postion of the mouse in screen coordinates 
- i 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector2i" %}
 
 {% capture listing %}
 val relative_position : Window.t -> OgamlMath.Vector2i.t
@@ -24,20 +24,20 @@ val relative_position : Window.t -> OgamlMath.Vector2i.t
 {% capture description %}
 Returns the position of the mouse relatively to a window
  
- i 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlCore.LL.Window" related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlCore.LL.Window" related="OgamlMath.Vector2i" %}
 
 {% capture listing %}
 val set_position : OgamlMath.Vector2i.t -> unit
 {% endcapture %}
 {% capture description %}
 Sets the position of the cursor relatively to the screen 
- i 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector2i" %}
 
 {% capture listing %}
 val set_relative_position : Window.t -> OgamlMath.Vector2i.t -> unit
@@ -45,10 +45,10 @@ val set_relative_position : Window.t -> OgamlMath.Vector2i.t -> unit
 {% capture description %}
 Sets the position of the cursor relatively to a window
  
- i 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlCore.LL.Window" related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlCore.LL.Window" related="OgamlMath.Vector2i" %}
 
 {% capture listing %}
 val is_pressed : Button.t -> bool

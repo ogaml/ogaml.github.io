@@ -51,37 +51,37 @@ val vector3f : string -> OgamlMath.Vector3f.t -> t -> t
 {% capture description %}
 {% include inline-ocaml.html code="vector3f name vec set" %} adds the uniform {% include inline-ocaml.html code="vec" %} to {% include inline-ocaml.html code="set" %}.
  The uniform should be refered to as {% include inline-ocaml.html code="name" %} in a GLSL program.
- f 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val vector2f : string -> OgamlMath.Vector2f.t -> t -> t
 {% endcapture %}
 {% capture description %}
-See vector3f f 
+See vector3f 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector2f" %}
 
 {% capture listing %}
 val vector3i : string -> OgamlMath.Vector3i.t -> t -> t
 {% endcapture %}
 {% capture description %}
-See vector3f i 
+See vector3f 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3i" %}
 
 {% capture listing %}
 val vector2i : string -> OgamlMath.Vector2i.t -> t -> t
 {% endcapture %}
 {% capture description %}
-See vector3f i 
+See vector3f 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector2i" %}
 
 {% capture listing %}
 val int : string -> int -> t -> t
@@ -105,10 +105,10 @@ See vector3f
 val matrix3D : string -> OgamlMath.Matrix3D.t -> t -> t
 {% endcapture %}
 {% capture description %}
-See vector3f D 
+See vector3f 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Matrix" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Matrix3D" %}
 
 {% capture listing %}
 val color : string -> Color.t -> t -> t
@@ -123,8 +123,8 @@ See vector3f
 val texture2D : string -> Texture.Texture2D.t -> t -> t
 {% endcapture %}
 {% capture description %}
-See vector3f D 
+See vector3f 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlGraphics.Texture.Texture" %}
+{% include docelem.html listing=listing description=description  related="OgamlGraphics.Texture.Texture2D" %}
 

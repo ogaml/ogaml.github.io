@@ -32,10 +32,10 @@ val vector3f : string -> OgamlMath.Vector3f.t -> t -> t
 {% capture description %}
 Adds a vector3f to a vertex. The given name must match
  the name of the vec3 attribute in the GLSL program
- f 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val vector2f : string -> OgamlMath.Vector2f.t -> t -> t
@@ -43,10 +43,10 @@ val vector2f : string -> OgamlMath.Vector2f.t -> t -> t
 {% capture description %}
 Adds a vector2f to a vertex. The given name must match
  the name of the vec2 attribute in the GLSL program
- f 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector2f" %}
 
 {% capture listing %}
 val vector3i : string -> OgamlMath.Vector3i.t -> t -> t
@@ -54,10 +54,10 @@ val vector3i : string -> OgamlMath.Vector3i.t -> t -> t
 {% capture description %}
 Adds a vector3i to a vertex. The given name must match
  the name of the ivec3 attribute in the GLSL program
- i 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3i" %}
 
 {% capture listing %}
 val vector2i : string -> OgamlMath.Vector2i.t -> t -> t
@@ -65,10 +65,10 @@ val vector2i : string -> OgamlMath.Vector2i.t -> t -> t
 {% capture description %}
 Adds a vector2i to a vertex. The given name must match
  the name of the ivec2 attribute in the GLSL program
- i 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector2i" %}
 
 {% capture listing %}
 val int : string -> int -> t -> t

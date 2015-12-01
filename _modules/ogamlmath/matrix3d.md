@@ -48,28 +48,28 @@ Identity matrix
 val translation : Vector3f.t -> t
 {% endcapture %}
 {% capture description %}
-Builds a translation matrix from a vector f 
+Builds a translation matrix from a vector 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val scaling : Vector3f.t -> t
 {% endcapture %}
 {% capture description %}
-Builds a scaling matrix from a vector f 
+Builds a scaling matrix from a vector 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val rotation : Vector3f.t -> float -> t
 {% endcapture %}
 {% capture description %}
-Builds a rotation matrix from an axis and an angle f 
+Builds a rotation matrix from an axis and an angle 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val from_quaternion : Quaternion.t -> t
@@ -105,40 +105,40 @@ val translate : Vector3f.t -> t -> t
 {% endcapture %}
 {% capture description %}
 Translates a matrix by a vector. The original matrix is not modified. 
- f 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val scale : Vector3f.t -> t -> t
 {% endcapture %}
 {% capture description %}
 Scales a matrix by a vector. The original matrix is not modified. 
- f 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val rotate : Vector3f.t -> float -> t -> t
 {% endcapture %}
 {% capture description %}
 Rotates a matrix by an angle around a given axis. The original matrix is not modified. 
- f 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val times : t -> Vector3f.t -> Vector3f.t
 {% endcapture %}
 {% capture description %}
 Computes the (right-)product of a matrix with a column vector
- f 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val print : t -> string
@@ -157,10 +157,10 @@ val look_at : from:Vector3f.t -> at:Vector3f.t -> up:Vector3f.t -> t
 {% capture description %}
 Builds a "look-at" view matrix.
  Raises Matrix3D_exception if {% include inline-ocaml.html code="up = zero" %}.
- f 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val look_at_eulerian : from:Vector3f.t -> theta:float -> phi:float -> t
@@ -170,10 +170,10 @@ Builds a "look-at" view matrix from eulerian angles.
  Theta should be in [0;2pi] and phi in [-pi/2;pi/2]. 
  If phi = pi/2, the camera is looking up (towards positive Y). 
  If theta = 0, the camera is looking towards negative Z. 
- f 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val orthographic : right:float -> left:float -> near:float -> far:float -> top:float -> bottom:float -> t

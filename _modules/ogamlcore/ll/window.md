@@ -50,10 +50,10 @@ val size : t -> OgamlMath.Vector2i.t
 {% endcapture %}
 {% capture description %}
 Returns the size of a window
- i 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector2i" %}
 
 {% capture listing %}
 val is_open : t -> bool

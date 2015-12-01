@@ -95,19 +95,19 @@ Divides a vector by a scalar. Raises Vector2f_exception if the scalar is zero.
 val floor : t -> Vector2i.t
 {% endcapture %}
 {% capture description %}
-Rounds-down a vector i 
+Rounds-down a vector 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector2i" %}
 
 {% capture listing %}
 val from_int : Vector2i.t -> t
 {% endcapture %}
 {% capture description %}
-Returns a float vector from an int vector i 
+Returns a float vector from an int vector 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector2i" %}
 
 {% capture listing %}
 val dot : t -> t -> float

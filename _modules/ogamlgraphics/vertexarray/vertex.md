@@ -21,10 +21,8 @@ val create : ?position:OgamlMath.Vector3f.t -> ?texcoord:OgamlMath.Vector2f.t ->
 {% endcapture %}
 {% capture description %}
 Creates a vertex containing various optional attributes
- f
- f
- 
+       *       * 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" related="OgamlMath.Vector" related="OgamlGraphics.Color" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" related="OgamlMath.Vector2f" related="OgamlGraphics.Color" %}
 

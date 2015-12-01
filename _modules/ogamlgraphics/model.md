@@ -114,40 +114,37 @@ Scales a model (in place)
 val translate : t -> OgamlMath.Vector3f.t -> unit
 {% endcapture %}
 {% capture description %}
-Translates a model f 
+Translates a model 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val add_vertex : t -> OgamlMath.Vector3f.t -> vertex
 {% endcapture %}
 {% capture description %}
-Adds a vertex to a model f
- and returns its location 
+Adds a vertex to a model     * and returns its location 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val add_normal : t -> OgamlMath.Vector3f.t -> normal
 {% endcapture %}
 {% capture description %}
-Adds a normal to a model f
- and returns its location 
+Adds a normal to a model     * and returns its location 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val add_uv : t -> OgamlMath.Vector2f.t -> uv
 {% endcapture %}
 {% capture description %}
-Adds some UV coordinates to a model f
- and returns its location 
+Adds some UV coordinates to a model     * and returns its location 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector2f" %}
 
 {% capture listing %}
 val add_color : t -> Color.t -> color
@@ -174,12 +171,10 @@ val add_point : t -> vertex:OgamlMath.Vector3f.t -> ?normal:OgamlMath.Vector3f.t
 {% capture description %}
 Similar to make_point but also adds the corresponding
  parameters to the model, and returns the point location
- f
- f
- 
+     *     * 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" related="OgamlMath.Vector" related="OgamlGraphics.Color" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" related="OgamlMath.Vector2f" related="OgamlGraphics.Color" %}
 
 {% capture listing %}
 val make_face : t -> (point * point * point) -> unit

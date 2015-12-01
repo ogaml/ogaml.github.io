@@ -88,20 +88,20 @@ val to_cartesian : t -> Vector3f.t
 {% endcapture %}
 {% capture description %}
 Converts a vector represented in spherical coordinates to a vector represented in cartesian coordinates 
- f 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val from_cartesian : Vector3f.t -> t
 {% endcapture %}
 {% capture description %}
 Converts a vector represented in cartesian coordinates to a vector represented in spherical coordinates 
- f 
+ 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3f" %}
 
 {% capture listing %}
 val norm : t -> float

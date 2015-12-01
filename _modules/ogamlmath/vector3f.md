@@ -105,37 +105,37 @@ Divides a vector by a scalar. Raises Vector3f_exception if the scalar is zero.
 val floor : t -> Vector3i.t
 {% endcapture %}
 {% capture description %}
-Rounds-down a vector i 
+Rounds-down a vector 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3i" %}
 
 {% capture listing %}
 val from_int : Vector3i.t -> t
 {% endcapture %}
 {% capture description %}
-Returns a float vector from an int vector i 
+Returns a float vector from an int vector 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector3i" %}
 
 {% capture listing %}
 val project : t -> Vector2f.t
 {% endcapture %}
 {% capture description %}
-Projects a vector on the plane {% include inline-ocaml.html code="z = 0." %} f 
+Projects a vector on the plane {% include inline-ocaml.html code="z = 0." %} 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector2f" %}
 
 {% capture listing %}
 val lift : Vector2f.t -> t
 {% endcapture %}
 {% capture description %}
-Lifts a 2D vector in the 3D space by setting {% include inline-ocaml.html code="z = 0." %} f 
+Lifts a 2D vector in the 3D space by setting {% include inline-ocaml.html code="z = 0." %} 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector" %}
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector2f" %}
 
 {% capture listing %}
 val dot : t -> t -> float
