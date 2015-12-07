@@ -8,7 +8,7 @@ abstract: Contains all events
 type t = ...
 {% endcapture %}
 {% capture description %}
-A variant type describing the possible events
+A variant type describing the possible events 
 {% endcapture %}
 {% include add_value.html value="Closed" desc=" The window sending the event has been closed " %}
 {% include add_value.html value="Resized" desc=" The window has been resized by the user " %}

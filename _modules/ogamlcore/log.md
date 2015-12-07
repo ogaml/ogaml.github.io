@@ -4,6 +4,8 @@ prefix: OgamlCore
 abstract: Log system 
 ---
 
+
+This module provides a very simple log system to use with Ogaml 
 {% capture listing %}
 type level = 
 | Debug
