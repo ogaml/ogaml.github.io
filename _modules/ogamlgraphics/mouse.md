@@ -1,65 +1,60 @@
 ---
 modulename: Mouse 
 prefix: OgamlGraphics
-abstract: Getting real-time mouse information 
+abstract: Getting real-time mouse information
 ---
 
 
 This module allows real-time access to the mouse,
- to check if a button is currently pressed for example. 
-### Accessing position 
+ to check if a button is currently pressed for example.
+### Accessing position
 
 {% capture listing %}
 val position : unit -> OgamlMath.Vector2i.t
 {% endcapture %}
 {% capture description %}
 Returns the position of the cursor relatively to the screen.
- 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector2i" %}
+{% include docelem.html listing=listing description=description  related = "OgamlMath.Vector2i" %}
 
 {% capture listing %}
 val relative_position : Window.t -> OgamlMath.Vector2i.t
 {% endcapture %}
 {% capture description %}
 Returns the position of the cursor relatively to a window.
-     * 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlGraphics.Window" related="OgamlMath.Vector2i" %}
+{% include docelem.html listing=listing description=description  related = "OgamlGraphics.Window,OgamlMath.Vector2i" %}
 
-### Setting position 
+### Setting position
 
 {% capture listing %}
 val set_position : OgamlMath.Vector2i.t -> unit
 {% endcapture %}
 {% capture description %}
 Sets the position of the cursor relatively to the screen
- 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlMath.Vector2i" %}
+{% include docelem.html listing=listing description=description  related = "OgamlMath.Vector2i" %}
 
 {% capture listing %}
 val set_relative_position : Window.t -> OgamlMath.Vector2i.t -> unit
 {% endcapture %}
 {% capture description %}
 Sets the position of the cursor relatively to a window
-     * 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlGraphics.Window" related="OgamlMath.Vector2i" %}
+{% include docelem.html listing=listing description=description  related = "OgamlGraphics.Window,OgamlMath.Vector2i" %}
 
-### Accessing button information 
+### Accessing button information
 
 {% capture listing %}
 val is_pressed : OgamlCore.Button.t -> bool
 {% endcapture %}
 {% capture description %}
 Check whether a given mouse button is currently held down
- 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlCore.Button" %}
+{% include docelem.html listing=listing description=description  related = "OgamlCore.Button" %}
 

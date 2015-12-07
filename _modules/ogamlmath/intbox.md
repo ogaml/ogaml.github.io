@@ -1,16 +1,16 @@
 ---
 modulename: IntBox 
 prefix: OgamlMath
-abstract: Operations on integer boxes 
+abstract: Operations on integer boxes
 ---
 
 
-This module defines the IntBox type and various operations on it. 
+This module defines the IntBox type and various operations on it.
 {% capture listing %}
 type t = {x : int; y : int; z : int; width : int; height : int; depth : int}
 {% endcapture %}
 {% capture description %}
-Type of immutable boxes of integers 
+Type of immutable boxes of integers
 {% endcapture %}
 {% include add_value.html value="x : int" %}
 {% include add_value.html value="y : int" %}
@@ -19,105 +19,105 @@ Type of immutable boxes of integers
 {% include add_value.html value="height : int" %}
 {% include add_value.html value="depth : int" %}
 
-{% include docelem.html listing=listing description=description struct_values=values %}
+{% include docelem.html listing=listing description=description struct_values=values  %}
 
 {% capture listing %}
 val create : Vector3i.t -> Vector3i.t -> t
 {% endcapture %}
 {% capture description %}
 {% include inline-ocaml.html code="create position size" %} creates a box at position {% include inline-ocaml.html code="position" %} and
- of size {% include inline-ocaml.html code="size" %} 
+ of size {% include inline-ocaml.html code="size" %}
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 val one : t
 {% endcapture %}
 {% capture description %}
-Unit box 
+Unit box
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 val corner : t -> Vector3i.t
 {% endcapture %}
 {% capture description %}
-Returns the position of a box 
+Returns the position of a box
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 val position : t -> Vector3i.t
 {% endcapture %}
 {% capture description %}
-Alias for corner 
+Alias for corner
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 val size : t -> Vector3i.t
 {% endcapture %}
 {% capture description %}
-Returns the size of a box 
+Returns the size of a box
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 val center : t -> Vector3f.t
 {% endcapture %}
 {% capture description %}
-Returns the center of a box 
+Returns the center of a box
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 val volume : t -> int
 {% endcapture %}
 {% capture description %}
-Returns the volume of a box 
+Returns the volume of a box
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 val scale : t -> Vector3i.t -> t
 {% endcapture %}
 {% capture description %}
-Scales a box 
+Scales a box
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 val translate : t -> Vector3i.t -> t
 {% endcapture %}
 {% capture description %}
-Translates a box 
+Translates a box
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 val intersect : t -> t -> bool
 {% endcapture %}
 {% capture description %}
-{% include inline-ocaml.html code="intersect t1 t2" %} returns {% include inline-ocaml.html code="true" %} iff the boxes {% include inline-ocaml.html code="t1" %} and {% include inline-ocaml.html code="t2" %} overlap 
+{% include inline-ocaml.html code="intersect t1 t2" %} returns {% include inline-ocaml.html code="true" %} iff the boxes {% include inline-ocaml.html code="t1" %} and {% include inline-ocaml.html code="t2" %} overlap
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 val contains : t -> Vector3i.t -> bool
 {% endcapture %}
 {% capture description %}
-{% include inline-ocaml.html code="contains t p" %} returns {% include inline-ocaml.html code="true" %} iff the box {% include inline-ocaml.html code="t" %} contains {% include inline-ocaml.html code="p" %} 
+{% include inline-ocaml.html code="contains t p" %} returns {% include inline-ocaml.html code="true" %} iff the box {% include inline-ocaml.html code="t" %} contains {% include inline-ocaml.html code="p" %}
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 

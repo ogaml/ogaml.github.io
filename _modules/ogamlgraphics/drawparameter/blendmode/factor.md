@@ -1,16 +1,16 @@
 ---
 modulename: Factor 
 prefix: OgamlGraphics.DrawParameter.BlendMode
-abstract: Blending factors enumeration 
+abstract: Blending factors enumeration
 ---
 
 
-This module consists of only one type enumerating openGL blending factors 
+This module consists of only one type enumerating openGL blending factors
 {% capture listing %}
 type t = ...
 {% endcapture %}
 {% capture description %}
-Blending factors 
+Blending factors
 {% endcapture %}
 {% include add_value.html value="Zero" %}
 {% include add_value.html value="One" %}
@@ -28,5 +28,5 @@ Blending factors
 {% include add_value.html value="ConstAlpha" %}
 {% include add_value.html value="OneMinusConstAlpha" %}
 
-{% include docelem.html listing=listing description=description values=values %}
+{% include docelem.html listing=listing description=description values=values  %}
 

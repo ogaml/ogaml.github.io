@@ -1,97 +1,96 @@
 ---
 modulename: VertexArray 
 prefix: OgamlGraphics
-abstract: High-level wrapper around OpenGL vertex arrays 
+abstract: High-level wrapper around OpenGL vertex arrays
 ---
 
 
 This modules provides a high-level and safe access to
  openGL vertex arrays. Vertex arrays are used to store
- vertices on the GPU and can be used to render 3D models. 
+ vertices on the GPU and can be used to render 3D models.
 {% capture listing %}
 exception Invalid_source of string
 {% endcapture %}
 {% capture description %}
-Raised when trying to rebuild a vertex array from an invalid source 
+Raised when trying to rebuild a vertex array from an invalid source
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 exception Invalid_vertex of string
 {% endcapture %}
 {% capture description %}
-Raised if a vertex passed to a source has a wrong type 
+Raised if a vertex passed to a source has a wrong type
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 exception Invalid_attribute of string
 {% endcapture %}
 {% capture description %}
 Raised if an attribute defined in a GLSL program does not
- have a type matching the vertex's 
+ have a type matching the vertex's
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 exception Missing_attribute of string
 {% endcapture %}
 {% capture description %}
 Raised when trying to draw with a vertex array containing an
- attribute that has not been declared in the GLSL program 
+ attribute that has not been declared in the GLSL program
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 type static
 {% endcapture %}
 {% capture description %}
-Phantom type for static arrays 
+Phantom type for static arrays
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 type dynamic
 {% endcapture %}
 {% capture description %}
-Phantom type for dynamic arrays 
+Phantom type for dynamic arrays
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 type 'a t
 {% endcapture %}
 {% capture description %}
-Type of a vertex array (static or dynamic) 
+Type of a vertex array (static or dynamic)
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 val static : Source.t -> static t
 {% endcapture %}
 {% capture description %}
 Creates a static array from a source. A static array is faster
- but cannot be modified later. 
+but cannot be modified later.
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlGraphics.VertexArray.Source" %}
+{% include docelem.html listing=listing description=description  related = "OgamlGraphics.VertexArray.Source" %}
 
 {% capture listing %}
 val dynamic : Source.t -> dynamic t
 {% endcapture %}
 {% capture description %}
 Creates a dynamic vertex array that can be modified later.
- 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlGraphics.VertexArray.Source" %}
+{% include docelem.html listing=listing description=description  related = "OgamlGraphics.VertexArray.Source" %}
 
 {% capture listing %}
 val rebuild : dynamic t -> Source.t -> int -> unit
@@ -100,27 +99,25 @@ val rebuild : dynamic t -> Source.t -> int -> unit
 {% include inline-ocaml.html code="rebuild array src offset" %} rebuilds {% include inline-ocaml.html code="array" %} starting from
  the vertex at position {% include inline-ocaml.html code="offset" %} using {% include inline-ocaml.html code="src" %}.<br/>
  The vertex array is modified in-place and is resized as needed.
- 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlGraphics.VertexArray.Source" %}
+{% include docelem.html listing=listing description=description  related = "OgamlGraphics.VertexArray.Source" %}
 
 {% capture listing %}
 val length : 'a t -> int
 {% endcapture %}
 {% capture description %}
-Returns the length of a vertex array 
+Returns the length of a vertex array
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  %}
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 val draw : vertices:'a t -> window:Window.t -> ?indices:'b IndexArray.t -> program:Program.t -> uniform:Uniform.t -> parameters:DrawParameter.t -> mode:DrawMode.t -> unit -> unit
 {% endcapture %}
 {% capture description %}
 Draws a vertex array using the given program, uniforms, draw parameters, and an optional index array.
-     *     * 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlGraphics.IndexArray" related="OgamlGraphics.Window" related="OgamlGraphics.Program" related="OgamlGraphics.Uniform" related="OgamlGraphics.DrawParameter" related="OgamlGraphics.DrawMode" %}
+{% include docelem.html listing=listing description=description  related = "OgamlGraphics.IndexArray,OgamlGraphics.Window,OgamlGraphics.Program,OgamlGraphics.Uniform,OgamlGraphics.DrawParameter,OgamlGraphics.DrawMode" %}
 

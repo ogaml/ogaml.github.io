@@ -1,16 +1,16 @@
 ---
 modulename: Keycode 
 prefix: OgamlCore
-abstract: Key codes 
+abstract: Key codes
 ---
 
 
-This modules contains an enumeration of the keys 
+This modules contains an enumeration of the keys
 {% capture listing %}
 type t = ...
 {% endcapture %}
 {% capture description %}
-Keys enumeration 
+Keys enumeration
 {% endcapture %}
 {% include add_value.html value="Unknown" desc=" Used when an unrecognized key event is triggered. You usually don't need to listen on it. " %}
 {% include add_value.html value="A" %}
@@ -93,5 +93,5 @@ Keys enumeration
 {% include add_value.html value="F11" %}
 {% include add_value.html value="F12" %}
 
-{% include docelem.html listing=listing description=description values=values %}
+{% include docelem.html listing=listing description=description values=values  %}
 
