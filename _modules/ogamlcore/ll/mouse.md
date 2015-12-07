@@ -12,7 +12,7 @@ This modules provides a low-level access to the mouse
 val position : unit -> OgamlMath.Vector2i.t
 {% endcapture %}
 {% capture description %}
-Returns the postion of the mouse in screen coordinates 
+Returns the postion of the mouse in screen coordinates
  
 {% endcapture %}
 
@@ -23,8 +23,7 @@ val relative_position : Window.t -> OgamlMath.Vector2i.t
 {% endcapture %}
 {% capture description %}
 Returns the position of the mouse relatively to a window
- 
- 
+       * 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  related="OgamlCore.LL.Window" related="OgamlMath.Vector2i" %}
@@ -33,7 +32,7 @@ Returns the position of the mouse relatively to a window
 val set_position : OgamlMath.Vector2i.t -> unit
 {% endcapture %}
 {% capture description %}
-Sets the position of the cursor relatively to the screen 
+Sets the position of the cursor relatively to the screen
  
 {% endcapture %}
 
@@ -44,8 +43,7 @@ val set_relative_position : Window.t -> OgamlMath.Vector2i.t -> unit
 {% endcapture %}
 {% capture description %}
 Sets the position of the cursor relatively to a window
- 
- 
+       * 
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  related="OgamlCore.LL.Window" related="OgamlMath.Vector2i" %}

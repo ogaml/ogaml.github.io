@@ -18,12 +18,12 @@ Type of a set of draw parameters
 {% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
-val make : ?culling:CullingMode.t -> ?polygon:PolygonMode.t -> ?depth_test:bool -> ?blend_mode:BlendMode.t -> unit -> t
+val make : ?culling:CullingMode.t -> ?polygon:PolygonMode.t -> ?depth_test:bool -> ?blend_mode:BlendMode.t -> ?viewport:Viewport.t -> unit -> t
 {% endcapture %}
 {% capture description %}
 Creates a set of draw parameters
-     *     * 
+     *     *     * 
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlGraphics.DrawParameter.CullingMode" related="OgamlGraphics.DrawParameter.PolygonMode" related="OgamlGraphics.DrawParameter.BlendMode" %}
+{% include docelem.html listing=listing description=description  related="OgamlGraphics.DrawParameter.CullingMode" related="OgamlGraphics.DrawParameter.PolygonMode" related="OgamlGraphics.DrawParameter.Viewport" related="OgamlGraphics.DrawParameter.BlendMode" %}
 

@@ -9,26 +9,6 @@ This module provides a high-level wrapper around the low-level
  window interface of OgamlCore and also provides drawing functions.<br/>
  Windows encapsulate a copy of the GL state that can be retrieved
  to obtain information about the GL context. 
-### Error Handling 
-
-{% capture listing %}
-exception Missing_uniform of string
-{% endcapture %}
-{% capture description %}
-Raised if a uniform variable is missing when calling draw 
-{% endcapture %}
-
-{% include docelem.html listing=listing description=description  %}
-
-{% capture listing %}
-exception Invalid_uniform of string
-{% endcapture %}
-{% capture description %}
-Raised when calling draw if a uniform variable has an incorrect type 
-{% endcapture %}
-
-{% include docelem.html listing=listing description=description  %}
-
 ### Window creation 
 
 {% capture listing %}
@@ -41,7 +21,7 @@ The type of a window
 {% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
-val create : width:int -> height:int -> settings:ContextSettings.t -> t
+val create : width:int -> height:int -> title:string -> settings:OgamlCore.ContextSettings.t -> t
 {% endcapture %}
 {% capture description %}
 Creates a window of size {% include inline-ocaml.html code="width" %} x {% include inline-ocaml.html code="height" %}.
@@ -49,7 +29,16 @@ Creates a window of size {% include inline-ocaml.html code="width" %} x {% inclu
  
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description  related="OgamlGraphics.ContextSettings" %}
+{% include docelem.html listing=listing description=description  related="OgamlCore.ContextSettings" %}
+
+{% capture listing %}
+val set_title : t -> string -> unit
+{% endcapture %}
+{% capture description %}
+Changes the title of the window. 
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
 val close : t -> unit
@@ -69,6 +58,26 @@ Frees the window and the memory
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  %}
+
+{% capture listing %}
+val resize : t -> OgamlMath.Vector2i.t -> unit
+{% endcapture %}
+{% capture description %}
+Resizes the window.
+ 
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description  related="OgamlMath.Vector2i" %}
+
+{% capture listing %}
+val rect : t -> OgamlMath.IntRect.t
+{% endcapture %}
+{% capture description %}
+Returns the rectangle associated to a window, in screen coordinates
+ 
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description  related="OgamlMath.IntRect" %}
 
 ### Information About Windows 
 
@@ -125,7 +134,7 @@ Displays the window after the GL calls
 {% include docelem.html listing=listing description=description  %}
 
 {% capture listing %}
-val clear : t -> unit
+val clear : ?color:Color.t -> t -> unit
 {% endcapture %}
 {% capture description %}
 Clears the window 

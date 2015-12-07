@@ -102,7 +102,7 @@ Returns the length of a source
 val append : t -> t -> t
 {% endcapture %}
 {% capture description %}
-{% include inline-ocaml.html code="append s1 s2" %} appends the source {% include inline-ocaml.html code="s2" %} at the end of the source {% include inline-ocaml.html code="s1" %} (in place), 
+{% include inline-ocaml.html code="append s1 s2" %} appends the source {% include inline-ocaml.html code="s2" %} at the end of the source {% include inline-ocaml.html code="s1" %} (in place),
  and returns {% include inline-ocaml.html code="s1" %}.
  If the attribute names are different, the names in the source {% include inline-ocaml.html code="s1" %} are used.
  Raises Invalid_source if types are incompatible. 
