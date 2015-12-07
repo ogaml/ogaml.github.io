@@ -16,7 +16,7 @@ type t =
 {% capture description %}
 Type of a viewport
 {% endcapture %}
-{% include add_value.html value="Full" desc=" Full window viewport " %}
+{% include add_value.html value="Full" desc=" Full window viewport (default) " %}
 {% include add_value.html value="Relative of OgamlMath.FloatRect.t" desc=" Viewport given as a fraction of the window's size " %}
 {% include add_value.html value="Absolute of OgamlMath.IntRect.t" desc=" Viewport given in pixels " %}
 

@@ -68,6 +68,15 @@ Resizes the window.
 {% include docelem.html listing=listing description=description  related = "OgamlMath.Vector2i" %}
 
 {% capture listing %}
+val toggle_fullscreen : t -> unit
+{% endcapture %}
+{% capture description %}
+Toggles the full screen mode of a window.
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
 val rect : t -> OgamlMath.IntRect.t
 {% endcapture %}
 {% capture description %}

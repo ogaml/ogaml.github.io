@@ -17,7 +17,7 @@ Polygon drawing modes
 {% endcapture %}
 {% include add_value.html value="DrawVertices" desc=" Draws only vertices " %}
 {% include add_value.html value="DrawLines" desc=" Draws only lines " %}
-{% include add_value.html value="DrawFill" desc=" Draws full polygons " %}
+{% include add_value.html value="DrawFill" desc=" Draws full polygons (default) " %}
 
 {% include docelem.html listing=listing description=description values=values  %}
 

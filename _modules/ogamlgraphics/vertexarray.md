@@ -113,10 +113,13 @@ Returns the length of a vertex array
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val draw : vertices:'a t -> window:Window.t -> ?indices:'b IndexArray.t -> program:Program.t -> uniform:Uniform.t -> parameters:DrawParameter.t -> mode:DrawMode.t -> unit -> unit
+val draw : vertices:'a t -> window:Window.t -> ?indices:'b IndexArray.t -> program:Program.t -> ?uniform:Uniform.t -> ?parameters:DrawParameter.t -> mode:DrawMode.t -> unit -> unit
 {% endcapture %}
 {% capture description %}
-Draws a vertex array using the given program, uniforms, draw parameters, and an optional index array.
+Draws a vertex array on a window using the given parameters.
+ 
+ {% include inline-ocaml.html code="uniform" %} should provide the uniforms required by {% include inline-ocaml.html code="program" %} (defaults to empty)<br/>
+ {% include inline-ocaml.html code="parameters" %} defaults to {% include inline-ocaml.html code="DrawParameter.make ()" %}
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  related = "OgamlGraphics.IndexArray,OgamlGraphics.Window,OgamlGraphics.Program,OgamlGraphics.Uniform,OgamlGraphics.DrawParameter,OgamlGraphics.DrawMode" %}

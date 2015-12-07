@@ -56,13 +56,14 @@ Creates a line from {% include inline-ocaml.html code="top" %} (zero by default)
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val draw : window:Window.t -> shape:t -> unit
+val draw : ?parameters:DrawParameter.t -> window:Window.t -> shape:t -> unit -> unit
 {% endcapture %}
 {% capture description %}
-Draws a shape.
+Draws a shape on a window using the given parameters.<br/>
+ {% include inline-ocaml.html code="parameters" %} defaults to {% include inline-ocaml.html code="DrawParameter.make ~depth_test:false ~blend_mode:DrawParameter.BlendMode.alpha" %}
 {% endcapture %}
 
-{% include docelem.html listing=listing description=description   %}
+{% include docelem.html listing=listing description=description  related = "OgamlGraphics.DrawParameter,OgamlGraphics.Window" %}
 
 {% capture listing %}
 val set_position : t -> OgamlMath.Vector2i.t -> unit

@@ -16,7 +16,7 @@ Type of the settings structure
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val create : ?depth:int -> ?stencil:int -> ?msaa:int -> ?resizable:bool -> unit -> t
+val create : ?depth:int -> ?stencil:int -> ?msaa:int -> ?resizable:bool -> ?fullscreen:bool -> unit -> t
 {% endcapture %}
 {% capture description %}
 Creates new settings using the following parameters :<br/>
@@ -60,6 +60,15 @@ val resizable : t -> bool
 {% endcapture %}
 {% capture description %}
 Returns true iff the settings require a resizable window
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
+val fullscreen : t -> bool
+{% endcapture %}
+{% capture description %}
+Returns true iff the settings require fullscreen mode
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
