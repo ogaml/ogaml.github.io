@@ -21,7 +21,7 @@ Type of a set of draw parameters
 val make : ?culling:CullingMode.t -> ?polygon:PolygonMode.t -> ?depth_test:bool -> ?blend_mode:BlendMode.t -> ?viewport:Viewport.t -> ?antialiasing:bool -> unit -> t
 {% endcapture %}
 {% capture description %}
-Creates a set of draw parameters with the following options : <br/>
+Creates a set of draw parameters with the following options :<br/>
  {% include inline-ocaml.html code="culling" %} specifies which face should be culled (defaults to {% include inline-ocaml.html code="CullNone" %})<br/>
  {% include inline-ocaml.html code="polygon" %} specifies how to render polygons (defaults to {% include inline-ocaml.html code="DrawFill" %})<br/>
  {% include inline-ocaml.html code="depth_test" %} specifies whether depth should be tested when rendering vertices (defaults to {% include inline-ocaml.html code="true" %})<br/>

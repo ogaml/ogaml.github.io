@@ -49,6 +49,15 @@ Raised when trying to draw with a vertex map containing an
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
+exception Out_of_bounds of string
+{% endcapture %}
+{% capture description %}
+Raised when trying to draw an invalid slice of a vertex map
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
 type static
 {% endcapture %}
 {% capture description %}
@@ -115,11 +124,13 @@ Returns the length of a vertex map
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val draw : vertices:'a t -> window:Window.t -> ?indices:'b IndexArray.t -> program:Program.t -> ?uniform:Uniform.t -> ?parameters:DrawParameter.t -> mode:DrawMode.t -> unit -> unit
+val draw : vertices:'a t -> window:Window.t -> ?indices:'b IndexArray.t -> program:Program.t -> ?uniform:Uniform.t -> ?parameters:DrawParameter.t -> ?start:int -> ?length:int -> mode:DrawMode.t -> unit -> unit
 {% endcapture %}
 {% capture description %}
-Draws a vertex map on a window using the given parameters.
- 
+Draws the slice starting at {% include inline-ocaml.html code="start" %} of length {% include inline-ocaml.html code="length" %} of a vertex map on a
+ window using the given parameters.<br/>
+ {% include inline-ocaml.html code="start" %} defaults to 0<br/>
+ if {% include inline-ocaml.html code="length" %} is not provided, then the whole vertex map (starting from {% include inline-ocaml.html code="start" %}) is drawn<br/>
  {% include inline-ocaml.html code="uniform" %} should provide the uniforms required by {% include inline-ocaml.html code="program" %} (defaults to empty)<br/>
  {% include inline-ocaml.html code="parameters" %} defaults to {% include inline-ocaml.html code="DrawParameter.make ()" %}
 {% endcapture %}

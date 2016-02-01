@@ -53,3 +53,12 @@ Returns true iff the given GLSL version is supported by this state
 
 {% include docelem.html listing=listing description=description   %}
 
+{% capture listing %}
+val assert_no_error : t -> unit
+{% endcapture %}
+{% capture description %}
+Asserts that no openGL error occured internally. Used for debugging and testing.
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+

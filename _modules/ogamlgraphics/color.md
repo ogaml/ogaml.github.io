@@ -61,3 +61,12 @@ Clamps a color w.r.t RGB.clamp and HSV.clamp
 
 {% include docelem.html listing=listing description=description   %}
 
+{% capture listing %}
+val map : t -> (float -> float) -> t
+{% endcapture %}
+{% capture description %}
+Maps each value of a color
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+

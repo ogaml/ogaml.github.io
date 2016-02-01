@@ -202,6 +202,24 @@ val clamp : t -> t -> t -> t
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
+val map : t -> (float -> float) -> t
+{% endcapture %}
+{% capture description %}
+Maps each coordinate of a vector
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
+val map2 : t -> t -> (float -> float -> float) -> t
+{% endcapture %}
+{% capture description %}
+Maps each pair of coordinates of two vectors
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
 val max : t -> float
 {% endcapture %}
 {% capture description %}

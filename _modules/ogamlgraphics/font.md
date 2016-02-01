@@ -1,117 +1,97 @@
 ---
-modulename: RGB 
-prefix: OgamlGraphics.Color
-abstract: Manipulation of RGBA colors
+modulename: Font 
+prefix: OgamlGraphics
+abstract: Information about a font
 ---
 
+
+This module stores a font and dynamically
+ loads sizes and glyphs as requested by the user
 {% capture listing %}
-type t = {r : float; g : float; b : float; a : float}
+type t
 {% endcapture %}
 {% capture description %}
-Type of a color in RGBA format
-{% endcapture %}
-{% include add_value.html value="r : float" %}
-{% include add_value.html value="g : float" %}
-{% include add_value.html value="b : float" %}
-{% include add_value.html value="a : float" %}
-
-{% include docelem.html listing=listing description=description struct_values=values  %}
-
-{% capture listing %}
-val black : t
-{% endcapture %}
-{% capture description %}
-Opaque black
+Type of a font
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val white : t
+type code = [`Char of char | `Code of int]
 {% endcapture %}
 {% capture description %}
-Opaque white
+Type alias for a character given in ASCII or UTF-8
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val red : t
+val load : string -> t
 {% endcapture %}
 {% capture description %}
-Opaque red
+Loads a font from a file
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val green : t
+val glyph : t -> code -> int -> bool -> Glyph.t
 {% endcapture %}
 {% capture description %}
-Opaque green
+{% include inline-ocaml.html code="glyph font code size bold" %} returns the glyph
+ representing the character {% include inline-ocaml.html code="code" %} in {% include inline-ocaml.html code="font" %}
+ of size {% include inline-ocaml.html code="size" %} and with the modifier {% include inline-ocaml.html code="bold" %}
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val blue : t
+val kerning : t -> code -> code -> int -> float
 {% endcapture %}
 {% capture description %}
-Opaque blue
+Returns the kerning between two chars of
+ a given size, that is the horizontal offset
+ that must be applied between the two glyphs
+ (usually negative)
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val yellow : t
+val ascent : t -> int -> float
 {% endcapture %}
 {% capture description %}
-Opaque yellow
+Returns the coordinate above the baseline the font extends
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val magenta : t
+val descent : t -> int -> float
 {% endcapture %}
 {% capture description %}
-Opaque magenta
+Returns the coordinate below the baseline the font
+ extends (usually negative)
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val cyan : t
+val linegap : t -> int -> float
 {% endcapture %}
 {% capture description %}
-Opaque cyan
+Returns the distance between the descent of a line
+ and the ascent of the next line
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val transparent : t
+val spacing : t -> int -> float
 {% endcapture %}
 {% capture description %}
-Transparent black
-{% endcapture %}
-
-{% include docelem.html listing=listing description=description   %}
-
-{% capture listing %}
-val clamp : t -> t
-{% endcapture %}
-{% capture description %}
-Clamps all the values of a color between 0 and 1
-{% endcapture %}
-
-{% include docelem.html listing=listing description=description   %}
-
-{% capture listing %}
-val map : t -> (float -> float) -> t
-{% endcapture %}
-{% capture description %}
-Maps each value of a color
+Returns the space between the baseline of two lines
+ (equals ascent + linegap - descent)
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}

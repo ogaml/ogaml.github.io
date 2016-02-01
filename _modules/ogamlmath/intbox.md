@@ -26,7 +26,27 @@ val create : Vector3i.t -> Vector3i.t -> t
 {% endcapture %}
 {% capture description %}
 {% include inline-ocaml.html code="create position size" %} creates a box at position {% include inline-ocaml.html code="position" %} and
- of size {% include inline-ocaml.html code="size" %}
+ of size {% include inline-ocaml.html code="size" %}<br/>
+ The box is created such that {% include inline-ocaml.html code="width" %}, {% include inline-ocaml.html code="height" %} and {% include inline-ocaml.html code="depth" %} are {% include inline-ocaml.html code=">= 0" %}
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
+val create_from_points : Vector3i.t -> Vector3i.t -> t
+{% endcapture %}
+{% capture description %}
+{% include inline-ocaml.html code="create_from_points p1 p2" %} creates a box going from {% include inline-ocaml.html code="p1" %} to {% include inline-ocaml.html code="p2" %} 
+ such that {% include inline-ocaml.html code="width" %}, {% include inline-ocaml.html code="height" %} and {% include inline-ocaml.html code="depth" %} are {% include inline-ocaml.html code=">= 0" %}
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
+val zero : t
+{% endcapture %}
+{% capture description %}
+Zero box
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
@@ -41,7 +61,7 @@ Unit box
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val corner : t -> Vector3i.t
+val position : t -> Vector3i.t
 {% endcapture %}
 {% capture description %}
 Returns the position of a box
@@ -50,10 +70,20 @@ Returns the position of a box
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val position : t -> Vector3i.t
+val corner : t -> Vector3i.t
 {% endcapture %}
 {% capture description %}
-Alias for corner
+Returns the top corner (aka position + size) of a box
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
+val normalize : t -> t
+{% endcapture %}
+{% capture description %}
+{% include inline-ocaml.html code="normalize box" %} returns a box equivalent to {% include inline-ocaml.html code="box" %} but with
+positive {% include inline-ocaml.html code="width" %}, {% include inline-ocaml.html code="height" %} and {% include inline-ocaml.html code="depth" %}
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
@@ -89,7 +119,7 @@ Returns the volume of a box
 val scale : t -> Vector3i.t -> t
 {% endcapture %}
 {% capture description %}
-Scales a box
+Scales a box (the result is normalized)
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
@@ -117,6 +147,15 @@ val contains : t -> Vector3i.t -> bool
 {% endcapture %}
 {% capture description %}
 {% include inline-ocaml.html code="contains t p" %} returns {% include inline-ocaml.html code="true" %} iff the box {% include inline-ocaml.html code="t" %} contains {% include inline-ocaml.html code="p" %}
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
+val iter : t -> (int -> int -> int -> unit) -> unit
+{% endcapture %}
+{% capture description %}
+{% include inline-ocaml.html code="iter t f" %} iterates through all points of the box
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}

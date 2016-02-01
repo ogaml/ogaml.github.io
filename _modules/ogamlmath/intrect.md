@@ -24,16 +24,36 @@ val create : Vector2i.t -> Vector2i.t -> t
 {% endcapture %}
 {% capture description %}
 {% include inline-ocaml.html code="create position size" %} creates a rectangle at position {% include inline-ocaml.html code="position" %} and
- of size {% include inline-ocaml.html code="size" %}
+ of size {% include inline-ocaml.html code="size" %}<br/>
+ The rectangle is created such that {% include inline-ocaml.html code="width" %} and {% include inline-ocaml.html code="height" %} are {% include inline-ocaml.html code=">= 0" %}
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val corner : t -> Vector2i.t
+val create_from_points : Vector2i.t -> Vector2i.t -> t
 {% endcapture %}
 {% capture description %}
-Returns the position of a rectangle
+{% include inline-ocaml.html code="create_from_points p1 p2" %} creates a rectangle going from {% include inline-ocaml.html code="p1" %} to {% include inline-ocaml.html code="p2" %} 
+ such that {% include inline-ocaml.html code="width" %} and {% include inline-ocaml.html code="height" %} are {% include inline-ocaml.html code=">= 0" %}
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
+val zero : t
+{% endcapture %}
+{% capture description %}
+Zero rectangle
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
+val one : t
+{% endcapture %}
+{% capture description %}
+Unit rectangle
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
@@ -42,7 +62,16 @@ Returns the position of a rectangle
 val position : t -> Vector2i.t
 {% endcapture %}
 {% capture description %}
-Alias for corner
+Returns the position of a rectangle
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
+val corner : t -> Vector2i.t
+{% endcapture %}
+{% capture description %}
+Returns the top corner (aka position + size) of a rectangle
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
@@ -66,6 +95,16 @@ Returns the center of a rectangle
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
+val normalize : t -> t
+{% endcapture %}
+{% capture description %}
+{% include inline-ocaml.html code="normalize rect" %} returns a rectangle equivalent to {% include inline-ocaml.html code="rect" %} but with
+positive {% include inline-ocaml.html code="width" %} and {% include inline-ocaml.html code="height" %}
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
 val area : t -> int
 {% endcapture %}
 {% capture description %}
@@ -78,7 +117,7 @@ Returns the area of a rectangle
 val scale : t -> Vector2i.t -> t
 {% endcapture %}
 {% capture description %}
-Scales a rectangle
+Scales a rectangle (the result is normalized)
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
@@ -106,6 +145,15 @@ val contains : t -> Vector2i.t -> bool
 {% endcapture %}
 {% capture description %}
 {% include inline-ocaml.html code="contains t p" %} returns {% include inline-ocaml.html code="true" %} iff the rectangle {% include inline-ocaml.html code="t" %} contains {% include inline-ocaml.html code="p" %}
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
+val iter : t -> (int -> int -> unit) -> unit
+{% endcapture %}
+{% capture description %}
+{% include inline-ocaml.html code="iter t f" %} iterates through all points of the rectangle
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}

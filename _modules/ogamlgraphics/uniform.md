@@ -110,6 +110,15 @@ See vector3f
 {% include docelem.html listing=listing description=description  related = "OgamlMath.Matrix3D" %}
 
 {% capture listing %}
+val matrix2D : string -> OgamlMath.Matrix2D.t -> t -> t
+{% endcapture %}
+{% capture description %}
+See vector3f
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description  related = "OgamlMath.Matrix2D" %}
+
+{% capture listing %}
 val color : string -> Color.t -> t -> t
 {% endcapture %}
 {% capture description %}

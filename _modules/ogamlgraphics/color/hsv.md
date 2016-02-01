@@ -108,3 +108,12 @@ Clamps the s,v,a values of a color between 0 and 1,
 
 {% include docelem.html listing=listing description=description   %}
 
+{% capture listing %}
+val map : t -> (float -> float) -> t
+{% endcapture %}
+{% capture description %}
+Maps each value of a color
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
