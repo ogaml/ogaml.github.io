@@ -242,13 +242,11 @@ val raytrace_points : t -> t -> (float * t * t) list
 {% endcapture %}
 {% capture description %}
 {% include inline-ocaml.html code="raytrace_points p1 p2" %} returns the list of integer-valued points (squares) on 
- the line from {% include inline-ocaml.html code="p1" %} to {% include inline-ocaml.html code="p2" %}  
- 
- Each point is a triplet of the form {% include inline-ocaml.html code="(t, p, f)" %} such that :
-  
-  {% include inline-ocaml.html code="t" %} is the time at the intersection between the line and the point<br/>
-  {% include inline-ocaml.html code="p" %} are the (integer) coordinates of the point<br/>
-  {% include inline-ocaml.html code="f" %} is a unit vector indicating which face of the square has been intersected
+ the line from {% include inline-ocaml.html code="p1" %} to {% include inline-ocaml.html code="p2" %}  <br/>
+ Each point is a triplet of the form {% include inline-ocaml.html code="(t, p, f)" %} such that :<br/>
+ {% include inline-ocaml.html code="t" %} is the time at the intersection between the line and the point<br/>
+ {% include inline-ocaml.html code="p" %} stores the (integer) coordinates of the point<br/>
+ {% include inline-ocaml.html code="f" %} is a unit vector indicating which face of the square has been intersected
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}

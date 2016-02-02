@@ -7,7 +7,7 @@ redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "strikethrough", "superscript", "with_toc_data"]
 
 # Syntax highlighting
-highlighter: pygments
+highlighter: rouge
 
 # Exclude non website files
 exclude: ['.gitignore', 'Gemfile', 'README.md', 'TODO']
