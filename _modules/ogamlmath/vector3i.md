@@ -211,6 +211,17 @@ Returns the minimal coordinate of a vector
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
+val raster : t -> t -> t list
+{% endcapture %}
+{% capture description %}
+{% include inline-ocaml.html code="raster p1 p2" %} applies the Bresenham's line algorithm between the points
+ {% include inline-ocaml.html code="p1" %} and {% include inline-ocaml.html code="p2" %} and returns the list of points constituting the line <br/>
+ Note : should not be used for precise raytracing as it may miss points
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
 val print : t -> string
 {% endcapture %}
 {% capture description %}
