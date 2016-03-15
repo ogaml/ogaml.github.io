@@ -106,7 +106,7 @@ Those functions provide a way to construct various (and even
  Most constructors require a list of points of the form {% include inline-ocaml.html code="(dt, v)" %}
  such that the created interpolator will take the value {% include inline-ocaml.html code="v" %}
  at time {% include inline-ocaml.html code="dt" %}.<br/>
- The {% include inline-ocaml.html code="cst_*" %} variants create constant-speed iterators 
+ The {% include inline-ocaml.html code="cst_*" %} variants create constant-speed interpolators 
  so the {% include inline-ocaml.html code="dt" %} parameter is not required.
 {% capture listing %}
 val custom : (float -> 'a) -> 'a t
@@ -239,7 +239,7 @@ val collapse : 'a t list -> 'a list t
 {% endcapture %}
 {% capture description %}
 Returns a list-interpolator from a list of interpolators.<br/>
- The new iterator will not have any modifiers.
+ The new interpolator will not have any modifiers.
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
@@ -249,7 +249,7 @@ val vector3f : float t -> float t -> float t -> OgamlMath.Vector3f.t t
 {% endcapture %}
 {% capture description %}
 Returns a vector3f interpolator from three float interpolators. <br/>
- The new iterator will not have any modifiers.
+ The new interpolator will not have any modifiers.
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
@@ -259,7 +259,7 @@ val vector2f : float t -> float t -> OgamlMath.Vector2f.t t
 {% endcapture %}
 {% capture description %}
 Returns a vector2f interpolator from two float interpolators. <br/>
- The new iterator will not have any modifiers.
+ The new interpolator will not have any modifiers.
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}

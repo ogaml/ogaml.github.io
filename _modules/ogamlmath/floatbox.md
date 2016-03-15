@@ -26,8 +26,7 @@ val create : Vector3f.t -> Vector3f.t -> t
 {% endcapture %}
 {% capture description %}
 {% include inline-ocaml.html code="create position size" %} creates a box at position {% include inline-ocaml.html code="position" %} and
- of size {% include inline-ocaml.html code="size" %}<br/>
- The box is created such that {% include inline-ocaml.html code="width" %}, {% include inline-ocaml.html code="height" %} and {% include inline-ocaml.html code="depth" %} are {% include inline-ocaml.html code=">= 0" %}
+ of size {% include inline-ocaml.html code="size" %}
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
@@ -36,8 +35,7 @@ val create : Vector3f.t -> Vector3f.t -> t
 val create_from_points : Vector3f.t -> Vector3f.t -> t
 {% endcapture %}
 {% capture description %}
-{% include inline-ocaml.html code="create_from_points p1 p2" %} creates a box going from {% include inline-ocaml.html code="p1" %} to {% include inline-ocaml.html code="p2" %} 
- such that {% include inline-ocaml.html code="width" %}, {% include inline-ocaml.html code="height" %} and {% include inline-ocaml.html code="depth" %} are {% include inline-ocaml.html code=">= 0" %}
+{% include inline-ocaml.html code="create_from_points p1 p2" %} creates a box going from {% include inline-ocaml.html code="p1" %} to {% include inline-ocaml.html code="p2" %}
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
@@ -70,6 +68,16 @@ Returns the position of a box
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
+val abs_position : t -> Vector3f.t
+{% endcapture %}
+{% capture description %}
+Returns the absolute position of a box, that is the point of minimal
+ coordinates
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
 val corner : t -> Vector3f.t
 {% endcapture %}
 {% capture description %}
@@ -88,6 +96,15 @@ Returns the size of a box
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
+val abs_size : t -> Vector3f.t
+{% endcapture %}
+{% capture description %}
+Returnrs the absolute size of a box
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
 val center : t -> Vector3f.t
 {% endcapture %}
 {% capture description %}
@@ -101,7 +118,7 @@ val normalize : t -> t
 {% endcapture %}
 {% capture description %}
 {% include inline-ocaml.html code="normalize box" %} returns a box equivalent to {% include inline-ocaml.html code="box" %} but with
-positive {% include inline-ocaml.html code="width" %}, {% include inline-ocaml.html code="height" %} and {% include inline-ocaml.html code="depth" %}
+positive size
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
@@ -152,10 +169,10 @@ Converts a float box to an integer box
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val intersect : t -> t -> bool
+val intersects : t -> t -> bool
 {% endcapture %}
 {% capture description %}
-{% include inline-ocaml.html code="intersect t1 t2" %} returns {% include inline-ocaml.html code="true" %} iff the boxes {% include inline-ocaml.html code="t1" %} and {% include inline-ocaml.html code="t2" %} overlap
+{% include inline-ocaml.html code="intersects t1 t2" %} returns {% include inline-ocaml.html code="true" %} iff the boxes {% include inline-ocaml.html code="t1" %} and {% include inline-ocaml.html code="t2" %} overlap
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}

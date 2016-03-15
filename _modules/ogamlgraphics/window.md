@@ -21,11 +21,15 @@ The type of a window
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val create : width:int -> height:int -> title:string -> settings:OgamlCore.ContextSettings.t -> t
+val create : ?width:int -> ?height:int -> ?title:string -> ?settings:OgamlCore.ContextSettings.t -> unit -> t
 {% endcapture %}
 {% capture description %}
 Creates a window of size {% include inline-ocaml.html code="width" %} x {% include inline-ocaml.html code="height" %}.
- This window will create its openGL context following the specified settings.
+ This window will create its openGL context following the specified settings.<br/>
+ {% include inline-ocaml.html code="width" %} defaults to 800<br/>
+ {% include inline-ocaml.html code="height" %} defaults to 600<br/>
+ {% include inline-ocaml.html code="title" %} defaults to ""<br/>
+ {% include inline-ocaml.html code="settings" %} defaults to the default context settings
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description  related = "OgamlCore.ContextSettings" %}

@@ -1,152 +1,147 @@
 ---
-modulename: Sprite 
-prefix: OgamlGraphics
-abstract: Creation and manipulation of 2D sprites
+modulename: UTF8String 
+prefix: OgamlUtils
+abstract: UTF-8 String representation and manipulation
 ---
+
+{% capture listing %}
+type code = int
+{% endcapture %}
+{% capture description %}
+Type of a UTF-8 character code
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
 type t
 {% endcapture %}
 {% capture description %}
-Type of sprites
+Type of a UTF-8 encoded string
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val create : texture:Texture.Texture2D.t -> ?origin:OgamlMath.Vector2f.t -> ?position:OgamlMath.Vector2f.t -> ?scale:OgamlMath.Vector2f.t -> ?size:OgamlMath.Vector2f.t -> ?rotation:float -> unit -> t
+exception UTF8_error of string
 {% endcapture %}
 {% capture description %}
-Creates a sprite.
+Raised when a string is not correctly encoded
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val draw : ?parameters:DrawParameter.t -> window:Window.t -> sprite:t -> unit -> unit
+exception Out_of_bounds of string
 {% endcapture %}
 {% capture description %}
-Draws a sprite on a window using the given parameters.<br/>
- {% include inline-ocaml.html code="parameters" %} defaults to {% include inline-ocaml.html code="DrawParameter.make ~depth_test:false ~blend_mode:DrawParameter.BlendMode.alpha" %}
-{% endcapture %}
-
-{% include docelem.html listing=listing description=description  related = "OgamlGraphics.DrawParameter,OgamlGraphics.Window" %}
-
-{% capture listing %}
-val set_position : t -> OgamlMath.Vector2f.t -> unit
-{% endcapture %}
-{% capture description %}
-Sets the position of the origin of the sprite in the window.
+Raised when an operation violates the bounds of the string
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val set_origin : t -> OgamlMath.Vector2f.t -> unit
+val empty : unit -> t
 {% endcapture %}
 {% capture description %}
-Sets the position of the origin with respect to the top-left corner of the
- sprite. The origin is the center of all transformations.
+Empty UTF-8 string
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val set_rotation : t -> float -> unit
+val make : int -> code -> t
 {% endcapture %}
 {% capture description %}
-Sets the angle of rotation of the sprite.
+Makes a UTF-8 string filled with one character
+ 
+ Raises UTF8_error if the code is not a valid UTF-8 character code
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val set_scale : t -> OgamlMath.Vector2f.t -> unit
+val get : t -> int -> code
 {% endcapture %}
 {% capture description %}
-Sets the scale of the sprite.
+Returns the ith character of a UTF-8 string
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val set_size : t -> OgamlMath.Vector2f.t -> unit
+val set : t -> int -> code -> unit
 {% endcapture %}
 {% capture description %}
-Sets the base size of a sprite.
+Sets the ith character of a UTF-8 string.<br/>
+ Raises UTF8_error if the code is not a valid UTF-8 character code
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val translate : t -> OgamlMath.Vector2f.t -> unit
+val length : t -> int
 {% endcapture %}
 {% capture description %}
-Translates the sprite by the given vector.
+Returns the length of a UTF-8 string
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val rotate : t -> float -> unit
+val byte_length : t -> int
 {% endcapture %}
 {% capture description %}
-Rotates the sprite by the given angle.
+Returns the byte length of a UTF-8 string
+ (the number of bytes required to encode it)
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val scale : t -> OgamlMath.Vector2f.t -> unit
+val from_string : string -> t
 {% endcapture %}
 {% capture description %}
-Scales the sprite.
+Returns a UTF-8 encoded string from a string.
+ 
+ Raises UTF8_error if the string is not a valid UTF-8 encoding
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val size : t -> OgamlMath.Vector2f.t
+val to_string : t -> string
 {% endcapture %}
 {% capture description %}
-Returns the base size of a sprite
+Returns a string from a UTF-8 encoded string
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val position : t -> OgamlMath.Vector2f.t
+val iter : t -> (code -> unit) -> unit
 {% endcapture %}
 {% capture description %}
-Returns the position of the origin in window coordinates.
+Iterates through a UTF-8 string
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val origin : t -> OgamlMath.Vector2f.t
+val fold : t -> (code -> 'a -> 'a) -> 'a -> 'a
 {% endcapture %}
 {% capture description %}
-Returns the position of the origin with respect to the first point of the
- sprite.
+Folds a UTF-8 string
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val rotation : t -> float
+val map : t -> (code -> code) -> t
 {% endcapture %}
 {% capture description %}
-Returns the angle of rotation of the sprite.
-{% endcapture %}
-
-{% include docelem.html listing=listing description=description   %}
-
-{% capture listing %}
-val get_scale : t -> OgamlMath.Vector2f.t
-{% endcapture %}
-{% capture description %}
-Returns the scale of the sprite.
+Maps a UTF-8 string<br/>
+ Raises UTF8_error if the function returns an invalid UTF-8 code
 {% endcapture %}
 
 {% include docelem.html listing=listing description=description   %}

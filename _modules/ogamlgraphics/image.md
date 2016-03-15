@@ -37,7 +37,7 @@ Return the size of an image
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val set : t -> int -> int -> Color.t -> unit
+val set : t -> OgamlMath.Vector2i.t -> Color.t -> unit
 {% endcapture %}
 {% capture description %}
 Sets a pixel of an image
@@ -46,7 +46,7 @@ Sets a pixel of an image
 {% include docelem.html listing=listing description=description  related = "OgamlGraphics.Color" %}
 
 {% capture listing %}
-val get : t -> int -> int -> Color.RGB.t
+val get : t -> OgamlMath.Vector2i.t -> Color.RGB.t
 {% endcapture %}
 {% capture description %}
 Gets the color of a pixel of an image

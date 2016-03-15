@@ -17,7 +17,7 @@ The type of pre-rendered texts.
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val create : text:string -> position:OgamlMath.Vector2i.t -> font:Font.t -> ?color:Color.t -> size:int -> bold:bool -> unit -> t
+val create : text:string -> position:OgamlMath.Vector2f.t -> font:Font.t -> ?color:Color.t -> size:int -> bold:bool -> unit -> t
 {% endcapture %}
 {% capture description %}
 Creates a drawable text from the given string.

@@ -137,6 +137,24 @@ Computes the norm of a vector
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
+val squared_dist : t -> t -> int
+{% endcapture %}
+{% capture description %}
+Computes the squared distance between two points
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
+val dist : t -> t -> float
+{% endcapture %}
+{% capture description %}
+Computes the distance between two points
+{% endcapture %}
+
+{% include docelem.html listing=listing description=description   %}
+
+{% capture listing %}
 val clamp : t -> t -> t -> t
 {% endcapture %}
 {% capture description %}

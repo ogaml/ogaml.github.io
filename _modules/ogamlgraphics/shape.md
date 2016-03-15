@@ -14,7 +14,7 @@ Type of shapes
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val create_polygon : points:OgamlMath.Vector2i.t list -> color:Color.t -> ?origin:OgamlMath.Vector2f.t -> ?position:OgamlMath.Vector2i.t -> ?scale:OgamlMath.Vector2f.t -> ?rotation:float -> ?thickness:float -> ?border_color:Color.t -> unit -> t
+val create_polygon : points:OgamlMath.Vector2f.t list -> color:Color.t -> ?origin:OgamlMath.Vector2f.t -> ?position:OgamlMath.Vector2f.t -> ?scale:OgamlMath.Vector2f.t -> ?rotation:float -> ?thickness:float -> ?border_color:Color.t -> unit -> t
 {% endcapture %}
 {% capture description %}
 Creates a convex polygon given a list of points.
@@ -27,7 +27,7 @@ Creates a convex polygon given a list of points.
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val create_rectangle : position:OgamlMath.Vector2i.t -> size:OgamlMath.Vector2i.t -> color:Color.t -> ?origin:OgamlMath.Vector2f.t -> ?scale:OgamlMath.Vector2f.t -> ?rotation:float -> ?thickness:float -> ?border_color:Color.t -> unit -> t
+val create_rectangle : position:OgamlMath.Vector2f.t -> size:OgamlMath.Vector2f.t -> color:Color.t -> ?origin:OgamlMath.Vector2f.t -> ?scale:OgamlMath.Vector2f.t -> ?rotation:float -> ?thickness:float -> ?border_color:Color.t -> unit -> t
 {% endcapture %}
 {% capture description %}
 Creates a rectangle.
@@ -37,7 +37,7 @@ Creates a rectangle.
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val create_regular : position:OgamlMath.Vector2i.t -> radius:float -> amount:int -> color:Color.t -> ?origin:OgamlMath.Vector2f.t -> ?scale:OgamlMath.Vector2f.t -> ?rotation:float -> ?thickness:float -> ?border_color:Color.t -> unit -> t
+val create_regular : position:OgamlMath.Vector2f.t -> radius:float -> amount:int -> color:Color.t -> ?origin:OgamlMath.Vector2f.t -> ?scale:OgamlMath.Vector2f.t -> ?rotation:float -> ?thickness:float -> ?border_color:Color.t -> unit -> t
 {% endcapture %}
 {% capture description %}
 Creates a regular polygon with a given number of vertices.
@@ -47,7 +47,7 @@ Creates a regular polygon with a given number of vertices.
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val create_line : thickness:float -> color:Color.t -> ?top:OgamlMath.Vector2i.t -> tip:OgamlMath.Vector2i.t -> ?position:OgamlMath.Vector2i.t -> ?origin:OgamlMath.Vector2f.t -> ?rotation:float -> unit -> t
+val create_line : thickness:float -> color:Color.t -> ?top:OgamlMath.Vector2f.t -> tip:OgamlMath.Vector2f.t -> ?position:OgamlMath.Vector2f.t -> ?origin:OgamlMath.Vector2f.t -> ?rotation:float -> unit -> t
 {% endcapture %}
 {% capture description %}
 Creates a line from {% include inline-ocaml.html code="top" %} (zero by default) to {% include inline-ocaml.html code="tip" %}.
@@ -66,7 +66,7 @@ Draws a shape on a window using the given parameters.<br/>
 {% include docelem.html listing=listing description=description  related = "OgamlGraphics.DrawParameter,OgamlGraphics.Window" %}
 
 {% capture listing %}
-val set_position : t -> OgamlMath.Vector2i.t -> unit
+val set_position : t -> OgamlMath.Vector2f.t -> unit
 {% endcapture %}
 {% capture description %}
 Sets the position of the origin in the window.
@@ -121,7 +121,7 @@ Sets the filling color of the shape.
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val translate : t -> OgamlMath.Vector2i.t -> unit
+val translate : t -> OgamlMath.Vector2f.t -> unit
 {% endcapture %}
 {% capture description %}
 Translates the shape by the given vector.
@@ -148,7 +148,7 @@ Scales the shape.
 {% include docelem.html listing=listing description=description   %}
 
 {% capture listing %}
-val position : t -> OgamlMath.Vector2i.t
+val position : t -> OgamlMath.Vector2f.t
 {% endcapture %}
 {% capture description %}
 Returns the position of the origin in window coordinates.
