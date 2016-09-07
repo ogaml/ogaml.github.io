@@ -2,6 +2,22 @@
 <html>
   <head>
     <title>OGaml documentation - Program</title>
+                                        
+    <link rel="stylesheet" href="../../css/monokai.css">
+                                        
+    <link rel="stylesheet" href="../../css/doc.css">
+                                        
+    <script src="../../script/highlight.pack.js"></script>
+                                        
+    <script type="text/javascript"> 
+    hljs.tabReplace = ''; 
+    hljs.initHighlightingOnLoad(); 
+    window.onload = function() { 
+      var aCodes = document.getElementsByTagName('code'); 
+      for (var i=0; i < aCodes.length; i++) { 
+        hljs.highlightBlock(aCodes[i]); 
+      }
+    } </script>
   </head>
   <body>
     <main>
@@ -93,7 +109,7 @@
      </span>
      <div class="more">
       
-        Compiles a program from a vertex source and a fragment source. The source must begin with a version assigment <pre><code>#version xxx</pre></code> 
+        Compiles a program from a vertex source and a fragment source. The source must begin with a version assigment <code class="OCaml">#version xxx</code> 
      </div>
    </article>
    <article>
@@ -121,7 +137,7 @@
      </span>
      <div class="more">
       
-        Compiles a program from a vertex source and a fragment source. The source should not begin with a <pre><code>#version xxx</pre></code> assignment, as the function will preprocess the sources and prepend the best version declaration. <span class="see">See : <a href="../ogamlgraphics/state.html">OgamlGraphics.State</a></span>
+        Compiles a program from a vertex source and a fragment source. The source should not begin with a <code class="OCaml">#version xxx</code> assignment, as the function will preprocess the sources and prepend the best version declaration. <span class="see">See : <a href="../ogamlgraphics/state.html">OgamlGraphics.State</a></span>
      </div>
    </article>
    

@@ -2,6 +2,22 @@
 <html>
   <head>
     <title>OGaml documentation - Fx</title>
+                                        
+    <link rel="stylesheet" href="../../../css/monokai.css">
+                                        
+    <link rel="stylesheet" href="../../../css/doc.css">
+                                        
+    <script src="../../../script/highlight.pack.js"></script>
+                                        
+    <script type="text/javascript"> 
+    hljs.tabReplace = ''; 
+    hljs.initHighlightingOnLoad(); 
+    window.onload = function() { 
+      var aCodes = document.getElementsByTagName('code'); 
+      for (var i=0; i < aCodes.length; i++) { 
+        hljs.highlightBlock(aCodes[i]); 
+      }
+    } </script>
   </head>
   <body>
     <main>
@@ -38,7 +54,7 @@
      </span>
      <div class="more">
       
-        The type of an iterator. The idea behind it is that <pre><code>'a</pre></code> is the type of objects that we manipulate (eg. <pre><code>Font.code</pre></code> ) while <pre><code>'b</pre></code> is the type of the value computed by the iterator. We rely here on continuation passing style to deal with this vaue at each step. 
+        The type of an iterator. The idea behind it is that <code class="OCaml">'a</code> is the type of objects that we manipulate (eg. <code class="OCaml">Font.code</code> ) while <code class="OCaml">'b</code> is the type of the value computed by the iterator. We rely here on continuation passing style to deal with this vaue at each step. 
      </div>
    </article>
    <article>

@@ -2,6 +2,22 @@
 <html>
   <head>
     <title>OGaml documentation - Vector2f</title>
+                                        
+    <link rel="stylesheet" href="../../css/monokai.css">
+                                        
+    <link rel="stylesheet" href="../../css/doc.css">
+                                        
+    <script src="../../script/highlight.pack.js"></script>
+                                        
+    <script type="text/javascript"> 
+    hljs.tabReplace = ''; 
+    hljs.initHighlightingOnLoad(); 
+    window.onload = function() { 
+      var aCodes = document.getElementsByTagName('code'); 
+      for (var i=0; i < aCodes.length; i++) { 
+        hljs.highlightBlock(aCodes[i]); 
+      }
+    } </script>
   </head>
   <body>
     <main>
@@ -108,7 +124,7 @@
      </span>
      <div class="more">
       
-        <pre><code>sub u v</pre></code> computes the vector <pre><code>u - v</pre></code> 
+        <code class="OCaml">sub u v</code> computes the vector <code class="OCaml">u - v</code> 
      </div>
    </article>
    <article>
@@ -150,7 +166,7 @@
      </span>
      <div class="more">
       
-        Rounds-down a vector <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+        Rounds-down a vector <span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
      </div>
    </article>
    <article>
@@ -164,7 +180,7 @@
      </span>
      <div class="more">
       
-        Returns a float vector from an int vector <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+        Returns a float vector from an int vector <span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
      </div>
    </article>
    <article>
@@ -290,7 +306,7 @@
      </span>
      <div class="more">
       
-        <pre><code>clamp v a b</pre></code> returns the vector whose coordinates are the coordinates of <pre><code>v</pre></code>  clamped between the coordinates of <pre><code>a</pre></code> and <pre><code>b</pre></code> 
+        <code class="OCaml">clamp v a b</code> returns the vector whose coordinates are the coordinates of <code class="OCaml">v</code>  clamped between the coordinates of <code class="OCaml">a</code> and <code class="OCaml">b</code> 
      </div>
    </article>
    <article>
@@ -374,7 +390,7 @@
      </span>
      <div class="more">
       
-        <pre><code>direction u v</pre></code> returns the normalized direction vector from <pre><code>u</pre></code> to <pre><code>v</pre></code> . Raises Vector2f_exception if <pre><code>u = v</pre></code> . 
+        <code class="OCaml">direction u v</code> returns the normalized direction vector from <code class="OCaml">u</code> to <code class="OCaml">v</code> . Raises Vector2f_exception if <code class="OCaml">u = v</code> . 
      </div>
    </article>
    <article>
@@ -388,7 +404,7 @@
      </span>
      <div class="more">
       
-        <pre><code>endpoint a v t</pre></code> returns the point <pre><code>a + tv</pre></code> 
+        <code class="OCaml">endpoint a v t</code> returns the point <code class="OCaml">a + tv</code> 
      </div>
    </article>
    <article>
@@ -402,7 +418,7 @@
      </span>
      <div class="more">
       
-        <pre><code>raytrace_points p1 p2</pre></code> returns the list of integer-valued points (squares) on  the line from <pre><code>p1</pre></code> to <pre><code>p2</pre></code>   Each point is a triplet of the form <pre><code>(t, p, f)</pre></code> such that :  <pre><code>t</pre></code> is the time at the intersection between the line and the point  <pre><code>p</pre></code> stores the (integer) coordinates of the point  <pre><code>f</pre></code> is a unit vector indicating which face of the square has been intersected  
+        <code class="OCaml">raytrace_points p1 p2</code> returns the list of integer-valued points (squares) on  the line from <code class="OCaml">p1</code> to <code class="OCaml">p2</code>   Each point is a triplet of the form <code class="OCaml">(t, p, f)</code> such that :  <code class="OCaml">t</code> is the time at the intersection between the line and the point  <code class="OCaml">p</code> stores the (integer) coordinates of the point  <code class="OCaml">f</code> is a unit vector indicating which face of the square has been intersected  
      </div>
    </article>
    <article>
@@ -416,7 +432,7 @@
      </span>
      <div class="more">
       
-        <pre><code>raytrace p v t</pre></code> applies <pre><code>raytrace_points</pre></code> between the points  <pre><code>p</pre></code> and <pre><code>p + tv</pre></code> . The intersection times are comprised between 0 and t 
+        <code class="OCaml">raytrace p v t</code> applies <code class="OCaml">raytrace_points</code> between the points  <code class="OCaml">p</code> and <code class="OCaml">p + tv</code> . The intersection times are comprised between 0 and t 
      </div>
    </article>
    

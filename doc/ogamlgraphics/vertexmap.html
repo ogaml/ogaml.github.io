@@ -2,6 +2,22 @@
 <html>
   <head>
     <title>OGaml documentation - VertexMap</title>
+                                        
+    <link rel="stylesheet" href="../../css/monokai.css">
+                                        
+    <link rel="stylesheet" href="../../css/doc.css">
+                                        
+    <script src="../../script/highlight.pack.js"></script>
+                                        
+    <script type="text/javascript"> 
+    hljs.tabReplace = ''; 
+    hljs.initHighlightingOnLoad(); 
+    window.onload = function() { 
+      var aCodes = document.getElementsByTagName('code'); 
+      for (var i=0; i < aCodes.length; i++) { 
+        hljs.highlightBlock(aCodes[i]); 
+      }
+    } </script>
   </head>
   <body>
     <main>
@@ -173,7 +189,7 @@
      </span>
      <div class="more">
       
-        <pre><code>rebuild map src offset</pre></code> rebuilds <pre><code>map</pre></code> starting from the vertex at position <pre><code>offset</pre></code> using <pre><code>src</pre></code> .  The vertex map is modified in-place and is resized as needed. <span class="see">See : <a href="../ogamlgraphics/vertexmap/source.html">OgamlGraphics.VertexMap.Source</a></span>
+        <code class="OCaml">rebuild map src offset</code> rebuilds <code class="OCaml">map</code> starting from the vertex at position <code class="OCaml">offset</code> using <code class="OCaml">src</code> .  The vertex map is modified in-place and is resized as needed. <span class="see">See : <a href="../ogamlgraphics/vertexmap/source.html">OgamlGraphics.VertexMap.Source</a></span>
      </div>
    </article>
    <article>
@@ -201,7 +217,7 @@
      </span>
      <div class="more">
       
-        Draws the slice starting at <pre><code>start</pre></code> of length <pre><code>length</pre></code> of a vertex map on a window using the given parameters.  <pre><code>start</pre></code> defaults to 0  if <pre><code>length</pre></code> is not provided, then the whole vertex map (starting from <pre><code>start</pre></code> ) is drawn  <pre><code>uniform</pre></code> should provide the uniforms required by <pre><code>program</pre></code> (defaults to empty)  <pre><code>parameters</pre></code> defaults to <pre><code>DrawParameter.make ()</pre></code>   <span class="see">See : <a href="../ogamlgraphics/indexarray.html">OgamlGraphics.IndexArray</a></span> <span class="see">See : <a href="../ogamlgraphics/window.html">OgamlGraphics.Window</a></span> <span class="see">See : <a href="../ogamlgraphics/program.html">OgamlGraphics.Program</a></span> <span class="see">See : <a href="../ogamlgraphics/uniform.html">OgamlGraphics.Uniform</a></span> <span class="see">See : <a href="../ogamlgraphics/drawparameter.html">OgamlGraphics.DrawParameter</a></span> <span class="see">See : <a href="../ogamlgraphics/drawmode.html">OgamlGraphics.DrawMode</a></span>
+        Draws the slice starting at <code class="OCaml">start</code> of length <code class="OCaml">length</code> of a vertex map on a window using the given parameters.  <code class="OCaml">start</code> defaults to 0  if <code class="OCaml">length</code> is not provided, then the whole vertex map (starting from <code class="OCaml">start</code> ) is drawn  <code class="OCaml">uniform</code> should provide the uniforms required by <code class="OCaml">program</code> (defaults to empty)  <code class="OCaml">parameters</code> defaults to <code class="OCaml">DrawParameter.make ()</code>   <span class="see">See : <a href="../ogamlgraphics/indexarray.html">OgamlGraphics.IndexArray</a></span> <span class="see">See : <a href="../ogamlgraphics/window.html">OgamlGraphics.Window</a></span> <span class="see">See : <a href="../ogamlgraphics/program.html">OgamlGraphics.Program</a></span> <span class="see">See : <a href="../ogamlgraphics/uniform.html">OgamlGraphics.Uniform</a></span> <span class="see">See : <a href="../ogamlgraphics/drawparameter.html">OgamlGraphics.DrawParameter</a></span> <span class="see">See : <a href="../ogamlgraphics/drawmode.html">OgamlGraphics.DrawMode</a></span>
      </div>
    </article>
    

@@ -2,6 +2,22 @@
 <html>
   <head>
     <title>OGaml documentation - Matrix3D</title>
+                                        
+    <link rel="stylesheet" href="../../css/monokai.css">
+                                        
+    <link rel="stylesheet" href="../../css/doc.css">
+                                        
+    <script src="../../script/highlight.pack.js"></script>
+                                        
+    <script type="text/javascript"> 
+    hljs.tabReplace = ''; 
+    hljs.initHighlightingOnLoad(); 
+    window.onload = function() { 
+      var aCodes = document.getElementsByTagName('code'); 
+      for (var i=0; i < aCodes.length; i++) { 
+        hljs.highlightBlock(aCodes[i]); 
+      }
+    } </script>
   </head>
   <body>
     <main>
@@ -80,7 +96,7 @@
      </span>
      <div class="more">
       
-        Builds a translation matrix from a vector <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+        Builds a translation matrix from a vector <span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
@@ -94,7 +110,7 @@
      </span>
      <div class="more">
       
-        Builds a scaling matrix from a vector <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+        Builds a scaling matrix from a vector <span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
@@ -108,7 +124,7 @@
      </span>
      <div class="more">
       
-        Builds a rotation matrix from an axis and an angle <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+        Builds a rotation matrix from an axis and an angle <span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
@@ -165,7 +181,7 @@
      </span>
      <div class="more">
       
-        Translates a matrix by a vector. The original matrix is not modified.  <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+        Translates a matrix by a vector. The original matrix is not modified.  <span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
@@ -179,7 +195,7 @@
      </span>
      <div class="more">
       
-        Scales a matrix by a vector. The original matrix is not modified.  <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+        Scales a matrix by a vector. The original matrix is not modified.  <span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
@@ -193,7 +209,7 @@
      </span>
      <div class="more">
       
-        Rotates a matrix by an angle around a given axis. The original matrix is not modified.  <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+        Rotates a matrix by an angle around a given axis. The original matrix is not modified.  <span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
@@ -207,7 +223,7 @@
      </span>
      <div class="more">
       
-        Computes the (right-)product of a matrix with a column vector <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+        Computes the (right-)product of a matrix with a column vector <span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
@@ -236,7 +252,7 @@
      </span>
      <div class="more">
       
-        Builds a "look-at" view matrix. Raises Matrix3D_exception if <pre><code>up = zero</pre></code> . <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+        Builds a "look-at" view matrix. Raises Matrix3D_exception if <code class="OCaml">up = zero</code> . <span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
@@ -250,7 +266,7 @@
      </span>
      <div class="more">
       
-        Builds a "look-at" view matrix from eulerian angles.  Theta should be in [0;2pi] and phi in [-pi/2;pi/2].  If phi = pi/2, the camera is looking up (towards positive Y).  If theta = 0, the camera is looking towards negative Z.  <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+        Builds a "look-at" view matrix from eulerian angles.  Theta should be in [0;2pi] and phi in [-pi/2;pi/2].  If phi = pi/2, the camera is looking up (towards positive Y).  If theta = 0, the camera is looking towards negative Z.  <span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
@@ -264,7 +280,7 @@
      </span>
      <div class="more">
       
-        Builds an orthographic projection matrix englobing a volume defined by six planes.  Raises Matrix3D_exception if <pre><code>right = left</pre></code> or <pre><code>near = far</pre></code> or <pre><code>top = bottom</pre></code> 
+        Builds an orthographic projection matrix englobing a volume defined by six planes.  Raises Matrix3D_exception if <code class="OCaml">right = left</code> or <code class="OCaml">near = far</code> or <code class="OCaml">top = bottom</code> 
      </div>
    </article>
    <article>
@@ -292,7 +308,7 @@
      </span>
      <div class="more">
       
-        Builds a perspective projection matrix. Near and far are the positions of the clipping planes relatively to the camera position (nothing will be rendered outside those planes). Width and height should usually be  the dimensions of the screen in pixels. Fov corresponds to the view  angle, and is given in radians.  Raises Matrix3D_exception if <pre><code>near = far</pre></code> . 
+        Builds a perspective projection matrix. Near and far are the positions of the clipping planes relatively to the camera position (nothing will be rendered outside those planes). Width and height should usually be  the dimensions of the screen in pixels. Fov corresponds to the view  angle, and is given in radians.  Raises Matrix3D_exception if <code class="OCaml">near = far</code> . 
      </div>
    </article>
    <article>

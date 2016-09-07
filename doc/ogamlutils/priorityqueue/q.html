@@ -2,6 +2,22 @@
 <html>
   <head>
     <title>OGaml documentation - Q</title>
+                                        
+    <link rel="stylesheet" href="../../../css/monokai.css">
+                                        
+    <link rel="stylesheet" href="../../../css/doc.css">
+                                        
+    <script src="../../../script/highlight.pack.js"></script>
+                                        
+    <script type="text/javascript"> 
+    hljs.tabReplace = ''; 
+    hljs.initHighlightingOnLoad(); 
+    window.onload = function() { 
+      var aCodes = document.getElementsByTagName('code'); 
+      for (var i=0; i < aCodes.length; i++) { 
+        hljs.highlightBlock(aCodes[i]); 
+      }
+    } </script>
   </head>
   <body>
     <main>
@@ -51,7 +67,7 @@
      </span>
      <div class="more">
       
-        Type of a queue storing elements of type <pre><code>'a</pre></code> 
+        Type of a queue storing elements of type <code class="OCaml">'a</code> 
      </div>
    </article>
    <article>
@@ -79,7 +95,7 @@
      </span>
      <div class="more">
       
-        Returns <pre><code>true</pre></code> iff the queue is empty 
+        Returns <code class="OCaml">true</code> iff the queue is empty 
      </div>
    </article>
    <article>
@@ -135,7 +151,7 @@
      </span>
      <div class="more">
       
-        Returns the top element of a queue  Raises <pre><code>Empty</pre></code> if the queue is empty 
+        Returns the top element of a queue  Raises <code class="OCaml">Empty</code> if the queue is empty 
      </div>
    </article>
    <article>
@@ -149,7 +165,7 @@
      </span>
      <div class="more">
       
-        Removes the top element of a queue  Raises <pre><code>Empty</pre></code> if the queue is empty 
+        Removes the top element of a queue  Raises <code class="OCaml">Empty</code> if the queue is empty 
      </div>
    </article>
    <article>
@@ -163,7 +179,7 @@
      </span>
      <div class="more">
       
-        Returns the top element of a queue and the queue without its first element  Raises <pre><code>Empty</pre></code> if the queue is empty 
+        Returns the top element of a queue and the queue without its first element  Raises <code class="OCaml">Empty</code> if the queue is empty 
      </div>
    </article>
    

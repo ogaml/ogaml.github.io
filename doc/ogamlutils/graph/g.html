@@ -2,6 +2,22 @@
 <html>
   <head>
     <title>OGaml documentation - G</title>
+                                        
+    <link rel="stylesheet" href="../../../css/monokai.css">
+                                        
+    <link rel="stylesheet" href="../../../css/doc.css">
+                                        
+    <script src="../../../script/highlight.pack.js"></script>
+                                        
+    <script type="text/javascript"> 
+    hljs.tabReplace = ''; 
+    hljs.initHighlightingOnLoad(); 
+    window.onload = function() { 
+      var aCodes = document.getElementsByTagName('code'); 
+      for (var i=0; i < aCodes.length; i++) { 
+        hljs.highlightBlock(aCodes[i]); 
+      }
+    } </script>
   </head>
   <body>
     <main>
@@ -162,7 +178,7 @@
      </span>
      <div class="more">
       
-        Tail-call alias for <pre><code>add_edge</pre></code> (for easy composition) 
+        Tail-call alias for <code class="OCaml">add_edge</code> (for easy composition) 
      </div>
    </article>
    <article>
@@ -232,7 +248,7 @@
      </span>
      <div class="more">
       
-        <pre><code>dfs g s f</pre></code> iterates <pre><code>f</pre></code> through all the vertices of <pre><code>g</pre></code> ,  starting from <pre><code>s</pre></code> using a dfs 
+        <code class="OCaml">dfs g s f</code> iterates <code class="OCaml">f</code> through all the vertices of <code class="OCaml">g</code> ,  starting from <code class="OCaml">s</code> using a dfs 
      </div>
    </article>
    <article>
@@ -246,7 +262,7 @@
      </span>
      <div class="more">
       
-        <pre><code>bfs g s f</pre></code> iterates <pre><code>f</pre></code> through all the vertices of <pre><code>g</pre></code> ,  starting from <pre><code>s</pre></code> using a bfs 
+        <code class="OCaml">bfs g s f</code> iterates <code class="OCaml">f</code> through all the vertices of <code class="OCaml">g</code> ,  starting from <code class="OCaml">s</code> using a bfs 
      </div>
    </article>
    <article>
@@ -260,7 +276,7 @@
      </span>
      <div class="more">
       
-        <pre><code>dijkstra g v1 v2</pre></code> runs Dijkstra's algorithm on <pre><code>g</pre></code> from <pre><code>v1</pre></code> to <pre><code>v2</pre></code>  and returns the minimal path as well as the distance between <pre><code>v1</pre></code> and <pre><code>v2</pre></code> , or <pre><code>None</pre></code> if <pre><code>v1</pre></code> and <pre><code>v2</pre></code> are not connected 
+        <code class="OCaml">dijkstra g v1 v2</code> runs Dijkstra's algorithm on <code class="OCaml">g</code> from <code class="OCaml">v1</code> to <code class="OCaml">v2</code>  and returns the minimal path as well as the distance between <code class="OCaml">v1</code> and <code class="OCaml">v2</code> , or <code class="OCaml">None</code> if <code class="OCaml">v1</code> and <code class="OCaml">v2</code> are not connected 
      </div>
    </article>
    <article>
@@ -274,7 +290,7 @@
      </span>
      <div class="more">
       
-        <pre><code>astar g v1 v2 f</pre></code> runs the A* algorithm on <pre><code>g</pre></code> from <pre><code>v1</pre></code> to <pre><code>v2</pre></code>  with the heuristic <pre><code>f</pre></code> and returns the minimal path as well as the  distance between <pre><code>v1</pre></code> and <pre><code>v2</pre></code> , or <pre><code>None</pre></code> if <pre><code>v1</pre></code> and <pre><code>v2</pre></code> are not connected 
+        <code class="OCaml">astar g v1 v2 f</code> runs the A* algorithm on <code class="OCaml">g</code> from <code class="OCaml">v1</code> to <code class="OCaml">v2</code>  with the heuristic <code class="OCaml">f</code> and returns the minimal path as well as the  distance between <code class="OCaml">v1</code> and <code class="OCaml">v2</code> , or <code class="OCaml">None</code> if <code class="OCaml">v1</code> and <code class="OCaml">v2</code> are not connected 
      </div>
    </article>
    

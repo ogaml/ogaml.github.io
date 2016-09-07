@@ -2,6 +2,22 @@
 <html>
   <head>
     <title>OGaml documentation - Image</title>
+                                        
+    <link rel="stylesheet" href="../../css/monokai.css">
+                                        
+    <link rel="stylesheet" href="../../css/doc.css">
+                                        
+    <script src="../../script/highlight.pack.js"></script>
+                                        
+    <script type="text/javascript"> 
+    hljs.tabReplace = ''; 
+    hljs.initHighlightingOnLoad(); 
+    window.onload = function() { 
+      var aCodes = document.getElementsByTagName('code'); 
+      for (var i=0; i < aCodes.length; i++) { 
+        hljs.highlightBlock(aCodes[i]); 
+      }
+    } </script>
   </head>
   <body>
     <main>
@@ -93,7 +109,7 @@
      </span>
      <div class="more">
       
-        <pre><code>blit src ~rect dest offset</pre></code> blits the subimage of <pre><code>src</pre></code> defined by <pre><code>rect</pre></code>  on the image <pre><code>dest</pre></code> at position <pre><code>offset</pre></code> (relative to the top-left pixel).  If <pre><code>rect</pre></code> is not provided then the whole image <pre><code>src</pre></code> is used. <span class="see">See : <a href="../ogamlmath/intrect.html">OgamlMath.IntRect</a></span> <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+        <code class="OCaml">blit src ~rect dest offset</code> blits the subimage of <code class="OCaml">src</code> defined by <code class="OCaml">rect</code>  on the image <code class="OCaml">dest</code> at position <code class="OCaml">offset</code> (relative to the top-left pixel).  If <code class="OCaml">rect</code> is not provided then the whole image <code class="OCaml">src</code> is used. <span class="see">See : <a href="../ogamlmath/intrect.html">OgamlMath.IntRect</a></span> <span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
      </div>
    </article>
    

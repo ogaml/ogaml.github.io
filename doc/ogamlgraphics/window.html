@@ -2,6 +2,22 @@
 <html>
   <head>
     <title>OGaml documentation - Window</title>
+                                        
+    <link rel="stylesheet" href="../../css/monokai.css">
+                                        
+    <link rel="stylesheet" href="../../css/doc.css">
+                                        
+    <script src="../../script/highlight.pack.js"></script>
+                                        
+    <script type="text/javascript"> 
+    hljs.tabReplace = ''; 
+    hljs.initHighlightingOnLoad(); 
+    window.onload = function() { 
+      var aCodes = document.getElementsByTagName('code'); 
+      for (var i=0; i < aCodes.length; i++) { 
+        hljs.highlightBlock(aCodes[i]); 
+      }
+    } </script>
   </head>
   <body>
     <main>
@@ -38,7 +54,7 @@
      </span>
      <div class="more">
       
-        Creates a window of size <pre><code>width</pre></code> x <pre><code>height</pre></code> . This window will create its openGL context following the specified settings.  <pre><code>width</pre></code> defaults to 800  <pre><code>height</pre></code> defaults to 600  <pre><code>title</pre></code> defaults to ""  <pre><code>settings</pre></code> defaults to the default context settings  <span class="see">See : <a href="../ogamlcore/contextsettings.html">OgamlCore.ContextSettings</a></span>
+        Creates a window of size <code class="OCaml">width</code> x <code class="OCaml">height</code> . This window will create its openGL context following the specified settings.  <code class="OCaml">width</code> defaults to 800  <code class="OCaml">height</code> defaults to 600  <code class="OCaml">title</code> defaults to ""  <code class="OCaml">settings</code> defaults to the default context settings  <span class="see">See : <a href="../ogamlcore/contextsettings.html">OgamlCore.ContextSettings</a></span>
      </div>
    </article>
    <article>
@@ -94,7 +110,7 @@
      </span>
      <div class="more">
       
-        Resizes the window. <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+        Resizes the window. <span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
      </div>
    </article>
    <article>
@@ -137,7 +153,7 @@
      </span>
      <div class="more">
       
-        Returns in pixel the width and height of the window (it only takes into account the size of the content where you can draw, *ie* the useful information). <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+        Returns in pixel the width and height of the window (it only takes into account the size of the content where you can draw, *ie* the useful information). <span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
      </div>
    </article>
    <article>

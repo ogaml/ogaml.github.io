@@ -2,6 +2,22 @@
 <html>
   <head>
     <title>OGaml documentation - FloatRect</title>
+                                        
+    <link rel="stylesheet" href="../../css/monokai.css">
+                                        
+    <link rel="stylesheet" href="../../css/doc.css">
+                                        
+    <script src="../../script/highlight.pack.js"></script>
+                                        
+    <script type="text/javascript"> 
+    hljs.tabReplace = ''; 
+    hljs.initHighlightingOnLoad(); 
+    window.onload = function() { 
+      var aCodes = document.getElementsByTagName('code'); 
+      for (var i=0; i < aCodes.length; i++) { 
+        hljs.highlightBlock(aCodes[i]); 
+      }
+    } </script>
   </head>
   <body>
     <main>
@@ -37,7 +53,7 @@
      </span>
      <div class="more">
       
-        <pre><code>create position size</pre></code> creates a rectangle at position <pre><code>position</pre></code> and of size <pre><code>size</pre></code> 
+        <code class="OCaml">create position size</code> creates a rectangle at position <code class="OCaml">position</code> and of size <code class="OCaml">size</code> 
      </div>
    </article>
    <article>
@@ -51,7 +67,7 @@
      </span>
      <div class="more">
       
-        <pre><code>create_from_points p1 p2</pre></code> creates a rectangle going from <pre><code>p1</pre></code> to <pre><code>p2</pre></code> 
+        <code class="OCaml">create_from_points p1 p2</code> creates a rectangle going from <code class="OCaml">p1</code> to <code class="OCaml">p2</code> 
      </div>
    </article>
    <article>
@@ -177,7 +193,7 @@
      </span>
      <div class="more">
       
-        <pre><code>normalize rect</pre></code> returns a rectangle equivalent to <pre><code>rect</pre></code> but with positive size 
+        <code class="OCaml">normalize rect</code> returns a rectangle equivalent to <code class="OCaml">rect</code> but with positive size 
      </div>
    </article>
    <article>
@@ -261,7 +277,7 @@
      </span>
      <div class="more">
       
-        <pre><code>intersects t1 t2</pre></code> returns <pre><code>true</pre></code> iff <pre><code>t1</pre></code> and <pre><code>t2</pre></code> overlap 
+        <code class="OCaml">intersects t1 t2</code> returns <code class="OCaml">true</code> iff <code class="OCaml">t1</code> and <code class="OCaml">t2</code> overlap 
      </div>
    </article>
    <article>
@@ -275,7 +291,7 @@
      </span>
      <div class="more">
       
-        <pre><code>contains t p</pre></code> returns <pre><code>true</pre></code> iff the rectangle <pre><code>t</pre></code> contains <pre><code>p</pre></code> 
+        <code class="OCaml">contains t p</code> returns <code class="OCaml">true</code> iff the rectangle <code class="OCaml">t</code> contains <code class="OCaml">p</code> 
      </div>
    </article>
    

@@ -2,6 +2,22 @@
 <html>
   <head>
     <title>OGaml documentation - Mouse</title>
+                                        
+    <link rel="stylesheet" href="../../../css/monokai.css">
+                                        
+    <link rel="stylesheet" href="../../../css/doc.css">
+                                        
+    <script src="../../../script/highlight.pack.js"></script>
+                                        
+    <script type="text/javascript"> 
+    hljs.tabReplace = ''; 
+    hljs.initHighlightingOnLoad(); 
+    window.onload = function() { 
+      var aCodes = document.getElementsByTagName('code'); 
+      for (var i=0; i < aCodes.length; i++) { 
+        hljs.highlightBlock(aCodes[i]); 
+      }
+    } </script>
   </head>
   <body>
     <main>
@@ -23,7 +39,7 @@
      </span>
      <div class="more">
       
-        Returns the postion of the mouse in screen coordinates <span class="see">See : <a href="../../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+        Returns the postion of the mouse in screen coordinates <span class="see">See : <a href="../../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
      </div>
    </article>
    <article>
@@ -37,7 +53,7 @@
      </span>
      <div class="more">
       
-        Returns the position of the mouse relatively to a window <span class="see">See : <a href="../../ogamlcore/ll/window.html">OgamlCore.LL.Window</a></span> <span class="see">See : <a href="../../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+        Returns the position of the mouse relatively to a window <span class="see">See : <a href="../../ogamlcore/ll/window.html">OgamlCore.LL.Window</a></span> <span class="see">See : <a href="../../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
      </div>
    </article>
    <article>
@@ -51,7 +67,7 @@
      </span>
      <div class="more">
       
-        Sets the position of the cursor relatively to the screen <span class="see">See : <a href="../../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+        Sets the position of the cursor relatively to the screen <span class="see">See : <a href="../../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
      </div>
    </article>
    <article>
@@ -65,7 +81,7 @@
      </span>
      <div class="more">
       
-        Sets the position of the cursor relatively to a window <span class="see">See : <a href="../../ogamlcore/ll/window.html">OgamlCore.LL.Window</a></span> <span class="see">See : <a href="../../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+        Sets the position of the cursor relatively to a window <span class="see">See : <a href="../../ogamlcore/ll/window.html">OgamlCore.LL.Window</a></span> <span class="see">See : <a href="../../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
      </div>
    </article>
    <article>
@@ -79,7 +95,7 @@
      </span>
      <div class="more">
       
-        Returns <pre><code>true</pre></code> iff the given button is currently held down by the user <span class="see">See : <a href="../../ogamlcore/button.html">OgamlCore.Button</a></span>
+        Returns <code class="OCaml">true</code> iff the given button is currently held down by the user <span class="see">See : <a href="../../ogamlcore/button.html">OgamlCore.Button</a></span>
      </div>
    </article>
    

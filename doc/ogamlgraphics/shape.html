@@ -2,6 +2,22 @@
 <html>
   <head>
     <title>OGaml documentation - Shape</title>
+                                        
+    <link rel="stylesheet" href="../../css/monokai.css">
+                                        
+    <link rel="stylesheet" href="../../css/doc.css">
+                                        
+    <script src="../../script/highlight.pack.js"></script>
+                                        
+    <script type="text/javascript"> 
+    hljs.tabReplace = ''; 
+    hljs.initHighlightingOnLoad(); 
+    window.onload = function() { 
+      var aCodes = document.getElementsByTagName('code'); 
+      for (var i=0; i < aCodes.length; i++) { 
+        hljs.highlightBlock(aCodes[i]); 
+      }
+    } </script>
   </head>
   <body>
     <main>
@@ -78,7 +94,7 @@
      </span>
      <div class="more">
       
-        Creates a line from <pre><code>top</pre></code> (zero by default) to <pre><code>tip</pre></code> . 
+        Creates a line from <code class="OCaml">top</code> (zero by default) to <code class="OCaml">tip</code> . 
      </div>
    </article>
    <article>
@@ -92,7 +108,7 @@
      </span>
      <div class="more">
       
-        Draws a shape on a window using the given parameters.  <pre><code>parameters</pre></code> defaults to <pre><code>DrawParameter.make ~depth_test:false ~blend_mode:DrawParameter.BlendMode.alpha</pre></code>   <span class="see">See : <a href="../ogamlgraphics/drawparameter.html">OgamlGraphics.DrawParameter</a></span> <span class="see">See : <a href="../ogamlgraphics/window.html">OgamlGraphics.Window</a></span>
+        Draws a shape on a window using the given parameters.  <code class="OCaml">parameters</code> defaults to <code class="OCaml">DrawParameter.make ~depth_test:false ~blend_mode:DrawParameter.BlendMode.alpha</code>   <span class="see">See : <a href="../ogamlgraphics/drawparameter.html">OgamlGraphics.DrawParameter</a></span> <span class="see">See : <a href="../ogamlgraphics/window.html">OgamlGraphics.Window</a></span>
      </div>
    </article>
    <article>

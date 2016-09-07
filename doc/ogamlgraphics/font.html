@@ -2,6 +2,22 @@
 <html>
   <head>
     <title>OGaml documentation - Font</title>
+                                        
+    <link rel="stylesheet" href="../../css/monokai.css">
+                                        
+    <link rel="stylesheet" href="../../css/doc.css">
+                                        
+    <script src="../../script/highlight.pack.js"></script>
+                                        
+    <script type="text/javascript"> 
+    hljs.tabReplace = ''; 
+    hljs.initHighlightingOnLoad(); 
+    window.onload = function() { 
+      var aCodes = document.getElementsByTagName('code'); 
+      for (var i=0; i < aCodes.length; i++) { 
+        hljs.highlightBlock(aCodes[i]); 
+      }
+    } </script>
   </head>
   <body>
     <main>
@@ -74,7 +90,7 @@
      </span>
      <div class="more">
       
-        <pre><code>glyph font code size bold</pre></code> returns the glyph representing the character <pre><code>code</pre></code> in <pre><code>font</pre></code>  of size <pre><code>size</pre></code> and with the modifier <pre><code>bold</pre></code> 
+        <code class="OCaml">glyph font code size bold</code> returns the glyph representing the character <code class="OCaml">code</code> in <code class="OCaml">font</code>  of size <code class="OCaml">size</code> and with the modifier <code class="OCaml">bold</code> 
      </div>
    </article>
    <article>

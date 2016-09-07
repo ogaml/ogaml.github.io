@@ -2,6 +2,22 @@
 <html>
   <head>
     <title>OGaml documentation - Quaternion</title>
+                                        
+    <link rel="stylesheet" href="../../css/monokai.css">
+                                        
+    <link rel="stylesheet" href="../../css/doc.css">
+                                        
+    <script src="../../script/highlight.pack.js"></script>
+                                        
+    <script type="text/javascript"> 
+    hljs.tabReplace = ''; 
+    hljs.initHighlightingOnLoad(); 
+    window.onload = function() { 
+      var aCodes = document.getElementsByTagName('code'); 
+      for (var i=0; i < aCodes.length; i++) { 
+        hljs.highlightBlock(aCodes[i]); 
+      }
+    } </script>
   </head>
   <body>
     <main>
@@ -135,7 +151,7 @@
      </span>
      <div class="more">
       
-        <pre><code>sub q1 q2</pre></code> returns the quaternion <pre><code>q1 - q2</pre></code> 
+        <code class="OCaml">sub q1 q2</code> returns the quaternion <code class="OCaml">q1 - q2</code> 
      </div>
    </article>
    <article>
@@ -149,7 +165,7 @@
      </span>
      <div class="more">
       
-        Returns the quaternion representing a rotation given by an axis and an angle. <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+        Returns the quaternion representing a rotation given by an axis and an angle. <span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>

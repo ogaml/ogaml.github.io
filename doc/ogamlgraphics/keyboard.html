@@ -2,6 +2,22 @@
 <html>
   <head>
     <title>OGaml documentation - Keyboard</title>
+                                        
+    <link rel="stylesheet" href="../../css/monokai.css">
+                                        
+    <link rel="stylesheet" href="../../css/doc.css">
+                                        
+    <script src="../../script/highlight.pack.js"></script>
+                                        
+    <script type="text/javascript"> 
+    hljs.tabReplace = ''; 
+    hljs.initHighlightingOnLoad(); 
+    window.onload = function() { 
+      var aCodes = document.getElementsByTagName('code'); 
+      for (var i=0; i < aCodes.length; i++) { 
+        hljs.highlightBlock(aCodes[i]); 
+      }
+    } </script>
   </head>
   <body>
     <main>
@@ -24,7 +40,7 @@
      </span>
      <div class="more">
       
-        <pre><code>is_pressed key</pre></code> will return <pre><code>true</pre></code> iff <pre><code>key</pre></code> is currently pressed <span class="see">See : <a href="../ogamlcore/keycode.html">OgamlCore.Keycode</a></span>
+        <code class="OCaml">is_pressed key</code> will return <code class="OCaml">true</code> iff <code class="OCaml">key</code> is currently pressed <span class="see">See : <a href="../ogamlcore/keycode.html">OgamlCore.Keycode</a></span>
      </div>
    </article>
    <h3> Accessing modifiers information </h3>
@@ -39,7 +55,7 @@
      </span>
      <div class="more">
       
-        <pre><code>true</pre></code> iff the shift modifier is active 
+        <code class="OCaml">true</code> iff the shift modifier is active 
      </div>
    </article>
    <article>
@@ -53,7 +69,7 @@
      </span>
      <div class="more">
       
-        <pre><code>true</pre></code> iff the control modifier (or cmd on OSX) is active 
+        <code class="OCaml">true</code> iff the control modifier (or cmd on OSX) is active 
      </div>
    </article>
    <article>
@@ -67,7 +83,7 @@
      </span>
      <div class="more">
       
-        <pre><code>true</pre></code> iff the alt modifier is active 
+        <code class="OCaml">true</code> iff the alt modifier is active 
      </div>
    </article>
    

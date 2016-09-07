@@ -2,6 +2,22 @@
 <html>
   <head>
     <title>OGaml documentation - Vector3i</title>
+                                        
+    <link rel="stylesheet" href="../../css/monokai.css">
+                                        
+    <link rel="stylesheet" href="../../css/doc.css">
+                                        
+    <script src="../../script/highlight.pack.js"></script>
+                                        
+    <script type="text/javascript"> 
+    hljs.tabReplace = ''; 
+    hljs.initHighlightingOnLoad(); 
+    window.onload = function() { 
+      var aCodes = document.getElementsByTagName('code'); 
+      for (var i=0; i < aCodes.length; i++) { 
+        hljs.highlightBlock(aCodes[i]); 
+      }
+    } </script>
   </head>
   <body>
     <main>
@@ -122,7 +138,7 @@
      </span>
      <div class="more">
       
-        <pre><code>sub u v</pre></code> computes the vector <pre><code>u - v</pre></code> 
+        <code class="OCaml">sub u v</code> computes the vector <code class="OCaml">u - v</code> 
      </div>
    </article>
    <article>
@@ -164,7 +180,7 @@
      </span>
      <div class="more">
       
-        Projects a vector on the plane <pre><code>z = 0</pre></code> <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+        Projects a vector on the plane <code class="OCaml">z = 0</code> <span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
      </div>
    </article>
    <article>
@@ -178,7 +194,7 @@
      </span>
      <div class="more">
       
-        Lifts a 2D vector in the 3D space by setting <pre><code>z = 0</pre></code> <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+        Lifts a 2D vector in the 3D space by setting <code class="OCaml">z = 0</code> <span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
      </div>
    </article>
    <article>
@@ -290,7 +306,7 @@
      </span>
      <div class="more">
       
-        <pre><code>clamp v a b</pre></code> returns the vector whose coordinates are the coordinates of <pre><code>v</pre></code>  clamped between the coordinates of <pre><code>a</pre></code> and <pre><code>b</pre></code> 
+        <code class="OCaml">clamp v a b</code> returns the vector whose coordinates are the coordinates of <code class="OCaml">v</code>  clamped between the coordinates of <code class="OCaml">a</code> and <code class="OCaml">b</code> 
      </div>
    </article>
    <article>
@@ -360,7 +376,7 @@
      </span>
      <div class="more">
       
-        <pre><code>raster p1 p2</pre></code> applies the Bresenham's line algorithm between the points <pre><code>p1</pre></code> and <pre><code>p2</pre></code> and returns the list of points constituting the line   Note : should not be used for precise raytracing as it may miss points 
+        <code class="OCaml">raster p1 p2</code> applies the Bresenham's line algorithm between the points <code class="OCaml">p1</code> and <code class="OCaml">p2</code> and returns the list of points constituting the line   Note : should not be used for precise raytracing as it may miss points 
      </div>
    </article>
    <article>
