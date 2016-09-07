@@ -29,7 +29,7 @@
       <hr>
       
       
-       This module defines interpolators between two values.  An interpolator between value v0 and v1 is a function f such that f(0) = v0, f(1) = v1.  
+       This module defines interpolators between two values.<br> An interpolator between value v0 and v1 is a function f such that f(0) = v0, f(1) = v1.<br>
       <article>
      <span class="showmore">
         <figure class="highlight">
@@ -59,7 +59,7 @@
      </div>
    </article>
    <h3> Accessors and modifiers </h3>
-       Those functions provide a way to modify the behaviour of interpolators.  Unless otherwise specified, the modifiers applied to  an interpolator are kept by all subsequent operations.  This means that, for example, passing a time-based  interpolator to <code class="OCaml">map</code> will return a new time-based  interpolator. 
+       Those functions provide a way to modify the behaviour of interpolators.<br> Unless otherwise specified, the modifiers applied to  an interpolator are kept by all subsequent operations.  This means that, for example, passing a time-based  interpolator to <code class="OCaml">map</code> will return a new time-based  interpolator. 
       <article>
      <span class="showmore">
         <figure class="highlight">
@@ -71,7 +71,7 @@
      </span>
      <div class="more">
       
-        <code class="OCaml">get ip t</code> returns the value of the interpolator <code class="OCaml">ip</code>  at time <code class="OCaml">t</code> in [0;1] 
+       <code class="OCaml">get ip t</code> returns the value of the interpolator <code class="OCaml">ip</code> at time <code class="OCaml">t</code> in [0;1] 
      </div>
    </article>
    <article>
@@ -85,7 +85,7 @@
      </span>
      <div class="more">
       
-        <code class="OCaml">current ip</code> returns the current value of a time-based interpolator (see function start).  If <code class="OCaml">ip</code> is not time-based then the result is <code class="OCaml">ip(0)</code> . 
+       <code class="OCaml">current ip</code> returns the current value of a time-based interpolator (see function start).<br> If <code class="OCaml">ip</code> is not time-based then the result is <code class="OCaml">ip(0)</code> . 
      </div>
    </article>
    <article>
@@ -99,7 +99,7 @@
      </span>
      <div class="more">
       
-        <code class="OCaml">start ip t dt</code> returns a new time-based interpolator  <code class="OCaml">tip</code> such that :  <code class="OCaml">current tip</code> = <code class="OCaml">ip(0)</code> at time <code class="OCaml">t</code>   <code class="OCaml">current tip</code> = <code class="OCaml">ip(1)</code> at time <code class="OCaml">t + dt</code>   <code class="OCaml">t</code> and <code class="OCaml">dt</code> are given in seconds.  <code class="OCaml">t = Unix.gettimeofday()</code> means that <code class="OCaml">tip</code> starts immediately.  If <code class="OCaml">dt = 0</code> then <code class="OCaml">current</code> will always return <code class="OCaml">ip(0)</code>   The result of <code class="OCaml">get</code> on the <code class="OCaml">tip</code> is left unchanged. 
+       <code class="OCaml">start ip t dt</code> returns a new time-based interpolator <code class="OCaml">tip</code> such that :<br><code class="OCaml">current tip</code> = <code class="OCaml">ip(0)</code> at time <code class="OCaml">t</code><br><code class="OCaml">current tip</code> = <code class="OCaml">ip(1)</code> at time <code class="OCaml">t + dt</code><br><code class="OCaml">t</code> and <code class="OCaml">dt</code> are given in seconds. <code class="OCaml">t = Unix.gettimeofday()</code> means that <code class="OCaml">tip</code> starts immediately.<br> If <code class="OCaml">dt = 0</code> then <code class="OCaml">current</code> will always return <code class="OCaml">ip(0)</code><br> The result of <code class="OCaml">get</code> on the <code class="OCaml">tip</code> is left unchanged. 
      </div>
    </article>
    <article>
@@ -113,7 +113,7 @@
      </span>
      <div class="more">
       
-        <code class="OCaml">repeat ip</code> returns a repeating interpolator <code class="OCaml">lip</code> from <code class="OCaml">ip</code> such that <code class="OCaml">lip(x)</code> = <code class="OCaml">ip(x)</code> for <code class="OCaml">x</code> in [0;1] and <code class="OCaml">lip</code> is 1-periodic. 
+       <code class="OCaml">repeat ip</code> returns a repeating interpolator <code class="OCaml">lip</code> from <code class="OCaml">ip</code> such that<code class="OCaml">lip(x)</code> = <code class="OCaml">ip(x)</code> for <code class="OCaml">x</code> in [0;1] and <code class="OCaml">lip</code> is 1-periodic. 
      </div>
    </article>
    <article>
@@ -127,11 +127,11 @@
      </span>
      <div class="more">
       
-        <code class="OCaml">loop ip</code> returns a repeating interpolator <code class="OCaml">lip</code> from <code class="OCaml">ip</code> such that :  <code class="OCaml">lip(x)</code> = <code class="OCaml">ip(x)</code> for <code class="OCaml">x</code> in [0;1]   <code class="OCaml">lip(x)</code> = <code class="OCaml">ip(2-x)</code> for <code class="OCaml">x</code> in [1;2]  <code class="OCaml">lip(x)</code> is 2-periodic 
+       <code class="OCaml">loop ip</code> returns a repeating interpolator <code class="OCaml">lip</code> from <code class="OCaml">ip</code> such that :<br><code class="OCaml">lip(x)</code> = <code class="OCaml">ip(x)</code> for <code class="OCaml">x</code> in [0;1] <br><code class="OCaml">lip(x)</code> = <code class="OCaml">ip(2-x)</code> for <code class="OCaml">x</code> in [1;2]<br><code class="OCaml">lip(x)</code> is 2-periodic 
      </div>
    </article>
    <h3> Constructors </h3>
-       Those functions provide a way to construct various (and even user-defined) interpolators.  Unless otherwise specified, parameters are clamped to [0;1], that is ip(x) for x < 0 equals ip(0) and ip(x) for x > 1 equals ip(1)   Most constructors require a list of points of the form <code class="OCaml">(dt, v)</code>  such that the created interpolator will take the value <code class="OCaml">v</code>  at time <code class="OCaml">dt</code> .  The <code class="OCaml">cst_*</code> variants create constant-speed interpolators  so the <code class="OCaml">dt</code> parameter is not required. 
+       Those functions provide a way to construct various (and even user-defined) interpolators.<br> Unless otherwise specified, parameters are clamped to [0;1], that is ip(x) for x < 0 equals ip(0) and ip(x) for x > 1 equals ip(1) <br> Most constructors require a list of points of the form <code class="OCaml">(dt, v)</code> such that the created interpolator will take the value <code class="OCaml">v</code> at time <code class="OCaml">dt</code> .<br> The <code class="OCaml">cst_*</code> variants create constant-speed interpolators  so the <code class="OCaml">dt</code> parameter is not required. 
       <article>
      <span class="showmore">
         <figure class="highlight">
@@ -143,7 +143,7 @@
      </span>
      <div class="more">
       
-        <code class="OCaml">custom f</code> returns a custom interpolator that coincides with   the function <code class="OCaml">f</code> on [0;1] and equals f(0) or f(1) elsewhere. 
+       <code class="OCaml">custom f</code> returns a custom interpolator that coincides with   the function <code class="OCaml">f</code> on [0;1] and equals f(0) or f(1) elsewhere. 
      </div>
    </article>
    <article>
@@ -157,7 +157,7 @@
      </span>
      <div class="more">
       
-        <code class="OCaml">copy f</code> returns a custom interpolator that coincides with   the function <code class="OCaml">f</code> everywhere 
+       <code class="OCaml">copy f</code> returns a custom interpolator that coincides with   the function <code class="OCaml">f</code> everywhere 
      </div>
    </article>
    <article>
@@ -185,7 +185,7 @@
      </span>
      <div class="more">
       
-        <code class="OCaml">linear start steps end</code> creates a linear interpolator going from <code class="OCaml">start</code> to <code class="OCaml">end</code> passing through each point <code class="OCaml">(dt, pos)</code> of <code class="OCaml">steps</code> at time <code class="OCaml">dt</code> 
+       <code class="OCaml">linear start steps end</code> creates a linear interpolator going from <code class="OCaml">start</code> to <code class="OCaml">end</code> passing through each point<code class="OCaml">(dt, pos)</code> of <code class="OCaml">steps</code> at time <code class="OCaml">dt</code>
      </div>
    </article>
    <article>
@@ -199,7 +199,7 @@
      </span>
      <div class="more">
       
-        <code class="OCaml">cst_linear start steps end</code> creates a linear interpolator  going from <code class="OCaml">start</code> to <code class="OCaml">end</code> passing through each point  of <code class="OCaml">steps</code> at constant speed 
+       <code class="OCaml">cst_linear start steps end</code> creates a linear interpolator  going from <code class="OCaml">start</code> to <code class="OCaml">end</code> passing through each point  of <code class="OCaml">steps</code> at constant speed 
      </div>
    </article>
    <article>
@@ -213,7 +213,7 @@
      </span>
      <div class="more">
       
-        <code class="OCaml">cubic (start, sm) steps (end, em)</code> creates a cubic spline interpolator going from <code class="OCaml">start</code> with tangent <code class="OCaml">sm</code> to <code class="OCaml">end</code> with tangeant <code class="OCaml">em</code>  passing through each point <code class="OCaml">(dt, pos)</code> of <code class="OCaml">steps</code> at time <code class="OCaml">dt</code> 
+       <code class="OCaml">cubic (start, sm) steps (end, em)</code> creates a cubic spline interpolator going from <code class="OCaml">start</code> with tangent <code class="OCaml">sm</code> to <code class="OCaml">end</code> with tangeant <code class="OCaml">em</code> passing through each point <code class="OCaml">(dt, pos)</code> of <code class="OCaml">steps</code> at time <code class="OCaml">dt</code>
      </div>
    </article>
    <article>
@@ -227,7 +227,7 @@
      </span>
      <div class="more">
       
-        <code class="OCaml">cubic (start, sm) steps (end, em)</code> creates a cubic spline interpolator going from <code class="OCaml">start</code> with tangent <code class="OCaml">sm</code> to <code class="OCaml">end</code> with tangeant <code class="OCaml">em</code>  passing through each point of <code class="OCaml">steps</code> at constant speed 
+       <code class="OCaml">cubic (start, sm) steps (end, em)</code> creates a cubic spline interpolator going from <code class="OCaml">start</code> with tangent <code class="OCaml">sm</code> to <code class="OCaml">end</code> with tangeant <code class="OCaml">em</code> passing through each point of <code class="OCaml">steps</code> at constant speed 
      </div>
    </article>
    <h3> Composition </h3>
@@ -242,7 +242,7 @@
      </span>
      <div class="more">
       
-        <code class="OCaml">compose ip1 ip2</code> returns a new interpolator that takes the values of <code class="OCaml">ip2</code> but using the values of <code class="OCaml">ip1</code> as parameter  The new interpolator will have the modifiers of <code class="OCaml">ip1</code> 
+       <code class="OCaml">compose ip1 ip2</code> returns a new interpolator that takes the values of <code class="OCaml">ip2</code> but using the values of <code class="OCaml">ip1</code> as parameter<br> The new interpolator will have the modifiers of <code class="OCaml">ip1</code>
      </div>
    </article>
    <article>
@@ -256,7 +256,7 @@
      </span>
      <div class="more">
       
-        <code class="OCaml">map ip f</code> returns a new interpolator that takes the value of <code class="OCaml">ip</code> and passes it to <code class="OCaml">f</code> . 
+       <code class="OCaml">map ip f</code> returns a new interpolator that takes the value of <code class="OCaml">ip</code> and passes it to <code class="OCaml">f</code> . 
      </div>
    </article>
    <article>
@@ -270,7 +270,7 @@
      </span>
      <div class="more">
       
-        <code class="OCaml">map_right</code> is an alias for <code class="OCaml">map</code> 
+       <code class="OCaml">map_right</code> is an alias for <code class="OCaml">map</code>
      </div>
    </article>
    <article>
@@ -284,7 +284,7 @@
      </span>
      <div class="more">
       
-        <code class="OCaml">map_left f ip</code> returns a function <code class="OCaml">g</code> such that  <code class="OCaml">g(x) = ip(f(x))</code> 
+       <code class="OCaml">map_left f ip</code> returns a function <code class="OCaml">g</code> such that <code class="OCaml">g(x) = ip(f(x))</code>
      </div>
    </article>
    <article>
@@ -298,7 +298,7 @@
      </span>
      <div class="more">
       
-        Returns a pair-interpolator from a pair of interpolators.  The new interpolator will not have any modifiers. 
+        Returns a pair-interpolator from a pair of interpolators.<br> The new interpolator will not have any modifiers. 
      </div>
    </article>
    <article>
@@ -312,7 +312,7 @@
      </span>
      <div class="more">
       
-        Returns a list-interpolator from a list of interpolators.  The new interpolator will not have any modifiers. 
+        Returns a list-interpolator from a list of interpolators.<br> The new interpolator will not have any modifiers. 
      </div>
    </article>
    <article>
@@ -326,7 +326,7 @@
      </span>
      <div class="more">
       
-        Returns a vector3f interpolator from three float interpolators.   The new interpolator will not have any modifiers. 
+        Returns a vector3f interpolator from three float interpolators. <br> The new interpolator will not have any modifiers. 
      </div>
    </article>
    <article>
@@ -340,7 +340,7 @@
      </span>
      <div class="more">
       
-        Returns a vector2f interpolator from two float interpolators.   The new interpolator will not have any modifiers. 
+        Returns a vector2f interpolator from two float interpolators. <br> The new interpolator will not have any modifiers. 
      </div>
    </article>
    

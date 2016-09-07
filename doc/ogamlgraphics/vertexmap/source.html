@@ -29,7 +29,7 @@
       <hr>
       
       
-       This module provides a way to store vertices in a source before creating a vertex map.  Note that a source is a mutable structure, therefore add and (<<) will directly modify the source.  Sources are redimensionned as needed when adding vertices. 
+       This module provides a way to store vertices in a source before creating a vertex map.<br> Note that a source is a mutable structure, therefore add and (<<) will directly modify the source.<br> Sources are redimensionned as needed when adding vertices. 
       <article>
      <span class="showmore">
         <figure class="highlight">
@@ -55,7 +55,7 @@
      </span>
      <div class="more">
       
-        Creates an empty source of a given initial size. The source will be redimensionned as needed.  The type of the vertices stored by the source will be defined by the first stored vertex. 
+        Creates an empty source of a given initial size. The source will be redimensionned as needed.<br> The type of the vertices stored by the source will be defined by the first stored vertex. 
      </div>
    </article>
    <article>
@@ -69,7 +69,7 @@
      </span>
      <div class="more">
       
-        Adds a vertex to a source. Resizes the source if needed. <span class="see">See : <a href="../../ogamlgraphics/vertexmap/vertex.html">OgamlGraphics.VertexMap.Vertex</a></span>
+        Adds a vertex to a source. Resizes the source if needed.<span class="see">See : <a href="../../ogamlgraphics/vertexmap/vertex.html">OgamlGraphics.VertexMap.Vertex</a></span>
      </div>
    </article>
    <article>
@@ -83,7 +83,7 @@
      </span>
      <div class="more">
       
-        Syntaxic sugar for sequences of additions. <span class="see">See : <a href="../../ogamlgraphics/vertexmap/vertex.html">OgamlGraphics.VertexMap.Vertex</a></span>  <code class="OCaml">source << vertex1 << vertex2 << vertex3</code> 
+        Syntaxic sugar for sequences of additions. <span class="see">See : <a href="../../ogamlgraphics/vertexmap/vertex.html">OgamlGraphics.VertexMap.Vertex</a></span><code class="OCaml">source << vertex1 << vertex2 << vertex3</code>
      </div>
    </article>
    <article>
@@ -111,7 +111,7 @@
      </span>
      <div class="more">
       
-        <code class="OCaml">append s1 s2</code> appends the source <code class="OCaml">s2</code> at the end of the source <code class="OCaml">s1</code> (in place), and returns <code class="OCaml">s1</code> . Raises Invalid_source if types are incompatible. 
+       <code class="OCaml">append s1 s2</code> appends the source <code class="OCaml">s2</code> at the end of the source <code class="OCaml">s1</code> (in place), and returns <code class="OCaml">s1</code> . Raises Invalid_source if types are incompatible. 
      </div>
    </article>
    
