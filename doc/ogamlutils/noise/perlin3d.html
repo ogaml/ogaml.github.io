@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Perlin3D</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlUtils.Noise.</span><span class="modulename">Perlin3D</span></h1>
+    
+      <span class="abstract"> 3D Perlin noise </span>
+      <hr>
+      
+      
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a 3D Perlin noise 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val create : unit -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates a 3D Perlin noise with the current random state 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val create_with_seed : Random.State.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates a 3D Perlin noise with a custom random state 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val get : t -> OgamlMath.Vector3f.t -> float
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Gets the value of a 3D noise at a given point 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

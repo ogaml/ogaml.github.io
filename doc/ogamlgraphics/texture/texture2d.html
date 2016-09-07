@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Texture2D</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.Texture.</span><span class="modulename">Texture2D</span></h1>
+    
+      <span class="abstract"> Represents a simple 2D texture </span>
+      <hr>
+      
+      
+       This modules provides an abstraction of openGL 2D textures that can be used for 2D rendering (with sprites) or 3D rendering when passed to a GLSL program. 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a 2D texture 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val create : [< `File of string | `Image of Image.t] -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates a texture from a source (a file or an image) 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val size : t -> OgamlMath.Vector2i.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the size of a texture 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

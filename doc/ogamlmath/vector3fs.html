@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Vector3fs</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlMath.</span><span class="modulename">Vector3fs</span></h1>
+    
+      <span class="abstract"> Operations on immutable vectors of 3 floats represented in spherical coordinates </span>
+      <hr>
+      
+      
+       This module defines the vector3fs type and various operations on it. 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            exception Vector3fs_exception of string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Raised when an error occurs (usually a division by zero) 
+     </div>
+   </article>
+   <h3> Vector operations </h3>
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t = {r : float; t : float; p : float}
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of immutable vectors of 3 floats represented in spherical coordinates 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val zero : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Zero vector 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val unit_x : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Unit x vector 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val unit_y : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Unit y vector 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val unit_z : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Unit z vector 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val prop : float -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Multiplies a vector by a scalar 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val div : float -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Divides a vector by a scalar. Raises Vector3fs_exception if the scalar is zero. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val to_cartesian : t -> Vector3f.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Converts a vector represented in spherical coordinates to a vector represented in cartesian coordinates  <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val from_cartesian : Vector3f.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Converts a vector represented in cartesian coordinates to a vector represented in spherical coordinates  <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val norm : t -> float
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Computes the norm of a vector 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val normalize : t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Normalizes a vector. Raises Vector3fs_exception if the vector is zero. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val print : t -> string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns a pretty-printed string (not for serialization) 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

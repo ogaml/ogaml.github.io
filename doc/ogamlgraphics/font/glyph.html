@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Glyph</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.Font.</span><span class="modulename">Glyph</span></h1>
+    
+      <span class="abstract"> Representation of a character </span>
+      <hr>
+      
+      
+       This module encapsulates the data associated to a character's glyph.  All coordinates are given relatively to the glyph's origin, and with an up-increasing Y coordinate 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a glyph 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val advance : t -> float
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Space between the origin of this glyph and the origin of the next glyph 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val bearing : t -> OgamlMath.Vector2f.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the offset between the origin and the top-left corner of the glyph 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val rect : t -> OgamlMath.FloatRect.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the bouding rectangle of the glyph relatively to the origin 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

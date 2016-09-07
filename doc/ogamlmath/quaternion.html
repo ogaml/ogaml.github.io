@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Quaternion</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlMath.</span><span class="modulename">Quaternion</span></h1>
+    
+      <span class="abstract"> Operations on immutable quaternions </span>
+      <hr>
+      
+      
+       This module defines the quaternion type and various operations on it 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            exception Quaternion_exception of string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Raised when an error occurs (usually a division by zero) 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t = {r : float; i : float; j : float; k : float}
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of quaternions 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val zero : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Zero quaternion 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val one : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Unit (real) quaternion 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val real : float -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns a real number as a quaternion 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val add : t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Adds two quaternions 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val times : t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Multiplies two quaternions 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val prop : float -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Multiplies a quaternion by a scalar 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val sub : t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>sub q1 q2</pre></code> returns the quaternion <pre><code>q1 - q2</pre></code> 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val rotation : Vector3f.t -> float -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the quaternion representing a rotation given by an axis and an angle. <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val conj : t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the conjugate of a quaternion 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val inverse : t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the inverse of a quaternion. Raises Quaternion_exception if the quaternion is zero 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val squared_norm : t -> float
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the squared norm of a quaternion 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val norm : t -> float
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the norm of a quaternion 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val normalize : t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Normalizes a quaternion. Raises Quaternion_exception if the quaternion is zero 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Log</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlUtils.</span><span class="modulename">Log</span></h1>
+    
+      <span class="abstract"> Log system </span>
+      <hr>
+      
+      
+       This module provides a very simple log system to use with Ogaml 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type level = | Debug
+| Warn
+| Error
+| Info
+| Fatal
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Enumeration of log message levels 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a log 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val create : ?output:out_channel -> ?debug:bool -> ?color:bool -> ?short:bool -> unit -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates a log  - output : output channel of log messages (defaults to stderr)  - debug : if false, debug messages will be ignored (defaults to true)  - color : if false, messages will not be colored (defaults to true)  - short : if true, timestamps will be shortened (defaults to false) 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val log : t -> level -> ('a, out_channel, unit) format -> 'a
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Logs a message 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val debug : t -> ('a, out_channel, unit) format -> 'a
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Logs a debug message 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val warn : t -> ('a, out_channel, unit) format -> 'a
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Logs a warn message 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val error : t -> ('a, out_channel, unit) format -> 'a
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Logs an error message 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val info : t -> ('a, out_channel, unit) format -> 'a
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Logs an info message 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val fatal : t -> ('a, out_channel, unit) format -> 'a
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Logs a fatal error message 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

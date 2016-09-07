@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Image</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.</span><span class="modulename">Image</span></h1>
+    
+      <span class="abstract"> Image manipulation and creation </span>
+      <hr>
+      
+      
+       This module provides a safe way to load and access images stored in the RAM. Images stored this way are uncompressed arrays of bytes and are therefore not meant to be stored in large quantities. 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of an image stored in the RAM 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val create : [ `File of string | `Empty of (int * int * Color.t) | `Data of (int * int * Bytes.t)] -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates an image from a file, some RGBA-formatted data, or an empty one filled with a default color <span class="see">See : <a href="../ogamlgraphics/color.html">OgamlGraphics.Color</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val size : t -> OgamlMath.Vector2i.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Return the size of an image 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val set : t -> OgamlMath.Vector2i.t -> Color.t -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Sets a pixel of an image <span class="see">See : <a href="../ogamlgraphics/color.html">OgamlGraphics.Color</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val get : t -> OgamlMath.Vector2i.t -> Color.RGB.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Gets the color of a pixel of an image <span class="see">See : <a href="../ogamlgraphics/color/rgb.html">OgamlGraphics.Color.RGB</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val blit : t -> ?rect:OgamlMath.IntRect.t -> t -> OgamlMath.Vector2i.t -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>blit src ~rect dest offset</pre></code> blits the subimage of <pre><code>src</pre></code> defined by <pre><code>rect</pre></code>  on the image <pre><code>dest</pre></code> at position <pre><code>offset</pre></code> (relative to the top-left pixel).  If <pre><code>rect</pre></code> is not provided then the whole image <pre><code>src</pre></code> is used. <span class="see">See : <a href="../ogamlmath/intrect.html">OgamlMath.IntRect</a></span> <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

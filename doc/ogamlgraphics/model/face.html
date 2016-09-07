@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Face</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.Model.</span><span class="modulename">Face</span></h1>
+    
+      <span class="abstract"> Represents a face of a model </span>
+      <hr>
+      
+      
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a face 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val create : Vertex.t -> Vertex.t -> Vertex.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates a face from 3 vertices 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val quad : Vertex.t -> Vertex.t -> Vertex.t -> Vertex.t -> (t * t)
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the two triangles associated to 4 vertices 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val vertices : t -> (Vertex.t * Vertex.t * Vertex.t)
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the 3 vertices of a face 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val paint : t -> Color.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns a new face painted with a given color 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val normal : t -> OgamlMath.Vector3f.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the normal of a face 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - BlendMode</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.DrawParameter.</span><span class="modulename">BlendMode</span></h1>
+    
+      <span class="abstract"> Blending modes manipulation </span>
+      <hr>
+      <h2>Submodules</h2>
+      
+      <table class="belowh">
+      
+        <tbody>
+          <tr><td><a href="../../ogamlgraphics/drawparameter/blendmode/factor.html">Factor</a></td><td> Blending factors enumeration </td></tr>
+          <tr><td><a href="../../ogamlgraphics/drawparameter/blendmode/equation.html">Equation</a></td><td> Blending equations enumeration </td></tr>
+          
+      
+        </tbody>
+      </table>
+      
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t = {color : Equation.t; alpha : Equation.t}
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Blending mode structure. This encapsulates a color blending equation and an alpha blending equation. <span class="see">See : <a href="../../ogamlgraphics/drawparameter/blendmode/equation.html">OgamlGraphics.DrawParameter.BlendMode.Equation</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val default : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Default blending mode, replaces the old color by the new one 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val alpha : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Common alpha blending mode 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val additive : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Additive blending mode 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val soft_additive : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Soft additive blending mode 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

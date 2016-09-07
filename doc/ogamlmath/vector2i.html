@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Vector2i</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlMath.</span><span class="modulename">Vector2i</span></h1>
+    
+      <span class="abstract"> Operations on immutable vectors of 2 integers </span>
+      <hr>
+      
+      
+       This module defines the vector2i type and various operations on it. 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            exception Vector2i_exception of string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Raised when an error occurs (usually a division by zero) 
+     </div>
+   </article>
+   <h3> Vector operations </h3>
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t = {x : int; y : int}
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of immutable vectors of 2 integers 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val zero : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Zero vector 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val unit_x : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Unit x vector 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val unit_y : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Unit y vector 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val add : t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Adds two vectors together 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val sub : t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>sub u v</pre></code> computes the vector <pre><code>u - v</pre></code> 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val prop : int -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Multiplies a vector by a scalar 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val div : int -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Divides a vector by a scalar. Raises Vector2i_exception if the scalar is zero. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val dot : t -> t -> int
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Computes the dot product of two vectors 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val det : t -> t -> int
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Computes the determinant of two vectors 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val angle : t -> t -> float
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Computes the angle (in radians) between two vectors 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val squared_norm : t -> int
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Computes the squared norm of a vector 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val norm : t -> float
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Computes the norm of a vector 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val squared_dist : t -> t -> int
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Computes the squared distance between two points 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val dist : t -> t -> float
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Computes the distance between two points 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val clamp : t -> t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>clamp v a b</pre></code> returns the vector whose coordinates are the coordinates of <pre><code>v</pre></code>  clamped between the coordinates of <pre><code>a</pre></code> and <pre><code>b</pre></code> 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val map : t -> (int -> int) -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Maps each coordinate of a vector 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val map2 : t -> t -> (int -> int -> int) -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Maps each pair of coordinates of two vectors 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val max : t -> int
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the maximal coordinate of a vector 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val min : t -> int
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the minimal coordinate of a vector 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val raster : t -> t -> t list
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>raster p1 p2</pre></code> applies the Bresenham's line algorithm between the points <pre><code>p1</pre></code> and <pre><code>p2</pre></code> and returns the list of points constituting the line  Note : should not be used for precise raytracing as it may miss points 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val print : t -> string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns a pretty-printed string (not for serialization) 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

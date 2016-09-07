@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Q</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlUtils.PriorityQueue.</span><span class="modulename">Q</span></h1>
+    
+      <span class="abstract"> Type of PriorityQueue.Make </span>
+      <hr>
+      
+      
+       This module provides a basic implementation of priority queues 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            exception Empty
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Raised when a queue is empty 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type priority
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Priorities used by the queue 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type 'a t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a queue storing elements of type <pre><code>'a</pre></code> 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val empty : 'a t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Empty queue 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val is_empty : 'a t -> bool
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns <pre><code>true</pre></code> iff the queue is empty 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val singleton : priority -> 'a -> 'a t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Singleton queue 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val merge : 'a t -> 'a t -> 'a t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Merges two queues 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val insert : 'a t -> priority -> 'a -> 'a t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Inserts an element with a given priority 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val top : 'a t -> 'a
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the top element of a queue  Raises <pre><code>Empty</pre></code> if the queue is empty 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val pop : 'a t -> 'a t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Removes the top element of a queue  Raises <pre><code>Empty</pre></code> if the queue is empty 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val extract : 'a t -> ('a * 'a t)
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the top element of a queue and the queue without its first element  Raises <pre><code>Empty</pre></code> if the queue is empty 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

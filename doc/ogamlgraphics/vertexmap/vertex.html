@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Vertex</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.VertexMap.</span><span class="modulename">Vertex</span></h1>
+    
+      <span class="abstract"> Represents a vertex </span>
+      <hr>
+      
+      
+       This module encapsulates vertices that can be passed to a source. A vertex is an immutable collection of attributes. 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a vertex 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val empty : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Empty vertex 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val vector3f : string -> OgamlMath.Vector3f.t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Adds a vector3f to a vertex. The given name must match the name of the vec3 attribute in the GLSL program <span class="see">See : <a href="../../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val vector2f : string -> OgamlMath.Vector2f.t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Adds a vector2f to a vertex. The given name must match the name of the vec2 attribute in the GLSL program <span class="see">See : <a href="../../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val vector3i : string -> OgamlMath.Vector3i.t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Adds a vector3i to a vertex. The given name must match the name of the ivec3 attribute in the GLSL program <span class="see">See : <a href="../../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val vector2i : string -> OgamlMath.Vector2i.t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Adds a vector2i to a vertex. The given name must match the name of the ivec2 attribute in the GLSL program <span class="see">See : <a href="../../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val int : string -> int -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Adds an integer to a vertex. The given name must match the name of the int attribute in the GLSL program 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val float : string -> float -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Adds a float to a vertex. The given name must match the name of the float attribute in the GLSL program 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val color : string -> Color.t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Adds a color to a vertex. The given name must match the name of the vec4 attribute in the GLSL program <span class="see">See : <a href="../../ogamlgraphics/color.html">OgamlGraphics.Color</a></span>
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

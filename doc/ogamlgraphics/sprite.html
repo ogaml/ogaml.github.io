@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Sprite</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.</span><span class="modulename">Sprite</span></h1>
+    
+      <span class="abstract"> Creation and manipulation of 2D sprites </span>
+      <hr>
+      
+      
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of sprites 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val create : texture:Texture.Texture2D.t -> ?origin:OgamlMath.Vector2f.t -> ?position:OgamlMath.Vector2f.t -> ?scale:OgamlMath.Vector2f.t -> ?size:OgamlMath.Vector2f.t -> ?rotation:float -> unit -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates a sprite. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val draw : ?parameters:DrawParameter.t -> window:Window.t -> sprite:t -> unit -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Draws a sprite on a window using the given parameters.  <pre><code>parameters</pre></code> defaults to <pre><code>DrawParameter.make ~depth_test:false ~blend_mode:DrawParameter.BlendMode.alpha</pre></code>   <span class="see">See : <a href="../ogamlgraphics/drawparameter.html">OgamlGraphics.DrawParameter</a></span> <span class="see">See : <a href="../ogamlgraphics/window.html">OgamlGraphics.Window</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val set_position : t -> OgamlMath.Vector2f.t -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Sets the position of the origin of the sprite in the window. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val set_origin : t -> OgamlMath.Vector2f.t -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Sets the position of the origin with respect to the top-left corner of the sprite. The origin is the center of all transformations. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val set_rotation : t -> float -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Sets the angle of rotation of the sprite. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val set_scale : t -> OgamlMath.Vector2f.t -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Sets the scale of the sprite. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val set_size : t -> OgamlMath.Vector2f.t -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Sets the base size of a sprite. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val translate : t -> OgamlMath.Vector2f.t -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Translates the sprite by the given vector. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val rotate : t -> float -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Rotates the sprite by the given angle. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val scale : t -> OgamlMath.Vector2f.t -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Scales the sprite. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val size : t -> OgamlMath.Vector2f.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the base size of a sprite 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val position : t -> OgamlMath.Vector2f.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the position of the origin in window coordinates. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val origin : t -> OgamlMath.Vector2f.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the position of the origin with respect to the first point of the sprite. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val rotation : t -> float
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the angle of rotation of the sprite. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val get_scale : t -> OgamlMath.Vector2f.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the scale of the sprite. 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

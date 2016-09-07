@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Model</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.</span><span class="modulename">Model</span></h1>
+    
+      <span class="abstract"> Creation, loading and manipulation of 3D models </span>
+      <hr>
+      <h2>Submodules</h2>
+      
+      <table class="belowh">
+      
+        <tbody>
+          <tr><td><a href="../ogamlgraphics/model/vertex.html">Vertex</a></td><td> Represents a particular vertex of a model </td></tr>
+          <tr><td><a href="../ogamlgraphics/model/face.html">Face</a></td><td> Represents a face of a model </td></tr>
+          
+      
+        </tbody>
+      </table>
+      
+       This module provides helpers to manipulate and load immutable 3D models in the RAM.  Moreover, the operations provided in this module are generally costly and should not be used in performance-sensitive code.  Models stored in that form are not RAM-friendly, and should not be stored in large numbers. Use vertex arrays instead. 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            exception Error of string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Raised if an OBJ file is ill-formed or if a model has a wrong type 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a model 
+     </div>
+   </article>
+   <h3> Model creation </h3>
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val empty : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Empty model 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val from_obj : string -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the model associated to an OBJ file 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val cube : OgamlMath.Vector3f.t -> OgamlMath.Vector3f.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates a cube from two endpoints 
+     </div>
+   </article>
+   <h3> Transformations </h3>
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val transform : t -> OgamlMath.Matrix3D.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Applies a transformation to a 3D model 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val scale : t -> OgamlMath.Vector3f.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Scales a 3D model 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val translate : t -> OgamlMath.Vector3f.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Translates a 3D model 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val rotate : t -> OgamlMath.Quaternion.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Rotates a 3D model 
+     </div>
+   </article>
+   <h3> Model modification </h3>
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val add_face : t -> Face.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Adds a face to a model 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val paint : t -> Color.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Paints the whole model with a given color 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val merge : t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Merges two models 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val compute_normals : ?smooth:bool -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        (Re-)computes the normals of a model. If <pre><code>smooth</pre></code> is <pre><code>true</pre></code> , then the normals are computed per-vertex instead of per-face 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val simplify : t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Simpifies a model (removes all redundant faces) 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val source : t -> ?index_source:IndexArray.Source.t -> vertex_source:VertexArray.Source.t -> unit -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Appends a model to a vertex source. Uses indexing if an index source is provided. Use Triangles as DrawMode with this source. <span class="see">See : <a href="../ogamlgraphics/indexarray/source.html">OgamlGraphics.IndexArray.Source</a></span> <span class="see">See : <a href="../ogamlgraphics/vertexarray/source.html">OgamlGraphics.VertexArray.Source</a></span>
+     </div>
+   </article>
+   <h3> Iterators </h3>
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val iter : t -> (Face.t -> unit) -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Iterates through all faces of a model 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val fold : t -> ('a -> Face.t -> 'a) -> 'a -> 'a
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Folds through all faces of a model 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val map : t -> (Face.t -> Face.t) -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Maps a model face by face 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

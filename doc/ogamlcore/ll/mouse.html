@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Mouse</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlCore.LL.</span><span class="modulename">Mouse</span></h1>
+    
+      <span class="abstract"> Getting real-time mouse information </span>
+      <hr>
+      
+      
+       This modules provides a low-level access to the mouse in real-time. You should probably use the OgamlGraphics.Mouse wrapper instead. 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val position : unit -> OgamlMath.Vector2i.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the postion of the mouse in screen coordinates <span class="see">See : <a href="../../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val relative_position : Window.t -> OgamlMath.Vector2i.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the position of the mouse relatively to a window <span class="see">See : <a href="../../ogamlcore/ll/window.html">OgamlCore.LL.Window</a></span> <span class="see">See : <a href="../../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val set_position : OgamlMath.Vector2i.t -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Sets the position of the cursor relatively to the screen <span class="see">See : <a href="../../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val set_relative_position : Window.t -> OgamlMath.Vector2i.t -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Sets the position of the cursor relatively to a window <span class="see">See : <a href="../../ogamlcore/ll/window.html">OgamlCore.LL.Window</a></span> <span class="see">See : <a href="../../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val is_pressed : Button.t -> bool
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns <pre><code>true</pre></code> iff the given button is currently held down by the user <span class="see">See : <a href="../../ogamlcore/button.html">OgamlCore.Button</a></span>
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

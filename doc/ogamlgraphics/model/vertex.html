@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Vertex</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.Model.</span><span class="modulename">Vertex</span></h1>
+    
+      <span class="abstract"> Represents a particular vertex of a model </span>
+      <hr>
+      
+      
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a model vertex 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val create : position:OgamlMath.Vector3f.t -> ?normal:OgamlMath.Vector3f.t -> ?uv:OgamlMath.Vector2f.t -> ?color:Color.t -> unit -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates a model vertex 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val position : t -> OgamlMath.Vector3f.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the position of a model vertex 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val normal : t -> OgamlMath.Vector3f.t option
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the normal of a model vertex 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val uv : t -> OgamlMath.Vector2f.t option
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the UV coordinates associated to a model vertex 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val color : t -> Color.t option
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the color of a model vertex 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

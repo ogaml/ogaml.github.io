@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Font</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.</span><span class="modulename">Font</span></h1>
+    
+      <span class="abstract"> Information about a font </span>
+      <hr>
+      <h2>Submodules</h2>
+      
+      <table class="belowh">
+      
+        <tbody>
+          <tr><td><a href="../ogamlgraphics/font/glyph.html">Glyph</a></td><td> Representation of a character </td></tr>
+          
+      
+        </tbody>
+      </table>
+      
+       This module stores a font and dynamically loads sizes and glyphs as requested by the user 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a font 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type code = [ `Char of char | `Code of int]
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type alias for a character given in ASCII or UTF-8 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val load : string -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Loads a font from a file 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val glyph : t -> code -> int -> bool -> Glyph.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>glyph font code size bold</pre></code> returns the glyph representing the character <pre><code>code</pre></code> in <pre><code>font</pre></code>  of size <pre><code>size</pre></code> and with the modifier <pre><code>bold</pre></code> 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val kerning : t -> code -> code -> int -> float
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the kerning between two chars of a given size, that is the horizontal offset that must be applied between the two glyphs (usually negative) 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val ascent : t -> int -> float
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the coordinate above the baseline the font extends 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val descent : t -> int -> float
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the coordinate below the baseline the font extends (usually negative) 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val linegap : t -> int -> float
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the distance between the descent of a line and the ascent of the next line 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val spacing : t -> int -> float
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the space between the baseline of two lines (equals ascent + linegap - descent) 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

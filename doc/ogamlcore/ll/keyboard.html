@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Keyboard</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlCore.LL.</span><span class="modulename">Keyboard</span></h1>
+    
+      <span class="abstract"> Getting real-time keyboard information </span>
+      <hr>
+      
+      
+       This module provides a low-level access to the keyboard in real-time. You should probably use the OgamlGraphics.Keyboard wrapper instead. 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val is_pressed : Keycode.t -> bool
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns <pre><code>true</pre></code> iff the given key is pressed <span class="see">See : <a href="../../ogamlcore/keycode.html">OgamlCore.Keycode</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val is_shift_down : unit -> bool
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns <pre><code>true</pre></code> iff the shift modifier is currently active 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val is_ctrl_down : unit -> bool
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns <pre><code>true</pre></code> iff the ctrl modifier (or cmd under OSX) is currently active 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val is_alt_down : unit -> bool
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns <pre><code>true</pre></code> iff the alt modifier is currently active 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

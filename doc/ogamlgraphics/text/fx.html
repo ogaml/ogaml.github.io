@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Fx</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.Text.</span><span class="modulename">Fx</span></h1>
+    
+      <span class="abstract"> Advanced text rendering </span>
+      <hr>
+      
+      
+       This module provides a more customisable way to render text through the use of iterators. This might prove more costly and also harder to use than the simple Text.t but it is much more powerful. 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        The type of pre-rendered customised texts. 
+     </div>
+   </article>
+   <h3> Iterators </h3>
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type ('a,'b) it = 'a -> 'b -> ('b -> 'b) -> 'b
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        The type of an iterator. The idea behind it is that <pre><code>'a</pre></code> is the type of objects that we manipulate (eg. <pre><code>Font.code</pre></code> ) while <pre><code>'b</pre></code> is the type of the value computed by the iterator. We rely here on continuation passing style to deal with this vaue at each step. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type ('a,'b,'c) full_it = (('a, 'b) it * 'b * 'b -> 'c)
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        The type of a full iterator also containing its initial value and a post-treatment function, typically to forget information that was useful to the computation but is irrelevant as a value. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val forall : 'c -> ('a, 'c list, 'c list) full_it
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        This creates a simple iterator that will return a constant for each value in the iterated list. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val foreach : ('a -> 'b) -> ('a, 'b list, 'b list) full_it
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Lifts a function as map would do. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val foreachi : ('a -> int -> 'b) -> ('a, ('b list * int), 'b list) full_it
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Lifts a function as mapi would do: it adds a parameter counting the number of times it has been called starting at 0. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val foreachword : (Font.code list -> 'a) -> 'a -> (Font.code, ('a list * Font.code list), 'a list) full_it
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        This iterator is specific to Font.code and allows the user to lift a function taking words instead of characters. It splits strings on blank spaces, hence the requirement for their value as second argument. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val create : text:string -> position:OgamlMath.Vector2f.t -> font:Font.t -> colors:(Font.code, 'b, Color.t list) full_it -> size:int -> unit -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates a drawable text with strongly customisable parameters. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val draw : ?parameters:DrawParameter.t -> text:t -> window:Window.t -> unit -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Draws a Fx.t. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val advance : t -> OgamlMath.Vector2f.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        The global advance of the text. Basically it is a vector such that if you add it to the position of text object, you get the position of the next character you would draw. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val boundaries : t -> OgamlMath.FloatRect.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns a rectangle containing all the text. 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

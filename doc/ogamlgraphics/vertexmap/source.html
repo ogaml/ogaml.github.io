@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Source</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.VertexMap.</span><span class="modulename">Source</span></h1>
+    
+      <span class="abstract"> Represents a source of vertices </span>
+      <hr>
+      
+      
+       This module provides a way to store vertices in a source before creating a vertex map.  Note that a source is a mutable structure, therefore add and (<<) will directly modify the source.  Sources are redimensionned as needed when adding vertices. 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a source 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val empty : unit -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates an empty source of a given initial size. The source will be redimensionned as needed.  The type of the vertices stored by the source will be defined by the first stored vertex. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val add : t -> Vertex.t -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Adds a vertex to a source. Resizes the source if needed. <span class="see">See : <a href="../../ogamlgraphics/vertexmap/vertex.html">OgamlGraphics.VertexMap.Vertex</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val (<<) : t -> Vertex.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Syntaxic sugar for sequences of additions. <span class="see">See : <a href="../../ogamlgraphics/vertexmap/vertex.html">OgamlGraphics.VertexMap.Vertex</a></span>  <pre><code>source << vertex1 << vertex2 << vertex3</pre></code> 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val length : t -> int
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the length of a source 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val append : t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>append s1 s2</pre></code> appends the source <pre><code>s2</pre></code> at the end of the source <pre><code>s1</pre></code> (in place), and returns <pre><code>s1</pre></code> . Raises Invalid_source if types are incompatible. 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Graph</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlUtils.</span><span class="modulename">Graph</span></h1>
+    
+      <span class="abstract"> Graph manipulation </span>
+      <hr>
+      
+      <h2>Signatures</h2>
+      
+      <table class="belowh">
+      
+        <tbody>
+          <tr><td><a href="../ogamlutils/graph/vertex.html">Vertex</a></td><td> Vertex representation </td></tr>
+          <tr><td><a href="../ogamlutils/graph/g.html">G</a></td><td> Output of Graph.Make </td></tr>
+          
+      
+        </tbody>
+      </table>
+       This module provides a functor to create graphs with arbitrary vertices 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            module Make : functor (V : Vertex) -> G with type vertex = V.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Graph functor 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

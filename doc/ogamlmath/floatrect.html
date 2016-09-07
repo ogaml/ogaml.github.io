@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - FloatRect</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlMath.</span><span class="modulename">FloatRect</span></h1>
+    
+      <span class="abstract"> Operations on float rectangles </span>
+      <hr>
+      
+      
+       This module defines the FloatRect type and various operations on it. 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t = {x : float; y : float; width : float; height : float}
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of immutable rectangles of floats 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val create : Vector2f.t -> Vector2f.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>create position size</pre></code> creates a rectangle at position <pre><code>position</pre></code> and of size <pre><code>size</pre></code> 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val create_from_points : Vector2f.t -> Vector2f.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>create_from_points p1 p2</pre></code> creates a rectangle going from <pre><code>p1</pre></code> to <pre><code>p2</pre></code> 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val zero : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Zero rectangle 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val one : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Unit rectangle 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val position : t -> Vector2f.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the position of a rectangle 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val abs_position : t -> Vector2f.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the absolute position of a rectangle, that is the point of minimal coordinates 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val corner : t -> Vector2f.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the top corner (aka position + size) of a rectangle 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val size : t -> Vector2f.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the size of a rectangle 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val abs_size : t -> Vector2f.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the absolute size of a rectangle 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val center : t -> Vector2f.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the center of a rectangle 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val normalize : t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>normalize rect</pre></code> returns a rectangle equivalent to <pre><code>rect</pre></code> but with positive size 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val area : t -> float
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the area of a rectangle 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val scale : t -> Vector2f.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Scales a rectangle (the result is normalized) 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val translate : t -> Vector2f.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Translates a rectangle 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val from_int : IntRect.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Converts an integer rectangle to a float rectangle 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val floor : t -> IntRect.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Converts a float rectangle to an integer rectangle 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val intersects : t -> t -> bool
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>intersects t1 t2</pre></code> returns <pre><code>true</pre></code> iff <pre><code>t1</pre></code> and <pre><code>t2</pre></code> overlap 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val contains : t -> Vector2f.t -> bool
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>contains t p</pre></code> returns <pre><code>true</pre></code> iff the rectangle <pre><code>t</pre></code> contains <pre><code>p</pre></code> 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

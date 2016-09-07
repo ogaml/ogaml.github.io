@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - IndexArray</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.</span><span class="modulename">IndexArray</span></h1>
+    
+      <span class="abstract"> High-level wrapper around OpenGL index arrays </span>
+      <hr>
+      <h2>Submodules</h2>
+      
+      <table class="belowh">
+      
+        <tbody>
+          <tr><td><a href="../ogamlgraphics/indexarray/source.html">Source</a></td><td> Represents a source of indices </td></tr>
+          
+      
+        </tbody>
+      </table>
+      
+       This modules provides a high-level and safe access to openGL index arrays. Index arrays can be passed to 3D rendering primitives and are used to render 3D models more efficiently. 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type static
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Phantom type for static index arrays 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type dynamic
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Phantom type for dynamic index arrays 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type 'a t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of an index array (static or dynamic) 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val static : Source.t -> static t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates a static index array. A static array is faster but can not be modified after creation. <span class="see">See : <a href="../ogamlgraphics/indexarray/source.html">OgamlGraphics.IndexArray.Source</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val dynamic : Source.t -> dynamic t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates a dynamic index array that can be modified after creation. <span class="see">See : <a href="../ogamlgraphics/indexarray/source.html">OgamlGraphics.IndexArray.Source</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val rebuild : dynamic t -> Source.t -> int -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>rebuild array src offset</pre></code> rebuilds <pre><code>array</pre></code> starting from the index at position <pre><code>offset</pre></code> using <pre><code>src</pre></code> .  The index array is modified in-place and is resized as needed. <span class="see">See : <a href="../ogamlgraphics/indexarray/source.html">OgamlGraphics.IndexArray.Source</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val length : 'a t -> int
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the length of an index array 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

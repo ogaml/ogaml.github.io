@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Matrix2D</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlMath.</span><span class="modulename">Matrix2D</span></h1>
+    
+      <span class="abstract"> Provides easy creation and manipulation of 2D rendering matrices </span>
+      <hr>
+      
+      
+       Optimized operations on 2D (3x3) float matrices 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            exception Matrix2D_exception of string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Raised when an error occurs (usually a division by zero) 
+     </div>
+   </article>
+   <h3> Simple Matrices </h3>
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of 3x3 matrices stored in a flat, column-major array 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val zero : unit -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Zero matrix 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val identity : unit -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Identity matrix 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val translation : Vector2f.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Builds a translation matrix from a vector <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val scaling : Vector2f.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Builds a scaling matrix from a vector <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val rotation : float -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Builds a rotation matrix from an angle 
+     </div>
+   </article>
+   <h3> Matrix Operations </h3>
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val product : t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Computes the product of two matrices 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val transpose : t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Transposes a matrix. The original is not modified. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val translate : Vector2f.t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Translates a matrix by a vector. The original matrix is not modified.  <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val scale : Vector2f.t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Scales a matrix by a vector. The original matrix is not modified.  <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val rotate : float -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Rotates a matrix by an angle. The original matrix is not modified. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val times : t -> Vector2f.t -> Vector2f.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Computes the (right-)product of a matrix with a column vector 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val print : t -> string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns a pretty-printed string (not for serialization) 
+     </div>
+   </article>
+   <h3> Rendering Matrices Creation </h3>
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val projection : size:Vector2f.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Builds an orthographic projection matrix englobing a screen 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val iprojection : size:Vector2f.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Builds the inverse of an orthographic projection matrix 
+     </div>
+   </article>
+   <h3> Other functions </h3>
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val to_bigarray : t -> (float, Bigarray.float32_elt, Bigarray.c_layout) Bigarray.Array1.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns a matrix as a flat bigarray. Used internally by OGAML, it should not be necessary for your programs. 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

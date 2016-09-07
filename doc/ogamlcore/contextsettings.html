@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - ContextSettings</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlCore.</span><span class="modulename">ContextSettings</span></h1>
+    
+      <span class="abstract"> Encapsulates data for context creation </span>
+      <hr>
+      
+      
+       This module encapsulates the settings used to create a GL context 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of the settings structure 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val create : ?depth:int -> ?stencil:int -> ?msaa:int -> ?resizable:bool -> ?fullscreen:bool -> unit -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates new settings using the following parameters :  <pre><code>depth</pre></code> - bits allocated to the depth buffer (defaults to 24)  <pre><code>stencil</pre></code> - bits allocated to the stencil buffer (defaults to 0)  <pre><code>msaa</pre></code> - MSAA level (defaults to 0)  <pre><code>resizable</pre></code> - requests a resizable context (defaults to true)  
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val aa_level : t -> int
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the requested AA level 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val depth_bits : t -> int
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the requested number of depth buffer bits 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val stencil_bits : t -> int
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the requested number of stencil buffer bits 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val resizable : t -> bool
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns true iff the settings require a resizable window 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val fullscreen : t -> bool
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns true iff the settings require fullscreen mode 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

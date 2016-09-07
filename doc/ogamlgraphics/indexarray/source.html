@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Source</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.IndexArray.</span><span class="modulename">Source</span></h1>
+    
+      <span class="abstract"> Represents a source of indices </span>
+      <hr>
+      
+      
+       This module provides a way to store indices in a source before creating an index array.  Note that a source is a mutable structure, therefore add and (<<) will directly modify the source.  Sources are redimensionned as needed when adding indices. 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a source of indices 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val empty : int -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        An empty source 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val add : t -> int -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Adds an integer index to a source (redimensions the source as needed) 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val (<<) : t -> int -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Syntaxic sugar for sequences of additions  <pre><code>source << index1 << index2 << index3</pre></code> 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val length : t -> int
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the length of a source 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val append : t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>append s1 s2</pre></code> appends the source <pre><code>s2</pre></code> at the end of the source <pre><code>s1</pre></code> (in place), and returns <pre><code>s1</pre></code> . Raises Invalid_source if types are incompatible. 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

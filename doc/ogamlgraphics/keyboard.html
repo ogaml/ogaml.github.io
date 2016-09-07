@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Keyboard</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.</span><span class="modulename">Keyboard</span></h1>
+    
+      <span class="abstract"> Getting real-time keyboard information </span>
+      <hr>
+      
+      
+       This module allows real-time access to the keyboard, to check if a key is currently pressed for example. 
+      <h3> Polling keyboard </h3>
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val is_pressed : OgamlCore.Keycode.t -> bool
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>is_pressed key</pre></code> will return <pre><code>true</pre></code> iff <pre><code>key</pre></code> is currently pressed <span class="see">See : <a href="../ogamlcore/keycode.html">OgamlCore.Keycode</a></span>
+     </div>
+   </article>
+   <h3> Accessing modifiers information </h3>
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val is_shift_down : unit -> bool
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>true</pre></code> iff the shift modifier is active 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val is_ctrl_down : unit -> bool
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>true</pre></code> iff the control modifier (or cmd on OSX) is active 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val is_alt_down : unit -> bool
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>true</pre></code> iff the alt modifier is active 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

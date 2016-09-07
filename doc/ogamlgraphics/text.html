@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Text</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.</span><span class="modulename">Text</span></h1>
+    
+      <span class="abstract"> Text rendering </span>
+      <hr>
+      <h2>Submodules</h2>
+      
+      <table class="belowh">
+      
+        <tbody>
+          <tr><td><a href="../ogamlgraphics/text/fx.html">Fx</a></td><td> Advanced text rendering </td></tr>
+          
+      
+        </tbody>
+      </table>
+      
+       This module provides an efficient way to render text using openGL primitives. 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        The type of pre-rendered texts. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val create : text:string -> position:OgamlMath.Vector2f.t -> font:Font.t -> ?color:Color.t -> size:int -> bold:bool -> unit -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates a drawable text from the given string. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val draw : ?parameters:DrawParameter.t -> text:t -> window:Window.t -> unit -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Draws text on the screen. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val advance : t -> OgamlMath.Vector2f.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        The global advance of the text. Basically it is a vector such that if you add it to the position of text object, you get the position of the next character you would draw. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val boundaries : t -> OgamlMath.FloatRect.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns a rectangle containing all the text. 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

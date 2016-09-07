@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Program</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.</span><span class="modulename">Program</span></h1>
+    
+      <span class="abstract"> High-level wrapper around GL shader programs </span>
+      <hr>
+      
+      
+       This module provides a high-level wrapper around GL shader programs and can be used to compile shaders. 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            exception Compilation_error of string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Raised when the compilation of a program fails 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            exception Linking_error of string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Raised when the linking of a program fails 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            exception Invalid_version of string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Raised when trying to compile a program with a version that is not supported by the current context 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a program 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type src = [ `File of string | `String of string]
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a source, from a file or from a string 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val from_source : vertex_source:src -> fragment_source:src -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Compiles a program from a vertex source and a fragment source. The source must begin with a version assigment <pre><code>#version xxx</pre></code> 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val from_source_list : State.t -> vertex_source:(int * src) list -> fragment_source:(int * src) list -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Compiles a program from a state (gotten from a window) and a list of sources paired with their required GLSL version. The function will chose the best source for the current context. <span class="see">See : <a href="../ogamlgraphics/state.html">OgamlGraphics.State</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val from_source_pp : State.t -> vertex_source:src -> fragment_source:src -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Compiles a program from a vertex source and a fragment source. The source should not begin with a <pre><code>#version xxx</pre></code> assignment, as the function will preprocess the sources and prepend the best version declaration. <span class="see">See : <a href="../ogamlgraphics/state.html">OgamlGraphics.State</a></span>
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

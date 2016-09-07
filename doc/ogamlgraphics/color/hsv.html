@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - HSV</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.Color.</span><span class="modulename">HSV</span></h1>
+    
+      <span class="abstract"> Manipulation of HSVA colors </span>
+      <hr>
+      
+      
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t = {h : float; s : float; v : float; a : float}
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a color in HSVA format 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val black : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Opaque black 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val white : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Opaque white 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val red : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Opaque red 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val green : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Opaque green 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val blue : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Opaque blue 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val yellow : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Opaque yellow 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val magenta : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Opaque magenta 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val cyan : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Opaque cyan 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val transparent : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Transparent black 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val clamp : t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Clamps the s,v,a values of a color between 0 and 1, and h between 0 and 2*pi 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val map : t -> (float -> float) -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Maps each value of a color 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

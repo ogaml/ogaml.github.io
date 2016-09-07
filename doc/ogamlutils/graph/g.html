@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - G</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlUtils.Graph.</span><span class="modulename">G</span></h1>
+    
+      <span class="abstract"> Output of Graph.Make </span>
+      <hr>
+      
+      
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a graph 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type vertex
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a vertex 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val empty : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Empty graph 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val vertices : t -> int
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the number of vertices of a graph 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val edges : t -> int
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the number of edges of a graph 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val iter_vertices : t -> (vertex -> unit) -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Iterates through all the vertices of a graph 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val fold_vertices : t -> (vertex -> 'a -> 'a) -> 'a -> 'a
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Folds through all the vertices of a graph 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val iter_edges : t -> (vertex -> vertex -> unit) -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Iterates through all the edges of a graph 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val add_vertex : t -> vertex -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Adds a vertex to a graph 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val add_edge : t -> ?cost:float -> vertex -> vertex -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Adds an edge with an optional cost to a graph (adds the vertices if needed) 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val add : ?cost:float -> vertex -> vertex -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Tail-call alias for <pre><code>add_edge</pre></code> (for easy composition) 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val remove_edge : t -> vertex -> vertex -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Removes an edge from a graph (does nothing if the edge does not exist) 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val remove_vertex : t -> vertex -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Removes a vertex from a graph (and all of its adjacent edges) 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val neighbours : t -> vertex -> vertex list
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns all the neighbours of a vertex 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val merge : t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Merges two graphs 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val dfs : t -> vertex -> (vertex -> unit) -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>dfs g s f</pre></code> iterates <pre><code>f</pre></code> through all the vertices of <pre><code>g</pre></code> ,  starting from <pre><code>s</pre></code> using a dfs 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val bfs : t -> vertex -> (vertex -> unit) -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>bfs g s f</pre></code> iterates <pre><code>f</pre></code> through all the vertices of <pre><code>g</pre></code> ,  starting from <pre><code>s</pre></code> using a bfs 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val dijkstra : t -> vertex -> vertex -> (float * vertex list) option
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>dijkstra g v1 v2</pre></code> runs Dijkstra's algorithm on <pre><code>g</pre></code> from <pre><code>v1</pre></code> to <pre><code>v2</pre></code>  and returns the minimal path as well as the distance between <pre><code>v1</pre></code> and <pre><code>v2</pre></code> , or <pre><code>None</pre></code> if <pre><code>v1</pre></code> and <pre><code>v2</pre></code> are not connected 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val astar : t -> vertex -> vertex -> (vertex -> float) -> (float * vertex list) option
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>astar g v1 v2 f</pre></code> runs the A* algorithm on <pre><code>g</pre></code> from <pre><code>v1</pre></code> to <pre><code>v2</pre></code>  with the heuristic <pre><code>f</pre></code> and returns the minimal path as well as the  distance between <pre><code>v1</pre></code> and <pre><code>v2</pre></code> , or <pre><code>None</pre></code> if <pre><code>v1</pre></code> and <pre><code>v2</pre></code> are not connected 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

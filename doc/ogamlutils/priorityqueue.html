@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - PriorityQueue</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlUtils.</span><span class="modulename">PriorityQueue</span></h1>
+    
+      <span class="abstract"> Priority queue data structure </span>
+      <hr>
+      
+      <h2>Signatures</h2>
+      
+      <table class="belowh">
+      
+        <tbody>
+          <tr><td><a href="../ogamlutils/priorityqueue/priority.html">Priority</a></td><td> Priorities used by a queue </td></tr>
+          <tr><td><a href="../ogamlutils/priorityqueue/q.html">Q</a></td><td> Type of PriorityQueue.Make </td></tr>
+          
+      
+        </tbody>
+      </table>
+       This module provides a functor for creating priority queues 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            module Make : functor (P : Priority) -> Q with type priority = P.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Priority queue functor 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

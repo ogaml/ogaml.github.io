@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - VertexMap</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.</span><span class="modulename">VertexMap</span></h1>
+    
+      <span class="abstract"> Customisable, high-level vertex arrays </span>
+      <hr>
+      <h2>Submodules</h2>
+      
+      <table class="belowh">
+      
+        <tbody>
+          <tr><td><a href="../ogamlgraphics/vertexmap/vertex.html">Vertex</a></td><td> Represents a vertex </td></tr>
+          <tr><td><a href="../ogamlgraphics/vertexmap/source.html">Source</a></td><td> Represents a source of vertices </td></tr>
+          
+      
+        </tbody>
+      </table>
+      
+       This modules provides a high-level and safe access to openGL vertex arrays. Vertex maps are less safe and optimized than vertex arrays, but can store any kind of data (especially integers). You should use the module VertexArray when possible. 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            exception Invalid_source of string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Raised when trying to rebuild a vertex map from an invalid source 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            exception Invalid_vertex of string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Raised if a vertex passed to a source has a wrong type 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            exception Invalid_attribute of string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Raised if an attribute defined in a GLSL program does not have a type matching the vertex's 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            exception Missing_attribute of string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Raised when trying to draw with a vertex map containing an attribute that has not been declared in the GLSL program 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            exception Out_of_bounds of string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Raised when trying to draw an invalid slice of a vertex map 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type static
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Phantom type for static maps 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type dynamic
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Phantom type for dynamic maps 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type 'a t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a vertex map (static or dynamic) 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val static : Source.t -> static t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates a static map from a source. A static map is faster but cannot be modified later. <span class="see">See : <a href="../ogamlgraphics/vertexmap/source.html">OgamlGraphics.VertexMap.Source</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val dynamic : Source.t -> dynamic t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates a dynamic vertex map that can be modified later. <span class="see">See : <a href="../ogamlgraphics/vertexmap/source.html">OgamlGraphics.VertexMap.Source</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val rebuild : dynamic t -> Source.t -> int -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>rebuild map src offset</pre></code> rebuilds <pre><code>map</pre></code> starting from the vertex at position <pre><code>offset</pre></code> using <pre><code>src</pre></code> .  The vertex map is modified in-place and is resized as needed. <span class="see">See : <a href="../ogamlgraphics/vertexmap/source.html">OgamlGraphics.VertexMap.Source</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val length : 'a t -> int
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the length of a vertex map 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val draw : vertices:'a t -> window:Window.t -> ?indices:'b IndexArray.t -> program:Program.t -> ?uniform:Uniform.t -> ?parameters:DrawParameter.t -> ?start:int -> ?length:int -> mode:DrawMode.t -> unit -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Draws the slice starting at <pre><code>start</pre></code> of length <pre><code>length</pre></code> of a vertex map on a window using the given parameters.  <pre><code>start</pre></code> defaults to 0  if <pre><code>length</pre></code> is not provided, then the whole vertex map (starting from <pre><code>start</pre></code> ) is drawn  <pre><code>uniform</pre></code> should provide the uniforms required by <pre><code>program</pre></code> (defaults to empty)  <pre><code>parameters</pre></code> defaults to <pre><code>DrawParameter.make ()</pre></code>   <span class="see">See : <a href="../ogamlgraphics/indexarray.html">OgamlGraphics.IndexArray</a></span> <span class="see">See : <a href="../ogamlgraphics/window.html">OgamlGraphics.Window</a></span> <span class="see">See : <a href="../ogamlgraphics/program.html">OgamlGraphics.Program</a></span> <span class="see">See : <a href="../ogamlgraphics/uniform.html">OgamlGraphics.Uniform</a></span> <span class="see">See : <a href="../ogamlgraphics/drawparameter.html">OgamlGraphics.DrawParameter</a></span> <span class="see">See : <a href="../ogamlgraphics/drawmode.html">OgamlGraphics.DrawMode</a></span>
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

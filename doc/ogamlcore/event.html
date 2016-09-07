@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Event</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlCore.</span><span class="modulename">Event</span></h1>
+    
+      <span class="abstract"> Contains all events </span>
+      <hr>
+      <h2>Submodules</h2>
+      
+      <table class="belowh">
+      
+        <tbody>
+          <tr><td><a href="../ogamlcore/event/keyevent.html">KeyEvent</a></td><td> Key event information </td></tr>
+          <tr><td><a href="../ogamlcore/event/buttonevent.html">ButtonEvent</a></td><td> Mouse button event information </td></tr>
+          <tr><td><a href="../ogamlcore/event/mouseevent.html">MouseEvent</a></td><td> Mouse movement event information </td></tr>
+          
+      
+        </tbody>
+      </table>
+      
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t = | Closed
+| Resized
+| KeyPressed of KeyEvent.t
+| KeyReleased of KeyEvent.t
+| ButtonPressed of ButtonEvent.t
+| ButtonReleased of ButtonEvent.t
+| MouseMoved of MouseEvent.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        A variant type describing the possible events  <span class="see">See : <a href="../ogamlcore/event/keyevent.html">OgamlCore.Event.KeyEvent</a></span> <span class="see">See : <a href="../ogamlcore/event/buttonevent.html">OgamlCore.Event.ButtonEvent</a></span> <span class="see">See : <a href="../ogamlcore/event/mouseevent.html">OgamlCore.Event.MouseEvent</a></span>
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

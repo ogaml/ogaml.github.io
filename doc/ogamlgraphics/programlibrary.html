@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - ProgramLibrary</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.</span><span class="modulename">ProgramLibrary</span></h1>
+    
+      <span class="abstract"> Library of useful predefined programs </span>
+      <hr>
+      
+      
+       This module provides several predefined programs  that are used internally by Ogaml. Those programs are compatible with the types used by the module VertexArray 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a library 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val create : State.t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates a library from a GL state.  The library will compile the programs using the best version supported by the state. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val shape_drawing : t -> Program.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns a shape drawing program from a library. This program requires the following attributes :  - position : as a Vector3f.t, in pixels, relative to the top-left corner (the 3rd coordinate is there for compatibility with VertexArray and is ignored)  - color : as a Color.t  It also requires the following uniforms :  - size : the size of the window, in pixels, as a Vector2f.t 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val sprite_drawing : t -> Program.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns a sprite drawing program from a library. This program requires the following attributes :  - position : as a Vector3f.t, in pixels, relative to the top-left corner (the 3rd coordinate is there for compatibility with VertexArray and is ignored)  - uv : as a Vector2f.t, in relative coordinates (between 0 and 1)  It also requires the following uniforms :  - size : the size of the window, in pixels, as a Vector2f.t  - utexture : as a Texture.t 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

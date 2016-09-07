@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - State</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.</span><span class="modulename">State</span></h1>
+    
+      <span class="abstract"> Encapsulates data about an OpenGL internal state </span>
+      <hr>
+      
+      
+       This module encapsulates a copy of the internal GL state. This allows efficient optimizations of state changes 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            exception Invalid_state of string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Raised when trying to perform an invalid state change  (for example, binding a texture to an invalid texture unit) 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a GL state 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val version : t -> (int * int)
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the GL version supported by this state in (major, minor) format 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val is_version_supported : t -> (int * int) -> bool
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns true iff the given GL version in (major, minor) format is supported by the given state 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val glsl_version : t -> int
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the GLSL version supported by this state 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val is_glsl_version_supported : t -> int -> bool
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns true iff the given GLSL version is supported by this state 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val assert_no_error : t -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Asserts that no openGL error occured internally. Used for debugging and testing. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val max_textures : t -> int
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the number of available texture units 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

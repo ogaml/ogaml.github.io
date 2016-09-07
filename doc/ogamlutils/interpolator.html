@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Interpolator</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlUtils.</span><span class="modulename">Interpolator</span></h1>
+    
+      <span class="abstract"> Interpolation between multiple values </span>
+      <hr>
+      
+      
+       This module defines interpolators between two values.  An interpolator between value v0 and v1 is a function f such that f(0) = v0, f(1) = v1.  
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type 'a t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of an interpolator returning type 'a 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            exception Invalid_interpolator of string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Raised when an error occurs during the creation of an interpolator 
+     </div>
+   </article>
+   <h3> Accessors and modifiers </h3>
+       Those functions provide a way to modify the behaviour of interpolators.  Unless otherwise specified, the modifiers applied to  an interpolator are kept by all subsequent operations.  This means that, for example, passing a time-based  interpolator to <pre><code>map</pre></code> will return a new time-based  interpolator. 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val get : 'a t -> float -> 'a
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>get ip t</pre></code> returns the value of the interpolator <pre><code>ip</pre></code>  at time <pre><code>t</pre></code> in [0;1] 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val current : 'a t -> 'a
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>current ip</pre></code> returns the current value of a time-based interpolator (see function start).  If <pre><code>ip</pre></code> is not time-based then the result is <pre><code>ip(0)</pre></code> . 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val start : 'a t -> float -> float -> 'a t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>start ip t dt</pre></code> returns a new time-based interpolator  <pre><code>tip</pre></code> such that :  <pre><code>current tip</pre></code> = <pre><code>ip(0)</pre></code> at time <pre><code>t</pre></code>   <pre><code>current tip</pre></code> = <pre><code>ip(1)</pre></code> at time <pre><code>t + dt</pre></code>   <pre><code>t</pre></code> and <pre><code>dt</pre></code> are given in seconds.  <pre><code>t = Unix.gettimeofday()</pre></code> means that <pre><code>tip</pre></code> starts immediately.  If <pre><code>dt = 0</pre></code> then <pre><code>current</pre></code> will always return <pre><code>ip(0)</pre></code>   The result of <pre><code>get</pre></code> on the <pre><code>tip</pre></code> is left unchanged. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val repeat : 'a t -> 'a t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>repeat ip</pre></code> returns a repeating interpolator <pre><code>lip</pre></code> from <pre><code>ip</pre></code> such that <pre><code>lip(x)</pre></code> = <pre><code>ip(x)</pre></code> for <pre><code>x</pre></code> in [0;1] and <pre><code>lip</pre></code> is 1-periodic. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val loop : 'a t -> 'a t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>loop ip</pre></code> returns a repeating interpolator <pre><code>lip</pre></code> from <pre><code>ip</pre></code> such that :  <pre><code>lip(x)</pre></code> = <pre><code>ip(x)</pre></code> for <pre><code>x</pre></code> in [0;1]   <pre><code>lip(x)</pre></code> = <pre><code>ip(2-x)</pre></code> for <pre><code>x</pre></code> in [1;2]  <pre><code>lip(x)</pre></code> is 2-periodic 
+     </div>
+   </article>
+   <h3> Constructors </h3>
+       Those functions provide a way to construct various (and even user-defined) interpolators.  Unless otherwise specified, parameters are clamped to [0;1], that is ip(x) for x < 0 equals ip(0) and ip(x) for x > 1 equals ip(1)   Most constructors require a list of points of the form <pre><code>(dt, v)</pre></code>  such that the created interpolator will take the value <pre><code>v</pre></code>  at time <pre><code>dt</pre></code> .  The <pre><code>cst_*</pre></code> variants create constant-speed interpolators  so the <pre><code>dt</pre></code> parameter is not required. 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val custom : (float -> 'a) -> 'a t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>custom f</pre></code> returns a custom interpolator that coincides with   the function <pre><code>f</pre></code> on [0;1] and equals f(0) or f(1) elsewhere. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val copy : (float -> 'a) -> 'a t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>copy f</pre></code> returns a custom interpolator that coincides with   the function <pre><code>f</pre></code> everywhere 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val constant : float -> float t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns a constant interpolator 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val linear : float -> (float * float) list -> float -> float t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>linear start steps end</pre></code> creates a linear interpolator going from <pre><code>start</pre></code> to <pre><code>end</pre></code> passing through each point <pre><code>(dt, pos)</pre></code> of <pre><code>steps</pre></code> at time <pre><code>dt</pre></code> 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val cst_linear : float -> float list -> float -> float t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>cst_linear start steps end</pre></code> creates a linear interpolator  going from <pre><code>start</pre></code> to <pre><code>end</pre></code> passing through each point  of <pre><code>steps</pre></code> at constant speed 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val cubic : (float * float) -> (float * float) list -> (float * float) -> float t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>cubic (start, sm) steps (end, em)</pre></code> creates a cubic spline interpolator going from <pre><code>start</pre></code> with tangent <pre><code>sm</pre></code> to <pre><code>end</pre></code> with tangeant <pre><code>em</pre></code>  passing through each point <pre><code>(dt, pos)</pre></code> of <pre><code>steps</pre></code> at time <pre><code>dt</pre></code> 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val cst_cubic : (float * float) -> float list -> (float * float) -> float t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>cubic (start, sm) steps (end, em)</pre></code> creates a cubic spline interpolator going from <pre><code>start</pre></code> with tangent <pre><code>sm</pre></code> to <pre><code>end</pre></code> with tangeant <pre><code>em</pre></code>  passing through each point of <pre><code>steps</pre></code> at constant speed 
+     </div>
+   </article>
+   <h3> Composition </h3>
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val compose : float t -> 'a t -> 'a t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>compose ip1 ip2</pre></code> returns a new interpolator that takes the values of <pre><code>ip2</pre></code> but using the values of <pre><code>ip1</pre></code> as parameter  The new interpolator will have the modifiers of <pre><code>ip1</pre></code> 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val map : 'a t -> ('a -> 'b) -> 'b t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>map ip f</pre></code> returns a new interpolator that takes the value of <pre><code>ip</pre></code> and passes it to <pre><code>f</pre></code> . 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val map_right : 'a t -> ('a -> 'b) -> 'b t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>map_right</pre></code> is an alias for <pre><code>map</pre></code> 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val map_left : ('a -> float) -> 'b t -> 'a -> 'b
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>map_left f ip</pre></code> returns a function <pre><code>g</pre></code> such that  <pre><code>g(x) = ip(f(x))</pre></code> 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val pair : 'a t -> 'b t -> ('a * 'b) t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns a pair-interpolator from a pair of interpolators.  The new interpolator will not have any modifiers. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val collapse : 'a t list -> 'a list t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns a list-interpolator from a list of interpolators.  The new interpolator will not have any modifiers. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val vector3f : float t -> float t -> float t -> OgamlMath.Vector3f.t t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns a vector3f interpolator from three float interpolators.   The new interpolator will not have any modifiers. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val vector2f : float t -> float t -> OgamlMath.Vector2f.t t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns a vector2f interpolator from two float interpolators.   The new interpolator will not have any modifiers. 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

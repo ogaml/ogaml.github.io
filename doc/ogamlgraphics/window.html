@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Window</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.</span><span class="modulename">Window</span></h1>
+    
+      <span class="abstract"> High-level window wrapper for rendering and event management </span>
+      <hr>
+      
+      
+       This module provides a high-level wrapper around the low-level window interface of OgamlCore and also provides drawing functions.  Windows encapsulate a copy of the GL state that can be retrieved to obtain information about the GL context. 
+      <h3> Window creation </h3>
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        The type of a window 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val create : ?width:int -> ?height:int -> ?title:string -> ?settings:OgamlCore.ContextSettings.t -> unit -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Creates a window of size <pre><code>width</pre></code> x <pre><code>height</pre></code> . This window will create its openGL context following the specified settings.  <pre><code>width</pre></code> defaults to 800  <pre><code>height</pre></code> defaults to 600  <pre><code>title</pre></code> defaults to ""  <pre><code>settings</pre></code> defaults to the default context settings  <span class="see">See : <a href="../ogamlcore/contextsettings.html">OgamlCore.ContextSettings</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val set_title : t -> string -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Changes the title of the window. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val close : t -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Closes a window, but does not free the memory. This should prevent segfaults when calling functions on this window. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val destroy : t -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Frees the window and the memory 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val resize : t -> OgamlMath.Vector2i.t -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Resizes the window. <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val toggle_fullscreen : t -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Toggles the full screen mode of a window. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val rect : t -> OgamlMath.IntRect.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the rectangle associated to a window, in screen coordinates <span class="see">See : <a href="../ogamlmath/intrect.html">OgamlMath.IntRect</a></span>
+     </div>
+   </article>
+   <h3> Information About Windows </h3>
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val size : t -> OgamlMath.Vector2i.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns in pixel the width and height of the window (it only takes into account the size of the content where you can draw, *ie* the useful information). <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val is_open : t -> bool
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Tells whether the window is currently open 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val has_focus : t -> bool
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Return true iff the window has the focus 
+     </div>
+   </article>
+   <h3> Event Handling </h3>
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val poll_event : t -> OgamlCore.Event.t option
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the next event on the event stack, or None if the stack is empty. <span class="see">See : <a href="../ogamlcore/event.html">OgamlCore.Event</a></span>
+     </div>
+   </article>
+   <h3> Displaying and Drawing </h3>
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val display : t -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Displays the window after the GL calls 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val clear : ?color:Color.t -> t -> unit
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Clears the window 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val state : t -> State.t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Returns the internal GL state of the window <span class="see">See : <a href="../ogamlgraphics/state.html">OgamlGraphics.State</a></span>
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>

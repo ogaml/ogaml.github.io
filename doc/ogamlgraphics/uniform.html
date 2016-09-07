@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OGaml documentation - Uniform</title>
+  </head>
+  <body>
+    <main>
+      <h1>Module <span class="prefix">OgamlGraphics.</span><span class="modulename">Uniform</span></h1>
+    
+      <span class="abstract"> Encapsulates a group of uniforms for rendering </span>
+      <hr>
+      
+      
+       This module encapsulates a set of uniforms that can be passed to GLSL programs 
+      <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            exception Unknown_uniform of string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Raised when trying to draw using a program that requires a uniform not provided in the set 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            exception Invalid_uniform of string
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Raised when the type of a uniform is not matching the type required by the GLSL program 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            type t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Type of a set of uniforms 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val empty : t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        Empty set of uniforms 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val vector3f : string -> OgamlMath.Vector3f.t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        <pre><code>vector3f name vec set</pre></code> adds the uniform <pre><code>vec</pre></code> to <pre><code>set</pre></code> . the uniform should be refered to as <pre><code>name</pre></code> in a glsl program. Type : vec3. <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val vector2f : string -> OgamlMath.Vector2f.t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        See vector3f. Type : vec2. <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> f 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val vector3i : string -> OgamlMath.Vector3i.t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        See vector3f. Type : vec3i. <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val vector2i : string -> OgamlMath.Vector2i.t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        See vector3f. Type : vec2i. <span class="see">See : <a href="../ogamlmath/vector.html">OgamlMath.Vector</a></span> i 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val int : string -> int -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        See vector3f. Type : int. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val float : string -> float -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        See vector3f. Type : float. 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val matrix3D : string -> OgamlMath.Matrix3D.t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        See vector3f. Type : mat3. <span class="see">See : <a href="../ogamlmath/matrix.html">OgamlMath.Matrix</a></span> D 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val matrix2D : string -> OgamlMath.Matrix2D.t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        See vector3f. Type : mat2. <span class="see">See : <a href="../ogamlmath/matrix.html">OgamlMath.Matrix</a></span> D 
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val color : string -> Color.t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        See vector3f. Type : vec4. <span class="see">See : <a href="../ogamlgraphics/color.html">OgamlGraphics.Color</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">
+      
+            val texture2D : string -> ?tex_unit:int -> Texture.Texture2D.t -> t -> t
+          </code></pre>
+        </figure>
+     </span>
+     <div class="more">
+      
+        See vector3f. Type : sampler2D.  The optional parameter <pre><code>tex_unit</pre></code> corresponds to the texture unit that is used to bind this texture and defaults to <pre><code>0</pre></code> . See <pre><code>State.max_textures</pre></code> for the number of available units. <span class="see">See : <a href="../ogamlgraphics/texture/texture.html">OgamlGraphics.Texture.Texture</a></span> D 
+     </div>
+   </article>
+   
+    </main>
+  </body>
+</html>
