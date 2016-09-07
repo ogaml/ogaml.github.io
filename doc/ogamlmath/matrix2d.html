@@ -33,10 +33,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            exception Matrix2D_exception of string
-          </code></pre>
+          <pre><code class="OCaml">exception Matrix2D_exception of string</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -48,10 +45,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            type t
-          </code></pre>
+          <pre><code class="OCaml">type t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -62,10 +56,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val zero : unit -> t
-          </code></pre>
+          <pre><code class="OCaml">val zero : unit -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -76,10 +67,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val identity : unit -> t
-          </code></pre>
+          <pre><code class="OCaml">val identity : unit -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -90,10 +78,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val translation : Vector2f.t -> t
-          </code></pre>
+          <pre><code class="OCaml">val translation : Vector2f.t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -104,10 +89,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val scaling : Vector2f.t -> t
-          </code></pre>
+          <pre><code class="OCaml">val scaling : Vector2f.t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -118,10 +100,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val rotation : float -> t
-          </code></pre>
+          <pre><code class="OCaml">val rotation : float -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -133,10 +112,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val product : t -> t -> t
-          </code></pre>
+          <pre><code class="OCaml">val product : t -> t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -147,10 +123,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val transpose : t -> t
-          </code></pre>
+          <pre><code class="OCaml">val transpose : t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -161,10 +134,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val translate : Vector2f.t -> t -> t
-          </code></pre>
+          <pre><code class="OCaml">val translate : Vector2f.t -> t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -175,10 +145,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val scale : Vector2f.t -> t -> t
-          </code></pre>
+          <pre><code class="OCaml">val scale : Vector2f.t -> t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -189,10 +156,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val rotate : float -> t -> t
-          </code></pre>
+          <pre><code class="OCaml">val rotate : float -> t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -203,10 +167,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val times : t -> Vector2f.t -> Vector2f.t
-          </code></pre>
+          <pre><code class="OCaml">val times : t -> Vector2f.t -> Vector2f.t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -217,10 +178,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val print : t -> string
-          </code></pre>
+          <pre><code class="OCaml">val print : t -> string</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -232,10 +190,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val projection : size:Vector2f.t -> t
-          </code></pre>
+          <pre><code class="OCaml">val projection : size:Vector2f.t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -246,10 +201,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val iprojection : size:Vector2f.t -> t
-          </code></pre>
+          <pre><code class="OCaml">val iprojection : size:Vector2f.t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -261,10 +213,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val to_bigarray : t -> (float, Bigarray.float32_elt, Bigarray.c_layout) Bigarray.Array1.t
-          </code></pre>
+          <pre><code class="OCaml">val to_bigarray : t -> (float, Bigarray.float32_elt, Bigarray.c_layout) Bigarray.Array1.t</code></pre>
         </figure>
      </span>
      <div class="more">

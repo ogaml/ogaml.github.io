@@ -43,10 +43,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            exception Error of string
-          </code></pre>
+          <pre><code class="OCaml">exception Error of string</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -57,10 +54,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            type t
-          </code></pre>
+          <pre><code class="OCaml">type t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -72,10 +66,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val empty : t
-          </code></pre>
+          <pre><code class="OCaml">val empty : t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -86,10 +77,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val from_obj : string -> t
-          </code></pre>
+          <pre><code class="OCaml">val from_obj : string -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -100,10 +88,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val cube : OgamlMath.Vector3f.t -> OgamlMath.Vector3f.t -> t
-          </code></pre>
+          <pre><code class="OCaml">val cube : OgamlMath.Vector3f.t -> OgamlMath.Vector3f.t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -115,10 +100,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val transform : t -> OgamlMath.Matrix3D.t -> t
-          </code></pre>
+          <pre><code class="OCaml">val transform : t -> OgamlMath.Matrix3D.t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -129,10 +111,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val scale : t -> OgamlMath.Vector3f.t -> t
-          </code></pre>
+          <pre><code class="OCaml">val scale : t -> OgamlMath.Vector3f.t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -143,10 +122,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val translate : t -> OgamlMath.Vector3f.t -> t
-          </code></pre>
+          <pre><code class="OCaml">val translate : t -> OgamlMath.Vector3f.t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -157,10 +133,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val rotate : t -> OgamlMath.Quaternion.t -> t
-          </code></pre>
+          <pre><code class="OCaml">val rotate : t -> OgamlMath.Quaternion.t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -172,10 +145,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val add_face : t -> Face.t -> t
-          </code></pre>
+          <pre><code class="OCaml">val add_face : t -> Face.t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -186,10 +156,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val paint : t -> Color.t -> t
-          </code></pre>
+          <pre><code class="OCaml">val paint : t -> Color.t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -200,10 +167,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val merge : t -> t -> t
-          </code></pre>
+          <pre><code class="OCaml">val merge : t -> t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -214,10 +178,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val compute_normals : ?smooth:bool -> t -> t
-          </code></pre>
+          <pre><code class="OCaml">val compute_normals : ?smooth:bool -> t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -228,10 +189,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val simplify : t -> t
-          </code></pre>
+          <pre><code class="OCaml">val simplify : t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -242,10 +200,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val source : t -> ?index_source:IndexArray.Source.t -> vertex_source:VertexArray.Source.t -> unit -> unit
-          </code></pre>
+          <pre><code class="OCaml">val source : t -> ?index_source:IndexArray.Source.t -> vertex_source:VertexArray.Source.t -> unit -> unit</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -257,10 +212,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val iter : t -> (Face.t -> unit) -> unit
-          </code></pre>
+          <pre><code class="OCaml">val iter : t -> (Face.t -> unit) -> unit</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -271,10 +223,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val fold : t -> ('a -> Face.t -> 'a) -> 'a -> 'a
-          </code></pre>
+          <pre><code class="OCaml">val fold : t -> ('a -> Face.t -> 'a) -> 'a -> 'a</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -285,10 +234,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val map : t -> (Face.t -> Face.t) -> t
-          </code></pre>
+          <pre><code class="OCaml">val map : t -> (Face.t -> Face.t) -> t</code></pre>
         </figure>
      </span>
      <div class="more">

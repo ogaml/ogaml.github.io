@@ -33,10 +33,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            type t = {x : int; y : int; z : int; width : int; height : int; depth : int}
-          </code></pre>
+          <pre><code class="OCaml">type t = {x : int; y : int; z : int; width : int; height : int; depth : int}</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -47,10 +44,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val create : Vector3i.t -> Vector3i.t -> t
-          </code></pre>
+          <pre><code class="OCaml">val create : Vector3i.t -> Vector3i.t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -61,10 +55,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val create_from_points : Vector3i.t -> Vector3i.t -> t
-          </code></pre>
+          <pre><code class="OCaml">val create_from_points : Vector3i.t -> Vector3i.t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -75,10 +66,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val zero : t
-          </code></pre>
+          <pre><code class="OCaml">val zero : t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -89,10 +77,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val one : t
-          </code></pre>
+          <pre><code class="OCaml">val one : t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -103,10 +88,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val position : t -> Vector3i.t
-          </code></pre>
+          <pre><code class="OCaml">val position : t -> Vector3i.t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -117,10 +99,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val abs_position : t -> Vector3i.t
-          </code></pre>
+          <pre><code class="OCaml">val abs_position : t -> Vector3i.t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -131,10 +110,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val corner : t -> Vector3i.t
-          </code></pre>
+          <pre><code class="OCaml">val corner : t -> Vector3i.t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -145,10 +121,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val normalize : t -> t
-          </code></pre>
+          <pre><code class="OCaml">val normalize : t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -159,10 +132,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val size : t -> Vector3i.t
-          </code></pre>
+          <pre><code class="OCaml">val size : t -> Vector3i.t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -173,10 +143,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val abs_size : t -> Vector3i.t
-          </code></pre>
+          <pre><code class="OCaml">val abs_size : t -> Vector3i.t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -187,10 +154,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val center : t -> Vector3f.t
-          </code></pre>
+          <pre><code class="OCaml">val center : t -> Vector3f.t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -201,10 +165,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val volume : t -> int
-          </code></pre>
+          <pre><code class="OCaml">val volume : t -> int</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -215,10 +176,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val scale : t -> Vector3i.t -> t
-          </code></pre>
+          <pre><code class="OCaml">val scale : t -> Vector3i.t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -229,10 +187,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val translate : t -> Vector3i.t -> t
-          </code></pre>
+          <pre><code class="OCaml">val translate : t -> Vector3i.t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -243,10 +198,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val intersects : t -> t -> bool
-          </code></pre>
+          <pre><code class="OCaml">val intersects : t -> t -> bool</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -257,10 +209,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val contains : ?strict:bool -> t -> Vector3i.t -> bool
-          </code></pre>
+          <pre><code class="OCaml">val contains : ?strict:bool -> t -> Vector3i.t -> bool</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -271,10 +220,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val iter : ?strict:bool -> t -> (Vector3i.t -> unit) -> unit
-          </code></pre>
+          <pre><code class="OCaml">val iter : ?strict:bool -> t -> (Vector3i.t -> unit) -> unit</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -285,10 +231,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val fold : ?strict:bool -> t -> (Vector3i.t -> 'a -> 'a) -> 'a -> 'a
-          </code></pre>
+          <pre><code class="OCaml">val fold : ?strict:bool -> t -> (Vector3i.t -> 'a -> 'a) -> 'a -> 'a</code></pre>
         </figure>
      </span>
      <div class="more">

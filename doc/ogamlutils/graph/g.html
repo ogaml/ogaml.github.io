@@ -32,10 +32,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            type t
-          </code></pre>
+          <pre><code class="OCaml">type t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -46,10 +43,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            type vertex
-          </code></pre>
+          <pre><code class="OCaml">type vertex</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -60,10 +54,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val empty : t
-          </code></pre>
+          <pre><code class="OCaml">val empty : t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -74,10 +65,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val vertices : t -> int
-          </code></pre>
+          <pre><code class="OCaml">val vertices : t -> int</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -88,10 +76,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val edges : t -> int
-          </code></pre>
+          <pre><code class="OCaml">val edges : t -> int</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -102,10 +87,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val iter_vertices : t -> (vertex -> unit) -> unit
-          </code></pre>
+          <pre><code class="OCaml">val iter_vertices : t -> (vertex -> unit) -> unit</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -116,10 +98,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val fold_vertices : t -> (vertex -> 'a -> 'a) -> 'a -> 'a
-          </code></pre>
+          <pre><code class="OCaml">val fold_vertices : t -> (vertex -> 'a -> 'a) -> 'a -> 'a</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -130,10 +109,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val iter_edges : t -> (vertex -> vertex -> unit) -> unit
-          </code></pre>
+          <pre><code class="OCaml">val iter_edges : t -> (vertex -> vertex -> unit) -> unit</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -144,10 +120,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val add_vertex : t -> vertex -> t
-          </code></pre>
+          <pre><code class="OCaml">val add_vertex : t -> vertex -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -158,10 +131,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val add_edge : t -> ?cost:float -> vertex -> vertex -> t
-          </code></pre>
+          <pre><code class="OCaml">val add_edge : t -> ?cost:float -> vertex -> vertex -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -172,10 +142,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val add : ?cost:float -> vertex -> vertex -> t -> t
-          </code></pre>
+          <pre><code class="OCaml">val add : ?cost:float -> vertex -> vertex -> t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -186,10 +153,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val remove_edge : t -> vertex -> vertex -> t
-          </code></pre>
+          <pre><code class="OCaml">val remove_edge : t -> vertex -> vertex -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -200,10 +164,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val remove_vertex : t -> vertex -> t
-          </code></pre>
+          <pre><code class="OCaml">val remove_vertex : t -> vertex -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -214,10 +175,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val neighbours : t -> vertex -> vertex list
-          </code></pre>
+          <pre><code class="OCaml">val neighbours : t -> vertex -> vertex list</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -228,10 +186,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val merge : t -> t -> t
-          </code></pre>
+          <pre><code class="OCaml">val merge : t -> t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -242,10 +197,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val dfs : t -> vertex -> (vertex -> unit) -> unit
-          </code></pre>
+          <pre><code class="OCaml">val dfs : t -> vertex -> (vertex -> unit) -> unit</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -256,10 +208,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val bfs : t -> vertex -> (vertex -> unit) -> unit
-          </code></pre>
+          <pre><code class="OCaml">val bfs : t -> vertex -> (vertex -> unit) -> unit</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -270,10 +219,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val dijkstra : t -> vertex -> vertex -> (float * vertex list) option
-          </code></pre>
+          <pre><code class="OCaml">val dijkstra : t -> vertex -> vertex -> (float * vertex list) option</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -284,10 +230,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val astar : t -> vertex -> vertex -> (vertex -> float) -> (float * vertex list) option
-          </code></pre>
+          <pre><code class="OCaml">val astar : t -> vertex -> vertex -> (vertex -> float) -> (float * vertex list) option</code></pre>
         </figure>
      </span>
      <div class="more">

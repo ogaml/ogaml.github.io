@@ -33,10 +33,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            exception Vector3f_exception of string
-          </code></pre>
+          <pre><code class="OCaml">exception Vector3f_exception of string</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -48,10 +45,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            type t = {x : float; y : float; z : float}
-          </code></pre>
+          <pre><code class="OCaml">type t = {x : float; y : float; z : float}</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -62,10 +56,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val zero : t
-          </code></pre>
+          <pre><code class="OCaml">val zero : t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -76,10 +67,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val unit_x : t
-          </code></pre>
+          <pre><code class="OCaml">val unit_x : t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -90,10 +78,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val unit_y : t
-          </code></pre>
+          <pre><code class="OCaml">val unit_y : t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -104,10 +89,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val unit_z : t
-          </code></pre>
+          <pre><code class="OCaml">val unit_z : t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -118,10 +100,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val add : t -> t -> t
-          </code></pre>
+          <pre><code class="OCaml">val add : t -> t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -132,10 +111,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val sub : t -> t -> t
-          </code></pre>
+          <pre><code class="OCaml">val sub : t -> t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -146,10 +122,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val prop : float -> t -> t
-          </code></pre>
+          <pre><code class="OCaml">val prop : float -> t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -160,10 +133,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val div : float -> t -> t
-          </code></pre>
+          <pre><code class="OCaml">val div : float -> t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -174,10 +144,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val floor : t -> Vector3i.t
-          </code></pre>
+          <pre><code class="OCaml">val floor : t -> Vector3i.t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -188,10 +155,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val from_int : Vector3i.t -> t
-          </code></pre>
+          <pre><code class="OCaml">val from_int : Vector3i.t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -202,10 +166,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val project : t -> Vector2f.t
-          </code></pre>
+          <pre><code class="OCaml">val project : t -> Vector2f.t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -216,10 +177,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val lift : Vector2f.t -> t
-          </code></pre>
+          <pre><code class="OCaml">val lift : Vector2f.t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -230,10 +188,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val dot : t -> t -> float
-          </code></pre>
+          <pre><code class="OCaml">val dot : t -> t -> float</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -244,10 +199,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val cross : t -> t -> t
-          </code></pre>
+          <pre><code class="OCaml">val cross : t -> t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -258,10 +210,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val angle : t -> t -> float
-          </code></pre>
+          <pre><code class="OCaml">val angle : t -> t -> float</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -272,10 +221,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val squared_norm : t -> float
-          </code></pre>
+          <pre><code class="OCaml">val squared_norm : t -> float</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -286,10 +232,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val norm : t -> float
-          </code></pre>
+          <pre><code class="OCaml">val norm : t -> float</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -300,10 +243,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val squared_dist : t -> t -> float
-          </code></pre>
+          <pre><code class="OCaml">val squared_dist : t -> t -> float</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -314,10 +254,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val dist : t -> t -> float
-          </code></pre>
+          <pre><code class="OCaml">val dist : t -> t -> float</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -328,10 +265,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val normalize : t -> t
-          </code></pre>
+          <pre><code class="OCaml">val normalize : t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -342,10 +276,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val clamp : t -> t -> t -> t
-          </code></pre>
+          <pre><code class="OCaml">val clamp : t -> t -> t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -356,10 +287,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val map : t -> (float -> float) -> t
-          </code></pre>
+          <pre><code class="OCaml">val map : t -> (float -> float) -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -370,10 +298,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val map2 : t -> t -> (float -> float -> float) -> t
-          </code></pre>
+          <pre><code class="OCaml">val map2 : t -> t -> (float -> float -> float) -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -384,10 +309,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val max : t -> float
-          </code></pre>
+          <pre><code class="OCaml">val max : t -> float</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -398,10 +320,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val min : t -> float
-          </code></pre>
+          <pre><code class="OCaml">val min : t -> float</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -412,10 +331,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val print : t -> string
-          </code></pre>
+          <pre><code class="OCaml">val print : t -> string</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -426,10 +342,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val direction : t -> t -> t
-          </code></pre>
+          <pre><code class="OCaml">val direction : t -> t -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -440,10 +353,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val endpoint : t -> t -> float -> t
-          </code></pre>
+          <pre><code class="OCaml">val endpoint : t -> t -> float -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -454,10 +364,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val raytrace_points : t -> t -> (float * t * t) list
-          </code></pre>
+          <pre><code class="OCaml">val raytrace_points : t -> t -> (float * t * t) list</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -468,10 +375,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val raytrace : t -> t -> float -> (float * t * t) list
-          </code></pre>
+          <pre><code class="OCaml">val raytrace : t -> t -> float -> (float * t * t) list</code></pre>
         </figure>
      </span>
      <div class="more">

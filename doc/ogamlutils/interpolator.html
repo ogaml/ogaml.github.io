@@ -33,10 +33,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            type 'a t
-          </code></pre>
+          <pre><code class="OCaml">type 'a t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -47,10 +44,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            exception Invalid_interpolator of string
-          </code></pre>
+          <pre><code class="OCaml">exception Invalid_interpolator of string</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -63,10 +57,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val get : 'a t -> float -> 'a
-          </code></pre>
+          <pre><code class="OCaml">val get : 'a t -> float -> 'a</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -77,10 +68,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val current : 'a t -> 'a
-          </code></pre>
+          <pre><code class="OCaml">val current : 'a t -> 'a</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -91,10 +79,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val start : 'a t -> float -> float -> 'a t
-          </code></pre>
+          <pre><code class="OCaml">val start : 'a t -> float -> float -> 'a t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -105,10 +90,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val repeat : 'a t -> 'a t
-          </code></pre>
+          <pre><code class="OCaml">val repeat : 'a t -> 'a t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -119,10 +101,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val loop : 'a t -> 'a t
-          </code></pre>
+          <pre><code class="OCaml">val loop : 'a t -> 'a t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -135,10 +114,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val custom : (float -> 'a) -> 'a t
-          </code></pre>
+          <pre><code class="OCaml">val custom : (float -> 'a) -> 'a t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -149,10 +125,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val copy : (float -> 'a) -> 'a t
-          </code></pre>
+          <pre><code class="OCaml">val copy : (float -> 'a) -> 'a t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -163,10 +136,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val constant : float -> float t
-          </code></pre>
+          <pre><code class="OCaml">val constant : float -> float t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -177,10 +147,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val linear : float -> (float * float) list -> float -> float t
-          </code></pre>
+          <pre><code class="OCaml">val linear : float -> (float * float) list -> float -> float t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -191,10 +158,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val cst_linear : float -> float list -> float -> float t
-          </code></pre>
+          <pre><code class="OCaml">val cst_linear : float -> float list -> float -> float t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -205,10 +169,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val cubic : (float * float) -> (float * float) list -> (float * float) -> float t
-          </code></pre>
+          <pre><code class="OCaml">val cubic : (float * float) -> (float * float) list -> (float * float) -> float t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -219,10 +180,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val cst_cubic : (float * float) -> float list -> (float * float) -> float t
-          </code></pre>
+          <pre><code class="OCaml">val cst_cubic : (float * float) -> float list -> (float * float) -> float t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -234,10 +192,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val compose : float t -> 'a t -> 'a t
-          </code></pre>
+          <pre><code class="OCaml">val compose : float t -> 'a t -> 'a t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -248,10 +203,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val map : 'a t -> ('a -> 'b) -> 'b t
-          </code></pre>
+          <pre><code class="OCaml">val map : 'a t -> ('a -> 'b) -> 'b t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -262,10 +214,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val map_right : 'a t -> ('a -> 'b) -> 'b t
-          </code></pre>
+          <pre><code class="OCaml">val map_right : 'a t -> ('a -> 'b) -> 'b t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -276,10 +225,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val map_left : ('a -> float) -> 'b t -> 'a -> 'b
-          </code></pre>
+          <pre><code class="OCaml">val map_left : ('a -> float) -> 'b t -> 'a -> 'b</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -290,10 +236,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val pair : 'a t -> 'b t -> ('a * 'b) t
-          </code></pre>
+          <pre><code class="OCaml">val pair : 'a t -> 'b t -> ('a * 'b) t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -304,10 +247,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val collapse : 'a t list -> 'a list t
-          </code></pre>
+          <pre><code class="OCaml">val collapse : 'a t list -> 'a list t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -318,10 +258,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val vector3f : float t -> float t -> float t -> OgamlMath.Vector3f.t t
-          </code></pre>
+          <pre><code class="OCaml">val vector3f : float t -> float t -> float t -> OgamlMath.Vector3f.t t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -332,10 +269,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val vector2f : float t -> float t -> OgamlMath.Vector2f.t t
-          </code></pre>
+          <pre><code class="OCaml">val vector2f : float t -> float t -> OgamlMath.Vector2f.t t</code></pre>
         </figure>
      </span>
      <div class="more">

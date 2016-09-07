@@ -43,10 +43,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            exception Invalid_source of string
-          </code></pre>
+          <pre><code class="OCaml">exception Invalid_source of string</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -57,10 +54,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            exception Invalid_vertex of string
-          </code></pre>
+          <pre><code class="OCaml">exception Invalid_vertex of string</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -71,10 +65,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            exception Invalid_attribute of string
-          </code></pre>
+          <pre><code class="OCaml">exception Invalid_attribute of string</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -85,10 +76,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            exception Missing_attribute of string
-          </code></pre>
+          <pre><code class="OCaml">exception Missing_attribute of string</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -99,10 +87,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            exception Out_of_bounds of string
-          </code></pre>
+          <pre><code class="OCaml">exception Out_of_bounds of string</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -113,10 +98,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            type static
-          </code></pre>
+          <pre><code class="OCaml">type static</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -127,10 +109,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            type dynamic
-          </code></pre>
+          <pre><code class="OCaml">type dynamic</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -141,10 +120,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            type 'a t
-          </code></pre>
+          <pre><code class="OCaml">type 'a t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -155,10 +131,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val static : Source.t -> static t
-          </code></pre>
+          <pre><code class="OCaml">val static : Source.t -> static t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -169,10 +142,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val dynamic : Source.t -> dynamic t
-          </code></pre>
+          <pre><code class="OCaml">val dynamic : Source.t -> dynamic t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -183,10 +153,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val rebuild : dynamic t -> Source.t -> int -> unit
-          </code></pre>
+          <pre><code class="OCaml">val rebuild : dynamic t -> Source.t -> int -> unit</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -197,10 +164,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val length : 'a t -> int
-          </code></pre>
+          <pre><code class="OCaml">val length : 'a t -> int</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -211,10 +175,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val draw : vertices:'a t -> window:Window.t -> ?indices:'b IndexArray.t -> program:Program.t -> ?uniform:Uniform.t -> ?parameters:DrawParameter.t -> ?start:int -> ?length:int -> mode:DrawMode.t -> unit -> unit
-          </code></pre>
+          <pre><code class="OCaml">val draw : vertices:'a t -> window:Window.t -> ?indices:'b IndexArray.t -> program:Program.t -> ?uniform:Uniform.t -> ?parameters:DrawParameter.t -> ?start:int -> ?length:int -> mode:DrawMode.t -> unit -> unit</code></pre>
         </figure>
      </span>
      <div class="more">

@@ -33,10 +33,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            type level = Debug | Warn | Error | Info | Fatal
-          </code></pre>
+          <pre><code class="OCaml">type level = Debug | Warn | Error | Info | Fatal</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -47,10 +44,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            type t
-          </code></pre>
+          <pre><code class="OCaml">type t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -61,10 +55,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val create : ?output:out_channel -> ?debug:bool -> ?color:bool -> ?short:bool -> unit -> t
-          </code></pre>
+          <pre><code class="OCaml">val create : ?output:out_channel -> ?debug:bool -> ?color:bool -> ?short:bool -> unit -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -75,10 +66,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val log : t -> level -> ('a, out_channel, unit) format -> 'a
-          </code></pre>
+          <pre><code class="OCaml">val log : t -> level -> ('a, out_channel, unit) format -> 'a</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -89,10 +77,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val debug : t -> ('a, out_channel, unit) format -> 'a
-          </code></pre>
+          <pre><code class="OCaml">val debug : t -> ('a, out_channel, unit) format -> 'a</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -103,10 +88,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val warn : t -> ('a, out_channel, unit) format -> 'a
-          </code></pre>
+          <pre><code class="OCaml">val warn : t -> ('a, out_channel, unit) format -> 'a</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -117,10 +99,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val error : t -> ('a, out_channel, unit) format -> 'a
-          </code></pre>
+          <pre><code class="OCaml">val error : t -> ('a, out_channel, unit) format -> 'a</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -131,10 +110,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val info : t -> ('a, out_channel, unit) format -> 'a
-          </code></pre>
+          <pre><code class="OCaml">val info : t -> ('a, out_channel, unit) format -> 'a</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -145,10 +121,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val fatal : t -> ('a, out_channel, unit) format -> 'a
-          </code></pre>
+          <pre><code class="OCaml">val fatal : t -> ('a, out_channel, unit) format -> 'a</code></pre>
         </figure>
      </span>
      <div class="more">

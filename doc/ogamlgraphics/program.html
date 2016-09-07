@@ -33,10 +33,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            exception Compilation_error of string
-          </code></pre>
+          <pre><code class="OCaml">exception Compilation_error of string</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -47,10 +44,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            exception Linking_error of string
-          </code></pre>
+          <pre><code class="OCaml">exception Linking_error of string</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -61,10 +55,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            exception Invalid_version of string
-          </code></pre>
+          <pre><code class="OCaml">exception Invalid_version of string</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -75,10 +66,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            type t
-          </code></pre>
+          <pre><code class="OCaml">type t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -89,10 +77,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            type src = [ `File of string | `String of string]
-          </code></pre>
+          <pre><code class="OCaml">type src = [ `File of string | `String of string]</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -103,10 +88,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val from_source : vertex_source:src -> fragment_source:src -> t
-          </code></pre>
+          <pre><code class="OCaml">val from_source : vertex_source:src -> fragment_source:src -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -117,10 +99,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val from_source_list : State.t -> vertex_source:(int * src) list -> fragment_source:(int * src) list -> t
-          </code></pre>
+          <pre><code class="OCaml">val from_source_list : State.t -> vertex_source:(int * src) list -> fragment_source:(int * src) list -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -131,10 +110,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val from_source_pp : State.t -> vertex_source:src -> fragment_source:src -> t
-          </code></pre>
+          <pre><code class="OCaml">val from_source_pp : State.t -> vertex_source:src -> fragment_source:src -> t</code></pre>
         </figure>
      </span>
      <div class="more">

@@ -32,10 +32,7 @@
       <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            type code = int
-          </code></pre>
+          <pre><code class="OCaml">type code = int</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -46,10 +43,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            type t
-          </code></pre>
+          <pre><code class="OCaml">type t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -60,10 +54,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            exception UTF8_error of string
-          </code></pre>
+          <pre><code class="OCaml">exception UTF8_error of string</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -74,10 +65,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            exception Out_of_bounds of string
-          </code></pre>
+          <pre><code class="OCaml">exception Out_of_bounds of string</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -88,10 +76,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val empty : unit -> t
-          </code></pre>
+          <pre><code class="OCaml">val empty : unit -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -102,10 +87,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val make : int -> code -> t
-          </code></pre>
+          <pre><code class="OCaml">val make : int -> code -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -116,10 +98,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val get : t -> int -> code
-          </code></pre>
+          <pre><code class="OCaml">val get : t -> int -> code</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -130,10 +109,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val set : t -> int -> code -> unit
-          </code></pre>
+          <pre><code class="OCaml">val set : t -> int -> code -> unit</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -144,10 +120,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val length : t -> int
-          </code></pre>
+          <pre><code class="OCaml">val length : t -> int</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -158,10 +131,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val byte_length : t -> int
-          </code></pre>
+          <pre><code class="OCaml">val byte_length : t -> int</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -172,10 +142,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val from_string : string -> t
-          </code></pre>
+          <pre><code class="OCaml">val from_string : string -> t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -186,10 +153,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val to_string : t -> string
-          </code></pre>
+          <pre><code class="OCaml">val to_string : t -> string</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -200,10 +164,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val iter : t -> (code -> unit) -> unit
-          </code></pre>
+          <pre><code class="OCaml">val iter : t -> (code -> unit) -> unit</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -214,10 +175,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val fold : t -> (code -> 'a -> 'a) -> 'a -> 'a
-          </code></pre>
+          <pre><code class="OCaml">val fold : t -> (code -> 'a -> 'a) -> 'a -> 'a</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -228,10 +186,7 @@
    <article>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">
-      
-            val map : t -> (code -> code) -> t
-          </code></pre>
+          <pre><code class="OCaml">val map : t -> (code -> code) -> t</code></pre>
         </figure>
      </span>
      <div class="more">
