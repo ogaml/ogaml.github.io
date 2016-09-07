@@ -152,7 +152,7 @@
      </span>
      <div class="more">
       
-       <code class="OCaml">linear start steps end</code> creates a linear interpolator going from <code class="OCaml">start</code> to <code class="OCaml">end</code> passing through each point<code class="OCaml">(dt, pos)</code> of <code class="OCaml">steps</code> at time <code class="OCaml">dt</code>
+       <code class="OCaml">linear start steps endt</code> creates a linear interpolator going from <code class="OCaml">start</code> to <code class="OCaml">endt</code> passing through each point<code class="OCaml">(dt, pos)</code> of <code class="OCaml">steps</code> at time <code class="OCaml">dt</code>
      </div>
    </article>
    <article>
@@ -163,7 +163,7 @@
      </span>
      <div class="more">
       
-       <code class="OCaml">cst_linear start steps end</code> creates a linear interpolator  going from <code class="OCaml">start</code> to <code class="OCaml">end</code> passing through each point  of <code class="OCaml">steps</code> at constant speed 
+       <code class="OCaml">cst_linear start steps endt</code> creates a linear interpolator  going from <code class="OCaml">start</code> to <code class="OCaml">endt</code> passing through each point  of <code class="OCaml">steps</code> at constant speed 
      </div>
    </article>
    <article>
@@ -174,7 +174,7 @@
      </span>
      <div class="more">
       
-       <code class="OCaml">cubic (start, sm) steps (end, em)</code> creates a cubic spline interpolator going from <code class="OCaml">start</code> with tangent <code class="OCaml">sm</code> to <code class="OCaml">end</code> with tangeant <code class="OCaml">em</code> passing through each point <code class="OCaml">(dt, pos)</code> of <code class="OCaml">steps</code> at time <code class="OCaml">dt</code>
+       <code class="OCaml">cubic (start, sm) steps (endt, em)</code> creates a cubic spline interpolator going from <code class="OCaml">start</code> with tangent <code class="OCaml">sm</code> to <code class="OCaml">endt</code> with tangent <code class="OCaml">em</code> passing through each point <code class="OCaml">(dt, pos)</code> of <code class="OCaml">steps</code> at time <code class="OCaml">dt</code>
      </div>
    </article>
    <article>
@@ -185,7 +185,7 @@
      </span>
      <div class="more">
       
-       <code class="OCaml">cubic (start, sm) steps (end, em)</code> creates a cubic spline interpolator going from <code class="OCaml">start</code> with tangent <code class="OCaml">sm</code> to <code class="OCaml">end</code> with tangeant <code class="OCaml">em</code> passing through each point of <code class="OCaml">steps</code> at constant speed 
+       <code class="OCaml">cubic (start, sm) steps (endt, em)</code> creates a cubic spline interpolator going from <code class="OCaml">start</code> with tangent <code class="OCaml">sm</code> to <code class="OCaml">endt</code> with tangent <code class="OCaml">em</code> passing through each point of <code class="OCaml">steps</code> at constant speed 
      </div>
    </article>
    <h3> Composition </h3>
