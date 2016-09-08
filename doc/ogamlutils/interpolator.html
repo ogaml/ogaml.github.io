@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>OGaml documentation - Interpolator</title>
-                                        
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-                                        
-    <link rel="stylesheet" href="../../css/monokai.css">
-                                        
-    <link rel="stylesheet" href="../../css/doc.css">
-                                        
-    <script src="../../script/highlight.pack.js"></script>
-                                        
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-                                        
-    <script src="../../script/doc.js"></script>
-                                        
-    <script type="text/javascript">hljs.tabReplace = ''; 
+<head>
+      
+  <title>OGaml documentation - Interpolator</title>
+      
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+      
+  <link rel="stylesheet" href="../../css/monokai.css">
+      
+  <link rel="stylesheet" href="../../css/doc.css">
+      
+  <script src="../../script/highlight.pack.js"></script>
+      
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      
+  <script src="../../script/doc.js"></script>
+      
+  <script type="text/javascript">hljs.tabReplace = ''; 
    hljs.initHighlightingOnLoad(); 
    window.onload = function() { 
      var aCodes = document.getElementsByTagName('code'); 
@@ -23,20 +24,637 @@
        hljs.highlightBlock(aCodes[i]); 
      }
    }</script>
-             
-    <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon-ogaml.ico">
-             
-  </head>
-  <body>
-    <main>
-      <h1>Module <span class="prefix">OgamlUtils.</span><span class="modulename">Interpolator</span></h1>
+      
+  <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon-ogaml.ico">
+      
+</head>
+<body><aside>
+    <header>
+    <a href="../../index.html">
+      <img src="../../img/ogaml-logo.svg" alt="OGAML" width="100%">
+    </a>
+  </header>
+    <h1> 
+      <a href="../../doc/doc.html">Modules</a>
+      <span class="showall">Show all</span>
+    </h1>
+    <ul id="main-nav" style="display: block;">
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore.html">OgamlCore</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/ll.html">LL</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/ll/mouse.html">Mouse</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/ll/keyboard.html">Keyboard</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/ll/window.html">Window</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/contextsettings.html">ContextSettings</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/event.html">Event</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/event/mouseevent.html">MouseEvent</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/event/buttonevent.html">ButtonEvent</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/event/keyevent.html">KeyEvent</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/keycode.html">Keycode</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/button.html">Button</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics.html">OgamlGraphics</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/keyboard.html">Keyboard</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/mouse.html">Mouse</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/text.html">Text</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/text/fx.html">Fx</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/sprite.html">Sprite</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/shape.html">Shape</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/model.html">Model</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/model/face.html">Face</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/model/vertex.html">Vertex</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexmap.html">VertexMap</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexmap/source.html">Source</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexmap/vertex.html">Vertex</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexarray.html">VertexArray</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexarray/source.html">Source</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexarray/vertex.html">Vertex</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/indexarray.html">IndexArray</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/indexarray/source.html">Source</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/window.html">Window</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/programlibrary.html">ProgramLibrary</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/uniform.html">Uniform</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/program.html">Program</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/font.html">Font</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/font/glyph.html">Glyph</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture.html">Texture</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture/texture2d.html">Texture2D</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/image.html">Image</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/state.html">State</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter.html">DrawParameter</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/blendmode.html">BlendMode</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/blendmode/equation.html">Equation</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/blendmode/factor.html">Factor</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/viewport.html">Viewport</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/polygonmode.html">PolygonMode</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/cullingmode.html">CullingMode</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawmode.html">DrawMode</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/color.html">Color</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/color/hsv.html">HSV</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/color/rgb.html">RGB</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath.html">OgamlMath</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/matrix2d.html">Matrix2D</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/matrix3d.html">Matrix3D</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/quaternion.html">Quaternion</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/floatbox.html">FloatBox</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/intbox.html">IntBox</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/floatrect.html">FloatRect</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/intrect.html">IntRect</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/vector3fs.html">Vector3fs</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/vector3f.html">Vector3f</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/vector3i.html">Vector3i</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/vector2f.html">Vector2f</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/vector2i.html">Vector2i</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/constants.html">Constants</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils.html">OgamlUtils</a>
+    <ul class="nav-open" style="display: block;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/graph.html">Graph</a>
+    <ul style="display: none;">
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/graph/g.html">G</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/graph/vertex.html">Vertex</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/priorityqueue.html">PriorityQueue</a>
+    <ul style="display: none;">
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/priorityqueue/q.html">Q</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/priorityqueue/priority.html">Priority</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/noise.html">Noise</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/noise/perlin3d.html">Perlin3D</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/noise/perlin2d.html">Perlin2D</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/interpolator.html">Interpolator</a>
+    <ul class="nav-open" style="display: block;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/utf8string.html">UTF8String</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/log.html">Log</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+   </aside>
+<main>
+  <h1>Module <span class="prefix">OgamlUtils.</span><span class="modulename">Interpolator</span></h1>
     
-      <span class="abstract"> Interpolation between multiple values </span>
-      <hr>
-      
-      
-      <p> This module defines interpolators between two values.<br> An interpolator between value v0 and v1 is a function f such that f(0) = v0, f(1) = v1.<br></p>
-      <article>
+  <span class="abstract"> Interpolation between multiple values </span>
+  <hr>
+  
+  
+  <p> This module defines interpolators between two values.<br> An interpolator between value v0 and v1 is a function f such that f(0) = v0, f(1) = v1.<br></p>
+  <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
@@ -44,7 +662,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Type of an interpolator returning type 'a 
      </div>
    </article>
@@ -56,13 +674,13 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Raised when an error occurs during the creation of an interpolator 
      </div>
    </article>
    <br><h3> Accessors and modifiers </h3>
-      <p> Those functions provide a way to modify the behaviour of interpolators.<br> Unless otherwise specified, the modifiers applied to  an interpolator are kept by all subsequent operations.  This means that, for example, passing a time-based  interpolator to <code class="OCaml">map</code> will return a new time-based  interpolator. </p>
-      <article>
+  <p> Those functions provide a way to modify the behaviour of interpolators.<br> Unless otherwise specified, the modifiers applied to  an interpolator are kept by all subsequent operations.  This means that, for example, passing a time-based  interpolator to <code class="OCaml">map</code> will return a new time-based  interpolator. </p>
+  <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
@@ -70,7 +688,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
        <code class="OCaml">get ip t</code> returns the value of the interpolator <code class="OCaml">ip</code> at time <code class="OCaml">t</code> in [0;1] 
      </div>
    </article>
@@ -82,7 +700,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
        <code class="OCaml">current ip</code> returns the current value of a time-based interpolator (see function start).<br> If <code class="OCaml">ip</code> is not time-based then the result is <code class="OCaml">ip(0)</code> . 
      </div>
    </article>
@@ -94,7 +712,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
        <code class="OCaml">start ip t dt</code> returns a new time-based interpolator <code class="OCaml">tip</code> such that :<br><code class="OCaml">current tip</code> = <code class="OCaml">ip(0)</code> at time <code class="OCaml">t</code><br><code class="OCaml">current tip</code> = <code class="OCaml">ip(1)</code> at time <code class="OCaml">t + dt</code><br><code class="OCaml">t</code> and <code class="OCaml">dt</code> are given in seconds. <code class="OCaml">t = Unix.gettimeofday()</code> means that <code class="OCaml">tip</code> starts immediately.<br> If <code class="OCaml">dt = 0</code> then <code class="OCaml">current</code> will always return <code class="OCaml">ip(0)</code><br> The result of <code class="OCaml">get</code> on the <code class="OCaml">tip</code> is left unchanged. 
      </div>
    </article>
@@ -106,7 +724,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
        <code class="OCaml">repeat ip</code> returns a repeating interpolator <code class="OCaml">lip</code> from <code class="OCaml">ip</code> such that<code class="OCaml">lip(x)</code> = <code class="OCaml">ip(x)</code> for <code class="OCaml">x</code> in [0;1] and <code class="OCaml">lip</code> is 1-periodic. 
      </div>
    </article>
@@ -118,13 +736,13 @@
         </figure>
      </span>
      <div class="more">
-      
+  
        <code class="OCaml">loop ip</code> returns a repeating interpolator <code class="OCaml">lip</code> from <code class="OCaml">ip</code> such that :<br><code class="OCaml">lip(x)</code> = <code class="OCaml">ip(x)</code> for <code class="OCaml">x</code> in [0;1] <br><code class="OCaml">lip(x)</code> = <code class="OCaml">ip(2-x)</code> for <code class="OCaml">x</code> in [1;2]<br><code class="OCaml">lip(x)</code> is 2-periodic 
      </div>
    </article>
    <br><h3> Constructors </h3>
-      <p> Those functions provide a way to construct various (and even user-defined) interpolators.<br> Unless otherwise specified, parameters are clamped to [0;1], that is ip(x) for x < 0 equals ip(0) and ip(x) for x > 1 equals ip(1) <br> Most constructors require a list of points of the form <code class="OCaml">(dt, v)</code> such that the created interpolator will take the value <code class="OCaml">v</code> at time <code class="OCaml">dt</code> .<br> The <code class="OCaml">cst_*</code> variants create constant-speed interpolators  so the <code class="OCaml">dt</code> parameter is not required. </p>
-      <article>
+  <p> Those functions provide a way to construct various (and even user-defined) interpolators.<br> Unless otherwise specified, parameters are clamped to [0;1], that is ip(x) for x < 0 equals ip(0) and ip(x) for x > 1 equals ip(1) <br> Most constructors require a list of points of the form <code class="OCaml">(dt, v)</code> such that the created interpolator will take the value <code class="OCaml">v</code> at time <code class="OCaml">dt</code> .<br> The <code class="OCaml">cst_*</code> variants create constant-speed interpolators  so the <code class="OCaml">dt</code> parameter is not required. </p>
+  <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
@@ -132,7 +750,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
        <code class="OCaml">custom f</code> returns a custom interpolator that coincides with   the function <code class="OCaml">f</code> on [0;1] and equals f(0) or f(1) elsewhere. 
      </div>
    </article>
@@ -144,7 +762,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
        <code class="OCaml">copy f</code> returns a custom interpolator that coincides with   the function <code class="OCaml">f</code> everywhere 
      </div>
    </article>
@@ -156,7 +774,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Returns a constant interpolator 
      </div>
    </article>
@@ -168,7 +786,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
        <code class="OCaml">linear start steps endt</code> creates a linear interpolator going from <code class="OCaml">start</code> to <code class="OCaml">endt</code> passing through each point<code class="OCaml">(dt, pos)</code> of <code class="OCaml">steps</code> at time <code class="OCaml">dt</code>
      </div>
    </article>
@@ -180,7 +798,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
        <code class="OCaml">cst_linear start steps endt</code> creates a linear interpolator  going from <code class="OCaml">start</code> to <code class="OCaml">endt</code> passing through each point  of <code class="OCaml">steps</code> at constant speed 
      </div>
    </article>
@@ -192,7 +810,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
        <code class="OCaml">cubic (start, sm) steps (endt, em)</code> creates a cubic spline interpolator going from <code class="OCaml">start</code> with tangent <code class="OCaml">sm</code> to <code class="OCaml">endt</code> with tangent <code class="OCaml">em</code> passing through each point <code class="OCaml">(dt, pos)</code> of <code class="OCaml">steps</code> at time <code class="OCaml">dt</code>
      </div>
    </article>
@@ -204,12 +822,12 @@
         </figure>
      </span>
      <div class="more">
-      
+  
        <code class="OCaml">cubic (start, sm) steps (endt, em)</code> creates a cubic spline interpolator going from <code class="OCaml">start</code> with tangent <code class="OCaml">sm</code> to <code class="OCaml">endt</code> with tangent <code class="OCaml">em</code> passing through each point of <code class="OCaml">steps</code> at constant speed 
      </div>
    </article>
    <br><h3> Composition </h3>
-      <article>
+  <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
@@ -217,7 +835,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
        <code class="OCaml">compose ip1 ip2</code> returns a new interpolator that takes the values of <code class="OCaml">ip2</code> but using the values of <code class="OCaml">ip1</code> as parameter<br> The new interpolator will have the modifiers of <code class="OCaml">ip1</code>
      </div>
    </article>
@@ -229,7 +847,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
        <code class="OCaml">map ip f</code> returns a new interpolator that takes the value of <code class="OCaml">ip</code> and passes it to <code class="OCaml">f</code> . 
      </div>
    </article>
@@ -241,7 +859,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
        <code class="OCaml">map_right</code> is an alias for <code class="OCaml">map</code>
      </div>
    </article>
@@ -253,7 +871,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
        <code class="OCaml">map_left f ip</code> returns a function <code class="OCaml">g</code> such that <code class="OCaml">g(x) = ip(f(x))</code>
      </div>
    </article>
@@ -265,7 +883,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Returns a pair-interpolator from a pair of interpolators.<br> The new interpolator will not have any modifiers. 
      </div>
    </article>
@@ -277,7 +895,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Returns a list-interpolator from a list of interpolators.<br> The new interpolator will not have any modifiers. 
      </div>
    </article>
@@ -289,7 +907,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Returns a vector3f interpolator from three float interpolators. <br> The new interpolator will not have any modifiers. 
      </div>
    </article>
@@ -301,11 +919,10 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Returns a vector2f interpolator from two float interpolators. <br> The new interpolator will not have any modifiers. 
      </div>
    </article>
    
-    </main>
-  </body>
+</main></body>
 </html>

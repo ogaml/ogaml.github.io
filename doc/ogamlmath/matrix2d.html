@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>OGaml documentation - Matrix2D</title>
-                                        
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-                                        
-    <link rel="stylesheet" href="../../css/monokai.css">
-                                        
-    <link rel="stylesheet" href="../../css/doc.css">
-                                        
-    <script src="../../script/highlight.pack.js"></script>
-                                        
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-                                        
-    <script src="../../script/doc.js"></script>
-                                        
-    <script type="text/javascript">hljs.tabReplace = ''; 
+<head>
+      
+  <title>OGaml documentation - Matrix2D</title>
+      
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+      
+  <link rel="stylesheet" href="../../css/monokai.css">
+      
+  <link rel="stylesheet" href="../../css/doc.css">
+      
+  <script src="../../script/highlight.pack.js"></script>
+      
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      
+  <script src="../../script/doc.js"></script>
+      
+  <script type="text/javascript">hljs.tabReplace = ''; 
    hljs.initHighlightingOnLoad(); 
    window.onload = function() { 
      var aCodes = document.getElementsByTagName('code'); 
@@ -23,20 +24,637 @@
        hljs.highlightBlock(aCodes[i]); 
      }
    }</script>
-             
-    <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon-ogaml.ico">
-             
-  </head>
-  <body>
-    <main>
-      <h1>Module <span class="prefix">OgamlMath.</span><span class="modulename">Matrix2D</span></h1>
+      
+  <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon-ogaml.ico">
+      
+</head>
+<body><aside>
+    <header>
+    <a href="../../index.html">
+      <img src="../../img/ogaml-logo.svg" alt="OGAML" width="100%">
+    </a>
+  </header>
+    <h1> 
+      <a href="../../doc/doc.html">Modules</a>
+      <span class="showall">Show all</span>
+    </h1>
+    <ul id="main-nav" style="display: block;">
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore.html">OgamlCore</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/ll.html">LL</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/ll/mouse.html">Mouse</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/ll/keyboard.html">Keyboard</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/ll/window.html">Window</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/contextsettings.html">ContextSettings</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/event.html">Event</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/event/mouseevent.html">MouseEvent</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/event/buttonevent.html">ButtonEvent</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/event/keyevent.html">KeyEvent</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/keycode.html">Keycode</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/button.html">Button</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics.html">OgamlGraphics</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/keyboard.html">Keyboard</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/mouse.html">Mouse</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/text.html">Text</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/text/fx.html">Fx</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/sprite.html">Sprite</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/shape.html">Shape</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/model.html">Model</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/model/face.html">Face</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/model/vertex.html">Vertex</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexmap.html">VertexMap</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexmap/source.html">Source</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexmap/vertex.html">Vertex</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexarray.html">VertexArray</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexarray/source.html">Source</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexarray/vertex.html">Vertex</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/indexarray.html">IndexArray</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/indexarray/source.html">Source</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/window.html">Window</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/programlibrary.html">ProgramLibrary</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/uniform.html">Uniform</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/program.html">Program</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/font.html">Font</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/font/glyph.html">Glyph</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture.html">Texture</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture/texture2d.html">Texture2D</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/image.html">Image</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/state.html">State</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter.html">DrawParameter</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/blendmode.html">BlendMode</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/blendmode/equation.html">Equation</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/blendmode/factor.html">Factor</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/viewport.html">Viewport</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/polygonmode.html">PolygonMode</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/cullingmode.html">CullingMode</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawmode.html">DrawMode</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/color.html">Color</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/color/hsv.html">HSV</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/color/rgb.html">RGB</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath.html">OgamlMath</a>
+    <ul class="nav-open" style="display: block;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/matrix2d.html">Matrix2D</a>
+    <ul class="nav-open" style="display: block;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/matrix3d.html">Matrix3D</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/quaternion.html">Quaternion</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/floatbox.html">FloatBox</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/intbox.html">IntBox</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/floatrect.html">FloatRect</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/intrect.html">IntRect</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/vector3fs.html">Vector3fs</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/vector3f.html">Vector3f</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/vector3i.html">Vector3i</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/vector2f.html">Vector2f</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/vector2i.html">Vector2i</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/constants.html">Constants</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils.html">OgamlUtils</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/graph.html">Graph</a>
+    <ul style="display: none;">
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/graph/g.html">G</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/graph/vertex.html">Vertex</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/priorityqueue.html">PriorityQueue</a>
+    <ul style="display: none;">
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/priorityqueue/q.html">Q</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/priorityqueue/priority.html">Priority</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/noise.html">Noise</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/noise/perlin3d.html">Perlin3D</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/noise/perlin2d.html">Perlin2D</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/interpolator.html">Interpolator</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/utf8string.html">UTF8String</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/log.html">Log</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+   </aside>
+<main>
+  <h1>Module <span class="prefix">OgamlMath.</span><span class="modulename">Matrix2D</span></h1>
     
-      <span class="abstract"> Provides easy creation and manipulation of 2D rendering matrices </span>
-      <hr>
-      
-      
-      <p> Optimized operations on 2D (3x3) float matrices </p>
-      <article>
+  <span class="abstract"> Provides easy creation and manipulation of 2D rendering matrices </span>
+  <hr>
+  
+  
+  <p> Optimized operations on 2D (3x3) float matrices </p>
+  <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
@@ -44,12 +662,12 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Raised when an error occurs (usually a division by zero) 
      </div>
    </article>
    <br><h3> Simple Matrices </h3>
-      <article>
+  <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
@@ -57,7 +675,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Type of 3x3 matrices stored in a flat, column-major array 
      </div>
    </article>
@@ -69,7 +687,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Zero matrix 
      </div>
    </article>
@@ -81,7 +699,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Identity matrix 
      </div>
    </article>
@@ -93,8 +711,8 @@
         </figure>
      </span>
      <div class="more">
-      
-        Builds a translation matrix from a vector <br><span class="see">See : <a href="../ogamlmath/vector2f.html">OgamlMath.Vector2f</a></span>
+  
+        Builds a translation matrix from a vector <br><span class="see">See : <a href="../../doc/ogamlmath/vector2f.html">OgamlMath.Vector2f</a></span>
      </div>
    </article>
    <article>
@@ -105,8 +723,8 @@
         </figure>
      </span>
      <div class="more">
-      
-        Builds a scaling matrix from a vector <br><span class="see">See : <a href="../ogamlmath/vector2f.html">OgamlMath.Vector2f</a></span>
+  
+        Builds a scaling matrix from a vector <br><span class="see">See : <a href="../../doc/ogamlmath/vector2f.html">OgamlMath.Vector2f</a></span>
      </div>
    </article>
    <article>
@@ -117,12 +735,12 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Builds a rotation matrix from an angle 
      </div>
    </article>
    <br><h3> Matrix Operations </h3>
-      <article>
+  <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
@@ -130,7 +748,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Computes the product of two matrices 
      </div>
    </article>
@@ -142,7 +760,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Transposes a matrix. The original is not modified. 
      </div>
    </article>
@@ -154,8 +772,8 @@
         </figure>
      </span>
      <div class="more">
-      
-        Translates a matrix by a vector. The original matrix is not modified. <br><span class="see">See : <a href="../ogamlmath/vector2f.html">OgamlMath.Vector2f</a></span>
+  
+        Translates a matrix by a vector. The original matrix is not modified. <br><span class="see">See : <a href="../../doc/ogamlmath/vector2f.html">OgamlMath.Vector2f</a></span>
      </div>
    </article>
    <article>
@@ -166,8 +784,8 @@
         </figure>
      </span>
      <div class="more">
-      
-        Scales a matrix by a vector. The original matrix is not modified. <br><span class="see">See : <a href="../ogamlmath/vector2f.html">OgamlMath.Vector2f</a></span>
+  
+        Scales a matrix by a vector. The original matrix is not modified. <br><span class="see">See : <a href="../../doc/ogamlmath/vector2f.html">OgamlMath.Vector2f</a></span>
      </div>
    </article>
    <article>
@@ -178,7 +796,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Rotates a matrix by an angle. The original matrix is not modified. 
      </div>
    </article>
@@ -190,7 +808,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Computes the (right-)product of a matrix with a column vector 
      </div>
    </article>
@@ -202,12 +820,12 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Returns a pretty-printed string (not for serialization) 
      </div>
    </article>
    <br><h3> Rendering Matrices Creation </h3>
-      <article>
+  <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
@@ -215,7 +833,7 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Builds an orthographic projection matrix englobing a screen 
      </div>
    </article>
@@ -227,12 +845,12 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Builds the inverse of an orthographic projection matrix 
      </div>
    </article>
    <br><h3> Other functions </h3>
-      <article>
+  <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
@@ -240,11 +858,10 @@
         </figure>
      </span>
      <div class="more">
-      
+  
         Returns a matrix as a flat bigarray. Used internally by OGAML, it should not be necessary for your programs. 
      </div>
    </article>
    
-    </main>
-  </body>
+</main></body>
 </html>
