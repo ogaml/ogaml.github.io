@@ -4,6 +4,8 @@
       
   <title>OGaml documentation - Equation</title>
       
+  <meta charset="utf-8">
+      
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
       
   <link rel="stylesheet" href="../../../../css/monokai.css">
@@ -663,7 +665,38 @@
      </span>
      <div class="more">
   
-        Blending equations <br><span class="see">See : <a href="../../../../doc/ogamlgraphics/drawparameter/blendmode/factor.html">OgamlGraphics.DrawParameter.BlendMode.Factor</a></span>
+        Blending equations 
+      <h4>Possible values</h4>
+     
+      <table class="values"></tbody>
+        <tr>
+        <td class="variant">
+     <figure class="highlight">
+        <code class="OCaml">None</code>
+     </figure>
+  </td>
+  <td> Default equation, replaces the old color by the new one </td>
+        </tr>
+        <tr>
+        <td class="variant">
+     <figure class="highlight">
+        <code class="OCaml">Add of (Factor.t * Factor.t)</code>
+     </figure>
+  </td>
+  <td></td>
+        </tr>
+        <tr>
+        <td class="variant">
+     <figure class="highlight">
+        <code class="OCaml">Sub of (Factor.t * Factor.t)</code>
+     </figure>
+  </td>
+  <td></td>
+        </tr>
+        
+        </tbody></table>
+      
+      <br><span class="see">See : <a href="../../../../doc/ogamlgraphics/drawparameter/blendmode/factor.html">OgamlGraphics.DrawParameter.BlendMode.Factor</a></span>
      </div>
    </article>
    

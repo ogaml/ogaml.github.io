@@ -4,6 +4,8 @@
       
   <title>OGaml documentation - KeyEvent</title>
       
+  <meta charset="utf-8">
+      
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
       
   <link rel="stylesheet" href="../../../css/monokai.css">
@@ -663,7 +665,46 @@
      </span>
      <div class="more">
   
-        A record containing information about a key event <br><span class="see">See : <a href="../../../doc/ogamlcore/keycode.html">OgamlCore.KeyCode</a></span>
+        A record containing information about a key event 
+      
+      <h4>Record fields</h4>
+     
+      <table class="fields"></tbody>
+        <tr>
+        <td class="record">
+     <figure class="highlight">
+        <code class="OCaml">key : Keycode.t</code>
+     </figure>
+  </td>
+  <td> Key coresponding to the event </td>
+        </tr>
+        <tr>
+        <td class="record">
+     <figure class="highlight">
+        <code class="OCaml">shift : bool</code>
+     </figure>
+  </td>
+  <td><code class="OCaml">true</code> iff the shift modifier was active during the event </td>
+        </tr>
+        <tr>
+        <td class="record">
+     <figure class="highlight">
+        <code class="OCaml">control : bool</code>
+     </figure>
+  </td>
+  <td><code class="OCaml">true</code> iff the ctrl modifier (or cmd under OSX) was active during the event </td>
+        </tr>
+        <tr>
+        <td class="record">
+     <figure class="highlight">
+        <code class="OCaml">alt : bool</code>
+     </figure>
+  </td>
+  <td><code class="OCaml">true</code> iff the alt modifier was active during the event </td>
+        </tr>
+        
+        </tbody></table>
+      <br><span class="see">See : <a href="../../../doc/ogamlcore/keycode.html">OgamlCore.KeyCode</a></span>
      </div>
    </article>
    

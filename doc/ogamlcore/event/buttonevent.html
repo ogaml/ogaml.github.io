@@ -4,6 +4,8 @@
       
   <title>OGaml documentation - ButtonEvent</title>
       
+  <meta charset="utf-8">
+      
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
       
   <link rel="stylesheet" href="../../../css/monokai.css">
@@ -663,7 +665,62 @@
      </span>
      <div class="more">
   
-        A record containing information about a mouse event <br><span class="see">See : <a href="../../../doc/ogamlcore/button.html">OgamlCore.Button</a></span>
+        A record containing information about a mouse event 
+      
+      <h4>Record fields</h4>
+     
+      <table class="fields"></tbody>
+        <tr>
+        <td class="record">
+     <figure class="highlight">
+        <code class="OCaml">button : Button.t</code>
+     </figure>
+  </td>
+  <td> Button corresponding to the event </td>
+        </tr>
+        <tr>
+        <td class="record">
+     <figure class="highlight">
+        <code class="OCaml">x : int</code>
+     </figure>
+  </td>
+  <td> X position of the mouse when the event was triggered </td>
+        </tr>
+        <tr>
+        <td class="record">
+     <figure class="highlight">
+        <code class="OCaml">y : int</code>
+     </figure>
+  </td>
+  <td> Y position of the mouse when the event was triggered </td>
+        </tr>
+        <tr>
+        <td class="record">
+     <figure class="highlight">
+        <code class="OCaml">shift : bool</code>
+     </figure>
+  </td>
+  <td><code class="OCaml">true</code> iff the shift modifier was active during the event </td>
+        </tr>
+        <tr>
+        <td class="record">
+     <figure class="highlight">
+        <code class="OCaml">control : bool</code>
+     </figure>
+  </td>
+  <td><code class="OCaml">true</code> iff the ctrl modifier (or cmd under OSX) was active during the event </td>
+        </tr>
+        <tr>
+        <td class="record">
+     <figure class="highlight">
+        <code class="OCaml">alt : bool</code>
+     </figure>
+  </td>
+  <td><code class="OCaml">true</code> iff the alt modifier was active during the event </td>
+        </tr>
+        
+        </tbody></table>
+      <br><span class="see">See : <a href="../../../doc/ogamlcore/button.html">OgamlCore.Button</a></span>
      </div>
    </article>
    

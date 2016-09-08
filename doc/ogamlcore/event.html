@@ -4,6 +4,8 @@
       
   <title>OGaml documentation - Event</title>
       
+  <meta charset="utf-8">
+      
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
       
   <link rel="stylesheet" href="../../css/monokai.css">
@@ -673,7 +675,70 @@
      </span>
      <div class="more">
   
-        A variant type describing the possible events <br><span class="see">See : <a href="../../doc/ogamlcore/event/keyevent.html">OgamlCore.Event.KeyEvent</a></span><br><span class="see">See : <a href="../../doc/ogamlcore/event/buttonevent.html">OgamlCore.Event.ButtonEvent</a></span><br><span class="see">See : <a href="../../doc/ogamlcore/event/mouseevent.html">OgamlCore.Event.MouseEvent</a></span>
+        A variant type describing the possible events 
+      <h4>Possible values</h4>
+     
+      <table class="values"></tbody>
+        <tr>
+        <td class="variant">
+     <figure class="highlight">
+        <code class="OCaml">Closed</code>
+     </figure>
+  </td>
+  <td> The window sending the event has been closed </td>
+        </tr>
+        <tr>
+        <td class="variant">
+     <figure class="highlight">
+        <code class="OCaml">Resized</code>
+     </figure>
+  </td>
+  <td> The window has been resized by the user </td>
+        </tr>
+        <tr>
+        <td class="variant">
+     <figure class="highlight">
+        <code class="OCaml">KeyPressed of KeyEvent.t</code>
+     </figure>
+  </td>
+  <td> A key has been pressed </td>
+        </tr>
+        <tr>
+        <td class="variant">
+     <figure class="highlight">
+        <code class="OCaml">KeyReleased of KeyEvent.t</code>
+     </figure>
+  </td>
+  <td> A key has been released </td>
+        </tr>
+        <tr>
+        <td class="variant">
+     <figure class="highlight">
+        <code class="OCaml">ButtonPressed of ButtonEvent.t</code>
+     </figure>
+  </td>
+  <td> A mouse button has been pressed </td>
+        </tr>
+        <tr>
+        <td class="variant">
+     <figure class="highlight">
+        <code class="OCaml">ButtonReleased of ButtonEvent.t</code>
+     </figure>
+  </td>
+  <td> A mouse button has been released </td>
+        </tr>
+        <tr>
+        <td class="variant">
+     <figure class="highlight">
+        <code class="OCaml">MouseMoved of MouseEvent.t</code>
+     </figure>
+  </td>
+  <td> The mouse has been moved </td>
+        </tr>
+        
+        </tbody></table>
+      
+      <br><span class="see">See : <a href="../../doc/ogamlcore/event/keyevent.html">OgamlCore.Event.KeyEvent</a></span><br><span class="see">See : <a href="../../doc/ogamlcore/event/buttonevent.html">OgamlCore.Event.ButtonEvent</a></span><br><span class="see">See : <a href="../../doc/ogamlcore/event/mouseevent.html">OgamlCore.Event.MouseEvent</a></span>
      </div>
    </article>
    
