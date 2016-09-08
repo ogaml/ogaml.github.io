@@ -3,6 +3,8 @@
   <head>
     <title>OGaml documentation - DrawParameter</title>
                                         
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+                                        
     <link rel="stylesheet" href="../../css/monokai.css">
                                         
     <link rel="stylesheet" href="../../css/doc.css">
@@ -36,17 +38,18 @@
       <table class="belowh">
       
         <tbody>
-          <tr><td><a href="../ogamlgraphics/drawparameter/cullingmode.html">CullingMode</a></td><td> Culling modes enumeration </td></tr>
-          <tr><td><a href="../ogamlgraphics/drawparameter/polygonmode.html">PolygonMode</a></td><td> Polygon modes enumeration </td></tr>
-          <tr><td><a href="../ogamlgraphics/drawparameter/viewport.html">Viewport</a></td><td> Viewports enumeration </td></tr>
           <tr><td><a href="../ogamlgraphics/drawparameter/blendmode.html">BlendMode</a></td><td> Blending modes manipulation </td></tr>
+          <tr><td><a href="../ogamlgraphics/drawparameter/viewport.html">Viewport</a></td><td> Viewports enumeration </td></tr>
+          <tr><td><a href="../ogamlgraphics/drawparameter/polygonmode.html">PolygonMode</a></td><td> Polygon modes enumeration </td></tr>
+          <tr><td><a href="../ogamlgraphics/drawparameter/cullingmode.html">CullingMode</a></td><td> Culling modes enumeration </td></tr>
           
       
         </tbody>
       </table>
       
-       This module encapsulates the data passed to the GPU when rendering. State changes are optimized such that calling a rendering primitive with the same parameters twice does not induce a state change. 
+      <p> This module encapsulates the data passed to the GPU when rendering. State changes are optimized such that calling a rendering primitive with the same parameters twice does not induce a state change. </p>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">type t</code></pre>
@@ -58,6 +61,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val make : ?culling:CullingMode.t -> ?polygon:PolygonMode.t -> ?depth_test:bool -> ?blend_mode:BlendMode.t -> ?viewport:Viewport.t -> ?antialiasing:bool -> unit -> t</code></pre>
@@ -65,7 +69,7 @@
      </span>
      <div class="more">
       
-        Creates a set of draw parameters with the following options :<br><code class="OCaml">culling</code> specifies which face should be culled (defaults to <code class="OCaml">CullNone</code> )<br><code class="OCaml">polygon</code> specifies how to render polygons (defaults to <code class="OCaml">DrawFill</code> )<br><code class="OCaml">depth_test</code> specifies whether depth should be tested when rendering vertices (defaults to <code class="OCaml">true</code> )<br><code class="OCaml">blend_mode</code> specifies the blending equation (defaults to <code class="OCaml">BlendingMode.default</code> )<br><code class="OCaml">viewport</code> specifies the viewport (defaults to <code class="OCaml">Full</code> )<br><code class="OCaml">antialiasing</code> specifies whether to activate AA or not (ignored if AA is not supported by the context, defaults to <code class="OCaml">true</code> )<br><span class="see">See : <a href="../ogamlgraphics/drawparameter/cullingmode.html">OgamlGraphics.DrawParameter.CullingMode</a></span><span class="see">See : <a href="../ogamlgraphics/drawparameter/polygonmode.html">OgamlGraphics.DrawParameter.PolygonMode</a></span><span class="see">See : <a href="../ogamlgraphics/drawparameter/viewport.html">OgamlGraphics.DrawParameter.Viewport</a></span><span class="see">See : <a href="../ogamlgraphics/drawparameter/blendmode.html">OgamlGraphics.DrawParameter.BlendMode</a></span>
+        Creates a set of draw parameters with the following options :<br><code class="OCaml">culling</code> specifies which face should be culled (defaults to <code class="OCaml">CullNone</code> )<br><code class="OCaml">polygon</code> specifies how to render polygons (defaults to <code class="OCaml">DrawFill</code> )<br><code class="OCaml">depth_test</code> specifies whether depth should be tested when rendering vertices (defaults to <code class="OCaml">true</code> )<br><code class="OCaml">blend_mode</code> specifies the blending equation (defaults to <code class="OCaml">BlendingMode.default</code> )<br><code class="OCaml">viewport</code> specifies the viewport (defaults to <code class="OCaml">Full</code> )<br><code class="OCaml">antialiasing</code> specifies whether to activate AA or not (ignored if AA is not supported by the context, defaults to <code class="OCaml">true</code> )<br><br><span class="see">See : <a href="../ogamlgraphics/drawparameter/cullingmode.html">OgamlGraphics.DrawParameter.CullingMode</a></span><br><span class="see">See : <a href="../ogamlgraphics/drawparameter/polygonmode.html">OgamlGraphics.DrawParameter.PolygonMode</a></span><br><span class="see">See : <a href="../ogamlgraphics/drawparameter/viewport.html">OgamlGraphics.DrawParameter.Viewport</a></span><br><span class="see">See : <a href="../ogamlgraphics/drawparameter/blendmode.html">OgamlGraphics.DrawParameter.BlendMode</a></span>
      </div>
    </article>
    

@@ -3,6 +3,8 @@
   <head>
     <title>OGaml documentation - Matrix2D</title>
                                         
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+                                        
     <link rel="stylesheet" href="../../css/monokai.css">
                                         
     <link rel="stylesheet" href="../../css/doc.css">
@@ -33,8 +35,9 @@
       <hr>
       
       
-       Optimized operations on 2D (3x3) float matrices 
+      <p> Optimized operations on 2D (3x3) float matrices </p>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">exception Matrix2D_exception of string</code></pre>
@@ -45,8 +48,9 @@
         Raised when an error occurs (usually a division by zero) 
      </div>
    </article>
-   <h3> Simple Matrices </h3>
+   <br><h3> Simple Matrices </h3>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">type t</code></pre>
@@ -58,6 +62,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val zero : unit -> t</code></pre>
@@ -69,6 +74,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val identity : unit -> t</code></pre>
@@ -80,6 +86,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val translation : Vector2f.t -> t</code></pre>
@@ -87,10 +94,11 @@
      </span>
      <div class="more">
       
-        Builds a translation matrix from a vector <span class="see">See : <a href="../ogamlmath/vector2f.html">OgamlMath.Vector2f</a></span>
+        Builds a translation matrix from a vector <br><span class="see">See : <a href="../ogamlmath/vector2f.html">OgamlMath.Vector2f</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val scaling : Vector2f.t -> t</code></pre>
@@ -98,10 +106,11 @@
      </span>
      <div class="more">
       
-        Builds a scaling matrix from a vector <span class="see">See : <a href="../ogamlmath/vector2f.html">OgamlMath.Vector2f</a></span>
+        Builds a scaling matrix from a vector <br><span class="see">See : <a href="../ogamlmath/vector2f.html">OgamlMath.Vector2f</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val rotation : float -> t</code></pre>
@@ -112,8 +121,9 @@
         Builds a rotation matrix from an angle 
      </div>
    </article>
-   <h3> Matrix Operations </h3>
+   <br><h3> Matrix Operations </h3>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val product : t -> t -> t</code></pre>
@@ -125,6 +135,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val transpose : t -> t</code></pre>
@@ -136,6 +147,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val translate : Vector2f.t -> t -> t</code></pre>
@@ -143,10 +155,11 @@
      </span>
      <div class="more">
       
-        Translates a matrix by a vector. The original matrix is not modified. <span class="see">See : <a href="../ogamlmath/vector2f.html">OgamlMath.Vector2f</a></span>
+        Translates a matrix by a vector. The original matrix is not modified. <br><span class="see">See : <a href="../ogamlmath/vector2f.html">OgamlMath.Vector2f</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val scale : Vector2f.t -> t -> t</code></pre>
@@ -154,10 +167,11 @@
      </span>
      <div class="more">
       
-        Scales a matrix by a vector. The original matrix is not modified. <span class="see">See : <a href="../ogamlmath/vector2f.html">OgamlMath.Vector2f</a></span>
+        Scales a matrix by a vector. The original matrix is not modified. <br><span class="see">See : <a href="../ogamlmath/vector2f.html">OgamlMath.Vector2f</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val rotate : float -> t -> t</code></pre>
@@ -169,6 +183,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val times : t -> Vector2f.t -> Vector2f.t</code></pre>
@@ -180,6 +195,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val print : t -> string</code></pre>
@@ -190,8 +206,9 @@
         Returns a pretty-printed string (not for serialization) 
      </div>
    </article>
-   <h3> Rendering Matrices Creation </h3>
+   <br><h3> Rendering Matrices Creation </h3>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val projection : size:Vector2f.t -> t</code></pre>
@@ -203,6 +220,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val iprojection : size:Vector2f.t -> t</code></pre>
@@ -213,8 +231,9 @@
         Builds the inverse of an orthographic projection matrix 
      </div>
    </article>
-   <h3> Other functions </h3>
+   <br><h3> Other functions </h3>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val to_bigarray : t -> (float, Bigarray.float32_elt, Bigarray.c_layout) Bigarray.Array1.t</code></pre>

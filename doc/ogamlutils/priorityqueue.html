@@ -3,6 +3,8 @@
   <head>
     <title>OGaml documentation - PriorityQueue</title>
                                         
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+                                        
     <link rel="stylesheet" href="../../css/monokai.css">
                                         
     <link rel="stylesheet" href="../../css/doc.css">
@@ -37,14 +39,15 @@
       <table class="belowh">
       
         <tbody>
-          <tr><td><a href="../ogamlutils/priorityqueue/priority.html">Priority</a></td><td> Priorities used by a queue </td></tr>
           <tr><td><a href="../ogamlutils/priorityqueue/q.html">Q</a></td><td> Type of PriorityQueue.Make </td></tr>
+          <tr><td><a href="../ogamlutils/priorityqueue/priority.html">Priority</a></td><td> Priorities used by a queue </td></tr>
           
       
         </tbody>
       </table>
-       This module provides a functor for creating priority queues 
+      <p> This module provides a functor for creating priority queues </p>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">module Make : functor (P : Priority) -> Q with type priority = P.t</code></pre>

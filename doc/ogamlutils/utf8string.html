@@ -3,6 +3,8 @@
   <head>
     <title>OGaml documentation - UTF8String</title>
                                         
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+                                        
     <link rel="stylesheet" href="../../css/monokai.css">
                                         
     <link rel="stylesheet" href="../../css/doc.css">
@@ -34,6 +36,7 @@
       
       
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">type code = int</code></pre>
@@ -45,6 +48,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">type t</code></pre>
@@ -56,6 +60,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">exception UTF8_error of string</code></pre>
@@ -67,6 +72,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">exception Out_of_bounds of string</code></pre>
@@ -78,6 +84,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val empty : unit -> t</code></pre>
@@ -89,6 +96,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val make : int -> code -> t</code></pre>
@@ -100,6 +108,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val get : t -> int -> code</code></pre>
@@ -111,6 +120,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val set : t -> int -> code -> unit</code></pre>
@@ -122,6 +132,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val length : t -> int</code></pre>
@@ -133,6 +144,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val byte_length : t -> int</code></pre>
@@ -144,6 +156,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val from_string : string -> t</code></pre>
@@ -155,6 +168,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val to_string : t -> string</code></pre>
@@ -166,6 +180,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val iter : t -> (code -> unit) -> unit</code></pre>
@@ -177,6 +192,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val fold : t -> (code -> 'a -> 'a) -> 'a -> 'a</code></pre>
@@ -188,6 +204,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val map : t -> (code -> code) -> t</code></pre>

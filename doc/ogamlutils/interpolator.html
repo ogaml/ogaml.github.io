@@ -3,6 +3,8 @@
   <head>
     <title>OGaml documentation - Interpolator</title>
                                         
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+                                        
     <link rel="stylesheet" href="../../css/monokai.css">
                                         
     <link rel="stylesheet" href="../../css/doc.css">
@@ -33,8 +35,9 @@
       <hr>
       
       
-       This module defines interpolators between two values.<br> An interpolator between value v0 and v1 is a function f such that f(0) = v0, f(1) = v1.<br>
+      <p> This module defines interpolators between two values.<br> An interpolator between value v0 and v1 is a function f such that f(0) = v0, f(1) = v1.<br></p>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">type 'a t</code></pre>
@@ -46,6 +49,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">exception Invalid_interpolator of string</code></pre>
@@ -56,9 +60,10 @@
         Raised when an error occurs during the creation of an interpolator 
      </div>
    </article>
-   <h3> Accessors and modifiers </h3>
-       Those functions provide a way to modify the behaviour of interpolators.<br> Unless otherwise specified, the modifiers applied to  an interpolator are kept by all subsequent operations.  This means that, for example, passing a time-based  interpolator to <code class="OCaml">map</code> will return a new time-based  interpolator. 
+   <br><h3> Accessors and modifiers </h3>
+      <p> Those functions provide a way to modify the behaviour of interpolators.<br> Unless otherwise specified, the modifiers applied to  an interpolator are kept by all subsequent operations.  This means that, for example, passing a time-based  interpolator to <code class="OCaml">map</code> will return a new time-based  interpolator. </p>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val get : 'a t -> float -> 'a</code></pre>
@@ -70,6 +75,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val current : 'a t -> 'a</code></pre>
@@ -81,6 +87,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val start : 'a t -> float -> float -> 'a t</code></pre>
@@ -92,6 +99,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val repeat : 'a t -> 'a t</code></pre>
@@ -103,6 +111,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val loop : 'a t -> 'a t</code></pre>
@@ -113,9 +122,10 @@
        <code class="OCaml">loop ip</code> returns a repeating interpolator <code class="OCaml">lip</code> from <code class="OCaml">ip</code> such that :<br><code class="OCaml">lip(x)</code> = <code class="OCaml">ip(x)</code> for <code class="OCaml">x</code> in [0;1] <br><code class="OCaml">lip(x)</code> = <code class="OCaml">ip(2-x)</code> for <code class="OCaml">x</code> in [1;2]<br><code class="OCaml">lip(x)</code> is 2-periodic 
      </div>
    </article>
-   <h3> Constructors </h3>
-       Those functions provide a way to construct various (and even user-defined) interpolators.<br> Unless otherwise specified, parameters are clamped to [0;1], that is ip(x) for x < 0 equals ip(0) and ip(x) for x > 1 equals ip(1) <br> Most constructors require a list of points of the form <code class="OCaml">(dt, v)</code> such that the created interpolator will take the value <code class="OCaml">v</code> at time <code class="OCaml">dt</code> .<br> The <code class="OCaml">cst_*</code> variants create constant-speed interpolators  so the <code class="OCaml">dt</code> parameter is not required. 
+   <br><h3> Constructors </h3>
+      <p> Those functions provide a way to construct various (and even user-defined) interpolators.<br> Unless otherwise specified, parameters are clamped to [0;1], that is ip(x) for x < 0 equals ip(0) and ip(x) for x > 1 equals ip(1) <br> Most constructors require a list of points of the form <code class="OCaml">(dt, v)</code> such that the created interpolator will take the value <code class="OCaml">v</code> at time <code class="OCaml">dt</code> .<br> The <code class="OCaml">cst_*</code> variants create constant-speed interpolators  so the <code class="OCaml">dt</code> parameter is not required. </p>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val custom : (float -> 'a) -> 'a t</code></pre>
@@ -127,6 +137,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val copy : (float -> 'a) -> 'a t</code></pre>
@@ -138,6 +149,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val constant : float -> float t</code></pre>
@@ -149,6 +161,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val linear : float -> (float * float) list -> float -> float t</code></pre>
@@ -160,6 +173,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val cst_linear : float -> float list -> float -> float t</code></pre>
@@ -171,6 +185,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val cubic : (float * float) -> (float * float) list -> (float * float) -> float t</code></pre>
@@ -182,6 +197,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val cst_cubic : (float * float) -> float list -> (float * float) -> float t</code></pre>
@@ -192,8 +208,9 @@
        <code class="OCaml">cubic (start, sm) steps (endt, em)</code> creates a cubic spline interpolator going from <code class="OCaml">start</code> with tangent <code class="OCaml">sm</code> to <code class="OCaml">endt</code> with tangent <code class="OCaml">em</code> passing through each point of <code class="OCaml">steps</code> at constant speed 
      </div>
    </article>
-   <h3> Composition </h3>
+   <br><h3> Composition </h3>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val compose : float t -> 'a t -> 'a t</code></pre>
@@ -205,6 +222,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val map : 'a t -> ('a -> 'b) -> 'b t</code></pre>
@@ -216,6 +234,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val map_right : 'a t -> ('a -> 'b) -> 'b t</code></pre>
@@ -227,6 +246,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val map_left : ('a -> float) -> 'b t -> 'a -> 'b</code></pre>
@@ -238,6 +258,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val pair : 'a t -> 'b t -> ('a * 'b) t</code></pre>
@@ -249,6 +270,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val collapse : 'a t list -> 'a list t</code></pre>
@@ -260,6 +282,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val vector3f : float t -> float t -> float t -> OgamlMath.Vector3f.t t</code></pre>
@@ -271,6 +294,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val vector2f : float t -> float t -> OgamlMath.Vector2f.t t</code></pre>

@@ -3,6 +3,8 @@
   <head>
     <title>OGaml documentation - Image</title>
                                         
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+                                        
     <link rel="stylesheet" href="../../css/monokai.css">
                                         
     <link rel="stylesheet" href="../../css/doc.css">
@@ -33,8 +35,9 @@
       <hr>
       
       
-       This module provides a safe way to load and access images stored in the RAM. Images stored this way are uncompressed arrays of bytes and are therefore not meant to be stored in large quantities. 
+      <p> This module provides a safe way to load and access images stored in the RAM. Images stored this way are uncompressed arrays of bytes and are therefore not meant to be stored in large quantities. </p>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">type t</code></pre>
@@ -46,6 +49,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val create : [ `File of string | `Empty of (int * int * Color.t) | `Data of (int * int * Bytes.t)] -> t</code></pre>
@@ -53,10 +57,11 @@
      </span>
      <div class="more">
       
-        Creates an image from a file, some RGBA-formatted data, or an empty one filled with a default color<span class="see">See : <a href="../ogamlgraphics/color.html">OgamlGraphics.Color</a></span>
+        Creates an image from a file, some RGBA-formatted data, or an empty one filled with a default color<br><span class="see">See : <a href="../ogamlgraphics/color.html">OgamlGraphics.Color</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val size : t -> OgamlMath.Vector2i.t</code></pre>
@@ -68,6 +73,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val set : t -> OgamlMath.Vector2i.t -> Color.t -> unit</code></pre>
@@ -75,10 +81,11 @@
      </span>
      <div class="more">
       
-        Sets a pixel of an image<span class="see">See : <a href="../ogamlgraphics/color.html">OgamlGraphics.Color</a></span>
+        Sets a pixel of an image<br><span class="see">See : <a href="../ogamlgraphics/color.html">OgamlGraphics.Color</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val get : t -> OgamlMath.Vector2i.t -> Color.RGB.t</code></pre>
@@ -86,10 +93,11 @@
      </span>
      <div class="more">
       
-        Gets the color of a pixel of an image<span class="see">See : <a href="../ogamlgraphics/color/rgb.html">OgamlGraphics.Color.RGB</a></span>
+        Gets the color of a pixel of an image<br><span class="see">See : <a href="../ogamlgraphics/color/rgb.html">OgamlGraphics.Color.RGB</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val blit : t -> ?rect:OgamlMath.IntRect.t -> t -> OgamlMath.Vector2i.t -> unit</code></pre>
@@ -97,7 +105,7 @@
      </span>
      <div class="more">
       
-       <code class="OCaml">blit src ~rect dest offset</code> blits the subimage of <code class="OCaml">src</code> defined by <code class="OCaml">rect</code> on the image <code class="OCaml">dest</code> at position <code class="OCaml">offset</code> (relative to the top-left pixel).<br> If <code class="OCaml">rect</code> is not provided then the whole image <code class="OCaml">src</code> is used.<span class="see">See : <a href="../ogamlmath/intrect.html">OgamlMath.IntRect</a></span><span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
+       <code class="OCaml">blit src ~rect dest offset</code> blits the subimage of <code class="OCaml">src</code> defined by <code class="OCaml">rect</code> on the image <code class="OCaml">dest</code> at position <code class="OCaml">offset</code> (relative to the top-left pixel).<br> If <code class="OCaml">rect</code> is not provided then the whole image <code class="OCaml">src</code> is used.<br><span class="see">See : <a href="../ogamlmath/intrect.html">OgamlMath.IntRect</a></span><br><span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
      </div>
    </article>
    

@@ -3,6 +3,8 @@
   <head>
     <title>OGaml documentation - Uniform</title>
                                         
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+                                        
     <link rel="stylesheet" href="../../css/monokai.css">
                                         
     <link rel="stylesheet" href="../../css/doc.css">
@@ -33,8 +35,9 @@
       <hr>
       
       
-       This module encapsulates a set of uniforms that can be passed to GLSL programs 
+      <p> This module encapsulates a set of uniforms that can be passed to GLSL programs </p>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">exception Unknown_uniform of string</code></pre>
@@ -46,6 +49,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">exception Invalid_uniform of string</code></pre>
@@ -57,6 +61,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">type t</code></pre>
@@ -68,6 +73,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val empty : t</code></pre>
@@ -79,6 +85,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val vector3f : string -> OgamlMath.Vector3f.t -> t -> t</code></pre>
@@ -86,10 +93,11 @@
      </span>
      <div class="more">
       
-       <code class="OCaml">vector3f name vec set</code> adds the uniform <code class="OCaml">vec</code> to <code class="OCaml">set</code> . the uniform should be refered to as <code class="OCaml">name</code> in a glsl program. Type : vec3.<span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
+       <code class="OCaml">vector3f name vec set</code> adds the uniform <code class="OCaml">vec</code> to <code class="OCaml">set</code> . the uniform should be refered to as <code class="OCaml">name</code> in a glsl program. Type : vec3.<br><span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val vector2f : string -> OgamlMath.Vector2f.t -> t -> t</code></pre>
@@ -97,10 +105,11 @@
      </span>
      <div class="more">
       
-        See vector3f. Type : vec2. <span class="see">See : <a href="../ogamlmath/vector2f.html">OgamlMath.Vector2f</a></span>
+        See vector3f. Type : vec2. <br><span class="see">See : <a href="../ogamlmath/vector2f.html">OgamlMath.Vector2f</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val vector3i : string -> OgamlMath.Vector3i.t -> t -> t</code></pre>
@@ -108,10 +117,11 @@
      </span>
      <div class="more">
       
-        See vector3f. Type : vec3i. <span class="see">See : <a href="../ogamlmath/vector3i.html">OgamlMath.Vector3i</a></span>
+        See vector3f. Type : vec3i. <br><span class="see">See : <a href="../ogamlmath/vector3i.html">OgamlMath.Vector3i</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val vector2i : string -> OgamlMath.Vector2i.t -> t -> t</code></pre>
@@ -119,10 +129,11 @@
      </span>
      <div class="more">
       
-        See vector3f. Type : vec2i. <span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
+        See vector3f. Type : vec2i. <br><span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val int : string -> int -> t -> t</code></pre>
@@ -134,6 +145,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val float : string -> float -> t -> t</code></pre>
@@ -145,6 +157,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val matrix3D : string -> OgamlMath.Matrix3D.t -> t -> t</code></pre>
@@ -152,10 +165,11 @@
      </span>
      <div class="more">
       
-        See vector3f. Type : mat3. <span class="see">See : <a href="../ogamlmath/matrix3d.html">OgamlMath.Matrix3D</a></span>
+        See vector3f. Type : mat3. <br><span class="see">See : <a href="../ogamlmath/matrix3d.html">OgamlMath.Matrix3D</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val matrix2D : string -> OgamlMath.Matrix2D.t -> t -> t</code></pre>
@@ -163,10 +177,11 @@
      </span>
      <div class="more">
       
-        See vector3f. Type : mat2. <span class="see">See : <a href="../ogamlmath/matrix2d.html">OgamlMath.Matrix2D</a></span>
+        See vector3f. Type : mat2. <br><span class="see">See : <a href="../ogamlmath/matrix2d.html">OgamlMath.Matrix2D</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val color : string -> Color.t -> t -> t</code></pre>
@@ -174,10 +189,11 @@
      </span>
      <div class="more">
       
-        See vector3f. Type : vec4. <span class="see">See : <a href="../ogamlgraphics/color.html">OgamlGraphics.Color</a></span>
+        See vector3f. Type : vec4. <br><span class="see">See : <a href="../ogamlgraphics/color.html">OgamlGraphics.Color</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val texture2D : string -> ?tex_unit:int -> Texture.Texture2D.t -> t -> t</code></pre>
@@ -185,7 +201,7 @@
      </span>
      <div class="more">
       
-        See vector3f. Type : sampler2D.<br> The optional parameter <code class="OCaml">tex_unit</code> corresponds to the texture unit that is used to bind this texture and defaults to <code class="OCaml">0</code> . See <code class="OCaml">State.max_textures</code> for the number of available units.<span class="see">See : <a href="../ogamlgraphics/texture/texture2d.html">OgamlGraphics.Texture.Texture2D</a></span>
+        See vector3f. Type : sampler2D.<br> The optional parameter <code class="OCaml">tex_unit</code> corresponds to the texture unit that is used to bind this texture and defaults to <code class="OCaml">0</code> . See <code class="OCaml">State.max_textures</code> for the number of available units.<br><span class="see">See : <a href="../ogamlgraphics/texture/texture2d.html">OgamlGraphics.Texture.Texture2D</a></span>
      </div>
    </article>
    

@@ -3,6 +3,8 @@
   <head>
     <title>OGaml documentation - VertexArray</title>
                                         
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+                                        
     <link rel="stylesheet" href="../../css/monokai.css">
                                         
     <link rel="stylesheet" href="../../css/doc.css">
@@ -36,15 +38,16 @@
       <table class="belowh">
       
         <tbody>
-          <tr><td><a href="../ogamlgraphics/vertexarray/vertex.html">Vertex</a></td><td> Represents a vertex </td></tr>
           <tr><td><a href="../ogamlgraphics/vertexarray/source.html">Source</a></td><td> Represents a source of vertices </td></tr>
+          <tr><td><a href="../ogamlgraphics/vertexarray/vertex.html">Vertex</a></td><td> Represents a vertex </td></tr>
           
       
         </tbody>
       </table>
       
-       This modules provides a high-level and safe access to openGL vertex arrays. Vertex arrays are used to store vertices on the GPU and can be used to render 3D models. 
+      <p> This modules provides a high-level and safe access to openGL vertex arrays. Vertex arrays are used to store vertices on the GPU and can be used to render 3D models. </p>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">exception Invalid_source of string</code></pre>
@@ -56,6 +59,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">exception Invalid_vertex of string</code></pre>
@@ -67,6 +71,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">exception Invalid_attribute of string</code></pre>
@@ -78,6 +83,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">exception Missing_attribute of string</code></pre>
@@ -89,6 +95,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">exception Out_of_bounds of string</code></pre>
@@ -100,6 +107,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">type static</code></pre>
@@ -111,6 +119,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">type dynamic</code></pre>
@@ -122,6 +131,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">type 'a t</code></pre>
@@ -133,6 +143,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val static : Source.t -> static t</code></pre>
@@ -140,10 +151,11 @@
      </span>
      <div class="more">
       
-        Creates a static array from a source. A static array is faster but cannot be modified later. <span class="see">See : <a href="../ogamlgraphics/vertexarray/source.html">OgamlGraphics.VertexArray.Source</a></span>
+        Creates a static array from a source. A static array is faster but cannot be modified later. <br><span class="see">See : <a href="../ogamlgraphics/vertexarray/source.html">OgamlGraphics.VertexArray.Source</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val dynamic : Source.t -> dynamic t</code></pre>
@@ -151,10 +163,11 @@
      </span>
      <div class="more">
       
-        Creates a dynamic vertex array that can be modified later.<span class="see">See : <a href="../ogamlgraphics/vertexarray/source.html">OgamlGraphics.VertexArray.Source</a></span>
+        Creates a dynamic vertex array that can be modified later.<br><span class="see">See : <a href="../ogamlgraphics/vertexarray/source.html">OgamlGraphics.VertexArray.Source</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val rebuild : dynamic t -> Source.t -> int -> unit</code></pre>
@@ -162,10 +175,11 @@
      </span>
      <div class="more">
       
-       <code class="OCaml">rebuild array src offset</code> rebuilds <code class="OCaml">array</code> starting from the vertex at position <code class="OCaml">offset</code> using <code class="OCaml">src</code> .<br> The vertex array is modified in-place and is resized as needed.<span class="see">See : <a href="../ogamlgraphics/vertexarray/source.html">OgamlGraphics.VertexArray.Source</a></span>
+       <code class="OCaml">rebuild array src offset</code> rebuilds <code class="OCaml">array</code> starting from the vertex at position <code class="OCaml">offset</code> using <code class="OCaml">src</code> .<br> The vertex array is modified in-place and is resized as needed.<br><span class="see">See : <a href="../ogamlgraphics/vertexarray/source.html">OgamlGraphics.VertexArray.Source</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val length : 'a t -> int</code></pre>
@@ -177,6 +191,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val draw : vertices:'a t -> window:Window.t -> ?indices:'b IndexArray.t -> program:Program.t -> ?uniform:Uniform.t -> ?parameters:DrawParameter.t -> ?start:int -> ?length:int -> mode:DrawMode.t -> unit -> unit</code></pre>
@@ -184,7 +199,7 @@
      </span>
      <div class="more">
       
-        Draws the slice starting at <code class="OCaml">start</code> of length <code class="OCaml">length</code> of a vertex array on a window using the given parameters.<br><code class="OCaml">start</code> defaults to 0<br> if <code class="OCaml">length</code> is not provided, then the whole vertex array (starting from <code class="OCaml">start</code> ) is drawn<br><code class="OCaml">uniform</code> should provide the uniforms required by <code class="OCaml">program</code> (defaults to empty)<br><code class="OCaml">parameters</code> defaults to <code class="OCaml">DrawParameter.make ()</code><br><span class="see">See : <a href="../ogamlgraphics/indexarray.html">OgamlGraphics.IndexArray</a></span><span class="see">See : <a href="../ogamlgraphics/window.html">OgamlGraphics.Window</a></span><span class="see">See : <a href="../ogamlgraphics/program.html">OgamlGraphics.Program</a></span><span class="see">See : <a href="../ogamlgraphics/uniform.html">OgamlGraphics.Uniform</a></span><span class="see">See : <a href="../ogamlgraphics/drawparameter.html">OgamlGraphics.DrawParameter</a></span><span class="see">See : <a href="../ogamlgraphics/drawmode.html">OgamlGraphics.DrawMode</a></span>
+        Draws the slice starting at <code class="OCaml">start</code> of length <code class="OCaml">length</code> of a vertex array on a window using the given parameters.<br><code class="OCaml">start</code> defaults to 0<br> if <code class="OCaml">length</code> is not provided, then the whole vertex array (starting from <code class="OCaml">start</code> ) is drawn<br><code class="OCaml">uniform</code> should provide the uniforms required by <code class="OCaml">program</code> (defaults to empty)<br><code class="OCaml">parameters</code> defaults to <code class="OCaml">DrawParameter.make ()</code><br><br><span class="see">See : <a href="../ogamlgraphics/indexarray.html">OgamlGraphics.IndexArray</a></span><br><span class="see">See : <a href="../ogamlgraphics/window.html">OgamlGraphics.Window</a></span><br><span class="see">See : <a href="../ogamlgraphics/program.html">OgamlGraphics.Program</a></span><br><span class="see">See : <a href="../ogamlgraphics/uniform.html">OgamlGraphics.Uniform</a></span><br><span class="see">See : <a href="../ogamlgraphics/drawparameter.html">OgamlGraphics.DrawParameter</a></span><br><span class="see">See : <a href="../ogamlgraphics/drawmode.html">OgamlGraphics.DrawMode</a></span>
      </div>
    </article>
    

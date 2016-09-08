@@ -3,6 +3,8 @@
   <head>
     <title>OGaml documentation - Mouse</title>
                                         
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+                                        
     <link rel="stylesheet" href="../../css/monokai.css">
                                         
     <link rel="stylesheet" href="../../css/doc.css">
@@ -33,9 +35,10 @@
       <hr>
       
       
-       This module allows real-time access to the mouse, to check if a button is currently pressed for example. 
-      <h3> Accessing position </h3>
+      <p> This module allows real-time access to the mouse, to check if a button is currently pressed for example. </p>
+      <br><h3> Accessing position </h3>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val position : unit -> OgamlMath.Vector2i.t</code></pre>
@@ -43,10 +46,11 @@
      </span>
      <div class="more">
       
-        Returns the position of the cursor relatively to the screen.<span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
+        Returns the position of the cursor relatively to the screen.<br><span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val relative_position : Window.t -> OgamlMath.Vector2i.t</code></pre>
@@ -54,11 +58,12 @@
      </span>
      <div class="more">
       
-        Returns the position of the cursor relatively to a window.<span class="see">See : <a href="../ogamlgraphics/window.html">OgamlGraphics.Window</a></span><span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
+        Returns the position of the cursor relatively to a window.<br><span class="see">See : <a href="../ogamlgraphics/window.html">OgamlGraphics.Window</a></span><br><span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
      </div>
    </article>
-   <h3> Setting position </h3>
+   <br><h3> Setting position </h3>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val set_position : OgamlMath.Vector2i.t -> unit</code></pre>
@@ -66,10 +71,11 @@
      </span>
      <div class="more">
       
-        Sets the position of the cursor relatively to the screen<span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
+        Sets the position of the cursor relatively to the screen<br><span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val set_relative_position : Window.t -> OgamlMath.Vector2i.t -> unit</code></pre>
@@ -77,11 +83,12 @@
      </span>
      <div class="more">
       
-        Sets the position of the cursor relatively to a window<span class="see">See : <a href="../ogamlgraphics/window.html">OgamlGraphics.Window</a></span><span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
+        Sets the position of the cursor relatively to a window<br><span class="see">See : <a href="../ogamlgraphics/window.html">OgamlGraphics.Window</a></span><br><span class="see">See : <a href="../ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
      </div>
    </article>
-   <h3> Accessing button information </h3>
+   <br><h3> Accessing button information </h3>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val is_pressed : OgamlCore.Button.t -> bool</code></pre>
@@ -89,7 +96,7 @@
      </span>
      <div class="more">
       
-        Check whether a given mouse button is currently held down<span class="see">See : <a href="../ogamlcore/button.html">OgamlCore.Button</a></span>
+        Check whether a given mouse button is currently held down<br><span class="see">See : <a href="../ogamlcore/button.html">OgamlCore.Button</a></span>
      </div>
    </article>
    

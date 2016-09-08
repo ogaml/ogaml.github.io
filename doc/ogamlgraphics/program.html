@@ -3,6 +3,8 @@
   <head>
     <title>OGaml documentation - Program</title>
                                         
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+                                        
     <link rel="stylesheet" href="../../css/monokai.css">
                                         
     <link rel="stylesheet" href="../../css/doc.css">
@@ -33,8 +35,9 @@
       <hr>
       
       
-       This module provides a high-level wrapper around GL shader programs and can be used to compile shaders. 
+      <p> This module provides a high-level wrapper around GL shader programs and can be used to compile shaders. </p>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">exception Compilation_error of string</code></pre>
@@ -46,6 +49,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">exception Linking_error of string</code></pre>
@@ -57,6 +61,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">exception Invalid_version of string</code></pre>
@@ -68,6 +73,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">type t</code></pre>
@@ -79,6 +85,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">type src = [ `File of string | `String of string]</code></pre>
@@ -90,6 +97,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val from_source : vertex_source:src -> fragment_source:src -> t</code></pre>
@@ -101,6 +109,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val from_source_list : State.t -> vertex_source:(int * src) list -> fragment_source:(int * src) list -> t</code></pre>
@@ -108,10 +117,11 @@
      </span>
      <div class="more">
       
-        Compiles a program from a state (gotten from a window) and a list of sources paired with their required GLSL version. The function will chose the best source for the current context.<span class="see">See : <a href="../ogamlgraphics/state.html">OgamlGraphics.State</a></span>
+        Compiles a program from a state (gotten from a window) and a list of sources paired with their required GLSL version. The function will chose the best source for the current context.<br><span class="see">See : <a href="../ogamlgraphics/state.html">OgamlGraphics.State</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val from_source_pp : State.t -> vertex_source:src -> fragment_source:src -> t</code></pre>
@@ -119,7 +129,7 @@
      </span>
      <div class="more">
       
-        Compiles a program from a vertex source and a fragment source. The source should not begin with a <code class="OCaml">#version xxx</code> assignment, as the function will preprocess the sources and prepend the best version declaration.<span class="see">See : <a href="../ogamlgraphics/state.html">OgamlGraphics.State</a></span>
+        Compiles a program from a vertex source and a fragment source. The source should not begin with a <code class="OCaml">#version xxx</code> assignment, as the function will preprocess the sources and prepend the best version declaration.<br><span class="see">See : <a href="../ogamlgraphics/state.html">OgamlGraphics.State</a></span>
      </div>
    </article>
    

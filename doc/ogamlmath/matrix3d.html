@@ -3,6 +3,8 @@
   <head>
     <title>OGaml documentation - Matrix3D</title>
                                         
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+                                        
     <link rel="stylesheet" href="../../css/monokai.css">
                                         
     <link rel="stylesheet" href="../../css/doc.css">
@@ -33,8 +35,9 @@
       <hr>
       
       
-       Optimized operations on 3D (4x4) float matrices 
+      <p> Optimized operations on 3D (4x4) float matrices </p>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">exception Matrix3D_exception of string</code></pre>
@@ -45,8 +48,9 @@
         Raised when an error occurs (usually a division by zero) 
      </div>
    </article>
-   <h3> Simple Matrices </h3>
+   <br><h3> Simple Matrices </h3>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">type t</code></pre>
@@ -58,6 +62,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val zero : unit -> t</code></pre>
@@ -69,6 +74,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val identity : unit -> t</code></pre>
@@ -80,6 +86,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val translation : Vector3f.t -> t</code></pre>
@@ -87,10 +94,11 @@
      </span>
      <div class="more">
       
-        Builds a translation matrix from a vector <span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
+        Builds a translation matrix from a vector <br><span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val scaling : Vector3f.t -> t</code></pre>
@@ -98,10 +106,11 @@
      </span>
      <div class="more">
       
-        Builds a scaling matrix from a vector <span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
+        Builds a scaling matrix from a vector <br><span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val rotation : Vector3f.t -> float -> t</code></pre>
@@ -109,10 +118,11 @@
      </span>
      <div class="more">
       
-        Builds a rotation matrix from an axis and an angle <span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
+        Builds a rotation matrix from an axis and an angle <br><span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val from_quaternion : Quaternion.t -> t</code></pre>
@@ -120,11 +130,12 @@
      </span>
      <div class="more">
       
-        Builds a rotation matrix from a quaternion <span class="see">See : <a href="../ogamlmath/quaternion.html">OgamlMath.Quaternion</a></span>
+        Builds a rotation matrix from a quaternion <br><span class="see">See : <a href="../ogamlmath/quaternion.html">OgamlMath.Quaternion</a></span>
      </div>
    </article>
-   <h3> Matrix Operations </h3>
+   <br><h3> Matrix Operations </h3>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val product : t -> t -> t</code></pre>
@@ -136,6 +147,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val transpose : t -> t</code></pre>
@@ -147,6 +159,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val translate : Vector3f.t -> t -> t</code></pre>
@@ -154,10 +167,11 @@
      </span>
      <div class="more">
       
-        Translates a matrix by a vector. The original matrix is not modified. <span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
+        Translates a matrix by a vector. The original matrix is not modified. <br><span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val scale : Vector3f.t -> t -> t</code></pre>
@@ -165,10 +179,11 @@
      </span>
      <div class="more">
       
-        Scales a matrix by a vector. The original matrix is not modified. <span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
+        Scales a matrix by a vector. The original matrix is not modified. <br><span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val rotate : Vector3f.t -> float -> t -> t</code></pre>
@@ -176,10 +191,11 @@
      </span>
      <div class="more">
       
-        Rotates a matrix by an angle around a given axis. The original matrix is not modified. <span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
+        Rotates a matrix by an angle around a given axis. The original matrix is not modified. <br><span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val times : t -> Vector3f.t -> Vector3f.t</code></pre>
@@ -187,10 +203,11 @@
      </span>
      <div class="more">
       
-        Computes the (right-)product of a matrix with a column vector<span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
+        Computes the (right-)product of a matrix with a column vector<br><span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val print : t -> string</code></pre>
@@ -201,8 +218,9 @@
         Returns a pretty-printed string (not for serialization) 
      </div>
    </article>
-   <h3> Rendering Matrices Creation </h3>
+   <br><h3> Rendering Matrices Creation </h3>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val look_at : from:Vector3f.t -> at:Vector3f.t -> up:Vector3f.t -> t</code></pre>
@@ -210,10 +228,11 @@
      </span>
      <div class="more">
       
-        Builds a "look-at" view matrix. Raises Matrix3D_exception if <code class="OCaml">up = zero</code> .<span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
+        Builds a "look-at" view matrix. Raises Matrix3D_exception if <code class="OCaml">up = zero</code> .<br><span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val look_at_eulerian : from:Vector3f.t -> theta:float -> phi:float -> t</code></pre>
@@ -221,10 +240,11 @@
      </span>
      <div class="more">
       
-        Builds a "look-at" view matrix from eulerian angles.  Theta should be in [0;2pi] and phi in [-pi/2;pi/2].  If phi = pi/2, the camera is looking up (towards positive Y).  If theta = 0, the camera is looking towards negative Z. <span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
+        Builds a "look-at" view matrix from eulerian angles.  Theta should be in [0;2pi] and phi in [-pi/2;pi/2].  If phi = pi/2, the camera is looking up (towards positive Y).  If theta = 0, the camera is looking towards negative Z. <br><span class="see">See : <a href="../ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val orthographic : right:float -> left:float -> near:float -> far:float -> top:float -> bottom:float -> t</code></pre>
@@ -236,6 +256,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val iorthographic : right:float -> left:float -> near:float -> far:float -> top:float -> bottom:float -> t</code></pre>
@@ -247,6 +268,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val perspective : near:float -> far:float -> width:float -> height:float -> fov:float -> t</code></pre>
@@ -258,6 +280,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val iperspective : near:float -> far:float -> width:float -> height:float -> fov:float -> t</code></pre>
@@ -268,8 +291,9 @@
         Builds the inverse of a perspective projection matrix 
      </div>
    </article>
-   <h3> Other functions </h3>
+   <br><h3> Other functions </h3>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val to_bigarray : t -> (float, Bigarray.float32_elt, Bigarray.c_layout) Bigarray.Array1.t</code></pre>

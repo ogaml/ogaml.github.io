@@ -3,6 +3,8 @@
   <head>
     <title>OGaml documentation - Sprite</title>
                                         
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+                                        
     <link rel="stylesheet" href="../../css/monokai.css">
                                         
     <link rel="stylesheet" href="../../css/doc.css">
@@ -34,6 +36,7 @@
       
       
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">type t</code></pre>
@@ -45,6 +48,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val create : texture:Texture.Texture2D.t -> ?origin:OgamlMath.Vector2f.t -> ?position:OgamlMath.Vector2f.t -> ?scale:OgamlMath.Vector2f.t -> ?size:OgamlMath.Vector2f.t -> ?rotation:float -> unit -> t</code></pre>
@@ -56,6 +60,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val draw : ?parameters:DrawParameter.t -> window:Window.t -> sprite:t -> unit -> unit</code></pre>
@@ -63,10 +68,11 @@
      </span>
      <div class="more">
       
-        Draws a sprite on a window using the given parameters.<br><code class="OCaml">parameters</code> defaults to <code class="OCaml">DrawParameter.make ~depth_test:false ~blend_mode:DrawParameter.BlendMode.alpha</code><br><span class="see">See : <a href="../ogamlgraphics/drawparameter.html">OgamlGraphics.DrawParameter</a></span><span class="see">See : <a href="../ogamlgraphics/window.html">OgamlGraphics.Window</a></span>
+        Draws a sprite on a window using the given parameters.<br><code class="OCaml">parameters</code> defaults to <code class="OCaml">DrawParameter.make ~depth_test:false ~blend_mode:DrawParameter.BlendMode.alpha</code><br><br><span class="see">See : <a href="../ogamlgraphics/drawparameter.html">OgamlGraphics.DrawParameter</a></span><br><span class="see">See : <a href="../ogamlgraphics/window.html">OgamlGraphics.Window</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val set_position : t -> OgamlMath.Vector2f.t -> unit</code></pre>
@@ -78,6 +84,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val set_origin : t -> OgamlMath.Vector2f.t -> unit</code></pre>
@@ -89,6 +96,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val set_rotation : t -> float -> unit</code></pre>
@@ -100,6 +108,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val set_scale : t -> OgamlMath.Vector2f.t -> unit</code></pre>
@@ -111,6 +120,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val set_size : t -> OgamlMath.Vector2f.t -> unit</code></pre>
@@ -122,6 +132,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val translate : t -> OgamlMath.Vector2f.t -> unit</code></pre>
@@ -133,6 +144,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val rotate : t -> float -> unit</code></pre>
@@ -144,6 +156,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val scale : t -> OgamlMath.Vector2f.t -> unit</code></pre>
@@ -155,6 +168,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val size : t -> OgamlMath.Vector2f.t</code></pre>
@@ -166,6 +180,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val position : t -> OgamlMath.Vector2f.t</code></pre>
@@ -177,6 +192,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val origin : t -> OgamlMath.Vector2f.t</code></pre>
@@ -188,6 +204,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val rotation : t -> float</code></pre>
@@ -199,6 +216,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val get_scale : t -> OgamlMath.Vector2f.t</code></pre>

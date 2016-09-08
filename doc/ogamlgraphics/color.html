@@ -3,6 +3,8 @@
   <head>
     <title>OGaml documentation - Color</title>
                                         
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+                                        
     <link rel="stylesheet" href="../../css/monokai.css">
                                         
     <link rel="stylesheet" href="../../css/doc.css">
@@ -36,15 +38,16 @@
       <table class="belowh">
       
         <tbody>
-          <tr><td><a href="../ogamlgraphics/color/rgb.html">RGB</a></td><td> Manipulation of RGBA colors </td></tr>
           <tr><td><a href="../ogamlgraphics/color/hsv.html">HSV</a></td><td> Manipulation of HSVA colors </td></tr>
+          <tr><td><a href="../ogamlgraphics/color/rgb.html">RGB</a></td><td> Manipulation of RGBA colors </td></tr>
           
       
         </tbody>
       </table>
       
-       This module provides an easy way to manipulate colors with different formats and to convert between them. 
+      <p> This module provides an easy way to manipulate colors with different formats and to convert between them. </p>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">type t = [ `HSV of HSV.t | `RGB of RGB.t]</code></pre>
@@ -52,10 +55,11 @@
      </span>
      <div class="more">
       
-        Polymorphic variant representing both color formats<span class="see">See : <a href="../ogamlgraphics/color/hsv.html">OgamlGraphics.Color.HSV</a></span><span class="see">See : <a href="../ogamlgraphics/color/rgb.html">OgamlGraphics.Color.RGB</a></span>
+        Polymorphic variant representing both color formats<br><span class="see">See : <a href="../ogamlgraphics/color/hsv.html">OgamlGraphics.Color.HSV</a></span><br><span class="see">See : <a href="../ogamlgraphics/color/rgb.html">OgamlGraphics.Color.RGB</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val rgb_to_hsv : RGB.t -> HSV.t</code></pre>
@@ -63,10 +67,11 @@
      </span>
      <div class="more">
       
-        Converts a color from RGB to HSV<span class="see">See : <a href="../ogamlgraphics/color/hsv.html">OgamlGraphics.Color.HSV</a></span><span class="see">See : <a href="../ogamlgraphics/color/rgb.html">OgamlGraphics.Color.RGB</a></span>
+        Converts a color from RGB to HSV<br><span class="see">See : <a href="../ogamlgraphics/color/hsv.html">OgamlGraphics.Color.HSV</a></span><br><span class="see">See : <a href="../ogamlgraphics/color/rgb.html">OgamlGraphics.Color.RGB</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val hsv_to_rgb : HSV.t -> RGB.t</code></pre>
@@ -74,10 +79,11 @@
      </span>
      <div class="more">
       
-        Converts a color from HSV to RGB<span class="see">See : <a href="../ogamlgraphics/color/hsv.html">OgamlGraphics.Color.HSV</a></span><span class="see">See : <a href="../ogamlgraphics/color/rgb.html">OgamlGraphics.Color.RGB</a></span>
+        Converts a color from HSV to RGB<br><span class="see">See : <a href="../ogamlgraphics/color/hsv.html">OgamlGraphics.Color.HSV</a></span><br><span class="see">See : <a href="../ogamlgraphics/color/rgb.html">OgamlGraphics.Color.RGB</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val hsv : t -> HSV.t</code></pre>
@@ -85,10 +91,11 @@
      </span>
      <div class="more">
       
-        Converts a color to HSV<span class="see">See : <a href="../ogamlgraphics/color/hsv.html">OgamlGraphics.Color.HSV</a></span>
+        Converts a color to HSV<br><span class="see">See : <a href="../ogamlgraphics/color/hsv.html">OgamlGraphics.Color.HSV</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val rgb : t -> RGB.t</code></pre>
@@ -96,10 +103,11 @@
      </span>
      <div class="more">
       
-        Converts a color to RGB<span class="see">See : <a href="../ogamlgraphics/color/rgb.html">OgamlGraphics.Color.RGB</a></span>
+        Converts a color to RGB<br><span class="see">See : <a href="../ogamlgraphics/color/rgb.html">OgamlGraphics.Color.RGB</a></span>
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val clamp : t -> t</code></pre>
@@ -111,6 +119,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val map : t -> (float -> float) -> t</code></pre>

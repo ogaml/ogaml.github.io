@@ -3,6 +3,8 @@
   <head>
     <title>OGaml documentation - Model</title>
                                         
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+                                        
     <link rel="stylesheet" href="../../css/monokai.css">
                                         
     <link rel="stylesheet" href="../../css/doc.css">
@@ -36,15 +38,16 @@
       <table class="belowh">
       
         <tbody>
-          <tr><td><a href="../ogamlgraphics/model/vertex.html">Vertex</a></td><td> Represents a particular vertex of a model </td></tr>
           <tr><td><a href="../ogamlgraphics/model/face.html">Face</a></td><td> Represents a face of a model </td></tr>
+          <tr><td><a href="../ogamlgraphics/model/vertex.html">Vertex</a></td><td> Represents a particular vertex of a model </td></tr>
           
       
         </tbody>
       </table>
       
-       This module provides helpers to manipulate and load immutable 3D models in the RAM.<br> Moreover, the operations provided in this module are generally costly and should not be used in performance-sensitive code.<br> Models stored in that form are not RAM-friendly, and should not be stored in large numbers. Use vertex arrays instead. 
+      <p> This module provides helpers to manipulate and load immutable 3D models in the RAM.<br> Moreover, the operations provided in this module are generally costly and should not be used in performance-sensitive code.<br> Models stored in that form are not RAM-friendly, and should not be stored in large numbers. Use vertex arrays instead. </p>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">exception Error of string</code></pre>
@@ -56,6 +59,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">type t</code></pre>
@@ -66,8 +70,9 @@
         Type of a model 
      </div>
    </article>
-   <h3> Model creation </h3>
+   <br><h3> Model creation </h3>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val empty : t</code></pre>
@@ -79,6 +84,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val from_obj : string -> t</code></pre>
@@ -90,6 +96,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val cube : OgamlMath.Vector3f.t -> OgamlMath.Vector3f.t -> t</code></pre>
@@ -100,8 +107,9 @@
         Creates a cube from two endpoints 
      </div>
    </article>
-   <h3> Transformations </h3>
+   <br><h3> Transformations </h3>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val transform : t -> OgamlMath.Matrix3D.t -> t</code></pre>
@@ -113,6 +121,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val scale : t -> OgamlMath.Vector3f.t -> t</code></pre>
@@ -124,6 +133,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val translate : t -> OgamlMath.Vector3f.t -> t</code></pre>
@@ -135,6 +145,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val rotate : t -> OgamlMath.Quaternion.t -> t</code></pre>
@@ -145,8 +156,9 @@
         Rotates a 3D model 
      </div>
    </article>
-   <h3> Model modification </h3>
+   <br><h3> Model modification </h3>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val add_face : t -> Face.t -> t</code></pre>
@@ -158,6 +170,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val paint : t -> Color.t -> t</code></pre>
@@ -169,6 +182,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val merge : t -> t -> t</code></pre>
@@ -180,6 +194,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val compute_normals : ?smooth:bool -> t -> t</code></pre>
@@ -191,6 +206,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val simplify : t -> t</code></pre>
@@ -202,6 +218,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val source : t -> ?index_source:IndexArray.Source.t -> vertex_source:VertexArray.Source.t -> unit -> unit</code></pre>
@@ -209,11 +226,12 @@
      </span>
      <div class="more">
       
-        Appends a model to a vertex source. Uses indexing if an index source is provided. Use Triangles as DrawMode with this source.<span class="see">See : <a href="../ogamlgraphics/indexarray/source.html">OgamlGraphics.IndexArray.Source</a></span><span class="see">See : <a href="../ogamlgraphics/vertexarray/source.html">OgamlGraphics.VertexArray.Source</a></span>
+        Appends a model to a vertex source. Uses indexing if an index source is provided. Use Triangles as DrawMode with this source.<br><span class="see">See : <a href="../ogamlgraphics/indexarray/source.html">OgamlGraphics.IndexArray.Source</a></span><br><span class="see">See : <a href="../ogamlgraphics/vertexarray/source.html">OgamlGraphics.VertexArray.Source</a></span>
      </div>
    </article>
-   <h3> Iterators </h3>
+   <br><h3> Iterators </h3>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val iter : t -> (Face.t -> unit) -> unit</code></pre>
@@ -225,6 +243,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val fold : t -> ('a -> Face.t -> 'a) -> 'a -> 'a</code></pre>
@@ -236,6 +255,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val map : t -> (Face.t -> Face.t) -> t</code></pre>

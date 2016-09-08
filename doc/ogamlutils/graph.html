@@ -3,6 +3,8 @@
   <head>
     <title>OGaml documentation - Graph</title>
                                         
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+                                        
     <link rel="stylesheet" href="../../css/monokai.css">
                                         
     <link rel="stylesheet" href="../../css/doc.css">
@@ -37,14 +39,15 @@
       <table class="belowh">
       
         <tbody>
-          <tr><td><a href="../ogamlutils/graph/vertex.html">Vertex</a></td><td> Vertex representation </td></tr>
           <tr><td><a href="../ogamlutils/graph/g.html">G</a></td><td> Output of Graph.Make </td></tr>
+          <tr><td><a href="../ogamlutils/graph/vertex.html">Vertex</a></td><td> Vertex representation </td></tr>
           
       
         </tbody>
       </table>
-       This module provides a functor to create graphs with arbitrary vertices 
+      <p> This module provides a functor to create graphs with arbitrary vertices </p>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">module Make : functor (V : Vertex) -> G with type vertex = V.t</code></pre>

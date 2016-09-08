@@ -3,6 +3,8 @@
   <head>
     <title>OGaml documentation - Font</title>
                                         
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+                                        
     <link rel="stylesheet" href="../../css/monokai.css">
                                         
     <link rel="stylesheet" href="../../css/doc.css">
@@ -42,8 +44,9 @@
         </tbody>
       </table>
       
-       This module stores a font and dynamically loads sizes and glyphs as requested by the user 
+      <p> This module stores a font and dynamically loads sizes and glyphs as requested by the user </p>
       <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">type t</code></pre>
@@ -55,6 +58,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">type code = [ `Char of char | `Code of int]</code></pre>
@@ -66,6 +70,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val load : string -> t</code></pre>
@@ -77,6 +82,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val glyph : t -> code -> int -> bool -> Glyph.t</code></pre>
@@ -88,6 +94,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val kerning : t -> code -> code -> int -> float</code></pre>
@@ -99,6 +106,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val ascent : t -> int -> float</code></pre>
@@ -110,6 +118,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val descent : t -> int -> float</code></pre>
@@ -121,6 +130,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val linegap : t -> int -> float</code></pre>
@@ -132,6 +142,7 @@
      </div>
    </article>
    <article>
+     <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
           <pre><code class="OCaml">val spacing : t -> int -> float</code></pre>
