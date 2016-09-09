@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html>
+<head>
+      
+  <title>OGaml documentation - Framebuffer</title>
+      
+  <meta charset="utf-8">
+      
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+      
+  <link rel="stylesheet" href="../../css/monokai.css">
+      
+  <link rel="stylesheet" href="../../css/doc.css">
+      
+  <script src="../../script/highlight.pack.js"></script>
+      
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      
+  <script src="../../script/doc.js"></script>
+      
+  <script type="text/javascript">hljs.tabReplace = ''; 
+   hljs.initHighlightingOnLoad(); 
+   window.onload = function() { 
+     var aCodes = document.getElementsByTagName('code'); 
+     for (var i=0; i < aCodes.length; i++) { 
+       hljs.highlightBlock(aCodes[i]); 
+     }
+   }</script>
+      
+  <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon-ogaml.ico">
+      
+</head>
+<body><aside>
+    <header>
+    <a href="../../index.html">
+      <img src="../../img/ogaml-logo.svg" alt="OGAML" width="100%">
+    </a>
+  </header>
+    <h1> 
+      <a href="../../doc/doc.html">Modules</a>
+      <span class="showall">Show all</span>
+    </h1>
+    <ul id="main-nav" style="display: block;">
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore.html">OgamlCore</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/ll.html">LL</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/ll/mouse.html">Mouse</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/ll/keyboard.html">Keyboard</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/ll/window.html">Window</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/contextsettings.html">ContextSettings</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/event.html">Event</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/event/buttonevent.html">ButtonEvent</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/event/keyevent.html">KeyEvent</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/keycode.html">Keycode</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/button.html">Button</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics.html">OgamlGraphics</a>
+    <ul class="nav-open" style="display: block;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/keyboard.html">Keyboard</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/mouse.html">Mouse</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/text.html">Text</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/text/fx.html">Fx</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/sprite.html">Sprite</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/shape.html">Shape</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/model.html">Model</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/model/face.html">Face</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/model/vertex.html">Vertex</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexmap.html">VertexMap</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexmap/source.html">Source</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexmap/vertex.html">Vertex</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexarray.html">VertexArray</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexarray/source.html">Source</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexarray/vertex.html">Vertex</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/indexarray.html">IndexArray</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/indexarray/source.html">Source</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/window.html">Window</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/uniform.html">Uniform</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/program.html">Program</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/font.html">Font</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/font/glyph.html">Glyph</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture.html">Texture</a>
+    <ul style="display: none;">
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture/t.html">T</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture/texture2darray.html">Texture2DArray</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture/texture2darraylayer.html">Texture2DArrayLayer</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture/texture2darraymipmap.html">Texture2DArrayMipmap</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture/texture2darraylayermipmap.html">Texture2DArrayLayerMipmap</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture/texture2d.html">Texture2D</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture/texture2dmipmap.html">Texture2DMipmap</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture/wrapfunction.html">WrapFunction</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture/magnifyfilter.html">MagnifyFilter</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture/minifyfilter.html">MinifyFilter</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/image.html">Image</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/framebuffer.html">Framebuffer</a>
+    <ul class="nav-open" style="display: block;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/renderbuffer.html">Renderbuffer</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/renderbuffer/depthbuffer.html">DepthBuffer</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/attachment.html">Attachment</a>
+    <ul style="display: none;">
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/attachment/depthstencilattachable.html">DepthStencilAttachable</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/attachment/stencilattachable.html">StencilAttachable</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/attachment/depthattachable.html">DepthAttachable</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/attachment/colorattachable.html">ColorAttachable</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/attachment/depthstencilattachment.html">DepthStencilAttachment</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/attachment/stencilattachment.html">StencilAttachment</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/attachment/depthattachment.html">DepthAttachment</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/attachment/colorattachment.html">ColorAttachment</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/rendertarget.html">RenderTarget</a>
+    <ul style="display: none;">
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/rendertarget/t.html">T</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/state.html">State</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter.html">DrawParameter</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/depthtest.html">DepthTest</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/blendmode.html">BlendMode</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/blendmode/equation.html">Equation</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/blendmode/factor.html">Factor</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/viewport.html">Viewport</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/polygonmode.html">PolygonMode</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawparameter/cullingmode.html">CullingMode</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/drawmode.html">DrawMode</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/color.html">Color</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/color/hsv.html">HSV</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/color/rgb.html">RGB</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath.html">OgamlMath</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/matrix2d.html">Matrix2D</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/matrix3d.html">Matrix3D</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/quaternion.html">Quaternion</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/floatbox.html">FloatBox</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/intbox.html">IntBox</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/floatrect.html">FloatRect</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/intrect.html">IntRect</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/vector3fs.html">Vector3fs</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/vector2fs.html">Vector2fs</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/vector3f.html">Vector3f</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/vector3i.html">Vector3i</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/vector2f.html">Vector2f</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/vector2i.html">Vector2i</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlmath/constants.html">Constants</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils.html">OgamlUtils</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/graph.html">Graph</a>
+    <ul style="display: none;">
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/graph/g.html">G</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/graph/vertex.html">Vertex</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/priorityqueue.html">PriorityQueue</a>
+    <ul style="display: none;">
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/priorityqueue/q.html">Q</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/priorityqueue/priority.html">Priority</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/noise.html">Noise</a>
+    <ul style="display: none;">
+      
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/noise/perlin3d.html">Perlin3D</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/noise/perlin2d.html">Perlin2D</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/interpolator.html">Interpolator</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/utf8string.html">UTF8String</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/log.html">Log</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+   </aside>
+<main>
+  <h1>Module <span class="prefix">OgamlGraphics.</span><span class="modulename">Framebuffer</span></h1>
+    
+  <span class="abstract"> Framebuffer creation and manipulation </span>
+  <hr>
+  
+  
+  <p> This module provides a safe way to create framebuffer objects (FBO) and  attach textures to them. </p>
+  <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">exception Error of string</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Raised if an error occurs at creation or during an attachment 
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">type t</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Type of a framebuffer object 
+      
+      
+      
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val create : (module RenderTarget.T with type t = 'a) -> 'a -> t</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Creates a framebuffer from a valid context 
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val attach_color : (module Attachment.ColorAttachable with type t = 'a) -> t -> int -> 'a -> unit</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Attaches a valid color attachment to a framebuffer at a given index. Raises <code class="OCaml">Error</code> if the index is greater than the maximum number of color attachments allowed by the context, or if the attachment is larger than the maximum size allowed by the context.<br><br><span class="see">See : <a href="../../doc/ogamlgraphics/attachment/colorattachable.html">OgamlGraphics.Attachment.ColorAttachable</a></span><br><span class="see">See : <a href="../../doc/ogamlgraphics/state.html">OgamlGraphics.State</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val attach_depth : (module Attachment.DepthAttachable with type t = 'a) -> t -> 'a -> unit</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Attaches a valid depth attachment to a framebuffer. Raises <code class="OCaml">Error</code> if the attachment is larger than the maximum size  allowed by the context.<br><br><span class="see">See : <a href="../../doc/ogamlgraphics/attachment/depthattachable.html">OgamlGraphics.Attachment.DepthAttachable</a></span><br><span class="see">See : <a href="../../doc/ogamlgraphics/state.html">OgamlGraphics.State</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val attach_stencil : (module Attachment.StencilAttachable with type t = 'a) -> t -> 'a -> unit</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Attaches a valid stencil attachment to a framebuffer. Raises <code class="OCaml">Error</code> if the attachment is larger than the maximum size  allowed by the context.<br><br><span class="see">See : <a href="../../doc/ogamlgraphics/attachment/stencilattachable.html">OgamlGraphics.Attachment.StencilAttachable</a></span><br><span class="see">See : <a href="../../doc/ogamlgraphics/state.html">OgamlGraphics.State</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val attach_depthstencil : (module Attachment.DepthStencilAttachable with type t = 'a) -> t -> 'a -> unit</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Attaches a valid depth and stencil attachment to a framebuffer. Raises <code class="OCaml">Error</code> if the attachment is larger than the maximum size  allowed by the context.<br><br><span class="see">See : <a href="../../doc/ogamlgraphics/attachment/depthstencilattachable.html">OgamlGraphics.Attachment.DepthStencilAttachable</a></span><br><span class="see">See : <a href="../../doc/ogamlgraphics/state.html">OgamlGraphics.State</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val has_color : t -> bool</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Returns true iff the FBO has a color attachment 
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val has_depth : t -> bool</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Returns true iff the FBO has a depth attachment 
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val has_stencil : t -> bool</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Returns true iff the FBO has a stencil attachment 
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val size : t -> OgamlMath.Vector2i.t</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Returns the size of an FBO, that is the intersection of the sizes of  its attachments. Returns the maximal allowed size if nothing has been attached to this FBO 
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val state : t -> State.t</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Returns the GL context associated to the FBO 
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val clear : ?color:Color.t option -> ?depth:bool -> ?stencil:bool -> t -> unit</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Clears the FBO 
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val bind : t -> DrawParameter.t -> unit</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Binds the FBO for drawing. Internal use only. 
+     </div>
+   </article>
+   
+</main></body>
+</html>
