@@ -2,7 +2,7 @@
 <html>
 <head>
       
-  <title>OGaml documentation - State</title>
+  <title>OGaml documentation - Context</title>
       
   <meta charset="utf-8">
       
@@ -529,7 +529,7 @@
   </li>
 <li>
     <span class="arrow-right arrow shownav"></span>
-    <a href="../../doc/ogamlgraphics/state.html">State</a>
+    <a href="../../doc/ogamlgraphics/context.html">Context</a>
     <ul class="nav-open" style="display: block;">
       
       
@@ -852,18 +852,18 @@
     </ul>
    </aside>
 <main>
-  <h1>Module <span class="prefix">OgamlGraphics.</span><span class="modulename">State</span></h1>
+  <h1>Module <span class="prefix">OgamlGraphics.</span><span class="modulename">Context</span></h1>
     
-  <span class="abstract"> Encapsulates data about an OpenGL internal state </span>
+  <span class="abstract"> Encapsulates data about an OpenGL internal context </span>
   <hr>
   
   
-  <p> This module encapsulates a copy of the internal GL state. This allows efficient optimizations of state changes.<br> To get an instance of a State.t, create a context (via a window) and use Window.state </p>
+  <p> This module encapsulates a copy of the internal GL context. This allows efficient optimizations of state changes.<br> To get an instance of a Context.t, create a GL context (via a window) and use Window.context </p>
   <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">exception Invalid_state of string</code></pre>
+          <pre><code class="OCaml">exception Invalid_context of string</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -891,7 +891,7 @@
         <code class="OCaml">max_3D_texture_size : int</code>
      </figure>
   </td>
-  <td></td>
+  <td> Maximal 3D texture size </td>
         </tr>
         <tr>
         <td class="record">
@@ -899,7 +899,7 @@
         <code class="OCaml">max_array_texture_layers : int</code>
      </figure>
   </td>
-  <td></td>
+  <td> Maximal number of layers in a texture array </td>
         </tr>
         <tr>
         <td class="record">
@@ -907,7 +907,7 @@
         <code class="OCaml">max_color_texture_samples : int</code>
      </figure>
   </td>
-  <td></td>
+  <td> Maximal number of samples in a multisampled color texture </td>
         </tr>
         <tr>
         <td class="record">
@@ -915,7 +915,7 @@
         <code class="OCaml">max_cube_map_texture_size : int</code>
      </figure>
   </td>
-  <td></td>
+  <td> Maximal cubemap texture size </td>
         </tr>
         <tr>
         <td class="record">
@@ -923,7 +923,7 @@
         <code class="OCaml">max_depth_texture_samples : int</code>
      </figure>
   </td>
-  <td></td>
+  <td> Maximal number of samples in a multisampled depth texture </td>
         </tr>
         <tr>
         <td class="record">
@@ -931,7 +931,7 @@
         <code class="OCaml">max_elements_indices : int</code>
      </figure>
   </td>
-  <td></td>
+  <td> Maximal number of indices in an element buffer </td>
         </tr>
         <tr>
         <td class="record">
@@ -939,7 +939,7 @@
         <code class="OCaml">max_elements_vertices : int</code>
      </figure>
   </td>
-  <td></td>
+  <td> Maximal number of vertices in an element buffer </td>
         </tr>
         <tr>
         <td class="record">
@@ -947,7 +947,7 @@
         <code class="OCaml">max_framebuffer_width : int</code>
      </figure>
   </td>
-  <td></td>
+  <td> Maximal width of a framebuffer </td>
         </tr>
         <tr>
         <td class="record">
@@ -955,7 +955,7 @@
         <code class="OCaml">max_framebuffer_height : int</code>
      </figure>
   </td>
-  <td></td>
+  <td> Maximal height of a framebuffer </td>
         </tr>
         <tr>
         <td class="record">
@@ -963,7 +963,7 @@
         <code class="OCaml">max_framebuffer_layers : int</code>
      </figure>
   </td>
-  <td></td>
+  <td> Maximal number of mipmap layers of a framebuffer </td>
         </tr>
         <tr>
         <td class="record">
@@ -971,7 +971,7 @@
         <code class="OCaml">max_framebuffer_samples : int</code>
      </figure>
   </td>
-  <td></td>
+  <td> Maximal number of samples in a multisampled framebuffer </td>
         </tr>
         <tr>
         <td class="record">
@@ -979,7 +979,7 @@
         <code class="OCaml">max_integer_samples : int</code>
      </figure>
   </td>
-  <td></td>
+  <td> Maximal number of samples in a multisampled integer texture </td>
         </tr>
         <tr>
         <td class="record">
@@ -987,7 +987,7 @@
         <code class="OCaml">max_renderbuffer_size : int</code>
      </figure>
   </td>
-  <td></td>
+  <td> Maximal size of a renderbuffer </td>
         </tr>
         <tr>
         <td class="record">
@@ -995,7 +995,7 @@
         <code class="OCaml">max_texture_buffer_size : int</code>
      </figure>
   </td>
-  <td></td>
+  <td> Maximal size of a texture buffer </td>
         </tr>
         <tr>
         <td class="record">
@@ -1003,7 +1003,7 @@
         <code class="OCaml">max_texture_image_units : int</code>
      </figure>
   </td>
-  <td></td>
+  <td> Number of available texture units </td>
         </tr>
         <tr>
         <td class="record">
@@ -1011,7 +1011,7 @@
         <code class="OCaml">max_texture_size : int</code>
      </figure>
   </td>
-  <td></td>
+  <td> Maximal size of a texture </td>
         </tr>
         <tr>
         <td class="record">
@@ -1019,7 +1019,7 @@
         <code class="OCaml">max_color_attachments : int</code>
      </figure>
   </td>
-  <td></td>
+  <td> Maximal number of color attachments in a framebuffer </td>
         </tr>
         
         </tbody></table>
@@ -1035,7 +1035,7 @@
      </span>
      <div class="more">
   
-        Type of a GL state 
+        Type of a GL context 
       
       
       
@@ -1062,7 +1062,7 @@
      </span>
      <div class="more">
   
-        Returns the GL version supported by this state in (major, minor) format 
+        Returns the GL version supported by this context in (major, minor) format 
      </div>
    </article>
    <article>
@@ -1074,7 +1074,7 @@
      </span>
      <div class="more">
   
-        Returns true iff the given GL version in (major, minor) format is supported by the given state 
+        Returns true iff the given GL version in (major, minor) format is supported by the given context 
      </div>
    </article>
    <article>
@@ -1086,7 +1086,7 @@
      </span>
      <div class="more">
   
-        Returns the GLSL version supported by this state 
+        Returns the GLSL version supported by this context 
      </div>
    </article>
    <article>
@@ -1098,7 +1098,7 @@
      </span>
      <div class="more">
   
-        Returns true iff the given GLSL version is supported by this state 
+        Returns true iff the given GLSL version is supported by this context 
      </div>
    </article>
    <article>

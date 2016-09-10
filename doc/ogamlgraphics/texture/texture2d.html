@@ -529,7 +529,7 @@
   </li>
 <li>
     <span class="arrow-right arrow shownav"></span>
-    <a href="../../../doc/ogamlgraphics/state.html">State</a>
+    <a href="../../../doc/ogamlgraphics/context.html">Context</a>
     <ul style="display: none;">
       
       
@@ -883,7 +883,7 @@
      </span>
      <div class="more">
   
-        Creates a texture from a source (a file or an image). Generates all mipmaps by default. 
+        Creates a texture from a source (a file or an image), or an empty texture. Generates all mipmaps by default.<br> Raises <code class="OCaml">Texture_error</code> if the requested size exceeds the maximal texture size allowed by the context.<br><br><span class="see">See : <a href="../../../doc/ogamlgraphics/rendertarget/t.html">OgamlGraphics.RenderTarget.T</a></span><br><span class="see">See : <a href="../../../doc/ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span><br><span class="see">See : <a href="../../../doc/ogamlgraphics/context.html">OgamlGraphics.Context</a></span>
      </div>
    </article>
    <article>
@@ -895,7 +895,7 @@
      </span>
      <div class="more">
   
-        Returns the size of a texture 
+        Returns the size of a texture <br><span class="see">See : <a href="../../../doc/ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
      </div>
    </article>
    <article>
@@ -955,7 +955,7 @@
      </span>
      <div class="more">
   
-        Returns a mipmap level of a texture. Raises Invalid_argument if the requested level is out of bounds 
+        Returns a mipmap level of a texture. Raises <code class="OCaml">Invalid_argument</code> if the requested level is out of bounds 
      </div>
    </article>
    <article>

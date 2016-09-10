@@ -529,7 +529,7 @@
   </li>
 <li>
     <span class="arrow-right arrow shownav"></span>
-    <a href="../../doc/ogamlgraphics/state.html">State</a>
+    <a href="../../doc/ogamlgraphics/context.html">Context</a>
     <ul style="display: none;">
       
       
@@ -858,20 +858,8 @@
   <hr>
   
   
-  <p> This module encapsulates a set of uniforms that can be passed to GLSL programs </p>
+  <p> This module encapsulates a set of uniforms that can be passed to GLSL programs. </p>
   <article>
-     <span class="arrow-right arrow"></span>
-     <span class="showmore">
-        <figure class="highlight">
-          <pre><code class="OCaml">exception Unknown_uniform of string</code></pre>
-        </figure>
-     </span>
-     <div class="more">
-  
-        Raised when trying to draw using a program that requires a uniform not provided in the set 
-     </div>
-   </article>
-   <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
@@ -880,7 +868,7 @@
      </span>
      <div class="more">
   
-        Raised when the type of a uniform is not matching the type required by the GLSL program 
+        Raised when an error occurs while creating or when drawing using a uniform. 
      </div>
    </article>
    <article>
@@ -919,7 +907,7 @@
      </span>
      <div class="more">
   
-       <code class="OCaml">vector3f name vec set</code> adds the uniform <code class="OCaml">vec</code> to <code class="OCaml">set</code> . the uniform should be refered to as <code class="OCaml">name</code> in a glsl program. Type : vec3.<br><span class="see">See : <a href="../../doc/ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
+       <code class="OCaml">vector3f name vec set</code> adds the uniform <code class="OCaml">vec</code> to <code class="OCaml">set</code> . the uniform should be refered to as <code class="OCaml">name</code> in a glsl program. Raises <code class="OCaml">Invalid_uniform</code> if <code class="OCaml">name</code> is already bound in <code class="OCaml">set</code> . Type : vec3.<br><span class="see">See : <a href="../../doc/ogamlmath/vector3f.html">OgamlMath.Vector3f</a></span>
      </div>
    </article>
    <article>
@@ -1027,7 +1015,7 @@
      </span>
      <div class="more">
   
-        See vector3f. Type : sampler2D.<br> The optional parameter <code class="OCaml">tex_unit</code> corresponds to the texture unit that is used to bind this texture and defaults to <code class="OCaml">0</code> . See <code class="OCaml">State.max_textures</code> for the number of available units.<br><span class="see">See : <a href="../../doc/ogamlgraphics/texture/texture2d.html">OgamlGraphics.Texture.Texture2D</a></span>
+        See vector3f. Type : sampler2D.<br> The optional parameter <code class="OCaml">tex_unit</code> corresponds to the texture unit that is used to bind this texture. If not provided, it defaults to the next available unit. If not additional units are available, or if a unit is explicitly bound twice, drawing with the uniform will raise <code class="OCaml">Invalid_uniform</code> .<br> See <code class="OCaml">Context.max_textures</code> for the number of available units.<br><span class="see">See : <a href="../../doc/ogamlgraphics/texture/texture2d.html">OgamlGraphics.Texture.Texture2D</a></span><br><span class="see">See : <a href="../../doc/ogamlgraphics/context.html">OgamlGraphics.Context</a></span>
      </div>
    </article>
    <article>

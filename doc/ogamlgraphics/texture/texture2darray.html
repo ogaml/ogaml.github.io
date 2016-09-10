@@ -529,7 +529,7 @@
   </li>
 <li>
     <span class="arrow-right arrow shownav"></span>
-    <a href="../../../doc/ogamlgraphics/state.html">State</a>
+    <a href="../../../doc/ogamlgraphics/context.html">Context</a>
     <ul style="display: none;">
       
       
@@ -883,7 +883,7 @@
      </span>
      <div class="more">
   
-        Creates a texture array from a list of files, a list of images, or creates an empty array of given dimensions. Generates all mipmaps by default for every layer by default.<br> Raises Creation_error if the list of images (or files) is empty, or if all the images do not have the same dimensions. 
+        Creates a texture array from a list of files, a list of images, or creates an empty array of given dimensions. Generates all mipmaps by default for every layer by default.<br> Raises <code class="OCaml">Texture_error</code> if the requested size exceeds the maximal texture  size allowed by the context.<br> Also raises <code class="OCaml">Texture_error</code> if the list of images (or files) is empty, or if all the images do not have the same dimensions. 
      </div>
    </article>
    <article>
@@ -967,7 +967,7 @@
      </span>
      <div class="more">
   
-        Returns a particular layer of a texture array. 
+        Returns a particular layer of a texture array. Raises <code class="OCaml">Invalid_argument</code> if the layer does not exist. 
      </div>
    </article>
    <article>
@@ -979,7 +979,7 @@
      </span>
      <div class="more">
   
-        Returns a particular mipmap of a texture array. 
+        Returns a particular mipmap of a texture array.  Raises <code class="OCaml">Invalid_argument</code> if the mipmap level does not exist. 
      </div>
    </article>
    

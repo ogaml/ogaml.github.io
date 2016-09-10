@@ -529,7 +529,7 @@
   </li>
 <li>
     <span class="arrow-right arrow shownav"></span>
-    <a href="../../doc/ogamlgraphics/state.html">State</a>
+    <a href="../../doc/ogamlgraphics/context.html">Context</a>
     <ul style="display: none;">
       
       
@@ -863,36 +863,12 @@
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">exception Compilation_error of string</code></pre>
+          <pre><code class="OCaml">exception Program_error of string</code></pre>
         </figure>
      </span>
      <div class="more">
   
-        Raised when the compilation of a program fails 
-     </div>
-   </article>
-   <article>
-     <span class="arrow-right arrow"></span>
-     <span class="showmore">
-        <figure class="highlight">
-          <pre><code class="OCaml">exception Linking_error of string</code></pre>
-        </figure>
-     </span>
-     <div class="more">
-  
-        Raised when the linking of a program fails 
-     </div>
-   </article>
-   <article>
-     <span class="arrow-right arrow"></span>
-     <span class="showmore">
-        <figure class="highlight">
-          <pre><code class="OCaml">exception Invalid_version of string</code></pre>
-        </figure>
-     </span>
-     <div class="more">
-  
-        Raised when trying to compile a program with a version that is not supported by the current context 
+        Raised when an error occurs during the manipulation of a program 
      </div>
    </article>
    <article>
@@ -929,36 +905,36 @@
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">val from_source : (module RenderTarget.T with type t = 'a) -> target:'a -> vertex_source:src -> fragment_source:src -> t</code></pre>
+          <pre><code class="OCaml">val from_source : (module RenderTarget.T with type t = 'a) -> ?log:OgamlUtils.Log.t -> context:'a -> vertex_source:src -> fragment_source:src -> unit -> t</code></pre>
         </figure>
      </span>
      <div class="more">
   
-        Compiles a program from a rendering context, a vertex source  and a fragment source. The source must begin with a version assigment <code class="OCaml">#version xxx</code>
+        Compiles a program from a rendering context, a vertex source  and a fragment source. Compilation errors will be reported on the provided log. The source must begin with a version assigment <code class="OCaml">#version xxx</code><br><span class="see">See : <a href="../../doc/ogamlutils/log.html">OgamlUtils.Log</a></span>
      </div>
    </article>
    <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">val from_source_list : (module RenderTarget.T with type t = 'a) -> target:'a -> vertex_source:(int * src) list -> fragment_source:(int * src) list -> t</code></pre>
+          <pre><code class="OCaml">val from_source_list : (module RenderTarget.T with type t = 'a) -> ?log:OgamlUtils.Log.t -> context:'a -> vertex_source:(int * src) list -> fragment_source:(int * src) list -> unit -> t</code></pre>
         </figure>
      </span>
      <div class="more">
   
-        Compiles a program from a rendering context and a list of sources paired with their required GLSL version. The function will chose the best source for the current context.<br><span class="see">See : <a href="../../doc/ogamlgraphics/state.html">OgamlGraphics.State</a></span>
+        Compiles a program from a rendering context and a list of sources paired with their required GLSL version. The function will chose the best source for the current context. Compilation errors will be reported on the provided log.<br><span class="see">See : <a href="../../doc/ogamlgraphics/context.html">OgamlGraphics.Context</a></span><br><span class="see">See : <a href="../../doc/ogamlutils/log.html">OgamlUtils.Log</a></span>
      </div>
    </article>
    <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">val from_source_pp : (module RenderTarget.T with type t = 'a) -> target:'a -> vertex_source:src -> fragment_source:src -> t</code></pre>
+          <pre><code class="OCaml">val from_source_pp : (module RenderTarget.T with type t = 'a) -> ?log:OgamlUtils.Log.t -> context:'a -> vertex_source:src -> fragment_source:src -> unit -> t</code></pre>
         </figure>
      </span>
      <div class="more">
   
-        Compiles a program from a rendering context and a source. The source should not begin with a <code class="OCaml">#version xxx</code> assignment, as the function will preprocess the sources and prepend the best version declaration.<br><span class="see">See : <a href="../../doc/ogamlgraphics/state.html">OgamlGraphics.State</a></span>
+        Compiles a program from a rendering context and a source. The source should not begin with a <code class="OCaml">#version xxx</code> assignment, as the function will preprocess the sources and prepend the best version declaration. Compilation errors will be reported on the provided log.<br><br><span class="see">See : <a href="../../doc/ogamlgraphics/context.html">OgamlGraphics.Context</a></span><br><span class="see">See : <a href="../../doc/ogamlutils/log.html">OgamlUtils.Log</a></span>
      </div>
    </article>
    

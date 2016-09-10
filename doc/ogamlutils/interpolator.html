@@ -529,7 +529,7 @@
   </li>
 <li>
     <span class="arrow-right arrow shownav"></span>
-    <a href="../../doc/ogamlgraphics/state.html">State</a>
+    <a href="../../doc/ogamlgraphics/context.html">Context</a>
     <ul style="display: none;">
       
       
@@ -954,12 +954,12 @@
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">val custom : (float -> 'a) -> 'a t</code></pre>
+          <pre><code class="OCaml">val custom : (float -> 'a) -> float -> float -> 'a t</code></pre>
         </figure>
      </span>
      <div class="more">
   
-       <code class="OCaml">custom f</code> returns a custom interpolator that coincides with   the function <code class="OCaml">f</code> on [0;1] and equals f(0) or f(1) elsewhere. 
+       <code class="OCaml">custom f start stop</code> returns a custom interpolator <code class="OCaml">ip</code> that coincides with   the function <code class="OCaml">f</code> such that <code class="OCaml">ip(0) = f(start)</code> , <code class="OCaml">ip(1) = f(stop)</code> . 
      </div>
    </article>
    <article>
@@ -995,7 +995,7 @@
      </span>
      <div class="more">
   
-       <code class="OCaml">linear start steps endt</code> creates a linear interpolator going from <code class="OCaml">start</code> to <code class="OCaml">endt</code> passing through each point<code class="OCaml">(dt, pos)</code> of <code class="OCaml">steps</code> at time <code class="OCaml">dt</code>
+       <code class="OCaml">linear start steps endt</code> creates a linear interpolator going from <code class="OCaml">start</code> to <code class="OCaml">endt</code> passing through each point<code class="OCaml">(dt, pos)</code> of <code class="OCaml">steps</code> at time <code class="OCaml">dt < 1.0</code>
      </div>
    </article>
    <article>
@@ -1019,7 +1019,7 @@
      </span>
      <div class="more">
   
-       <code class="OCaml">cubic (start, sm) steps (endt, em)</code> creates a cubic spline interpolator going from <code class="OCaml">start</code> with tangent <code class="OCaml">sm</code> to <code class="OCaml">endt</code> with tangent <code class="OCaml">em</code> passing through each point <code class="OCaml">(dt, pos)</code> of <code class="OCaml">steps</code> at time <code class="OCaml">dt</code>
+       <code class="OCaml">cubic (start, sm) steps (endt, em)</code> creates a cubic spline interpolator going from <code class="OCaml">start</code> with tangent <code class="OCaml">sm</code> to <code class="OCaml">endt</code> with tangent <code class="OCaml">em</code> passing through each point <code class="OCaml">(dt, pos)</code> of <code class="OCaml">steps</code> at time <code class="OCaml">dt < 1.0</code>
      </div>
    </article>
    <article>
