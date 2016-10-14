@@ -2,7 +2,7 @@
 <html>
 <head>
       
-  <title>OGaml documentation - Mouse</title>
+  <title>OGaml documentation - VertexSource</title>
       
   <meta charset="utf-8">
       
@@ -44,17 +44,17 @@
       <li>
     <span class="arrow-right arrow shownav"></span>
     <a href="../../../doc/ogamlcore.html">OgamlCore</a>
-    <ul class="nav-open" style="display: block;">
+    <ul style="display: none;">
       
       <li>
     <span class="arrow-right arrow shownav"></span>
     <a href="../../../doc/ogamlcore/ll.html">LL</a>
-    <ul class="nav-open" style="display: block;">
+    <ul style="display: none;">
       
       <li>
     <span class="arrow-right arrow shownav"></span>
     <a href="../../../doc/ogamlcore/ll/mouse.html">Mouse</a>
-    <ul class="nav-open" style="display: block;">
+    <ul style="display: none;">
       
       
     </ul>
@@ -129,7 +129,7 @@
 <li>
     <span class="arrow-right arrow shownav"></span>
     <a href="../../../doc/ogamlgraphics.html">OgamlGraphics</a>
-    <ul style="display: none;">
+    <ul class="nav-open" style="display: block;">
       
       <li>
     <span class="arrow-right arrow shownav"></span>
@@ -204,12 +204,12 @@
 <li>
     <span class="arrow-right arrow shownav"></span>
     <a href="../../../doc/ogamlgraphics/vertexarray.html">VertexArray</a>
-    <ul style="display: none;">
+    <ul class="nav-open" style="display: block;">
       
       <li>
     <span class="arrow-right arrow shownav"></span>
     <a href="../../../doc/ogamlgraphics/vertexarray/vertexsource.html">VertexSource</a>
-    <ul style="display: none;">
+    <ul class="nav-open" style="display: block;">
       
       
     </ul>
@@ -859,71 +859,158 @@
     </ul>
    </aside>
 <main>
-  <h1>Module <span class="prefix">OgamlCore.LL.</span><span class="modulename">Mouse</span></h1>
+  <h1>Module <span class="prefix">OgamlGraphics.VertexArray.</span><span class="modulename">VertexSource</span></h1>
     
-  <span class="abstract"> Getting real-time mouse information </span>
+  <span class="abstract"> Vertex source </span>
   <hr>
   
   
-  <p> This modules provides a low-level access to the mouse in real-time. You should probably use the OgamlGraphics.Mouse wrapper instead. </p>
+  <p> This module represents vertex sources, which are collections of vertices. <br> This module ensures that everything goes well. In particular, it verifies that all the vertices of a source are compatible (i.e. have the same initialized attributes).<br> An empty source can receive any vertex. The type of the source is then fixed by the first vertex added to it. Any vertex  added to the source after the first one must have at least the same initialized attributes as the first vertex. <br> Note that the type of a source is reinitialized if the source is cleared. </p>
   <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">val position : unit -> OgamlMath.Vector2i.t</code></pre>
+          <pre><code class="OCaml">exception Uninitialized_field of string</code></pre>
         </figure>
      </span>
      <div class="more">
   
-        Returns the postion of the mouse in screen coordinates<br><span class="see">See : <a href="../../../doc/ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
+        Raised if a vertex is missing some of the attributes required by the source. 
      </div>
    </article>
    <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">val relative_position : Window.t -> OgamlMath.Vector2i.t</code></pre>
+          <pre><code class="OCaml">exception Incompatible_sources</code></pre>
         </figure>
      </span>
      <div class="more">
   
-        Returns the position of the mouse relatively to a window<br><span class="see">See : <a href="../../../doc/ogamlcore/ll/window.html">OgamlCore.LL.Window</a></span><br><span class="see">See : <a href="../../../doc/ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
+        Raised when trying to concatenate incompatible sources. 
      </div>
    </article>
    <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">val set_position : OgamlMath.Vector2i.t -> unit</code></pre>
+          <pre><code class="OCaml">type 'a t</code></pre>
         </figure>
      </span>
      <div class="more">
   
-        Sets the position of the cursor relatively to the screen<br><span class="see">See : <a href="../../../doc/ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
+        Type of a vertex source 
+      
+      
+      
      </div>
    </article>
    <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">val set_relative_position : Window.t -> OgamlMath.Vector2i.t -> unit</code></pre>
+          <pre><code class="OCaml">val empty : ?size:int -> unit -> 'a t</code></pre>
         </figure>
      </span>
      <div class="more">
   
-        Sets the position of the cursor relatively to a window<br><span class="see">See : <a href="../../../doc/ogamlcore/ll/window.html">OgamlCore.LL.Window</a></span><br><span class="see">See : <a href="../../../doc/ogamlmath/vector2i.html">OgamlMath.Vector2i</a></span>
+        Empty vertex source. The source will be redimensionned as needed, but an initial size can be specified with <code class="OCaml">size</code> . 
      </div>
    </article>
    <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">val is_pressed : Button.t -> bool</code></pre>
+          <pre><code class="OCaml">val add : 'a t -> 'a Vertex.t -> unit</code></pre>
         </figure>
      </span>
      <div class="more">
   
-        Returns <code class="OCaml">true</code> iff the given button is currently held down by the user <br><span class="see">See : <a href="../../../doc/ogamlcore/button.html">OgamlCore.Button</a></span>
+        Adds a vertex to a source. If the source is not empty, the vertex must  have at least the same initialized fields as the first vertex put into the source. 
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val (<<) : 'a t -> 'a Vertex.t -> 'a t</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Convenient operator to add vertices to a source. 
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val length : 'a t -> int</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Returns the length (in vertices) of a source. 
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val clear : 'a t -> unit</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Clears the source. Any source that has been converted into a vertex array can be safely cleared and reused.  This avoids reallocation and garbage collection. 
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val append : 'a t -> 'a t -> unit</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+       <code class="OCaml">append s1 s2</code> appends the source <code class="OCaml">s2</code> to <code class="OCaml">s1</code> . <code class="OCaml">s2</code> is not modified. 
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val iter : 'a t -> ('a Vertex.t -> unit) -> unit</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Iterates through all the vertices of a source. 
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val map : 'a t -> ('a Vertex.t -> 'b Vertex.t) -> 'b t</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Maps all the vertices of a source to a new source. 
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val map_to : 'a t -> ('a Vertex.t -> 'b Vertex.t) -> 'b t -> unit</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Maps all the vertices of a source to an existing source. 
      </div>
    </article>
    

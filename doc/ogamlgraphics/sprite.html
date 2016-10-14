@@ -203,35 +203,20 @@
   </li>
 <li>
     <span class="arrow-right arrow shownav"></span>
-    <a href="../../doc/ogamlgraphics/vertexmap.html">VertexMap</a>
-    <ul style="display: none;">
-      
-      <li>
-    <span class="arrow-right arrow shownav"></span>
-    <a href="../../doc/ogamlgraphics/vertexmap/source.html">Source</a>
-    <ul style="display: none;">
-      
-      
-    </ul>
-  </li>
-<li>
-    <span class="arrow-right arrow shownav"></span>
-    <a href="../../doc/ogamlgraphics/vertexmap/vertex.html">Vertex</a>
-    <ul style="display: none;">
-      
-      
-    </ul>
-  </li>
-    </ul>
-  </li>
-<li>
-    <span class="arrow-right arrow shownav"></span>
     <a href="../../doc/ogamlgraphics/vertexarray.html">VertexArray</a>
     <ul style="display: none;">
       
       <li>
     <span class="arrow-right arrow shownav"></span>
-    <a href="../../doc/ogamlgraphics/vertexarray/source.html">Source</a>
+    <a href="../../doc/ogamlgraphics/vertexarray/vertexsource.html">VertexSource</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexarray/simplevertex.html">SimpleVertex</a>
     <ul style="display: none;">
       
       
@@ -241,8 +226,30 @@
     <span class="arrow-right arrow shownav"></span>
     <a href="../../doc/ogamlgraphics/vertexarray/vertex.html">Vertex</a>
     <ul style="display: none;">
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexarray/vertex/vertex.html">VERTEX</a>
+    <ul style="display: none;">
       
       
+    </ul>
+  </li>
+      <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexarray/vertex/attribute.html">Attribute</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/vertexarray/vertex/attributetype.html">AttributeType</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
     </ul>
   </li>
     </ul>
@@ -1058,7 +1065,7 @@
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">val to_source : t -> VertexArray.Source.t -> unit</code></pre>
+          <pre><code class="OCaml">val to_source : t -> VertexArray.SimpleVertex.T.s VertexArray.VertexSource.t -> unit</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -1070,24 +1077,12 @@
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">val map_to_source : t -> (VertexArray.Vertex.t -> VertexArray.Vertex.t) -> VertexArray.Source.t -> unit</code></pre>
+          <pre><code class="OCaml">val map_to_source : t -> (VertexArray.SimpleVertex.T.s VertexArray.Vertex.t -> 'b VertexArray.Vertex.t) -> 'b VertexArray.VertexSource.t -> unit</code></pre>
         </figure>
      </span>
      <div class="more">
   
         Outputs a sprite to a vertex array source by mapping its vertices.<br> See <code class="OCaml">to_source</code> for more information. 
-     </div>
-   </article>
-   <article>
-     <span class="arrow-right arrow"></span>
-     <span class="showmore">
-        <figure class="highlight">
-          <pre><code class="OCaml">val map_to_custom_source : t -> (VertexArray.Vertex.t -> VertexMap.Vertex.t) -> VertexMap.Source.t -> unit</code></pre>
-        </figure>
-     </span>
-     <div class="more">
-  
-        Outputs a sprite to a vertex map source by mapping its vertices.<br> See <code class="OCaml">to_source</code> for more information. 
      </div>
    </article>
    
