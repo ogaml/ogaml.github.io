@@ -87,6 +87,14 @@
   </li>
 <li>
     <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlcore/os.html">OS</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
     <a href="../../doc/ogamlcore/event.html">Event</a>
     <ul style="display: none;">
       
@@ -321,6 +329,38 @@
     </ul>
   </li>
       <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture/cubemap.html">Cubemap</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture/cubemapmipmap.html">CubemapMipmap</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture/cubemapface.html">CubemapFace</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlgraphics/texture/cubemapmipmapface.html">CubemapMipmapFace</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
     <span class="arrow-right arrow shownav"></span>
     <a href="../../doc/ogamlgraphics/texture/texture2darray.html">Texture2DArray</a>
     <ul style="display: none;">
@@ -848,6 +888,14 @@
   </li>
 <li>
     <span class="arrow-right arrow shownav"></span>
+    <a href="../../doc/ogamlutils/clock.html">Clock</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
     <a href="../../doc/ogamlutils/log.html">Log</a>
     <ul style="display: none;">
       
@@ -919,7 +967,7 @@
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">val hsv : t -> HSV.t</code></pre>
+          <pre><code class="OCaml">val to_hsv : t -> HSV.t</code></pre>
         </figure>
      </span>
      <div class="more">
@@ -931,12 +979,36 @@
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">val rgb : t -> RGB.t</code></pre>
+          <pre><code class="OCaml">val to_rgb : t -> RGB.t</code></pre>
         </figure>
      </span>
      <div class="more">
   
         Converts a color to RGB<br><span class="see">See : <a href="../../doc/ogamlgraphics/color/rgb.html">OgamlGraphics.Color.RGB</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val hsv : ?alpha:float -> float -> float -> float -> t</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Fast way to create a HSV color<br><span class="see">See : <a href="../../doc/ogamlgraphics/color/hsv.html">OgamlGraphics.Color.HSV</a></span>
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
+          <pre><code class="OCaml">val rgb : ?alpha:float -> float -> float -> float -> t</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Fast way to create a RGB color<br><span class="see">See : <a href="../../doc/ogamlgraphics/color/rgb.html">OgamlGraphics.Color.RGB</a></span>
      </div>
    </article>
    <article>

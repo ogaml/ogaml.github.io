@@ -2,7 +2,7 @@
 <html>
 <head>
       
-  <title>OGaml documentation - Font</title>
+  <title>OGaml documentation - OS</title>
       
   <meta charset="utf-8">
       
@@ -44,7 +44,7 @@
       <li>
     <span class="arrow-right arrow shownav"></span>
     <a href="../../doc/ogamlcore.html">OgamlCore</a>
-    <ul style="display: none;">
+    <ul class="nav-open" style="display: block;">
       
       <li>
     <span class="arrow-right arrow shownav"></span>
@@ -88,7 +88,7 @@
 <li>
     <span class="arrow-right arrow shownav"></span>
     <a href="../../doc/ogamlcore/os.html">OS</a>
-    <ul style="display: none;">
+    <ul class="nav-open" style="display: block;">
       
       
     </ul>
@@ -137,7 +137,7 @@
 <li>
     <span class="arrow-right arrow shownav"></span>
     <a href="../../doc/ogamlgraphics.html">OgamlGraphics</a>
-    <ul class="nav-open" style="display: block;">
+    <ul style="display: none;">
       
       <li>
     <span class="arrow-right arrow shownav"></span>
@@ -304,7 +304,7 @@
 <li>
     <span class="arrow-right arrow shownav"></span>
     <a href="../../doc/ogamlgraphics/font.html">Font</a>
-    <ul class="nav-open" style="display: block;">
+    <ul style="display: none;">
       
       <li>
     <span class="arrow-right arrow shownav"></span>
@@ -907,170 +907,90 @@
     </ul>
    </aside>
 <main>
-  <h1>Module <span class="prefix">OgamlGraphics.</span><span class="modulename">Font</span></h1>
+  <h1>Module <span class="prefix">OgamlCore.</span><span class="modulename">OS</span></h1>
     
-  <span class="abstract"> Information about a font </span>
+  <span class="abstract"> Provides some OS-relative data </span>
   <hr>
-  <h2>Submodules</h2>
-      
-  <table class="belowh">
-      
-    <tbody>
-      <tr><td><a href="../../doc/ogamlgraphics/font/glyph.html">Glyph</a></td><td> Representation of a character </td></tr>
-      
-      
-    </tbody>
-  </table>
   
-  <p> This module stores a font and dynamically loads sizes and glyphs as requested by the user </p>
+  
+  <p> This module provides some OS-relative data </p>
   <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">exception Font_error of string</code></pre>
+          <pre><code class="OCaml">type os = Windows | Linux | OSX</code></pre>
         </figure>
      </span>
      <div class="more">
   
-        Raised when an error occur in this module 
-     </div>
-   </article>
-   <article>
-     <span class="arrow-right arrow"></span>
-     <span class="showmore">
-        <figure class="highlight">
-          <pre><code class="OCaml">type t</code></pre>
-        </figure>
-     </span>
-     <div class="more">
-  
-        Type of a font 
+        OS enumeration 
+      <h4>Possible values</h4>
+     
+      <table class="values"></tbody>
+        <tr>
+        <td class="variant">
+     <figure class="highlight">
+        <code class="OCaml">Windows</code>
+     </figure>
+  </td>
+  <td></td>
+        </tr>
+        <tr>
+        <td class="variant">
+     <figure class="highlight">
+        <code class="OCaml">Linux</code>
+     </figure>
+  </td>
+  <td></td>
+        </tr>
+        <tr>
+        <td class="variant">
+     <figure class="highlight">
+        <code class="OCaml">OSX</code>
+     </figure>
+  </td>
+  <td></td>
+        </tr>
+        
+        </tbody></table>
       
       
-      
      </div>
    </article>
    <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">type code = [ `Char of char | `Code of int]</code></pre>
+          <pre><code class="OCaml">val os : os</code></pre>
         </figure>
      </span>
      <div class="more">
   
-        Type alias for a character given in ASCII or UTF-8 
-      
-      
-      
+        OS on which this distribution of OGaml has been compiled 
      </div>
    </article>
    <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">val load : string -> t</code></pre>
+          <pre><code class="OCaml">val resources_dir : string</code></pre>
         </figure>
      </span>
      <div class="more">
   
-        Loads a font from a file 
+        Resources directory prefix. Prepend this to all the resource paths used by your program before producing an executable/application bundle.
      </div>
    </article>
    <article>
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
-          <pre><code class="OCaml">val glyph : t -> code -> int -> bool -> Glyph.t</code></pre>
+          <pre><code class="OCaml">val canonical_path : string -> string</code></pre>
         </figure>
      </span>
      <div class="more">
   
-       <code class="OCaml">glyph font code size bold</code> returns the glyph representing the character <code class="OCaml">code</code> in <code class="OCaml">font</code> of size <code class="OCaml">size</code> and with the modifier <code class="OCaml">bold</code>
-     </div>
-   </article>
-   <article>
-     <span class="arrow-right arrow"></span>
-     <span class="showmore">
-        <figure class="highlight">
-          <pre><code class="OCaml">val kerning : t -> code -> code -> int -> float</code></pre>
-        </figure>
-     </span>
-     <div class="more">
-  
-        Returns the kerning between two chars of a given size, that is the horizontal offset that must be applied between the two glyphs (usually negative) 
-     </div>
-   </article>
-   <article>
-     <span class="arrow-right arrow"></span>
-     <span class="showmore">
-        <figure class="highlight">
-          <pre><code class="OCaml">val ascent : t -> int -> float</code></pre>
-        </figure>
-     </span>
-     <div class="more">
-  
-        Returns the coordinate above the baseline the font extends 
-     </div>
-   </article>
-   <article>
-     <span class="arrow-right arrow"></span>
-     <span class="showmore">
-        <figure class="highlight">
-          <pre><code class="OCaml">val descent : t -> int -> float</code></pre>
-        </figure>
-     </span>
-     <div class="more">
-  
-        Returns the coordinate below the baseline the font extends (usually negative) 
-     </div>
-   </article>
-   <article>
-     <span class="arrow-right arrow"></span>
-     <span class="showmore">
-        <figure class="highlight">
-          <pre><code class="OCaml">val linegap : t -> int -> float</code></pre>
-        </figure>
-     </span>
-     <div class="more">
-  
-        Returns the distance between the descent of a line and the ascent of the next line 
-     </div>
-   </article>
-   <article>
-     <span class="arrow-right arrow"></span>
-     <span class="showmore">
-        <figure class="highlight">
-          <pre><code class="OCaml">val spacing : t -> int -> float</code></pre>
-        </figure>
-     </span>
-     <div class="more">
-  
-        Returns the space between the baseline of two lines (equals ascent + linegap - descent) 
-     </div>
-   </article>
-   <article>
-     <span class="arrow-right arrow"></span>
-     <span class="showmore">
-        <figure class="highlight">
-          <pre><code class="OCaml">val texture : (module RenderTarget.T with type t = 'a) -> 'a -> t -> Texture.Texture2DArray.t</code></pre>
-        </figure>
-     </span>
-     <div class="more">
-  
-        Returns the texture associated to a font. In this texture, every layer correspond to a font size (in loading order). Use <code class="OCaml">Font.size_index</code> to get the layer associated to a font size.  This texture is not mipmapped. 
-     </div>
-   </article>
-   <article>
-     <span class="arrow-right arrow"></span>
-     <span class="showmore">
-        <figure class="highlight">
-          <pre><code class="OCaml">val size_index : t -> int -> int</code></pre>
-        </figure>
-     </span>
-     <div class="more">
-  
-        Returns the index associated to a font size in the font's texture. Raises Font_error if the font size has not been loaded yet. 
+        [canonical_path p] returns the resolved path equivalent to [p] 
      </div>
    </article>
    

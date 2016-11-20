@@ -87,6 +87,14 @@
   </li>
 <li>
     <span class="arrow-right arrow shownav"></span>
+    <a href="../../../doc/ogamlcore/os.html">OS</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
     <a href="../../../doc/ogamlcore/event.html">Event</a>
     <ul style="display: none;">
       
@@ -321,6 +329,38 @@
     </ul>
   </li>
       <li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../../doc/ogamlgraphics/texture/cubemap.html">Cubemap</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../../doc/ogamlgraphics/texture/cubemapmipmap.html">CubemapMipmap</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../../doc/ogamlgraphics/texture/cubemapface.html">CubemapFace</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
+    <a href="../../../doc/ogamlgraphics/texture/cubemapmipmapface.html">CubemapMipmapFace</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
     <span class="arrow-right arrow shownav"></span>
     <a href="../../../doc/ogamlgraphics/texture/texture2darray.html">Texture2DArray</a>
     <ul style="display: none;">
@@ -848,6 +888,14 @@
   </li>
 <li>
     <span class="arrow-right arrow shownav"></span>
+    <a href="../../../doc/ogamlutils/clock.html">Clock</a>
+    <ul style="display: none;">
+      
+      
+    </ul>
+  </li>
+<li>
+    <span class="arrow-right arrow shownav"></span>
     <a href="../../../doc/ogamlutils/log.html">Log</a>
     <ul style="display: none;">
       
@@ -1043,6 +1091,18 @@
      <span class="arrow-right arrow"></span>
      <span class="showmore">
         <figure class="highlight">
+          <pre><code class="OCaml">val iter_neighbours : t -> vertex -> (vertex -> unit) -> unit</code></pre>
+        </figure>
+     </span>
+     <div class="more">
+  
+        Iterates through all the neighbours of a vertex 
+     </div>
+   </article>
+   <article>
+     <span class="arrow-right arrow"></span>
+     <span class="showmore">
+        <figure class="highlight">
           <pre><code class="OCaml">val merge : t -> t -> t</code></pre>
         </figure>
      </span>
@@ -1060,7 +1120,7 @@
      </span>
      <div class="more">
   
-       <code class="OCaml">dfs g s f</code> iterates <code class="OCaml">f</code> through all the vertices of <code class="OCaml">g</code> ,  starting from <code class="OCaml">s</code> using a dfs 
+       <code class="OCaml">dfs g s f</code> iterates <code class="OCaml">f</code> through all the accessible vertices of <code class="OCaml">g</code> ,  starting from <code class="OCaml">s</code> using a dfs 
      </div>
    </article>
    <article>
@@ -1072,7 +1132,7 @@
      </span>
      <div class="more">
   
-       <code class="OCaml">bfs g s f</code> iterates <code class="OCaml">f</code> through all the vertices of <code class="OCaml">g</code> ,  starting from <code class="OCaml">s</code> using a bfs 
+       <code class="OCaml">bfs g s f</code> iterates <code class="OCaml">f</code> through all the accessible vertices of <code class="OCaml">g</code> ,  starting from <code class="OCaml">s</code> using a bfs 
      </div>
    </article>
    <article>
