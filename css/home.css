@@ -1,7 +1,15 @@
 body {
-  background-color: rgb(255, 156, 6);
   text-align: center;
   font-family: 'Open Sans';
+  padding: 0;
+  margin: 0;
+}
+
+/* HEADER */
+
+header {
+  background-color: rgb(255, 156, 6);
+  padding-bottom: 0.01rem;
 }
 
 h1 {
@@ -26,4 +34,25 @@ a:hover {
 
 img {
   max-width: 100%;
+}
+
+/* Card section */
+
+section {
+  margin: 0;
+  padding: 0.3em;
+  background-color: rgb(247, 247, 247);
+}
+
+section div.wrapper {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+section div.card {
+  width: 23em;
+  margin: 0em 1em;
 }
